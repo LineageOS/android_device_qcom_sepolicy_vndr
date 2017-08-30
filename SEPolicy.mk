@@ -1,5 +1,4 @@
 # Board specific SELinux policy variable definitions
-ifeq ($(call is-vendor-board-platform,QCOM),true)
 SEPOLICY_PATH:= device/qcom/sepolicy_vndr
 QSSI_SEPOLICY_PATH:= device/qcom/sepolicy
 SYS_ATTR_PROJECT_PATH := $(TOP)/device/qcom/sepolicy/generic/public/attribute
@@ -73,4 +72,5 @@ ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test/sysmonapp
     endif
 endif
-endif
+
+-include device/lineage/sepolicy/qcom/sepolicy.mk
