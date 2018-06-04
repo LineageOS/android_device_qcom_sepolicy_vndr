@@ -154,8 +154,8 @@
 /dev/block/platform/soc/4744000.sdhci/by-name/super                              u:object_r:super_block_device:s0
 
 # Camera
-/sys/devices/platform/soc/5ca0000.qcom,jpeg/video4linux/video[0-33]/name(/.*)?    u:object_r:vendor_sysfs_jpeg:s0
-/sys/devices/platform/soc/5c00000.qcom,msm-cam/video4linux/video[0-33]/name(/.*)?  u:object_r:vendor_sysfs_jpeg:s0
+/sys/devices/platform/soc/5ca0000.qcom,jpeg/video4linux/video[0-9]+/name(/.*)?    u:object_r:vendor_sysfs_jpeg:s0
+/sys/devices/platform/soc/5c00000.qcom,msm-cam/video4linux/video[0-9]+/name(/.*)?  u:object_r:vendor_sysfs_jpeg:s0
 #rawdump partition
 /dev/block/platform/soc/4744000.sdhci/by-name/rawdump                            u:object_r:vendor_rawdump_block_device:s0
 
