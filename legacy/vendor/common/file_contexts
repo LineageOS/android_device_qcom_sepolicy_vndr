@@ -438,6 +438,8 @@
 /sys/devices/virtual/graphics/fb([0-3])+/config                     u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/rotator/mdss_rotator/caps                      u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/hdcp/msm_hdcp/min_level_change                 u:object_r:sysfs_graphics:s0
+/sys/class/lcd_bias/secure_mode                                     u:object_r:sysfs_graphics:s0
+/sys/class/leds/wled/secure_mode                                    u:object_r:sysfs_graphics:s0
 
 /sys/devices/platform/soc/soc:qcom,cam-req-mgr/video4linux/video0/name  u:object_r:sysfs_graphics:s0
 /sys/devices/platform/cam_sync/video4linux/video1/name              u:object_r:sysfs_graphics:s0
