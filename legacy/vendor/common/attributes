@@ -137,3 +137,7 @@ attribute hal_capabilityconfigstore_qti_server;
 attribute hal_limits;
 attribute hal_limits_client;
 attribute hal_limits_server;
+
+attribute hal_cvp;
+attribute hal_cvp_client;
+attribute hal_cvp_server;
