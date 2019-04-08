@@ -59,6 +59,8 @@ genfscon sysfs /devices/virtual/kgsl/kgsl/proc u:object_r:sysfs_kgsl_proc:s0
 genfscon sysfs /module/qpnp_rtc/parameters/poweron_alarm u:object_r:sysfs_poweron_alarm:s0
 
 genfscon sysfs /devices/platform/cam_sync/video4linux/video0/name u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/cam_sync/video4linux/video1/name u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cam-req-mgr/video4linux/video0/name u:object_r:sysfs_graphics:s0
 
 genfscon sysfs /devices/virtual/npu/msm_npu/pwr u:object_r:sysfs_npu:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/name u:object_r:sysfs_graphics:s0
