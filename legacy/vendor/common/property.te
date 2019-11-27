@@ -147,6 +147,9 @@ vendor_restricted_prop(vendor_audio_prop)
 # Audio debug props
 vendor_internal_prop(vendor_audio_debug_prop)
 
+# shsusrd props
+vendor_restricted_prop(vendor_data_shsusr_prop);
+
 #ss-restart
 vendor_internal_prop(vendor_ssr_prop)
 
