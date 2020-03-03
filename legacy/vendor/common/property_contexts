@@ -123,6 +123,7 @@ vendor.debug.rs.           u:object_r:public_vendor_default_prop:s0
 
 # shsusrd loading
 persist.vendor.data.shsusr_load u:object_r:vendor_data_shsusr_prop:s0
+persist.vendor.data.qmipriod_load u:object_r:vendor_data_qmipriod_prop:s0
 
 # cgroup follow
 ro.vendor.qti.cgroup_follow.enable u:object_r:vendor_cgroup_follow_prop:s0
