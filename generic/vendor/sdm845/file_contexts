@@ -85,6 +85,7 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/recovery_[ab]         u:object_r:recovery_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/vbmeta_system_[ab]    u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/vbmeta_product_[ab]    u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/vbmeta_vendor_[ab]    u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/super                 u:object_r:super_block_device:s0
 
 /dev/block/platform/soc/1d84000.ufshc/sd[ade]                   u:object_r:vendor_gpt_block_device:s0
