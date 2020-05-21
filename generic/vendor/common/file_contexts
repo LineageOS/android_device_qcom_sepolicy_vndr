@@ -132,6 +132,7 @@
 /vendor/bin/adsprpcd            u:object_r:vendor_adsprpcd_exec:s0
 /vendor/bin/cdsprpcd            u:object_r:vendor_cdsprpcd_exec:s0
 /vendor/bin/audioadsprpcd       u:object_r:vendor_audioadsprpcd_exec:s0
+/vendor/bin/dspservice          u:object_r:vendor_dspservice_exec:s0
 /vendor/bin/irsc_util           u:object_r:vendor_irsc_util_exec:s0
 /vendor/bin/rmt_storage         u:object_r:vendor_rmt_storage_exec:s0
 /vendor/bin/tftp_server         u:object_r:vendor_rfs_access_exec:s0
@@ -278,6 +279,7 @@
 /vendor/lib(64)?/libcdsprpc\.so             u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libsdsprpc\.so             u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmdsprpc\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor.qti.hardware.dsp@1.0\.so     u:object_r:same_process_hal_file:s0
 /vendor/lib/dsp/fastrpc_shell_0             u:object_r:same_process_hal_file:s0
 
 # Fastcv libs
