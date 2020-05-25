@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,5 +24,18 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-[@SYSMONAPP]
-ALL : device/qcom/sepolicy_vndr/qva/vendor/common/sysmonapp/sysmonapp_app_cert.x509.pem
+
+type vendor_init-qti-dcvs-sh, domain;
+type vendor_init-qti-dcvs-sh_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(vendor_init-qti-dcvs-sh)
+
+allow vendor_init-qti-dcvs-sh vendor_shell_exec:file rx_file_perms;
+
+# execute toybox/toolbox
+allow vendor_init-qti-dcvs-sh self:perf_event { open cpu };
+neverallow vendor_init-qti-dcvs-sh self:perf_event ~{ open cpu };
+
+allow vendor_init-qti-dcvs-sh sysfs:dir { open read };
+allow vendor_init-qti-dcvs-sh vendor_sysfs_devfreq:dir r_dir_perms;
+allow vendor_init-qti-dcvs-sh vendor_sysfs_devfreq:file w_file_perms;
