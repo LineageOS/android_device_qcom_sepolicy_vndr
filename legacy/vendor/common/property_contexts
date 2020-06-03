@@ -222,3 +222,6 @@ persist.vendor.qteeconnector.    u:object_r:vendor_qteeconnector_opti_prop:s0
 
 #bt lazyhal property
 ro.vendor.bt.enablelazyhal       u:object_r:bluetooth_prop:s0 exact bool
+
+#SLM
+persist.vendor.slm.                          u:object_r:vendor_slm_prop:s0
