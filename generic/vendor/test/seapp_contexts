@@ -40,3 +40,6 @@ user=system seinfo=platform name=com.qualcomm.qti.ustaservice domain=vendor_usta
 
 #Add new domain for LibsochelperTest app
 user=_app seinfo=platform name=com.qualcomm.qti.libsochelpertest domain=vendor_libsochelpertest_app type=app_data_file levelFrom=all
+
+#Add new domain for qtidiagservices app
+user=system seinfo=platform name=com.qti.diagservices domain=qtidiagservices_app type=system_app_data_file

@@ -28,3 +28,4 @@
 
 #qspm hal debug
 type vendor_qspm_dbg_prop, property_type;
+type myapp_prop, property_type;

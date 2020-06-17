@@ -412,3 +412,5 @@ type vendor_capabilityconfigstore_data_file, file_type, data_file_type;
 
 #sensor log files
 type sensors_vendor_data_file, file_type, data_file_type;
+
+type vendor_sysfs_devicetree_cpu, sysfs_type, fs_type;

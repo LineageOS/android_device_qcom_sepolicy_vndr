@@ -334,7 +334,7 @@
 /(vendor|system/vendor)/bin/fm_qsoc_patches     u:object_r:fm_qsoc_patches_exec:s0
 /(vendor|system/vendor)/bin/chre                u:object_r:chre_exec:s0
 /(vendor|system/vendor)/bin/tloc_daemon         u:object_r:tlocd_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.factory@1\.0-service      u:object_r:vendor_hal_factory_qti_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.factory@1\.[0-1]-service  u:object_r:vendor_hal_factory_qti_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.allocator@1\.0-service   u:object_r:hal_graphics_allocator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.allocator-service   u:object_r:hal_graphics_allocator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.composer@1\.0-service   u:object_r:hal_graphics_composer_default_exec:s0
@@ -470,7 +470,7 @@
 /sys/devices/soc/soc:hbtp/secure_touch_enable                       u:object_r:hbtp_kernel_sysfs:s0
 /sys/devices/soc/soc:hbtp/secure_touch_userspace                    u:object_r:hbtp_kernel_sysfs:s0
 /sys/kernel/hbtp/display_pwr                                        u:object_r:hbtp_kernel_sysfs:s0
-/sys/firmware/devicetree/base/cpus(/.*)?                            u:object_r:sysfs_devices_system_cpu:s0
+/sys/firmware/devicetree/base/cpus(/.*)?                            u:object_r:vendor_sysfs_devicetree_cpu:s0
 /sys/devices/vendor/vendor:bt_wcn3990/extldo                        u:object_r:sysfs_bluetooth_writable:s0
 /sys/devices/vendor/vendor:bt_wcn3990/rfkill/rfkill0/state          u:object_r:sysfs_bluetooth_writable:s0
 /sys/devices/bt_qca6174/extldo                                      u:object_r:sysfs_bluetooth_writable:s0

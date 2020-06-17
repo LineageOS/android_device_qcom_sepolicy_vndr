@@ -30,7 +30,7 @@
 /(vendor|system/vendor)/bin/qmi-framework-tests/qmi_test.*      u:object_r:vendor_qmi_test_service_exec:s0
 
 /(vendor|system/vendor)/bin/diag_dci_client      u:object_r:vendor_diagdciclient_exec:s0
-
+/vendor/bin/diag-router         u:object_r:vendor_diag-router_exec:s0
 /(vendor|system/vendor)/bin/ptt_socket_app      u:object_r:vendor_wcnss_service_exec:s0
 /(vendor|system/vendor)/bin/athdiag             u:object_r:vendor_wcnss_service_exec:s0
 /(vendor|system/vendor)/bin/cld-fwlog-netlink                   u:object_r:vendor_wcnss_service_exec:s0
@@ -94,4 +94,4 @@
 # Console via JTAG - debug only
 /dev/hvc0							u:object_r:console_device:s0
 /data/vendor/gpu(/.*)? u:object_r:vendor_gles_data_file:s0
-/data/vendor/ts_loopback(/.*)?                                  u:object_r:vendor_tui_data_file:s0
+/data/vendor/ts_loopback(/.*)?                                  u:object_r:vendor_ts_loopback_data_file:s0
