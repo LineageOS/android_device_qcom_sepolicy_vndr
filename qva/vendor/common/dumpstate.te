@@ -38,3 +38,6 @@ allow dumpstate firmware_file:dir getattr;
 allow dumpstate firmware_file:filesystem getattr;
 dontaudit dumpstate sysfs:file *;
 allow dumpstate debugfs_mmc:dir search;
+
+# Signal native process to dump its stack 
+allow dumpstate vendor_hal_neuralnetworks_default:process signal;

@@ -126,11 +126,13 @@
 /vendor/bin/ssr_diag            u:object_r:vendor_ssr_diag_exec:s0
 /vendor/bin/pm-service          u:object_r:vendor_per_mgr_exec:s0
 /vendor/bin/pm-proxy            u:object_r:vendor_per_proxy_exec:s0
+/vendor/bin/vmmgr               u:object_r:vendor_vm_mgr_exec:s0
 /vendor/bin/qseecomd            u:object_r:tee_exec:s0
 /vendor/bin/subsystem_ramdump   u:object_r:vendor_subsystem_ramdump_exec:s0
 /vendor/bin/adsprpcd            u:object_r:vendor_adsprpcd_exec:s0
 /vendor/bin/cdsprpcd            u:object_r:vendor_cdsprpcd_exec:s0
 /vendor/bin/audioadsprpcd       u:object_r:vendor_audioadsprpcd_exec:s0
+/vendor/bin/dspservice          u:object_r:vendor_dspservice_exec:s0
 /vendor/bin/irsc_util           u:object_r:vendor_irsc_util_exec:s0
 /vendor/bin/rmt_storage         u:object_r:vendor_rmt_storage_exec:s0
 /vendor/bin/tftp_server         u:object_r:vendor_rfs_access_exec:s0
@@ -149,12 +151,12 @@
 /vendor/bin/imsqmidaemon        u:object_r:vendor_ims_exec:s0
 /vendor/bin/imsdatadaemon       u:object_r:vendor_ims_exec:s0
 /vendor/bin/ims_rtp_daemon      u:object_r:vendor_hal_imsrtp_exec:s0
+/vendor/bin/imsdaemon           u:object_r:vendor_ims_service_exec:s0
 /vendor/bin/ipacm               u:object_r:hal_tetheroffload_default_exec:s0
 /vendor/bin/ipacm-diag          u:object_r:hal_tetheroffload_default_exec:s0
 /vendor/bin/cnd                 u:object_r:vendor_cnd_exec:s0
 /vendor/bin/oemlock_provision   u:object_r:hal_bootctl_default_exec:s0
 /vendor/bin/oemlock-bridge      u:object_r:hal_bootctl_default_exec:s0
-/vendor/bin/diag-router         u:object_r:vendor_diag-router_exec:s0
 /(vendor|system/vendor)/bin/msm_irqbalance u:object_r:vendor_msm_irqbalanced_exec:s0
 /vendor/bin/hw/android\.hardware\.usb@1\.1-service.crosshatch             u:object_r:hal_usb_default_exec:s0
 /vendor/bin/chre                u:object_r:vendor_chre_exec:s0
@@ -182,6 +184,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.allocator-service   u:object_r:hal_graphics_allocator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.composer@1\.0-service   u:object_r:hal_graphics_composer_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.composer-service   u:object_r:hal_graphics_composer_default_exec:s0
+/(vendor|system/vendor)/bin/init\.qti\.display_boot\.sh  u:object_r:qti_display_boot_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.tui_comm@1\.0-service-qti u:object_r:vendor_hal_tui_comm_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qdutils_disp@1\.0-service-qti u:object_r:vendor_hal_qdutils_disp_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.trustedui@1\.0-service-qti u:object_r:vendor_hal_trustedui_qti_exec:s0
@@ -276,6 +279,7 @@
 /vendor/lib(64)?/libcdsprpc\.so             u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libsdsprpc\.so             u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmdsprpc\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor.qti.hardware.dsp@1.0\.so     u:object_r:same_process_hal_file:s0
 /vendor/lib/dsp/fastrpc_shell_0             u:object_r:same_process_hal_file:s0
 
 # Fastcv libs
@@ -296,6 +300,7 @@
 /data/vendor/wifi/wlan_logs(/.*)?      u:object_r:vendor_wifi_vendor_log_data_file:s0
 /data/vendor/ramdump(/.*)?             u:object_r:vendor_ramdump_vendor_data_file:s0
 /data/vendor/ssrdump(/.*)?             u:object_r:vendor_ramdump_vendor_data_file:s0
+/data/vendor/pddump(/.*)?              u:object_r:vendor_pddump_data_file:s0
 /data/vendor/modem_dump(/.*)?          u:object_r:vendor_modem_dump_file:s0
 /data/vendor/ipa(/.*)?                 u:object_r:vendor_ipa_vendor_data_file:s0
 /data/vendor/sensors(/.*)?             u:object_r:vendor_sensors_vendor_data_file:s0
@@ -307,6 +312,7 @@
 /data/vendor/tzstorage(/.*)?           u:object_r:vendor_data_tzstorage_file:s0
 /data/vendor/tombstones(/.*)?       u:object_r:vendor_tombstone_data_file:s0
 /data/vendor/time(/.*)?                u:object_r:vendor_time_data_file:s0
+/data/vendor/firmware(/.*)?                u:object_r:vendor_firmware_data_file:s0
 
 /data/vendor/mdmhelperdata(/.*)?       u:object_r:vendor_mdmhelperdata_data_file:s0
 /data/vendor/bluetooth(/.*)?           u:object_r:vendor_bt_data_file:s0
@@ -432,8 +438,13 @@
 
 /sys/devices(/platform)?/soc/[a-f0-9]+.sdhci/mmc_host/mmc0/clk_scaling(/.*)? u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/clkscale_enable        u:object_r:vendor_sysfs_scsi_host:s0
+/sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/auto_hibern8           u:object_r:vendor_sysfs_scsi_host:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+/host0/scsi_host/host0(/.*)?  u:object_r:vendor_sysfs_scsi_host:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/host0/target0:0:0/0:0:0:[0-9]+/scsi_generic(/.*)?     u:object_r:vendor_sysfs_scsi_target:s0
+
+# VM Neuron block device mapping node
+/sys/devices/platform/soc/soc:qcom,svm_neuron_block/soc:qcom,svm_neuron_block:application/blk_name  u:object_r:vendor_sysfs_svm_neuron:s0
+
 /data/vendor/media(/.*)?                                            u:object_r:vendor_media_data_file:s0
 /data/vendor/mediadrm(/.*)?                                         u:object_r:vendor_mediadrm_vendor_data_file:s0
 /data/vendor/nnhal(/.*)?                                            u:object_r:vendor_hal_neuralnetworks_data_file:s0
@@ -485,3 +496,5 @@
 /sys/module/msm_isense_cdsp/data                        u:object_r:sysfs_thermal:s0
 
 /(vendor|system/vendor)/bin/vendor_modprobe\.sh        u:object_r:vendor_modinstall-sh_exec:s0
+
+/vendor/bin/embmsslServer       u:object_r:vendor_hal_embmssl_qti_exec:s0

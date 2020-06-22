@@ -66,6 +66,7 @@ type vendor_sysfs_usbpd_device, sysfs_type, fs_type;
 type vendor_sysfs_vadc_dev, sysfs_type, fs_type;
 type vendor_sysfs_lcd, sysfs_type, fs_type;
 type vendor_sysfs_adsp_ssr, sysfs_type, fs_type;
+type vendor_sysfs_svm_neuron, sysfs_type, fs_type;
 
 type vendor_debugfs_clk, debugfs_type, fs_type;
 type vendor_debugfs_ion, debugfs_type, fs_type;
@@ -139,6 +140,7 @@ type vendor_display_vendor_data_file, file_type, data_file_type;
 type vendor_nfc_vendor_data_file, file_type, data_file_type;
 type vendor_radio_vendor_data_file, file_type, data_file_type, mlstrustedobject;
 type vendor_ramdump_vendor_data_file, file_type, data_file_type, mlstrustedobject;
+type vendor_pddump_data_file, file_type, data_file_type;
 type vendor_modem_dump_file, file_type, data_file_type;
 type vendor_sensors_vendor_data_file, file_type, data_file_type;
 type vendor_port_bridge_data_file, file_type, data_file_type;
@@ -146,6 +148,7 @@ type bt_firmware_file, file_type, contextmount_type, vendor_file_type;
 type vendor_firmware_file, vendor_file_type, file_type;
 type vendor_mdmhelperdata_data_file, file_type, data_file_type;
 type vendor_mbn_data_file, file_type, data_file_type;
+type vendor_firmware_data_file, file_type, data_file_type;
 
 #vendor capability configstore hal
 type vendor_capabilityconfigstore_data_file, file_type, data_file_type;
@@ -208,3 +211,5 @@ type vendor_sysfs_suspend, fs_type, sysfs_type;
 type vendor_sysfs_kgsl_gpu_model, sysfs_type, fs_type;
 
 type vendor_sysfs_kgsl_gpuclk, sysfs_type, fs_type;
+
+type vendor_sysfs_devicetree_cpu, sysfs_type, fs_type;

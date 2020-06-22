@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -71,7 +71,6 @@ vendor.qti.hardware.wifi.wifilearner::IWifiStats             u:object_r:vendor_h
 vendor.qti.qspmhal::IQspmhal                                 u:object_r:vendor_hal_qspmhal_hwservice:s0
 vendor.qti.hardware.secureprocessor.device::ISecureProcessor    u:object_r:vendor_hal_secureprocessor_hwservice:s0
 vendor.qti.hardware.cryptfshw::ICryptfsHw                    u:object_r:hal_keymaster_hwservice:s0
-vendor.qti.hardware.embmssl::IEmbms                          u:object_r:vendor_hal_embmssl_hwservice:s0
 vendor.qti.hardware.qseecom::IQSEECom                        u:object_r:vendor_hal_qseecom_hwservice:s0
 vendor.qti.hardware.qccvndhal::IQccvndhal                     u:object_r:vendor_hal_qccvndhal_hwservice:s0
 vendor.qti.spu::ISPUManager                                  u:object_r:vendor_hal_spu_hwservice:s0

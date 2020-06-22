@@ -106,5 +106,11 @@ allow vendor_hal_perf_default self:capability { kill };
 # Allow QSPM access
 hal_client_domain(vendor_hal_perf_default, vendor_hal_qspmhal);
 
+# Allow hal_perf to set property
+set_prop(vendor_hal_perf_default, vendor_mpctl_prop)
+
 #Allow Display Config access
 hal_client_domain(vendor_hal_perf_default, hal_graphics_composer);
+
+# Allow connecting to thermal_socket
+unix_socket_connect(vendor_hal_perf_default, vendor_thermal, vendor_thermal-engine)

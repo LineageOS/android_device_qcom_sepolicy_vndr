@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -106,10 +106,6 @@ attribute vendor_spunvm_file_type;
 attribute vendor_hal_bluetooth_dun;
 attribute vendor_hal_bluetooth_dun_client;
 attribute vendor_hal_bluetooth_dun_server;
-
-attribute vendor_hal_embmssl;
-attribute vendor_hal_embmssl_client;
-attribute vendor_hal_embmssl_server;
 
 attribute vendor_hal_qccvndhal;
 attribute vendor_hal_qccvndhal_client;

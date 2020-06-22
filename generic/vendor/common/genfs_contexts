@@ -119,7 +119,7 @@ genfscon sysfs /kernel/hbtp/display_pwr                                     u:ob
 genfscon sysfs /devices/virtual/net/bond0/bonding/queue_id u:object_r:vendor_sysfs_bond0:s0
 genfscon sysfs /devices/virtual/net/bond0/queues/rx-0/rps_cpus u:object_r:vendor_sysfs_bond0:s0
 
-genfscon sysfs /firmware/devicetree/base/cpus u:object_r:sysfs_devices_system_cpu:s0
+genfscon sysfs /firmware/devicetree/base/cpus u:object_r:vendor_sysfs_devicetree_cpu:s0
 
 genfscon sysfs /bus/spmi/devices u:object_r:vendor_sysfs_spmi_dev:s0
 

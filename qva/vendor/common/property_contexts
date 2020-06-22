@@ -43,6 +43,7 @@ vendor.perf.cores_online               u:object_r:vendor_mpctl_prop:s0
 persist.vendor.qti.                    u:object_r:vendor_mpctl_prop:s0
 ro.vendor.at_library                   u:object_r:vendor_mpctl_prop:s0
 vendor.debug.trace.perf                u:object_r:vendor_mpctl_prop:s0
+vendor.target.init.complete            u:object_r:vendor_mpctl_prop:s0
 vendor.iop.enable_uxe                  u:object_r:vendor_iop_prop:s0
 vendor.perf.iop_v3.enable              u:object_r:vendor_iop_prop:s0
 vendor.perf.iop_v3.enable.debug        u:object_r:vendor_iop_prop:s0
@@ -89,6 +90,7 @@ ctl.vendor.sensingdaemon                     u:object_r:vendor_ctl_vendor_wigigs
 # netmgrd ko loading
 persist.vendor.data.shs_ko_load u:object_r:vendor_data_ko_prop:s0
 persist.vendor.data.perf_ko_load u:object_r:vendor_data_ko_prop:s0
+persist.vendor.data.offload_ko_load u:object_r:vendor_data_ko_prop:s0
 
 # hvdcp_opti properties
 persist.vendor.bms.                          u:object_r:vendor_hvdcp_opti_prop:s0

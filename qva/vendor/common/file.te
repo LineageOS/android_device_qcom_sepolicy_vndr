@@ -129,7 +129,7 @@ type vendor_sysfs_bootguestvm, fs_type, sysfs_type;
 type vendor_qspmhal_data_file, file_type, data_file_type;
 
 #Memory offlining file types
-type vendor_sysfs_memory_offline, sysfs_type, fs_type;
+type vendor_sysfs_system_memory, sysfs_type, fs_type;
 
 type vendor_sysfs_qfprom, fs_type, sysfs_type;
 

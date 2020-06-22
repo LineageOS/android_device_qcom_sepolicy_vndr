@@ -33,3 +33,6 @@ hal_client_domain(bluetooth, vendor_hal_perf);
 
 #allow bluetooth to access bluetooth_dun hal
 hal_client_domain(bluetooth, vendor_hal_bluetooth_dun);
+
+#allow bluetooth to access qspmhal
+hal_client_domain(bluetooth, vendor_hal_qspmhal)

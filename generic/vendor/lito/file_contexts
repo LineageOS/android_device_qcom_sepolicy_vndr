@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2016-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -204,4 +204,9 @@
 
 /sys/devices/platform/soc/780000.qfprom/qfprom0/feat_conf10             u:object_r:vendor_sysfs_qfprom:s0
 
-/vendor/bin/embmsslServer       u:object_r:vendor_hal_embmssl_qti_exec:s0
+###################################
+# sysfs files
+#
+/sys/devices/virtual/block/dm-[0-6]/queue/read_ahead_kb                  u:object_r:vendor_sysfs_mmc_host:s0
+/sys/devices/platform/soc/4744000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/read_ahead_kb u:object_r:vendor_sysfs_mmc_host:s0
+
