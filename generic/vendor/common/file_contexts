@@ -96,10 +96,10 @@
 /dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
 /dev/wlan                                       u:object_r:vendor_wlan_device:s0
 /dev/socket/qmux_radio(/.*)?                    u:object_r:vendor_qmuxd_socket:s0
+/dev/socket/qcrild(/.*)?                        u:object_r:vendor_rild_socket:s0
 /data/vendor/modem_config(/.*)?                 u:object_r:vendor_mbn_data_file:s0
 /dev/socket/qdcmsocket                          u:object_r:vendor_qdcmsocket_socket:s0
 /dev/qce                                        u:object_r:vendor_qce_device:s0
-
 # Block device holding the GPT, where the A/B attributes are stored.
 /dev/block/sda                                  u:object_r:vendor_gpt_block_device:s0
 

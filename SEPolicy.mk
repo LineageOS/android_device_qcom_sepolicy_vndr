@@ -2,6 +2,9 @@
 ifeq ($(call is-vendor-board-platform,QCOM),true)
 SEPOLICY_PATH:= device/qcom/sepolicy_vndr
 QSSI_SEPOLICY_PATH:= device/qcom/sepolicy
+SYS_ATTR_PROJECT_PATH := $(TOP)/device/qcom/sepolicy/generic/public/attribute
+HAS_SYS_ATTR_PROJECT_PATH := false
+HAS_SYS_ATTR_PROJECT_PATH := $(shell if [ -d $(SYS_ATTR_PROJECT_PATH) ] ; then echo true; fi)
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR := \
     $(BOARD_PLAT_PUBLIC_SEPOLICY_DIR) \
     $(QSSI_SEPOLICY_PATH)/generic/public
@@ -51,6 +54,13 @@ ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/generic/vendor/test
     BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/qva/vendor/test
     endif
+    ifeq ($(HAS_SYS_ATTR_PROJECT_PATH),true)
+    BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(QSSI_SEPOLICY_PATH)/generic/public/attribute \
+                                      $(QSSI_SEPOLICY_PATH)/qva/public/attribute
+    else
+    BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/generic/vendor/common/attribute \
+                           $(SEPOLICY_PATH)/qva/vendor/common/attribute
+    endif
 endif
 
 ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
@@ -60,6 +70,13 @@ ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
                  $(SEPOLICY_PATH)/legacy/vendor/common/sysmonapp \
                  $(SEPOLICY_PATH)/legacy/vendor/ssg \
                  $(SEPOLICY_PATH)/legacy/vendor/common
+
+    ifeq ($(HAS_SYS_ATTR_PROJECT_PATH),true)
+    BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(QSSI_SEPOLICY_PATH)/generic/public/attribute \
+                                      $(QSSI_SEPOLICY_PATH)/qva/public/attribute
+    else
+    BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/common/attribute
+    endif
 
     ifeq ($(TARGET_SEPOLICY_DIR),)
       BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/$(TARGET_BOARD_PLATFORM)

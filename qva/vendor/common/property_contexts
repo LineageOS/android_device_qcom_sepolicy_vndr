@@ -121,3 +121,6 @@ ctl.start$vendor.qmuxd                       u:object_r:vendor_ctl_qmuxd_prop:s0
 
 #bluetooth property
 ro.vendor.bt.enablelazyhal                   u:object_r:vendor_bluetooth_prop:s0 exact bool
+
+#SLM
+persist.vendor.slm.                          u:object_r:vendor_slm_prop:s0

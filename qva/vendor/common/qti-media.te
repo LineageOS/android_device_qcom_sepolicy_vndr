@@ -1,5 +1,4 @@
-
-# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -26,28 +25,11 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type vendor_qtiloopback_native, domain;
-type vendor_qtiloopback_native_exec, exec_type, vendor_file_type, file_type;
-init_daemon_domain(vendor_qtiloopback_native)
-vndbinder_use(vendor_qtiloopback)
-userdebug_or_eng(`
+type vendor_qti_media, domain;
+type vendor_qti_media_exec, exec_type, vendor_file_type,file_type;
 
-hal_server_domain_bypass(vendor_qtiloopback_native,vendor_qtiloopback)
-binder_call(vendor_qtiloopback_client,vendor_qtiloopback_server)
-binder_call(vendor_qtiloopback_server,vendor_qtiloopback_client)
-hal_attribute_hwservice(vendor_qtiloopback, vendor_qtiloopback_hwservice)
+init_daemon_domain(vendor_qti_media)
 
-netmgr_socket(vendor_qtiloopback_native)
-allow vendor_qtiloopback_native self:{
-    # Allow receiving NETLINK responses from WLAN driver.
-    netlink_socket
-    netlink_generic_socket
-    qipcrtr_socket
-    netlink_route_socket
-} create_socket_perms_no_ioctl;
-
-allow vendor_qtiloopback_native vendor_sysfs_diag:dir search;
-allow vendor_qtiloopback_native self:netlink_route_socket nlmsg_read;
-allow vendor_qtiloopback_native self:udp_socket { create ioctl };
-
-')
+allow vendor_qti_media vendor_qti_media_exec:file rx_file_perms;
+allow vendor_qti_media vendor_toolbox_exec:file rx_file_perms;
+set_prop(vendor_qti_media, vendor_video_prop)

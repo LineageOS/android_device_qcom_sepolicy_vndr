@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2016-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,6 +24,50 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-rcs                                                  u:object_r:vendor_radio_service:s0
-com.fingerprints.extension.IFingerprintNavigation    u:object_r:vendor_fingerprint_service:s0
-com.qualcomm.qti.uceservice                          u:object_r:vendor_imsuce_service:s0
+
+attribute vendor_hal_hbtp;
+attribute vendor_hal_hbtp_client;
+attribute vendor_hal_hbtp_server;
+
+attribute vendor_hal_qdutils_disp;
+attribute vendor_hal_qdutils_disp_client;
+attribute vendor_hal_qdutils_disp_server;
+
+attribute vendor_hal_trustedui;
+attribute vendor_hal_trustedui_client;
+attribute vendor_hal_trustedui_server;
+
+attribute vendor_hal_tui_comm;
+attribute vendor_hal_tui_comm_client;
+attribute vendor_hal_tui_comm_server;
+
+attribute vendor_hal_display_color;
+attribute vendor_hal_display_color_client;
+attribute vendor_hal_display_color_server;
+
+attribute vendor_hal_display_postproc;
+attribute vendor_hal_display_postproc_client;
+attribute vendor_hal_display_postproc_server;
+
+# All types in /mnt/vendor/persist
+attribute vendor_persist_type;
+
+attribute vendor_hal_capabilityconfigstore_qti;
+attribute vendor_hal_capabilityconfigstore_qti_client;
+attribute vendor_hal_capabilityconfigstore_qti_server;
+
+attribute vendor_hal_dataconnection_qti;
+attribute vendor_hal_dataconnection_qti_client;
+attribute vendor_hal_dataconnection_qti_server;
+
+attribute vendor_hal_embmssl;
+attribute vendor_hal_embmssl_client;
+attribute vendor_hal_embmssl_server;
+
+attribute vendor_hal_dspmanager;
+attribute vendor_hal_dspmanager_client;
+attribute vendor_hal_dspmanager_server;
+
+attribute vendor_hal_diaghal;
+attribute vendor_hal_diaghal_client;
+attribute vendor_hal_diaghal_server;

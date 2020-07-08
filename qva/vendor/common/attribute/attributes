@@ -110,3 +110,12 @@ attribute vendor_hal_bluetooth_dun_server;
 attribute vendor_hal_qccvndhal;
 attribute vendor_hal_qccvndhal_client;
 attribute vendor_hal_qccvndhal_server;
+
+attribute vendor_qtiloopback;
+attribute vendor_qtiloopback_server;
+attribute vendor_qtiloopback_client;
+
+attribute vendor_hal_debugutils;
+attribute vendor_hal_debugutils_client;
+attribute vendor_hal_debugutils_server;
+

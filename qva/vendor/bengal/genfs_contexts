@@ -76,19 +76,3 @@ genfscon sysfs /devices/platform/soc/c800000.qcom,icnss u:object_r:sysfs_net:s0
 
 #fps sysfs-node
 
-#SSR nodes
-genfscon sysfs /devices/platform/soc/ab00000.qcom,lpass/subsys0/name   u:object_r:vendor_sysfs_ssr:s0
-genfscon sysfs /devices/platform/soc/b300000.qcom,turing/subsys1/name  u:object_r:vendor_sysfs_ssr:s0
-genfscon sysfs /devices/platform/soc/5ab0000.qcom,venus/subsys2/name   u:object_r:vendor_sysfs_ssr:s0
-genfscon sysfs /devices/platform/soc/6080000.qcom,mss/subsys3/name     u:object_r:vendor_sysfs_ssr:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys4/name     u:object_r:vendor_sysfs_ssr:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys5/name    u:object_r:vendor_sysfs_ssr:s0
-
-
-genfscon sysfs /devices/platform/soc/ab00000.qcom,lpass/subsys0/restart_level  u:object_r:vendor_sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/b300000.qcom,turing/subsys1/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/5ab0000.qcom,venus/subsys2/restart_level  u:object_r:vendor_sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/6080000.qcom,mss/subsys3/restart_level    u:object_r:vendor_sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys4/restart_level    u:object_r:vendor_sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys5/restart_level   u:object_r:vendor_sysfs_ssr_toggle:s0
-

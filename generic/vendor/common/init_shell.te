@@ -85,6 +85,7 @@ set_prop(vendor_qti_init_shell, vendor_audio_prop)
 get_prop(vendor_qti_init_shell, exported3_radio_prop)
 set_prop(vendor_qti_init_shell, vendor_gpu_prop)
 set_prop(vendor_qti_init_shell, vendor_sensors_prop)
+set_prop(vendor_qti_init_shell, vendor_adsprpc_prop)
 
 allow vendor_qti_init_shell {
     sysfs_devices_system_cpu

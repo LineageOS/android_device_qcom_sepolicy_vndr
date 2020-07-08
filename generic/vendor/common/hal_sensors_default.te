@@ -33,7 +33,6 @@ get_prop(hal_sensors_default, vendor_sensors_prop)
 userdebug_or_eng(`
   diag_use(hal_sensors_default)
   get_prop(hal_sensors_default, vendor_sensors_dbg_prop)
-  allow hal_sensors_default vendor_sysfs_timestamp_switch:file r_file_perms;
   # allow to trigger force crash to collect ramdump
   allow hal_sensors_default proc_sysrq:file rw_file_perms;
 ')

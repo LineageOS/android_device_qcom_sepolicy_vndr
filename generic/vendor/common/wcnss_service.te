@@ -64,7 +64,6 @@ allow vendor_wcnss_service vendor_sysfs_data:file r_file_perms;
 userdebug_or_eng(`
   r_dir_file(vendor_wcnss_service, vendor_proc_wifi_dbg)
   r_dir_file(vendor_wcnss_service, vendor_sysfs_diag)
-  allow vendor_wcnss_service vendor_sysfs_timestamp_switch:file r_file_perms;
 ')
 
 userdebug_or_eng(`
