@@ -26,3 +26,4 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 vendor.qti.memory.pasrmanager::IPasrManager                  u:object_r:vendor_hal_pasrmanager_memory_hwservice:s0
+vendor.qti.hardware.eid::IEid                                u:object_r:vendor_hal_eid_hwservice:s0

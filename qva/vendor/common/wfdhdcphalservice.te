@@ -43,3 +43,5 @@ hal_client_domain(vendor_wfdhdcphalservice_qti, hal_graphics_composer)
 #Allow to use fd from mediacodec and wfd app
 allow vendor_wfdhdcphalservice_qti { mediacodec vendor_wfd_app }:fd use;
 
+#Fallback for seccomp
+crash_dump_fallback(vendor_wfdhdcphalservice_qti)
