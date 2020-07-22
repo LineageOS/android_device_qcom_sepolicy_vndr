@@ -35,7 +35,6 @@ set_prop(vendor_ims, vendor_ims_prop)
 get_prop(vendor_ims, vendor_ims_prop)
 get_prop(vendor_ims, vendor_cnd_prop)
 
-allow vendor_ims vendor_sysfs_timestamp_switch:file r_file_perms;
 allow vendor_ims vendor_sysfs_data:file r_file_perms;
 
 allow vendor_ims self:capability net_bind_service;

@@ -35,7 +35,6 @@ net_domain(vendor_hal_rcsservice)
 get_prop(vendor_hal_rcsservice, vendor_ims_prop)
 set_prop(vendor_hal_rcsservice, vendor_ims_prop)
 
-allow vendor_hal_rcsservice vendor_sysfs_timestamp_switch:file r_file_perms;
 allow vendor_hal_rcsservice vendor_sysfs_data:file r_file_perms;
 allow vendor_hal_rcsservice self: { socket qipcrtr_socket } create_socket_perms_no_ioctl;
 #required for socket creation

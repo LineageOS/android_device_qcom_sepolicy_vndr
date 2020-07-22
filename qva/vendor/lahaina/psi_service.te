@@ -35,5 +35,20 @@ init_daemon_domain(vendor_psiservice)
 # Allow PSI Service to be a client of PASR HAL
 hal_client_domain(vendor_psiservice, vendor_hal_pasrmanager_memory)
 
+# Read /proc/zoneinfo
+allow vendor_psiservice proc_zoneinfo:file r_file_perms;
+
+# Read /proc/meminfo
+allow vendor_psiservice proc_meminfo:file r_file_perms;
+
+# Read /proc/vmstat
+allow vendor_psiservice proc_vmstat:file r_file_perms;
+
+# Read/Write /proc/pressure/memory
+allow vendor_psiservice proc_pressure_mem:file rw_file_perms;
+
+# Read sysfs directories
+allow vendor_psiservice sysfs:dir r_dir_perms;
+
 # For reading "vendor.pasr." properties
 get_prop(vendor_psiservice, vendor_pasr_prop)

@@ -26,3 +26,4 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 type vendor_hal_pasrmanager_memory_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_eid_hwservice, hwservice_manager_type, protected_hwservice;

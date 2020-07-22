@@ -43,3 +43,4 @@ type vendor_hal_display_postproc_hwservice, hwservice_manager_type, protected_hw
 type vendor_hal_capabilityconfigstore_qti_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_camera_postproc_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_embmssl_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_dspmanager_hwservice, hwservice_manager_type;

@@ -56,7 +56,6 @@ type vendor_sysfs_slpi, fs_type, sysfs_type;
 type vendor_sysfs_spmi_dev, sysfs_type, fs_type;
 type vendor_sysfs_ssr, sysfs_type, fs_type;
 type vendor_sysfs_ssr_toggle, sysfs_type, fs_type;
-type vendor_sysfs_timestamp_switch, sysfs_type, fs_type;
 type vendor_sysfs_touch, sysfs_type, fs_type;
 type vendor_sysfs_uio_file, sysfs_type, fs_type;
 type vendor_sysfs_usb_c, sysfs_type, fs_type;
@@ -85,6 +84,7 @@ type vendor_proc_audiod, fs_type, proc_type;
 type vendor_proc_shs, fs_type, proc_type;
 
 type vendor_qmuxd_socket, file_type;
+type vendor_rild_socket, file_type;
 type vendor_netmgrd_socket, file_type;
 type vendor_port-bridge_socket, file_type;
 type vendor_thermal_socket, file_type;

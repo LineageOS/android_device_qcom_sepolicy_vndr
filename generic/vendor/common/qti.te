@@ -41,7 +41,6 @@ allow vendor_qti { vendor_shell_exec }:file rx_file_perms;
 #diag
 userdebug_or_eng(`
     diag_use(vendor_qti)
-    allow vendor_qti { vendor_sysfs_data vendor_sysfs_timestamp_switch} :file r_file_perms;
 ')
 allow vendor_qti vendor_mhi_device:chr_file rw_file_perms;
 allow vendor_qti vendor_sysfs_mhi:dir r_dir_perms;

@@ -42,11 +42,8 @@ unix_socket_connect(vendor_hal_imsrtp, vendor_ims, vendor_ims)
 #allow ims_rtp_daemon to connect to server socket hosted in imsdaemon
 unix_socket_connect(vendor_hal_imsrtp, vendor_ims, vendor_ims_service)
 
-allow vendor_hal_imsrtp vendor_sysfs_timestamp_switch:file r_file_perms;
-
 allow vendor_hal_imsrtp self:capability net_bind_service;
 
-allow vendor_hal_imsrtp vendor_sysfs_timestamp_switch:file r_file_perms;
 allow vendor_hal_imsrtp ion_device:chr_file r_file_perms;
 allow vendor_hal_imsrtp vendor_sysfs_data:file r_file_perms;
 r_dir_file(vendor_hal_imsrtp, vendor_sysfs_diag)
