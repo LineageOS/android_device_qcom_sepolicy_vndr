@@ -174,7 +174,6 @@
 #
 /sys/devices/virtual/bdi/179:0/read_ahead_kb  u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices/virtual/bdi/179:32/read_ahead_kb  u:object_r:vendor_sysfs_mmc_host:s0
-/sys/devices/virtual/block/dm-[0-8]/queue/read_ahead_kb  u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices/platform/soc/7c4000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/read_ahead_kb u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices/platform/soc/7c4000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/queue/read_ahead_kb u:object_r:vendor_sysfs_mmc_host:s0
 

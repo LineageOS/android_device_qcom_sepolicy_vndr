@@ -60,3 +60,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-cpu-ddr-latfloor/devfreq u:ob
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-cpu-llcc-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-llcc-ddr-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-cpu-ddr-qoslat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+
+#qdss sysfs-node
+genfscon sysfs /devices/platform/soc/8047000.tmc/coresight-tmc-etf u:object_r:vendor_sysfs_qdss_dev:s0
+genfscon sysfs /devices/platform/soc/8048000.tmc/coresight-tmc-etr u:object_r:vendor_sysfs_qdss_dev:s0
+genfscon sysfs /devices/platform/soc/8002000.stm/coresight-stm u:object_r:vendor_sysfs_qdss_dev:s0
+genfscon sysfs /devices/platform/soc/8a03000.csr/coresight-swao-csr u:object_r:vendor_sysfs_qdss_dev:s0

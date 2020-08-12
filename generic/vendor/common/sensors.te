@@ -72,6 +72,7 @@ r_dir_file(vendor_sensors, adsprpcd_file)
 get_prop(vendor_sensors, vendor_adsprpc_prop)
 
 allow vendor_sensors vendor_persist_sensors_file:fifo_file create_file_perms;
+allow vendor_sensors vendor_sensors_vendor_data_file:fifo_file create_file_perms;
 # Access to /persist/vendor_sensors
 allow vendor_sensors vendor_persist_sensors_file:dir create_dir_perms;
 allow vendor_sensors vendor_persist_sensors_file:file create_file_perms;

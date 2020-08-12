@@ -1,4 +1,4 @@
-# Copyright (c) 2017, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,16 +25,13 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# ssgtzd - SSG TZ Daemon
-type ssgtzd, domain, mlstrustedsubject;
-type ssgtzd_exec, exec_type, vendor_file_type, file_type;
+#Define Domain
+type vendor_hal_debugutils_default, domain;
+type vendor_hal_debugutils_default_exec, exec_type, vendor_file_type, file_type;
+hal_server_domain(vendor_hal_debugutils_default, vendor_hal_debugutils)
+init_daemon_domain(vendor_hal_debugutils_default)
 
-init_daemon_domain(ssgtzd)
-
-#Allow access to smcinvoke device
-allow ssgtzd tee_device:chr_file rw_file_perms;
-
-allow ssgtzd ssg_app:unix_stream_socket connectto;
-#Allow access to firmware/image
-allow ssgtzd vendor_firmware_file:dir r_dir_perms;
-allow ssgtzd vendor_firmware_file:file r_file_perms;
+permissive vendor_hal_debugutils_default;
+binder_call(vendor_hal_debugutils_server, vendor_hal_debugutils_client);
+binder_call(vendor_hal_debugutils_client, vendor_hal_debugutils_server);
+hal_attribute_hwservice(vendor_hal_debugutils,hal_debugutils_hwservice);

@@ -145,6 +145,7 @@ genfscon sysfs /devices/platform/soc/18590100.qcom,cpu4-cpu-l3-lat/devfreq u:obj
 genfscon sysfs /devices/platform/soc/18590100.qcom,cpu5-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/18590100.qcom,cpu6-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/18590100.qcom,cpu7-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/18590100.qcom,cpu7-cpu-l3-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/18590100.qcom,snoop-l3-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0

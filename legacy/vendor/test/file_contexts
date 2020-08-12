@@ -66,6 +66,9 @@
 /(vendor|system/vendor)/bin/StoreKeybox         u:object_r:sectest_exec:s0
 /(vendor|system/vendor)/bin/InstallKeybox                       u:object_r:sectest_exec:s0
 
+#context for debugutils HAL
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.debugutils@1\.0-service        u:object_r:vendor_hal_debugutils_default_exec:s0
+
 #Authentication and FIDO
 /(vendor|system/vendor)/bin/sampleauthdaemon    u:object_r:fidotest_exec:s0
 /(vendor|system/vendor)/bin/qseeproxysampledaemon u:object_r:qseeproxysample_exec:s0

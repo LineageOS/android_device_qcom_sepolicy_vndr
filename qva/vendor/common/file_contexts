@@ -173,6 +173,7 @@
 /sys/devices(/platform)?/soc/[a-z0-9]+\.qcom,pcie/pci[0-9:]+/[0-9:\.]+/[0-9:\.]+/net/wigig0/gro_flush_timeout     u:object_r:vendor_sysfs_wigig:s0
 
 /sys/devices(/platform)?/soc/soc:qcom,gpubw/devfreq/soc:qcom,gpubw(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/class/kgsl/kgsl/proc(/.*)?                                    u:object_r:vendor_sysfs_kgsl_proc:s0
 
 /sys/devices(/platform)?/soc/soc:qcom,spss_utils(/.*)?             u:object_r:vendor_sysfs_spss:s0
 
