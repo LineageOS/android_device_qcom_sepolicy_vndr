@@ -129,6 +129,7 @@
 /vendor/bin/pm-proxy            u:object_r:vendor_per_proxy_exec:s0
 /vendor/bin/vmmgr               u:object_r:vendor_vm_mgr_exec:s0
 /vendor/bin/qseecomd            u:object_r:tee_exec:s0
+/vendor/bin/keymasterd          u:object_r:vendor_keymasterd_exec:s0
 /vendor/bin/subsystem_ramdump   u:object_r:vendor_subsystem_ramdump_exec:s0
 /vendor/bin/adsprpcd            u:object_r:vendor_adsprpcd_exec:s0
 /vendor/bin/cdsprpcd            u:object_r:vendor_cdsprpcd_exec:s0

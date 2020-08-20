@@ -63,3 +63,5 @@ get_prop(vendor_biometricsface, vendor_adsprpc_prop);
 
 allow vendor_biometricsface fwk_camera_hwservice:hwservice_manager find;
 allow vendor_biometricsface hidl_token_hwservice:hwservice_manager find;
+
+dontaudit vendor_biometricsface system_file:file *;

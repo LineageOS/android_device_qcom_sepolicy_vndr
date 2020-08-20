@@ -43,3 +43,6 @@ allow dumpstate debugfs_mmc:dir search;
 
 # Signal native process to dump its stack 
 allow dumpstate vendor_hal_neuralnetworks_default:process signal;
+
+binder_call(dumpstate, hal_light_default)
+binder_call(dumpstate, hal_power_default)

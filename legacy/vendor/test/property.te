@@ -28,3 +28,6 @@ type sensors_dbg_prop, property_type;
 
 #WiFi Display
 type wfd_vendor_debug_prop, property_type;
+
+#debugutils HAL
+type vendor_dbg_brkpoint_prop, property_type;

@@ -31,7 +31,6 @@ type vendor_feature_enabler_client_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_feature_enabler_client)
 allow vendor_feature_enabler_client tee_device:chr_file rw_file_perms;
 allow vendor_feature_enabler_client ion_device:chr_file rw_file_perms;
-allow vendor_feature_enabler_client vendor_smcinvoke_device:chr_file rw_file_perms;
 unix_socket_connect(vendor_feature_enabler_client , vendor_ssgtzd, vendor_ssgtzd)
 
 

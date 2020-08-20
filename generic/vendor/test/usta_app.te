@@ -29,7 +29,7 @@
 ##
 ## This file defines the permissions that vendor_usta_apps can carry
 
-type vendor_usta_app, domain;
+type vendor_usta_app, domain, mlstrustedsubject;
 
 app_domain(vendor_usta_app)
 hal_client_domain(vendor_usta_app, vendor_hal_perf)
@@ -54,6 +54,9 @@ allow vendor_usta_app system_app_data_file:file create_file_perms;
 
 allow vendor_usta_app vendor_sensors_data_file:dir create_dir_perms;
 allow vendor_usta_app vendor_sensors_data_file:file create_file_perms;
+
+allow vendor_usta_app vendor_sensors_vendor_data_file:dir create_dir_perms;
+allow vendor_usta_app vendor_sensors_vendor_data_file:file create_file_perms;
 
 allow vendor_usta_app vendor_persist_sensors_file:dir create_dir_perms;
 allow vendor_usta_app vendor_persist_sensors_file:file create_file_perms;

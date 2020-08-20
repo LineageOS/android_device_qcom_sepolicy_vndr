@@ -91,6 +91,8 @@ allow vendor_hal_perf {
      vendor_sysfs_battery_supply
      vendor_sysfs_process_reclaim
      vendor_sysfs_qfprom
+     vendor_sysfs_kgsl_proc
+     sysfs_dm
 }:file rw_file_perms;
 
 allow vendor_hal_perf {
@@ -117,3 +119,6 @@ unix_socket_connect(vendor_hal_perf_default, vendor_thermal, vendor_thermal-engi
 
 #Allow display driver access
 allow vendor_hal_perf_default graphics_device:chr_file rw_file_perms;
+
+allow vendor_hal_perf_default block_device:dir { open read search };
+allow vendor_hal_perf_default proc_diskstats:file { getattr open read };
