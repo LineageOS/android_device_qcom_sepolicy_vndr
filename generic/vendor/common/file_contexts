@@ -45,6 +45,7 @@
 /dev/media([0-9])+                              u:object_r:video_device:s0
 /dev/v4l-subdev.*                               u:object_r:video_device:s0
 /dev/qseecom                                    u:object_r:tee_device:s0
+/dev/smcinvoke                                  u:object_r:tee_device:s0
 /dev/qsee_ipc_irq_spss                          u:object_r:vendor_qsee_ipc_irq_spss_device:s0
 /dev/seemplog                                   u:object_r:vendor_seemplog_device:s0
 /dev/spcom                                      u:object_r:vendor_spcom_device:s0
