@@ -30,4 +30,5 @@ type qti_display_boot_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(qti_display_boot)
 allow qti_display_boot vendor_shell_exec:file rx_file_perms;
+allow qti_display_boot vendor_toolbox_exec:file x_file_perms;
 set_prop(qti_display_boot, vendor_display_prop)

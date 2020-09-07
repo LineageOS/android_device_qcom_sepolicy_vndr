@@ -41,6 +41,4 @@ type vendor_gles_data_file, file_type, data_file_type;
 
 type vendor_ts_loopback_data_file, file_type, data_file_type;
 
-typeattribute vendor_persist_sensors_file mlstrustedobject;
-
 typeattribute vendor_sensors_vendor_data_file mlstrustedobject;

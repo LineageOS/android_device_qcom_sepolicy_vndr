@@ -90,6 +90,8 @@
 /dev/block/platform/soc/4804000.ufshc/by-name/uefisecapp_[ab]   u:object_r:vendor_uefi_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/recovery_[ab]     u:object_r:recovery_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/vbmeta_system_[ab]    u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/featenabler_[ab]  u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/multiimgoem_[ab]  u:object_r:vendor_custom_ab_block_device:s0
 
 # Block device holding the GPT, where the A/B attributes are stored.
 /dev/block/platform/soc/4804000.ufshc/sd[ade]                   u:object_r:vendor_gpt_block_device:s0
@@ -128,6 +130,8 @@
 /dev/block/platform/soc/4744000.sdhci/by-name/uefisecapp_[ab]   u:object_r:vendor_uefi_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/recovery_[ab]     u:object_r:recovery_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/vbmeta_system_[ab] u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/featenabler_[ab]  u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/multiimgoem_[ab]  u:object_r:vendor_custom_ab_block_device:s0
 
 #non A/B
 /dev/block/platform/soc/4744000.sdhci/by-name/system            u:object_r:system_block_device:s0
@@ -188,3 +192,5 @@
 /sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/restart_level    u:object_r:vendor_sysfs_ssr_toggle:s0
 /sys/devices/platform/soc/soc:qcom,kgsl-hyp/subsys[0-9]+/restart_level   u:object_r:vendor_sysfs_ssr_toggle:s0
 
+#Brightness
+/sys/devices/platform/soc/5e00000.qcom,mdss_mdp/backlight(/.*)?  u:object_r:vendor_sysfs_graphics:s0

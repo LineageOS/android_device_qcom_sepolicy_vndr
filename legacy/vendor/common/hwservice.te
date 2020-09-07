@@ -1,4 +1,4 @@
-# Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2017-2018, 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -46,7 +46,7 @@ type hal_imsrcsd_hwservice, hwservice_manager_type;
 type hal_ipacm_hwservice, hwservice_manager_type;
 type hal_vpp_hwservice, hwservice_manager_type;
 type hal_wigig_hwservice, hwservice_manager_type;
-type hal_qteeconnector_hwservice, hwservice_manager_type;
+type vendor_hal_qteeconnector_hwservice, hwservice_manager_type;
 type hal_esepowermanager_hwservice, hwservice_manager_type;
 type hal_voiceprint_hwservice, hwservice_manager_type;
 type vendor_hal_factory_qti_hwservice, hwservice_manager_type;
@@ -65,3 +65,4 @@ type hal_capabilityconfigstore_qti_hwservice, hwservice_manager_type;
 type hal_qseecom_hwservice, hwservice_manager_type, protected_hwservice;
 type hal_perfcallback_hwservice, hwservice_manager_type, protected_hwservice;
 type hal_debugutils_hwservice, hwservice_manager_type;
+type vendor_hal_dspmanager_hwservice, hwservice_manager_type;

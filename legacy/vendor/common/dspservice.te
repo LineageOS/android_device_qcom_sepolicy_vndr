@@ -1,5 +1,5 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
-#
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
 # met:
@@ -25,41 +25,36 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-## vendor_usta_app
-##
-## This file defines the permissions that vendor_usta_apps can carry
+# Policy for DSP HAL service
+type vendor_dspservice, domain;
+type vendor_dspservice_exec, exec_type, vendor_file_type, file_type;
 
-type vendor_usta_app, domain, mlstrustedsubject;
+# Started by init
+init_daemon_domain(vendor_dspservice)
 
-app_domain(vendor_usta_app)
-hal_client_domain(vendor_usta_app, vendor_hal_perf)
-get_prop(vendor_usta_app, vendor_sensors_prop)
+# Allow permissions required for this HAL server to offer a
+# HAL implementation of the specified type over HwBinder
+hal_server_domain(vendor_dspservice, vendor_hal_dspmanager)
 
-#allow only vendor_usta_app with userdebug to access ioctl
-userdebug_or_eng(`
-  diag_use(vendor_usta_app)
-  get_prop(vendor_usta_app, vendor_sensors_dbg_prop)
-  allowxperm vendor_usta_app self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
-  allow vendor_usta_app self:{ socket qipcrtr_socket } create_socket_perms;
-  allow vendor_usta_app vendor_xdsp_device:chr_file r_file_perms;
-')
+# Allow DSP clients to perform binder IPC to DSP HAL server
+binder_call(vendor_hal_dspmanager_client, vendor_hal_dspmanager_server)
+binder_call(vendor_hal_dspmanager_server, vendor_hal_dspmanager_client)
 
-allow vendor_usta_app {
-  app_api_service
-  surfaceflinger_service
-}:service_manager find;
+# Add dspservice to hwservice_manager and allow it to be discovered
+hal_attribute_hwservice(vendor_hal_dspmanager, vendor_hal_dspmanager_hwservice)
 
-allow vendor_usta_app system_app_data_file:dir create_dir_perms;
-allow vendor_usta_app system_app_data_file:file create_file_perms;
+# For reading dir/files on "/vendor/dsp"
+r_dir_file(vendor_dspservice, adsprpcd_file)
 
-allow vendor_usta_app vendor_sensors_vendor_data_file:dir create_dir_perms;
-allow vendor_usta_app vendor_sensors_vendor_data_file:file create_file_perms;
+# For reading "vendor.fastrpc." properties
+get_prop(vendor_dspservice, adsprpc_prop)
 
-dontaudit vendor_usta_app system_data_file:file open;
-allow vendor_usta_app cgroup:file w_file_perms;
+# Allow access to adsprpc secure and non-secure devices
+allow vendor_dspservice qdsp_device:chr_file r_file_perms;
+allow vendor_dspservice xdsp_device:chr_file r_file_perms;
 
-dontaudit vendor_usta_app vendor_hal_qspmhal_hwservice:hwservice_manager find;
-dontaudit vendor_usta_app gpuservice:binder call;
-userdebug_or_eng(`
-  dontaudit vendor_usta_app vendor_diag-router:unix_stream_socket connectto;
-')
+# Allow access to adsprpc ION device
+allow vendor_dspservice ion_device:chr_file r_file_perms;
+
+# Access to wakelock sysfs
+wakelock_use(vendor_dspservice)

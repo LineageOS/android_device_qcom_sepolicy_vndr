@@ -129,6 +129,7 @@
 /vendor/bin/pm-proxy            u:object_r:vendor_per_proxy_exec:s0
 /vendor/bin/vmmgr               u:object_r:vendor_vm_mgr_exec:s0
 /vendor/bin/qseecomd            u:object_r:tee_exec:s0
+/vendor/bin/keymasterd          u:object_r:vendor_keymasterd_exec:s0
 /vendor/bin/subsystem_ramdump   u:object_r:vendor_subsystem_ramdump_exec:s0
 /vendor/bin/adsprpcd            u:object_r:vendor_adsprpcd_exec:s0
 /vendor/bin/cdsprpcd            u:object_r:vendor_cdsprpcd_exec:s0
@@ -300,6 +301,7 @@
 /data/vendor/nfc(/.*)?                 u:object_r:vendor_nfc_vendor_data_file:s0
 /data/vendor/radio(/.*)?               u:object_r:vendor_radio_vendor_data_file:s0
 /data/vendor/wifi/wlan_logs(/.*)?      u:object_r:vendor_wifi_vendor_log_data_file:s0
+/data/vendor/log/wifi(/.*)?            u:object_r:vendor_log_wifi_data_file:s0
 /data/vendor/ramdump(/.*)?             u:object_r:vendor_ramdump_vendor_data_file:s0
 /data/vendor/ssrdump(/.*)?             u:object_r:vendor_ramdump_vendor_data_file:s0
 /data/vendor/pddump(/.*)?              u:object_r:vendor_pddump_data_file:s0
@@ -458,6 +460,7 @@
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,kgsl-3d0/devfreq/[a-f0-9]+.qcom,kgsl-3d0(/.*)? u:object_r:vendor_sysfs_kgsl:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model u:object_r:vendor_sysfs_kgsl_gpu_model:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk u:object_r:vendor_sysfs_kgsl_gpuclk:s0
+/sys/devices/platform/soc/3d00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpubusy u:object_r:vendor_sysfs_kgsl_gpubusy:s0
 
 /sys/devices/soc/[a-f0-9]+.ssusb/power_supply/usb(/.*)?             u:object_r:vendor_sysfs_usb_supply:s0
 
