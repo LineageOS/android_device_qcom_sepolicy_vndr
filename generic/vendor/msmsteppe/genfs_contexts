@@ -105,3 +105,6 @@ genfscon sysfs /devices/platform/soc/soc:bt_qca6174/rfkill/rfkill0/state u:objec
 
 #net sysfs
 genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/net u:object_r:sysfs_net:s0
+
+# usbpd device
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup u:object_r:sysfs_wakeup:s0
