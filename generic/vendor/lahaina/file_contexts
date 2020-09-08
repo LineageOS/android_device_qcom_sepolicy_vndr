@@ -77,6 +77,7 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/persist               u:object_r:vendor_persist_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/pmic_[ab]             u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/qupfw_[ab]            u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/qweslicstore_[ab]     u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/rpm_[ab]              u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/shrm_[ab]             u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/system_[ab]           u:object_r:system_block_device:s0
@@ -146,3 +147,15 @@
 
 /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
+
+#Display nodes
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DP-1/enabled u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-2/enabled u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-Virtual-1/enabled u:object_r:vendor_sysfs_graphics:s0
+
+#poweropt-service
+/(vendor|system/vendor)/bin/poweropt-service u:object_r:vendor_poweroptservice_exec:s0
+
+# Feature configs
+/sys/devices/platform/soc/780000.qfprom/qfprom0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
+

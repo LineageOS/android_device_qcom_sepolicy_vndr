@@ -81,8 +81,6 @@
 /(vendor|system/vendor)/bin/init\.qti\.kernel\.debug\.sh        u:object_r:vendor_qti_init_shell_exec:s0
 
 /(vendor|system/vendor)/bin/sns.*               u:object_r:vendor_sensors_test_exec:s0
-# Sensors scripts for test app
-/data/sensors/scripts(/.*)?                                     u:object_r:vendor_sensors_data_file:s0
 #for testscripts support
 /(vendor|system/vendor)/bin/init\.qcom\.vendor\.testscripts\.sh u:object_r:vendor-qti-testscripts_exec:s0
 #TODO: coredump_file need have a attribute of data_file_type and

@@ -42,7 +42,7 @@ allow vendor_ssgtzd vendor_firmware_file:file r_file_perms;
 allow vendor_ssgtzd self:udp_socket create_socket_perms;
 
 # Allow ssgtzd to write state information to /data/vendor/qwes/qwesd.conf
-allow vendor_ssgtzd vendor_qwes_data_file:dir rw_dir_perms;
+allow vendor_ssgtzd vendor_qwes_data_file:dir { rw_dir_perms setattr };
 allow vendor_ssgtzd vendor_qwes_data_file:file rw_file_perms;
 
 # Allow access to qipcrtr_socket

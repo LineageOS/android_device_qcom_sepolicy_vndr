@@ -93,7 +93,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.power\.pasrmanager\@1\.0-service       u:object_r:vendor_hal_pasrmanager_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.secure_element@1\.0-service            u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.secure_element@1\.2-service            u:object_r:hal_secure_element_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.[0-1]-service        u:object_r:vendor_hal_perf_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.[0-2]-service        u:object_r:vendor_hal_perf_default_exec:s0
 /(vendor|system/vendor)/bin/mm-audio-ftm                                           u:object_r:vendor_audioftm_exec:s0
 /(vendor|system/vendor)/bin/qrtr-ns                                                u:object_r:vendor_qrtr_exec:s0
 /(vendor|system/vendor)/bin/spdaemon                                               u:object_r:vendor_spdaemon_exec:s0
@@ -226,6 +226,8 @@
 
 # Perf
 /vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.0\.so    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.1\.so    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.2\.so    u:object_r:same_process_hal_file:s0
 
 #wifilearner daemon
 /(vendor|system/vendor)/bin/wifilearner    u:object_r:vendor_wifilearnersvc_exec:s0

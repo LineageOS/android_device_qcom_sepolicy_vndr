@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,40 +24,26 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-userdebug_or_eng(`
-  allow domain vendor_diag_device:chr_file rw_file_perms;
-')
 
-# In order for /sys/kernel/debug/kgsl/proc/<pid>/mem
-# to be created for memory tracking, the domain of
-# the tracked process must have permission to search
-# in /sys/kernel/debug/kgsl
-allow domain vendor_debugfs_kgsl:dir search;
+type vendor_hal_qccvndhal_qti, domain;
+type vendor_hal_qccvndhal_qti_exec, exec_type, vendor_file_type, file_type;
 
-allow domain vendor_debugfs_ion:dir search;
+hal_server_domain(vendor_hal_qccvndhal_qti, vendor_hal_qccvndhal)
 
-get_prop(domain, vendor_gralloc_prop)
+#Allow for transition from init domain to vendor_hal_qccvndhal
+init_daemon_domain(vendor_hal_qccvndhal_qti)
 
-r_dir_file({domain - isolated_app}, vendor_sysfs_soc);
-r_dir_file({domain - isolated_app}, vendor_sysfs_esoc);
-r_dir_file({domain - isolated_app}, vendor_sysfs_ssr);
-r_dir_file({domain - isolated_app}, sysfs_thermal);
+#Allow vendor_hal_qccvndhal to use Vendor Binder IPC
+vndbinder_use(vendor_hal_qccvndhal)
 
-get_prop(domain, vendor_public_vendor_default_prop)
+#Allow hwbinder call from hal client to server
+binder_call(vendor_hal_qccvndhal_client, vendor_hal_qccvndhal_server)
+binder_call(vendor_hal_qccvndhal_server, vendor_hal_qccvndhal_client)
 
-dontaudit domain kernel:system module_request;
+#Add hwservice related rules
+#add_hwservice(vendor_hal_qccvndhal_server, vendor_hal_qccvndhal_hwservice)
+#allow vendor_hal_qccvndhal_client vendor_hal_qccvndhal_hwservice:hwservice_manager find;
+hal_attribute_hwservice(vendor_hal_qccvndhal, vendor_hal_qccvndhal_hwservice)
 
-# For compliance testing test suite reads vendor_security_path_level
-# Which is the public readable property “ ro.vendor.build.security_patch
-get_prop(domain, vendor_security_patch_level_prop)
-neverallow {
-     coredomain
-     -init
-     -ueventd
-     -vold
-     } vendor_persist_type: { dir file } *;
-
-allow { domain - isolated_app } vendor_sysfs_kgsl:dir search;
-# Allow all context to read gpu model
-allow { domain - isolated_app } vendor_sysfs_kgsl_gpu_model:file r_file_perms;
-allow { domain - isolated_app } vendor_sysfs_kgsl_gpubusy:file r_file_perms;
+allow vendor_hal_qccvndhal_qti vendor_qcc_trd_data_file:file create_file_perms;
+allow vendor_hal_qccvndhal_qti vendor_qcc_trd_data_file:dir create_dir_perms;
