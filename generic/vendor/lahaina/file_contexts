@@ -146,3 +146,7 @@
 
 /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
+
+# move from qssi to vendor under each specific target, Lahaina etc.
+/dev/smcinvoke                                  u:object_r:tee_device:s0
+
