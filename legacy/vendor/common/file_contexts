@@ -155,6 +155,7 @@
 /dev/socket/mlid                                u:object_r:mlid_socket:s0
 /dev/socket/ssgqmig                             u:object_r:ssgqmig_socket:s0
 /dev/socket/ssgtzd                              u:object_r:ssgtzd_socket:s0
+/dev/socket/qwes_ipc                            u:object_r:qwesd_socket:s0
 /dev/socket/wififtmd_server                     u:object_r:wififtmd_socket:s0
 /dev/socket/wigig/wpa_wigig[0-9]                u:object_r:wifi_vendor_wpa_socket:s0
 /dev/socket/vendor_wpa_wlan[0-9]                u:object_r:wifi_vendor_wpa_socket:s0
@@ -557,6 +558,7 @@
 /data/vendor/wifi/wigig_sockets/wpa_ctrl.*                          u:object_r:wifi_vendor_wpa_socket:s0
 /data/vendor/qdmastats(/.*)?                                        u:object_r:vendor_qcc_trd_data_file:s0
 /data/vendor/qdma(/.*)?                                             u:object_r:vendor_qcc_trd_data_file:s0
+/data/vendor/qwes(/.*)?                                             u:object_r:vendor_qwes_data_file:s0
 /data/vendor/vpp(/.*)?                                              u:object_r:vendor_vpp_data_file:s0
 /data/vendor/camera(/.*)?                                           u:object_r:vendor_camera_data_file:s0
 /data/vendor/wifi/wigig_hostapd(/.*)?                               u:object_r:wigig_hostapd_socket:s0
