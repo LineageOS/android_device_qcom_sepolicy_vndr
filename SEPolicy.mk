@@ -45,3 +45,5 @@ ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/qva/vendor/test/sysmonapp
     endif
 endif
+
+-include device/lineage/sepolicy/qcom/sepolicy.mk
