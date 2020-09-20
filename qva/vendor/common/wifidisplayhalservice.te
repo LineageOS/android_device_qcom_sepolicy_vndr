@@ -113,3 +113,6 @@ get_prop(vendor_wifidisplayhalservice_qti, vendor_video_prop)
 
 #Allow access to uhid driver for HID event injection
 allow vendor_wifidisplayhalservice_qti uhid_device:chr_file rw_file_perms;
+
+#Fallback for seccomp
+crash_dump_fallback(vendor_wifidisplayhalservice_qti)

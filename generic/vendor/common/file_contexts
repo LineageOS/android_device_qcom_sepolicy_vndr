@@ -175,6 +175,7 @@
 /vendor/bin/hw/android\.hardware\.keymaster@3\.0-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.0-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
+/vendor/bin/init\.qti\.keymaster\.sh                                 u:object_r:vendor_init-qti-keymaster-sh_exec:s0
 /vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service-qti        u:object_r:vendor_hal_gatekeeper_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@.*-service-qti u:object_r:vendor_hal_gnss_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti         u:object_r:hal_bluetooth_default_exec:s0
@@ -366,6 +367,7 @@
 
 /(vendor|system/vendor)/bin/hbtp_daemon                             u:object_r:vendor_hbtp_exec:s0
 /(vendor|system/vendor)/bin/sscrpcd                                 u:object_r:vendor_sensors_exec:s0
+/(vendor|system/vendor)/bin/lowirpcd                                u:object_r:vendor_lowirpcd_service_exec:s0
 
 # vendor_sysfs_graphics
 /sys/class/graphics/fb0/mdp/caps                                    u:object_r:vendor_sysfs_graphics:s0

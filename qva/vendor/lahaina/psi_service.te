@@ -50,5 +50,9 @@ allow vendor_psiservice proc_pressure_mem:file rw_file_perms;
 # Read sysfs directories
 allow vendor_psiservice sysfs:dir r_dir_perms;
 
+# Read/Write "/sys/kernel/mem-offline/*" sysfs files
+allow vendor_psiservice vendor_sysfs_mem_offline:file rw_file_perms;
+allow vendor_psiservice vendor_sysfs_mem_offline:dir r_dir_perms;
+
 # For reading "vendor.pasr." properties
 get_prop(vendor_psiservice, vendor_pasr_prop)

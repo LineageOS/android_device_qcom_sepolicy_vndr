@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,14 +24,17 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+type vendor_lowirpcd_service, domain;
+type vendor_lowirpcd_service_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_lowirpcd_service)
 
-# Add new domain for location test apps
-user=_app seinfo=platform name=com.qualcomm.qct.dlt levelfrom=all domain=vendor_location_app_test type=app_data_file
-user=_app seinfo=platform name=com.qualcomm.qti.qlogcat levelfrom=all domain=vendor_location_app_test type=app_data_file
-user=system seinfo=platform name=.loopbackservice domain=vendor_qtiloopback_app type=system_app_data_file
-user=system seinfo=platform name=qcom.cta.cta_ui domain=vendor_cta_app type=system_app_data_file
-user=system seinfo=platform name=com.qualcomm.qti.logkit.lite domain=vendor_logkit_app type=system_app_data_file
-user=_app seinfo=platform domain=vendor_pdt_app name=com.quicinc.framework.debugapp levelfrom=all type=app_data_file
-user=_app seinfo=platform name=com.qualcomm.qti.dualstaapp domain=vendor_dualsta_app type=app_data_file levelFrom=all
-user=_app seinfo=platform name=com.example.cam2test domain=vendor_sys_seccam2_app type=app_data_file levelFrom=all
-user=system seinfo=platform name=com.qualcomm.wrd.ue.kpitool.base domain=vendor_cta_app type=system_app_data_file
+allow vendor_lowirpcd_service ion_device:chr_file r_file_perms;
+allow vendor_lowirpcd_service vendor_qdsp_device:chr_file r_file_perms;
+allow vendor_lowirpcd_service vendor_xdsp_device:chr_file r_file_perms;
+
+# For reading adsprpc_prop
+get_prop(vendor_lowirpcd_service, vendor_adsprpc_prop)
+
+# Access to wakelock sysfs
+wakelock_use(vendor_lowirpcd_service)
+

@@ -114,7 +114,11 @@ persist.vendor.net.doxlat                    u:object_r:vendor_xlat_prop:s0
 ro.vendor.qspm.enable            u:object_r:vendor_qspm_prop:s0 exact bool
 
 #qvr properties
-vendor.qvr                       u:object_r:vendor_qvr_prop:s0
+vendor.qvr.                                   u:object_r:vendor_qvr_prop:s0
+vendor.sxr.                                   u:object_r:vendor_sxr_prop:s0
+vendor.qvrd.                                  u:object_r:vendor_qvrd_prop:s0
+persist.vendor.qvr.                           u:object_r:vendor_qvr_persist_prop:s0
+persist.vendor.qvrd.                          u:object_r:vendor_qvrd_persist_prop:s0
 
 #qmuxd property
 ctl.start$vendor.qmuxd                       u:object_r:vendor_ctl_qmuxd_prop:s0
