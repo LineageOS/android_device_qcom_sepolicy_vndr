@@ -165,6 +165,7 @@
 /dev/socket/wifihal(/.*)?                       u:object_r:wifihal_socket:s0
 /dev/socket/wigig/wigignpt                      u:object_r:wigignpt_socket:s0
 
+/dev/smcinvoke                                  u:object_r:tee_device:s0
 ###################################
 # vendor bins files
 # there are still some bin which are build in system/vendor/bin
