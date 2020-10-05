@@ -77,6 +77,7 @@ genfscon sysfs  /devices/platform/soc/aae0000.qcom,venus/subsys4/name         u:
 
 #entry for usb controller
 genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0
+genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 
 #net sysfs
 genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/net u:object_r:sysfs_net:s0

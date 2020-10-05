@@ -92,3 +92,6 @@ allow hal_graphics_composer_client vendor_hal_display_config_hwservice:hwservice
 
 # Allow qdcmss socket access
 unix_socket_connect(hal_graphics_composer_default, vendor_qdcmsocket, vendor_qdcm-ss)
+
+#allow composer to find hal_perf
+hal_client_domain(hal_graphics_composer_default, vendor_hal_perf);
