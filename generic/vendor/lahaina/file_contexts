@@ -158,6 +158,4 @@
 
 # Feature configs
 /sys/devices/platform/soc/780000.qfprom/qfprom0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
-# move from qssi to vendor under each specific target, Lahaina etc.
-/dev/smcinvoke                                  u:object_r:tee_device:s0
 
