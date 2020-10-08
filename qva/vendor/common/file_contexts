@@ -63,6 +63,8 @@
 /dev/socket/wigig/wigignpt                      u:object_r:vendor_wigignpt_socket:s0
 /dev/socket/wigig/sensingdaemon                 u:object_r:vendor_sensingdaemon_socket:s0
 
+
+/dev/smcinvoke                                  u:object_r:tee_device:s0
 ###################################
 # System files
 #

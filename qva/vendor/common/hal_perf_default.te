@@ -120,5 +120,8 @@ unix_socket_connect(vendor_hal_perf_default, vendor_thermal, vendor_thermal-engi
 #Allow display driver access
 allow vendor_hal_perf_default graphics_device:chr_file rw_file_perms;
 
+# Allow shared memory access
+hal_client_domain(vendor_hal_perf_default, hal_allocator);
+
 allow vendor_hal_perf_default block_device:dir { open read search };
 allow vendor_hal_perf_default proc_diskstats:file { getattr open read };

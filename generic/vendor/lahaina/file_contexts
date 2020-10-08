@@ -136,6 +136,12 @@
 /sys/devices/platform/soc/98900000.qcom,turing/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/98900000.qcom,turing/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
 
+/sys/devices/platform/soc/3700000.qcom,lpass/subsys[0-9]+/name  u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/3700000.qcom,lpass/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/a300000.qcom,turing/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/a300000.qcom,turing/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
+
 /sys/devices/platform/soc/5c00000.qcom,ssc/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/5c00000.qcom,ssc/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
 
