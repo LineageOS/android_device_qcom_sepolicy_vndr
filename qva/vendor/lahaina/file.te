@@ -27,6 +27,3 @@
 
 # vendor biometricsface data file
 type vendor_biometricsface_data_file, file_type, data_file_type;
-
-# Memory offlining file types
-type vendor_sysfs_mem_offline, sysfs_type, fs_type;
