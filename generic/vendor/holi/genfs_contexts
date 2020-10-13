@@ -92,6 +92,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu6-cpu-ddr-latfloor/devfreq u:ob
 genfscon sysfs /sys/devices/system/cpu/memlat/c0_memlat/cpu0-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /sys/devices/system/cpu/memlat/c6_memlat/cpu6-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
 
+#net sysfs
+genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/net u:object_r:sysfs_net:s0
+
 #qdss sysfs-node
 genfscon sysfs /devices/platform/soc/8047000.tmc/coresight-tmc-etf u:object_r:vendor_sysfs_qdss_dev:s0
 genfscon sysfs /devices/platform/soc/8048000.tmc/coresight-tmc-etr u:object_r:vendor_sysfs_qdss_dev:s0
