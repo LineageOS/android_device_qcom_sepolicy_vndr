@@ -78,3 +78,4 @@ vendor.qti.hardware.qccvndhal::IQccvndhal                     u:object_r:vendor_
 vendor.qti.spu::ISPUManager                                  u:object_r:vendor_hal_spu_hwservice:s0
 vendor.qti.hardware.slmadapter::ISlmAdapter                  u:object_r:vendor_hal_slmadapter_hwservice:s0
 vendor.qti.hardware.perf::IPerfCallback                      u:object_r:vendor_hal_perfcallback_hwservice:s0
+vendor.qti.hardware.mwqemadapter::IMwqemAdapter              u:object_r:vendor_hal_mwqemadapter_hwservice:s0
