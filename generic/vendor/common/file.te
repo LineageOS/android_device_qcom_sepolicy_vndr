@@ -150,6 +150,8 @@ type vendor_firmware_file, vendor_file_type, file_type;
 type vendor_mdmhelperdata_data_file, file_type, data_file_type;
 type vendor_mbn_data_file, file_type, data_file_type;
 type vendor_firmware_data_file, file_type, data_file_type;
+type vendor_qmcs_file, file_type, vendor_qmcs_file_type;
+allow { vendor_qmcs_file }self:filesystem associate;
 
 #vendor capability configstore hal
 type vendor_capabilityconfigstore_data_file, file_type, data_file_type;
