@@ -27,6 +27,3 @@
 
 #face3d
 vendor_internal_prop(vendor_face3d_producer_prop);
-
-#pasr property
-vendor_internal_prop(vendor_pasr_prop);

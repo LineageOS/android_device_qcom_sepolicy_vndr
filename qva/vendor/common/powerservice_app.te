@@ -37,4 +37,7 @@ allow vendor_powerservice_app app_api_service:service_manager find;
 get_prop(vendor_powerservice_app, vendor_pasr_prop)
 
 # allow Power service to interact with pasr memory hal
-hal_client_domain(vendor_powerservice_app, vendor_hal_pasrmanager_memory)
+hal_client_domain(vendor_powerservice_app, vendor_hal_mem_pasrmanager)
+
+# allow Power service to interact with pasr power hal
+hal_client_domain(vendor_powerservice_app, vendor_hal_pasrmanager)
