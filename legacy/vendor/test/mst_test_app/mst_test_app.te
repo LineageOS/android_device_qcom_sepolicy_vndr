@@ -32,4 +32,6 @@ userdebug_or_eng(`
   permissive mst_test_app;
   app_domain(mst_test_app);
 
+#Inherit base network permissions from netd
+  net_domain(mst_test_app);
 ')
