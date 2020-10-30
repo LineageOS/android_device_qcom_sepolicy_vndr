@@ -26,4 +26,4 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #Add new domain for eid app
-user=system seinfo=platform name=.eidservices domain=vendor_eid_app type=system_app_data_file
+user=_app seinfo=platform name=.eidservices domain=vendor_eid_app type=app_data_file levelFrom=all
