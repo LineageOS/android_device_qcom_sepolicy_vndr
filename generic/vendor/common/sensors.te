@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -78,3 +78,7 @@ allow vendor_sensors vendor_persist_sensors_file:dir create_dir_perms;
 allow vendor_sensors vendor_persist_sensors_file:file create_file_perms;
 # Access to wakelock sysfs
 wakelock_use(vendor_sensors)
+
+#Allow to search SSR node directory
+allow vendor_sensors vendor_sysfs_slpi:dir search;
+allow vendor_sensors vendor_sysfs_slpi:file getattr;
