@@ -61,3 +61,5 @@ allow vendor_pasrmanager_memory_qti sysfs:dir r_dir_perms;
 
 # For reading "vendor.pasr." properties
 get_prop(vendor_pasrmanager_memory_qti, vendor_pasr_prop)
+
+hal_client_domain(vendor_pasrmanager_memory_qti, hal_allocator)
