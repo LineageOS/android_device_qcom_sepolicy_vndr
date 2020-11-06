@@ -213,7 +213,7 @@
 /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/backlight(/.*)?  u:object_r:vendor_sysfs_graphics:s0
 
 # Feature configs
-/sys/devices/platform/soc/1b40000.qfprom/qfprom0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
+/sys/devices/platform/soc/soc:qfprom@0/feat_conf[0-9] u:object_r:vendor_sysfs_qfprom:s0
 
 #Display nodes
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DP-1/enabled u:object_r:vendor_sysfs_graphics:s0

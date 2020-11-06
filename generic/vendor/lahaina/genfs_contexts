@@ -191,5 +191,9 @@ genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:5/scs
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:6/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:7/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
 
+#Trusted UI
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0049/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+
 # Feature configs for Cedros
-genfscon sysfs /devices/platform/soc/780000.qfprom/qfprom0/feat_conf_m7 u:object_r:vendor_sysfs_qfprom:s0
+genfscon sysfs /devices/platform/soc/soc:qfprom@0/feat_conf_m7 u:object_r:vendor_sysfs_qfprom:s0
