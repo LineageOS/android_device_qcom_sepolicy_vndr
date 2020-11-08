@@ -140,3 +140,11 @@ genfscon sysfs /devices/platform/soc/8a03000.csr/coresight-swao-csr u:object_r:v
 #usbpd device
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup u:object_r:sysfs_wakeup:s0
+
+#scsi nodes
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:1/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:2/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:3/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:4/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:5/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
