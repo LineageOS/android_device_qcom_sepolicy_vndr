@@ -34,6 +34,7 @@ type vendor_hal_imsrtp_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_imscallinfo_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_ipacm_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_hbtp_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_limits_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_perf_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_tui_comm_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_qdutils_disp_hwservice, hwservice_manager_type, protected_hwservice;
