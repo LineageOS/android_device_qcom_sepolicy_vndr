@@ -52,6 +52,10 @@ r_dir_file(hal_graphics_composer_default, sysfs_leds)
 allow hal_graphics_composer_default video_device:chr_file rw_file_perms;
 allow hal_graphics_composer_default graphics_device:chr_file rw_file_perms;
 
+# Allow access to QMCS partition files
+allow hal_graphics_composer_default vendor_qmcs_file:dir create_dir_perms;
+allow hal_graphics_composer_default vendor_qmcs_file:file create_file_perms;
+
 # HWC_UeventThread
 allow hal_graphics_composer_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 
@@ -92,3 +96,6 @@ allow hal_graphics_composer_client vendor_hal_display_config_hwservice:hwservice
 
 # Allow qdcmss socket access
 unix_socket_connect(hal_graphics_composer_default, vendor_qdcmsocket, vendor_qdcm-ss)
+
+#allow composer to find hal_perf
+hal_client_domain(hal_graphics_composer_default, vendor_hal_perf);

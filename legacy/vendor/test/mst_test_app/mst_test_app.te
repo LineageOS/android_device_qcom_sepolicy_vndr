@@ -25,30 +25,11 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Policy for PSI service
-type vendor_psiservice, domain;
-type vendor_psiservice_exec, exec_type, vendor_file_type, file_type;
+type mst_test_app, domain;
 
-# Started by init
-init_daemon_domain(vendor_psiservice)
+userdebug_or_eng(`
+  typeattribute mst_test_app coredomain;
+  permissive mst_test_app;
+  app_domain(mst_test_app);
 
-# Allow PSI Service to be a client of PASR HAL
-hal_client_domain(vendor_psiservice, vendor_hal_pasrmanager_memory)
-
-# Read /proc/zoneinfo
-allow vendor_psiservice proc_zoneinfo:file r_file_perms;
-
-# Read /proc/meminfo
-allow vendor_psiservice proc_meminfo:file r_file_perms;
-
-# Read /proc/vmstat
-allow vendor_psiservice proc_vmstat:file r_file_perms;
-
-# Read/Write /proc/pressure/memory
-allow vendor_psiservice proc_pressure_mem:file rw_file_perms;
-
-# Read sysfs directories
-allow vendor_psiservice sysfs:dir r_dir_perms;
-
-# For reading "vendor.pasr." properties
-get_prop(vendor_psiservice, vendor_pasr_prop)
+')

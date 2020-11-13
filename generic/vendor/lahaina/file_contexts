@@ -51,6 +51,7 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/mdm1m9kefs3           u:object_r:vendor_efs_boot_dev:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/mdmddr                u:object_r:vendor_efs_boot_dev:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/vm-data               u:object_r:vendor_vm_data_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/qmcs                  u:object_r:vendor_qmcs_block_device:s0
 
 # A/B partitions.
 /dev/block/platform/soc/1d84000.ufshc/by-name/abl_[ab]              u:object_r:vendor_custom_ab_block_device:s0
@@ -77,6 +78,7 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/persist               u:object_r:vendor_persist_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/pmic_[ab]             u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/qupfw_[ab]            u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/qweslicstore_[ab]     u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/rpm_[ab]              u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/shrm_[ab]             u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/system_[ab]           u:object_r:system_block_device:s0
@@ -135,6 +137,12 @@
 /sys/devices/platform/soc/98900000.qcom,turing/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/98900000.qcom,turing/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
 
+/sys/devices/platform/soc/3700000.qcom,lpass/subsys[0-9]+/name  u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/3700000.qcom,lpass/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/a300000.qcom,turing/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/a300000.qcom,turing/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
+
 /sys/devices/platform/soc/5c00000.qcom,ssc/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/5c00000.qcom,ssc/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
 
@@ -147,6 +155,16 @@
 /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
 
+#Display nodes
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DP-1/enabled u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-2/enabled u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-Virtual-1/enabled u:object_r:vendor_sysfs_graphics:s0
+
+#poweropt-service
+/(vendor|system/vendor)/bin/poweropt-service u:object_r:vendor_poweroptservice_exec:s0
+
+# Feature configs
+/sys/devices/platform/soc/780000.qfprom/qfprom0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
+
 # move from qssi to vendor under each specific target, Lahaina etc.
 /dev/smcinvoke                                  u:object_r:tee_device:s0
-

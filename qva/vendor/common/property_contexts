@@ -70,6 +70,7 @@ vendor.sys.boot_mode                         u:object_r:vendor_boot_mode_prop:s0
 vendor.media.target.version                  u:object_r:vendor_video_prop:s0
 vendor.video.disable.ubwc                    u:object_r:vendor_video_prop:s0
 vendor.media.target_variant                  u:object_r:vendor_video_prop:s0
+vendor.netflix.bsp_rev                       u:object_r:vendor_video_prop:s0
 
 # factory properties
 ctl.vendor.mmid                              u:object_r:vendor_ctl_vendor_mmid_prop:s0
@@ -114,7 +115,11 @@ persist.vendor.net.doxlat                    u:object_r:vendor_xlat_prop:s0
 ro.vendor.qspm.enable            u:object_r:vendor_qspm_prop:s0 exact bool
 
 #qvr properties
-vendor.qvr                       u:object_r:vendor_qvr_prop:s0
+vendor.qvr.                                   u:object_r:vendor_qvr_prop:s0
+vendor.sxr.                                   u:object_r:vendor_sxr_prop:s0
+vendor.qvrd.                                  u:object_r:vendor_qvrd_prop:s0
+persist.vendor.qvr.                           u:object_r:vendor_qvr_persist_prop:s0
+persist.vendor.qvrd.                          u:object_r:vendor_qvrd_persist_prop:s0
 
 #qmuxd property
 ctl.start$vendor.qmuxd                       u:object_r:vendor_ctl_qmuxd_prop:s0
@@ -124,3 +129,7 @@ ro.vendor.bt.enablelazyhal                   u:object_r:vendor_bluetooth_prop:s0
 
 #SLM
 persist.vendor.slm.                          u:object_r:vendor_slm_prop:s0
+
+#pasr property
+vendor.pasr.                                 u:object_r:vendor_pasr_prop:s0
+ro.vendor.pasr.                              u:object_r:vendor_pasr_prop:s0

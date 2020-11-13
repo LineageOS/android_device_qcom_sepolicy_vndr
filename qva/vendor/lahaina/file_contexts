@@ -28,6 +28,4 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face@1\.0-service    u:object_r:vendor_biometricsface_exec:s0
 
 /data/vendor/face3d_dir(/.*)?                                       u:object_r:vendor_biometricsface_data_file:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.memory\.pasrmanager\@1\.0-service      u:object_r:vendor_pasrmanager_memory_qti_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.psiclient\@1\.0-service                u:object_r:vendor_psiservice_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.eid@1\.0-service             u:object_r:vendor_hal_eid_qti_exec:s0
