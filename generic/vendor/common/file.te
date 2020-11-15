@@ -66,6 +66,7 @@ type vendor_sysfs_vadc_dev, sysfs_type, fs_type;
 type vendor_sysfs_lcd, sysfs_type, fs_type;
 type vendor_sysfs_adsp_ssr, sysfs_type, fs_type;
 type vendor_sysfs_svm_neuron, sysfs_type, fs_type;
+type vendor_sysfs_trusted_touch_enable, sysfs_type, fs_type;
 
 type vendor_debugfs_clk, debugfs_type, fs_type;
 type vendor_debugfs_ion, debugfs_type, fs_type;
@@ -150,6 +151,8 @@ type vendor_firmware_file, vendor_file_type, file_type;
 type vendor_mdmhelperdata_data_file, file_type, data_file_type;
 type vendor_mbn_data_file, file_type, data_file_type;
 type vendor_firmware_data_file, file_type, data_file_type;
+type vendor_qmcs_file, file_type, vendor_qmcs_file_type;
+allow { vendor_qmcs_file }self:filesystem associate;
 
 #vendor capability configstore hal
 type vendor_capabilityconfigstore_data_file, file_type, data_file_type;
@@ -211,7 +214,18 @@ type vendor_sysfs_suspend, fs_type, sysfs_type;
 # kgsl gpu model file type for sysfs access
 type vendor_sysfs_kgsl_gpu_model, sysfs_type, fs_type;
 
+# kgsl max gpuclk file type for sysfs access
+type vendor_sysfs_kgsl_max_gpuclk, sysfs_type, fs_type;
+
+#gpu max clock file type for sysfs acces
+type vendor_sysfs_gpu_max_clock, sysfs_type, fs_type;
+
 type vendor_sysfs_kgsl_gpuclk, sysfs_type, fs_type;
 type vendor_sysfs_kgsl_gpubusy, sysfs_type, fs_type;
 
 type vendor_sysfs_devicetree_cpu, sysfs_type, fs_type;
+
+type vendor_sysfs_devicetree_soc, sysfs_type, fs_type;
+
+# for qfprom0 node access
+type vendor_sysfs_qfprom, fs_type, sysfs_type;

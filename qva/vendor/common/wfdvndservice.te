@@ -58,3 +58,6 @@ allow vendor_wfdvndservice vendor_qce_device:chr_file rw_file_perms;
 #Allow access to graphics_composer and qdisplay_service
 hal_client_domain(vendor_wfdvndservice, hal_graphics_composer);
 allow vendor_wfdvndservice vendor_qdisplay_service:service_manager find;
+
+#Fallback for seccomp
+crash_dump_fallback(vendor_wfdvndservice)

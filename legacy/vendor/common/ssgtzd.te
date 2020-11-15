@@ -38,3 +38,15 @@ allow ssgtzd ssg_app:unix_stream_socket connectto;
 #Allow access to firmware/image
 allow ssgtzd vendor_firmware_file:dir r_dir_perms;
 allow ssgtzd vendor_firmware_file:file r_file_perms;
+
+#Allow ssgtzd to create sockets for HTTP
+allow ssgtzd self:udp_socket create_socket_perms;
+
+# Allow ssgtzd to write state information to /data/vendor/qwes/qwesd.conf
+allow ssgtzd vendor_qwes_data_file:dir { setattr rw_dir_perms };
+allow ssgtzd vendor_qwes_data_file:file rw_file_perms;
+
+# Allow access to qipcrtr_socket
+# Remove this when QMI service moves to pfmd
+allow ssgtzd self:{ socket qipcrtr_socket } create_socket_perms;
+allowxperm ssgtzd self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;

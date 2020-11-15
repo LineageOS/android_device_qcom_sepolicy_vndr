@@ -25,16 +25,11 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#Define Domain for Power service
-type vendor_powerservice_app, domain;
-app_domain(vendor_powerservice_app);
+type mst_test_app, domain;
 
-# Allow invoking activity of vendor_powerservice_app
-allow vendor_powerservice_app activity_service:service_manager find;
-allow vendor_powerservice_app app_api_service:service_manager find;
+userdebug_or_eng(`
+  typeattribute mst_test_app coredomain;
+  permissive mst_test_app;
+  app_domain(mst_test_app);
 
-# Allow Power service to read vendor_pasr_prop
-get_prop(vendor_powerservice_app, vendor_pasr_prop)
-
-# allow Power service to interact with pasr memory hal
-hal_client_domain(vendor_powerservice_app, vendor_hal_pasrmanager_memory)
+')

@@ -59,3 +59,7 @@ allow vendor_qti_init_shell {
     vendor_sysfs_mmc_host
     sysfs_dm
 }:file w_file_perms;
+
+#dontaudit default_prop and init read
+dontaudit vendor_qti_init_shell default_prop:file read;
+dontaudit vendor_qti_init_shell init:file read;

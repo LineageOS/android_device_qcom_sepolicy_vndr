@@ -40,6 +40,7 @@ allow vendor_vm_mgr vendor_vm_system_file:file r_file_perms;
 allow vendor_vm_mgr vendor_vm_system_file:dir search;
 
 # Execute toolbox to setup loopback block devices for VM's file system
+allow vendor_vm_mgr self:global_capability_class_set { sys_admin };
 allow vendor_vm_mgr { vendor_shell_exec vendor_toolbox_exec }:file rx_file_perms;
 allow vendor_vm_mgr block_device:dir r_dir_perms;
 allow vendor_vm_mgr block_device:blk_file getattr;
@@ -47,13 +48,20 @@ allow vendor_vm_mgr loop_control_device:chr_file rw_file_perms;
 allowxperm vendor_vm_mgr loop_control_device:chr_file ioctl { LOOP_CTL_GET_FREE };
 allow vendor_vm_mgr loop_device:blk_file rw_file_perms;
 allowxperm vendor_vm_mgr loop_device:blk_file ioctl { LOOP_GET_STATUS64 LOOP_SET_FD LOOP_SET_STATUS64 LOOP_CLR_FD };
+allow vendor_vm_mgr vendor_ssr_device:chr_file r_file_perms;
+allow vendor_vm_mgr vendor_sysfs_bootguestvm:file w_file_perms;
 # losetup used by vm-mgr scans for every block devices looking for loopbacks
 # so ignore all denials during this scan
 dontaudit vendor_vm_mgr dev_type:blk_file getattr;
-allow vendor_vm_mgr vendor_ssr_device:chr_file r_file_perms;
+# Invoking losetup executable from vm-mgr launch a shell process, which may make use of any
+# AOSP debug-type properties.  Ignore them all.
+dontaudit vendor_vm_mgr default_prop:file read;
 
 # Set neuron mapping block device
 allow vendor_vm_mgr vendor_sysfs_svm_neuron:file rw_file_perms;
+# allow kernel neuron driver to make use of the mapped block device and underlying file image
+allow kernel vendor_vm_mgr:fd use;
+allow kernel vendor_vm_system_file:file r_file_perms;
 
 
 #######################

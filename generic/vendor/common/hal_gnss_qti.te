@@ -42,7 +42,7 @@ allow vendor_hal_gnss_qti vendor_location_data_file:dir create_dir_perms;
 allow vendor_hal_gnss_qti vendor_location_data_file:file create_file_perms;
 
 # /dev/socket/vendor_location
-allow vendor_hal_gnss_qti vendor_location_socket:sock_file create_file_perms;
+allow vendor_hal_gnss_qti vendor_location_socket: {sock_file lnk_file } create_file_perms;
 allow vendor_hal_gnss_qti vendor_location_socket:dir rw_dir_perms;
 allow vendor_hal_gnss_qti vendor_location:unix_stream_socket connectto;
 allow vendor_hal_gnss_qti vendor_location:unix_dgram_socket sendto;
