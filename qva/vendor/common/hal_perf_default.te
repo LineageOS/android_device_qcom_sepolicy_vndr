@@ -128,3 +128,7 @@ hal_client_domain(vendor_hal_perf_default, vendor_hal_mem_pasrmanager);
 
 allow vendor_hal_perf_default block_device:dir { open read search };
 allow vendor_hal_perf_default proc_diskstats:file { getattr open read };
+
+allow vendor_hal_perf_default surfaceflinger:process setsched;
+allow vendor_hal_perf_default hal_graphics_composer_default:process setsched;
+allow vendor_hal_perf_default self:capability sys_nice;
