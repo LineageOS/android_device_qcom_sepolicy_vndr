@@ -57,3 +57,7 @@ set_prop(vendor_init, vendor_persist_dpm_prop)
 
 # Allow vendor_init to set vendor_pasr_prop
 set_prop(vendor_init, vendor_pasr_prop)
+
+# allow vendor_init to use wait for qseecom
+allow vendor_init tee_device:chr_file getattr;
+

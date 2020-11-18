@@ -63,3 +63,6 @@ allow vendor_qti_init_shell {
 #dontaudit default_prop and init read
 dontaudit vendor_qti_init_shell default_prop:file read;
 dontaudit vendor_qti_init_shell init:file read;
+
+# Allow vendor_qti_init_shell to set vendor_pasr_prop
+set_prop(vendor_qti_init_shell, vendor_pasr_prop)
