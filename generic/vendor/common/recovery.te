@@ -44,4 +44,5 @@ recovery_only(`
  allow recovery vendor_sg_device:chr_file ioctl;
  allow recovery sysfs_dm:dir r_dir_perms;
  allow recovery sysfs_dm:file r_file_perms;
+ allow recovery sysfs:file r_file_perms;
 ')
