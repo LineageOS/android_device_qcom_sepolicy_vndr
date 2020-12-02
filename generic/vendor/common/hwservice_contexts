@@ -28,7 +28,6 @@ com.qualcomm.qti.ant::IAntHci                                   u:object_r:hal_b
 com.dsi.ant::IAnt                                               u:object_r:hal_bluetooth_hwservice:s0
 vendor.qti.hardware.data.iwlan::IIWlan                          u:object_r:vendor_hal_iwlan_hwservice:s0
 com.qualcomm.qti.uceservice::IUceService                        u:object_r:vendor_hal_imsrcsd_hwservice:s0
-com.qualcomm.qti.imscmservice::IImsCmService                    u:object_r:vendor_hal_imsrcsd_hwservice:s0
 vendor.qti.ims.callinfo::IService                               u:object_r:vendor_hal_imscallinfo_hwservice:s0
 vendor.qti.imsrtpservice::IRTPService                          u:object_r:vendor_hal_imsrtp_hwservice:s0
 vendor.qti.data.factory::IFactory                               u:object_r:vendor_hal_datafactory_hwservice:s0
