@@ -36,15 +36,19 @@ binder_call(vendor_hal_eid_server, vendor_hal_eid_client)
 
 hal_attribute_hwservice(vendor_hal_eid, vendor_hal_eid_hwservice)
 
-#Allow access to tee device
+# Allow access to tee device
 allow vendor_hal_eid_qti tee_device:chr_file rw_file_perms;
 
-#Allow access to load firmware images
+# Allow access to load firmware images
 r_dir_file(vendor_hal_eid_qti, firmware_file)
 
-#Allow access to interract with ion_device
+# Allow access to interract with ion_device
 allow vendor_hal_eid_qti ion_device:chr_file r_file_perms;
 
 get_prop(vendor_hal_eid_qti, vendor_tee_listener_prop)
 
 hal_client_domain(vendor_hal_eid_qti, vendor_hal_qteeconnector)
+
+# TUI Part
+hal_client_domain(vendor_hal_eid_qti, vendor_hal_trustedui)
+hal_client_domain(vendor_hal_eid_qti, hal_graphics_composer)
