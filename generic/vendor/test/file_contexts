@@ -99,6 +99,7 @@
 /data/vendor/ts_loopback(/.*)?                                  u:object_r:vendor_ts_loopback_data_file:s0
 
 # snapcam libs
+/vendor/lib(64)?/libjni_imageutil\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libjni_mfnrutil\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libjni_aidenoiserutil\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libjni_aidenoiserutilv2\.so       u:object_r:same_process_hal_file:s0
