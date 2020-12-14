@@ -25,15 +25,27 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face@1\.0-service    u:object_r:vendor_biometricsface_exec:s0
+type vendor_hang_guard, domain, mlstrustedsubject;
+type vendor_hang_guard_exec, exec_type, vendor_file_type, file_type;
 
-/data/vendor/face3d_dir(/.*)?                                                      u:object_r:vendor_biometricsface_data_file:s0
+init_daemon_domain(vendor_hang_guard)
 
-###################################
-#eID
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.eid@1\.0-service             u:object_r:vendor_hal_eid_qti_exec:s0
-/dev/membuf                                                                        u:object_r:vendor_membuf_dev:s0
+userdebug_or_eng(`
+  allow vendor_hang_guard self:global_capability_class_set kill;
+  allow vendor_hang_guard kmsg_device:chr_file w_file_perms;
+  allow vendor_hang_guard domain:process { signal sigstop sigkill };
 
-###################################
-#camera
-/sys/firmware/devicetree/base/memory/ddr_device_type                               u:object_r:vendor_sysfs_ddr:s0
+  # sh
+  allow vendor_hang_guard { vendor_shell_exec vendor_toolbox_exec }:file rx_file_perms;
+
+  # look through /proc
+  allow vendor_hang_guard domain:dir r_dir_perms;
+  allow vendor_hang_guard domain:file r_file_perms;
+  allow vendor_hang_guard domain:lnk_file read;
+
+  # write into sysrq
+  allow vendor_hang_guard proc_sysrq:file w_file_perms;
+
+  # reboot
+  set_prop(vendor_hang_guard, powerctl_prop)
+')
