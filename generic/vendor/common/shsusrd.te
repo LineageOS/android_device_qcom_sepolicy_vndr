@@ -38,3 +38,6 @@ allow vendor_shsusrd self:netlink_kobject_uevent_socket create_socket_perms_no_i
 
 allow vendor_shsusrd vendor_shsusr_data_file:dir rw_dir_perms;
 allow vendor_shsusrd vendor_shsusr_data_file:file create_file_perms;
+
+allow vendor_shsusrd vendor_ipa_vendor_data_file:dir r_dir_perms;
+allow vendor_shsusrd vendor_ipa_vendor_data_file:file r_file_perms;
