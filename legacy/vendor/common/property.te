@@ -87,6 +87,7 @@ type vendor_alarm_boot_prop, property_type;
 
 
 type vendor_wifi_ftmd_prop, property_type;
+type vendor_wifi_version, property_type;
 
 # WIGIG
 type vendor_wigig_prop, property_type;
