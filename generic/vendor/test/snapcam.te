@@ -1,4 +1,4 @@
-# Copyright (c) 2017-2019 The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,14 +24,21 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+type vendor_snapcam_app, domain;
+hal_client_domain(vendor_snapcam_app, vendor_hal_perf);
+app_domain(vendor_snapcam_app);
 
-type vendor_poweroffalarm_app, domain;
-app_domain(vendor_poweroffalarm_app);
+allow vendor_snapcam_app cameraserver_service:service_manager find;
+get_prop(vendor_snapcam_app, vendor_persist_camera_prop)
+allow vendor_snapcam_app nfc_service:service_manager find;
+binder_call(vendor_snapcam_app, gpuservice)
 
-allow vendor_poweroffalarm_app app_api_service:service_manager find;
+allow vendor_snapcam_app app_api_service:service_manager find;
 
-hal_client_domain(vendor_poweroffalarm_app, vendor_hal_alarm_qti);
-hal_client_domain(vendor_poweroffalarm_app, vendor_hal_perf);
+allow vendor_snapcam_app audioserver_service:service_manager find;
+allow vendor_snapcam_app mediaextractor_service:service_manager find;
+allow vendor_snapcam_app mediametrics_service:service_manager find;
+allow vendor_snapcam_app mediaserver_service:service_manager find;
 
-binder_call(vendor_poweroffalarm_app, vendor_hal_alarm_qti_default);
-
+# Allow vendor_snapcam_apps to open and send ioctl to qdsp device
+allow vendor_snapcam_app vendor_qdsp_device:chr_file r_file_perms;

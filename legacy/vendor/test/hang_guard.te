@@ -1,4 +1,4 @@
-# Copyright (c) 2017-2019 The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,13 +25,27 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type vendor_poweroffalarm_app, domain;
-app_domain(vendor_poweroffalarm_app);
+type hang_guard, domain, mlstrustedsubject;
+type hang_guard_exec, exec_type, vendor_file_type, file_type;
 
-allow vendor_poweroffalarm_app app_api_service:service_manager find;
+init_daemon_domain(hang_guard)
 
-hal_client_domain(vendor_poweroffalarm_app, vendor_hal_alarm_qti);
-hal_client_domain(vendor_poweroffalarm_app, vendor_hal_perf);
+userdebug_or_eng(`
+  allow hang_guard self:global_capability_class_set kill;
+  allow hang_guard kmsg_device:chr_file w_file_perms;
+  allow hang_guard domain:process { signal sigstop sigkill };
 
-binder_call(vendor_poweroffalarm_app, vendor_hal_alarm_qti_default);
+  # sh
+  # allow hang_guard { shell_exec toolbox_exec }:file rx_file_perms;
 
+  # look through /proc
+  allow hang_guard domain:dir r_dir_perms;
+  allow hang_guard domain:file r_file_perms;
+  allow hang_guard domain:lnk_file read;
+
+  # write into sysrq
+  allow hang_guard proc_sysrq:file w_file_perms;
+
+  # reboot
+  set_prop(hang_guard, powerctl_prop)
+')

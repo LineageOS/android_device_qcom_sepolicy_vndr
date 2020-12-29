@@ -43,3 +43,6 @@ user=_app seinfo=platform name=com.qualcomm.qti.libsochelpertest domain=vendor_l
 
 #Add new domain for qtidiagservices app
 user=system seinfo=platform name=com.qti.diagservices domain=qtidiagservices_app type=system_app_data_file
+
+#Add new domain for snapcam app
+user=_app isPrivApp=true name=org.codeaurora.snapcam domain=vendor_snapcam_app type=app_data_file levelFrom=all
