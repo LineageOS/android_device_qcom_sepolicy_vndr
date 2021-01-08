@@ -47,6 +47,7 @@ allow vendor_hal_trustedui_qti self:qipcrtr_socket create_socket_perms_no_ioctl;
 allow vendor_hal_trustedui_qti sysfs:dir r_dir_perms;
 allow vendor_hal_trustedui_qti vendor_sysfs_trusted_touch_enable:file rw_file_perms;
 allow vendor_hal_trustedui_qti vendor_sysfs_trusted_touch_event:file rw_file_perms;
+allow vendor_hal_trustedui_qti vendor_sysfs_trusted_touch_type:file rw_file_perms;
 
 allow vendor_hal_trustedui_qti ion_device:chr_file r_file_perms;
 allow vendor_hal_trustedui_qti surfaceflinger:fd use;
