@@ -48,7 +48,7 @@ allow init { bt_firmware_file firmware_file }:filesystem  { relabelfrom  mount }
 allow { bt_firmware_file firmware_file  }self:filesystem associate;
 
 allow init vendor_qmcs_file:dir { mounton };
-allow init vendor_qmcs_file:filesystem { relabelfrom mount relabelto };
+allow init vendor_qmcs_file:filesystem { relabelfrom mount unmount relabelto };
 
 dontaudit init kernel:system module_request;
 
