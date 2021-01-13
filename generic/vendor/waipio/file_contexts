@@ -1,4 +1,4 @@
-# Copyright (c) 2017-2019 The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,14 +24,9 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+###################################
 
-type vendor_poweroffalarm_app, domain;
-app_domain(vendor_poweroffalarm_app);
 
-allow vendor_poweroffalarm_app app_api_service:service_manager find;
-
-hal_client_domain(vendor_poweroffalarm_app, vendor_hal_alarm_qti);
-hal_client_domain(vendor_poweroffalarm_app, vendor_hal_perf);
-
-binder_call(vendor_poweroffalarm_app, vendor_hal_alarm_qti_default);
-
+#poweropt-service
+/(vendor|system/vendor)/bin/poweropt-service u:object_r:vendor_poweroptservice_exec:s0
+/data/vendor/pwr(/.*)? u:object_r:vendor_pm_data_file:s0
