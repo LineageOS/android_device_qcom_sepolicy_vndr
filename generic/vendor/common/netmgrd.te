@@ -1,4 +1,4 @@
-# Copyright (c) 2018, 2020 The Linux Foundation. All rights reserved.
+# Copyright (c) 2018, 2020-2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -80,6 +80,8 @@ set_prop(vendor_netmgrd, vendor_data_shsusr_prop)
 set_prop(vendor_netmgrd, vendor_data_qmipriod_prop)
 
 allow vendor_netmgrd self:capability { net_admin net_raw setgid setpcap setuid kill };
+
+hal_client_domain(vendor_netmgrd, vendor_hal_perf);
 
 allow vendor_netmgrd vendor_toolbox_exec:file rx_file_perms;
 
