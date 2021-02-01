@@ -182,6 +182,7 @@
 /dev/block/platform/soc/7c4000.sdhci/by-name/persist                            u:object_r:vendor_persist_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/super                              u:object_r:super_block_device:s0
 
+/vendor/bin/diagcommd                                                           u:object_r:vendor_diagcommd_exec:s0
 #rawdump partition
 /dev/block/platform/soc/7c4000.sdhci/by-name/rawdump                            u:object_r:vendor_rawdump_block_device:s0
 
