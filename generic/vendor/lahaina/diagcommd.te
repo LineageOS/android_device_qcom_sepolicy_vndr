@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,41 +25,14 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type vendor_init_exec, exec_type, vendor_file_type, file_type;
+type vendor_diagcommd, domain;
+type vendor_diagcommd_exec, exec_type, vendor_file_type, file_type;
 
-set_prop(vendor_init, vendor_bluetooth_prop)
-#set_prop(vendor_init, vold_prop)
+init_daemon_domain(vendor_diagcommd)
 
-set_prop(vendor_init, vendor_hvdcp_opti_prop)
-get_prop(vendor_init, vendor_hvdcp_opti_prop)
+# Alloc access to ion_device
+allow vendor_diagcommd ion_device:chr_file r_file_perms;
 
-get_prop(vendor_init, vendor_boot_mode_prop)
-get_prop(vendor_init, vendor_mmi_prop)
-
-set_prop(vendor_init, vendor_usb_prop)
-
-get_prop(vendor_init, vendor_video_prop)
-set_prop(vendor_init, vendor_video_prop)
-get_prop(vendor_init, vendor_sys_video_prop)
-set_prop(vendor_init, vendor_sys_video_prop)
-
-set_prop(vendor_init, vendor_wigig_prop)
-
-set_prop(vendor_init, vendor_qspm_prop)
-
-set_prop(vendor_init, vendor_mpctl_prop)
-
-userdebug_or_eng(`
-  set_prop(vendor_init, vendor_audio_debug_prop)
-')
-
-set_prop(vendor_init, vendor_disable_spu_prop)
-
-set_prop(vendor_init, vendor_persist_dpm_prop)
-
-# Allow vendor_init to set vendor_pasr_prop
-set_prop(vendor_init, vendor_pasr_prop)
-
-# allow vendor_init to use wait for qseecom
-allow vendor_init tee_device:chr_file getattr;
+# Allow vendor_diagcommd to interract with qseecom
+allow vendor_diagcommd tee_device:chr_file rw_file_perms;
 
