@@ -194,8 +194,23 @@
 /dev/block/platform/soc/4804000.ufshc/by-name/limits-cdsp           u:object_r:vendor_limits_block_device:s0
 
 #subsys nodes
-/sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
-/sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
+/sys/devices/platform/soc/soc:qcom,wpss@8a00000/subsys[0-9]+/name      u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/soc:qcom,wpss@8a00000/subsys[0-9]+/restart_level      u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/62400000.qcom,lpass/subsys[0-9]+/name      u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/62400000.qcom,lpass/subsys[0-9]+/restart_level      u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/8300000.qcom,turing/subsys[0-9]+/name      u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/8300000.qcom,turing/subsys[0-9]+/restart_level      u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/aae0000.qcom,venus/subsys[0-9]+/name       u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/aae0000.qcom,venus/subsys[0-9]+/restart_level       u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/name         u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/restart_level         u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/9800000.qcom,npu/subsys[0-9]+/name         u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/9800000.qcom,npu/subsys[0-9]+/restart_level         u:object_r:vendor_sysfs_ssr_toggle:s0
 
 /sys/devices/platform/soc/abb0000.qcom,cvpss/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/abb0000.qcom,cvpss/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
