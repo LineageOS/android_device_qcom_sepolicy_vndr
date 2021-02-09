@@ -486,6 +486,7 @@
 
 #Light AIDL HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.qti   u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.lights\.service                   u:object_r:hal_light_default_exec:s0
 
 /(vendor|system/vendor)/bin/init\.class_main\.sh        u:object_r:vendor_qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.crda\.sh              u:object_r:vendor_qti_init_shell_exec:s0
