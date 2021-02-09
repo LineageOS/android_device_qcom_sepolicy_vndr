@@ -45,3 +45,10 @@ vndbinder_use(vendor_hal_display_demura);
 # Allow reading/writing to "/data/vendor/display"
 allow hal_display_demura_default vendor_display_vendor_data_file:dir create_dir_perms;
 allow hal_display_demura_default vendor_display_vendor_data_file:file create_file_perms;
+
+# Allow only directory search to '/mnt/vendor/persist/'
+allow hal_display_demura_default mnt_vendor_file:dir search;
+
+# Allow reading/writing to '/mnt/vendor/persist/display/*'
+allow hal_display_demura_default vendor_persist_display_file:dir rw_dir_perms;
+allow hal_display_demura_default vendor_persist_display_file:file create_file_perms;
