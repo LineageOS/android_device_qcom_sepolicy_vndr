@@ -49,3 +49,8 @@ allow vendor_feature_enabler_client vendor_qfeatenab_client_service:service_mana
 allow vendor_feature_enabler_client vendor_qdisplay_service:service_manager find;
 hal_client_domain(vendor_feature_enabler_client, hal_graphics_composer)
 allow vendor_feature_enabler_client graphics_device:chr_file rw_file_perms;
+
+#Allow access to various dmabuf heap device
+allow vendor_feature_enabler_client vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow vendor_feature_enabler_client vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+allow vendor_feature_enabler_client vendor_dmabuf_user_contig_heap_device:chr_file r_file_perms;

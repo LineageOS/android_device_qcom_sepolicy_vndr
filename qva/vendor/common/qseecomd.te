@@ -49,3 +49,8 @@ allow tee vendor_persist_qti_fp_file:file create_file_perms;
 
 allowxperm tee vendor_rpmb_device:blk_file ioctl { MMC_IOC_CMD };
 allowxperm tee vendor_rpmb_device:chr_file ioctl {MMC_IOC_MULTI_CMD};
+
+# As each dma buf is seperate device, need to allow access to those devices
+allow tee vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow tee vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+allow tee vendor_dmabuf_user_contig_heap_device:chr_file r_file_perms;

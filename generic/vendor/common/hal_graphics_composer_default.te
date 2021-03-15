@@ -105,3 +105,7 @@ unix_socket_connect(hal_graphics_composer_default, vendor_qdcmsocket, vendor_qdc
 
 #allow composer to find hal_perf
 hal_client_domain(hal_graphics_composer_default, vendor_hal_perf);
+
+# Allow access to qipcrtr_socket
+# Remove this when QMI service moves to pfmd
+allow hal_graphics_composer self: qipcrtr_socket create_socket_perms_no_ioctl;

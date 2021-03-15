@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018, 2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -55,9 +55,15 @@ allow hal_audio_default self:qipcrtr_socket create_socket_perms_no_ioctl;
 #Allow hal audio to use Binder IPC
 vndbinder_use(hal_audio)
 
+#Allow hal audio to access wakelock
+wakelock_use(hal_audio)
+
 #allow acess to wcd_cpe
 allow hal_audio vendor_sysfs_audio:file rw_file_perms;
 allow hal_audio vendor_sysfs_audio:dir r_dir_perms ;
+
+#allow access to snd_card sysfs
+allow hal_audio vendor_sysfs_sndcard:file rw_file_perms;
 
 # audio properties
 get_prop(hal_audio, vendor_audio_prop)

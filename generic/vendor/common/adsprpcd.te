@@ -30,6 +30,8 @@ type vendor_adsprpcd_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_adsprpcd)
 
 allow vendor_adsprpcd ion_device:chr_file r_file_perms;
+allow vendor_adsprpcd vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow vendor_adsprpcd vendor_dmabuf_adsp_heap_device:chr_file r_file_perms;
 allow vendor_adsprpcd vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_adsprpcd vendor_xdsp_device:chr_file r_file_perms;
 

@@ -1,5 +1,5 @@
-# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
-#
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
+
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
 # met:
@@ -12,8 +12,8 @@
 #     * Neither the name of The Linux Foundation nor the names of its
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
+
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -25,37 +25,12 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type vendor_init_exec, exec_type, vendor_file_type, file_type;
-
-set_prop(vendor_init, vendor_bluetooth_prop)
-#set_prop(vendor_init, vold_prop)
-
-set_prop(vendor_init, vendor_hvdcp_opti_prop)
-get_prop(vendor_init, vendor_hvdcp_opti_prop)
-
-get_prop(vendor_init, vendor_boot_mode_prop)
-get_prop(vendor_init, vendor_mmi_prop)
-
-set_prop(vendor_init, vendor_usb_prop)
-
-set_prop(vendor_init, vendor_video_prop)
-set_prop(vendor_init, vendor_sys_video_prop)
-
-set_prop(vendor_init, vendor_wigig_prop)
-
-set_prop(vendor_init, vendor_qspm_prop)
-
-set_prop(vendor_init, vendor_mpctl_prop)
-
 userdebug_or_eng(`
-  set_prop(vendor_init, vendor_audio_debug_prop)
+type aoncameraservice_app, domain;
+permissive aoncameraservice_app;
+app_domain(aoncameraservice_app)
+diag_use(aoncameraservice_app)
+binder_call(aoncameraservice_app, hal_camera)
+allow aoncameraservice_app cameraserver_service:service_manager find;
+allow aoncameraservice_app { app_api_service activity_service }:service_manager find;
 ')
-
-set_prop(vendor_init, vendor_confqmaa)
-
-set_prop(vendor_init, vendor_disable_spu_prop)
-
-set_prop(vendor_init, vendor_persist_dpm_prop)
-
-# Allow vendor_init to set vendor_pasr_prop
-set_prop(vendor_init, vendor_pasr_prop)

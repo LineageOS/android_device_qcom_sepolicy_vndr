@@ -57,9 +57,14 @@ set_prop(vendor_hal_spu_qti, vendor_spcomlib_prop)
 
 # Allow to allocate HLOS<=>SP share buffers for loading SP apps (r_file_perms includes ioctl)
 allow vendor_hal_spu_qti vendor_dmabuf_sp_hlos_heap_device:chr_file r_file_perms;
+allow vendor_hal_spu_qti vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 
 # Allow hyp_assign() for HLOS<=>SP share buffers (r_file_perms includes ioctl)
+allow vendor_hal_spu_qti vendor_vm_hlos_device:chr_file r_file_perms;
+allow vendor_hal_spu_qti vendor_vm_cp_spss_sp_device:chr_file r_file_perms;
+allow vendor_hal_spu_qti vendor_vm_cp_spss_sp_shared_device:chr_file r_file_perms;
 allow vendor_hal_spu_qti vendor_vm_cp_spss_hlos_shared_device:chr_file r_file_perms;
+allow vendor_hal_spu_qti vendor_membuf_dev:chr_file r_file_perms;
 
 # Vendor binder
 use_vendor_per_mgr(vendor_hal_spu_qti)

@@ -47,3 +47,10 @@ allow vendor_hal_drm_widevine vendor_qdisplay_service:service_manager { find };
 hal_client_domain(vendor_hal_drm_widevine, hal_graphics_composer);
 allow vendor_hal_drm_widevine vendor_mediadrm_vendor_data_file:dir create_dir_perms;
 allow vendor_hal_drm_widevine vendor_mediadrm_vendor_data_file:file create_file_perms;
+
+#DMA Buf
+allow vendor_hal_drm_widevine vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow vendor_hal_drm_widevine vendor_membuf_dev:chr_file r_file_perms;
+allow vendor_hal_drm_widevine vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow vendor_hal_drm_widevine vendor_vm_cp_bitstream_device:chr_file r_file_perms;
+allow vendor_hal_drm_widevine vendor_vm_hlos_device:chr_file r_file_perms;

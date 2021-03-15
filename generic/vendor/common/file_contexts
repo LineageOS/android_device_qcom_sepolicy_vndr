@@ -130,8 +130,12 @@
 /dev/dma_heap/qcom,display              u:object_r:vendor_dmabuf_display_heap_device:s0
 /dev/dma_heap/qcom,audio-ml             u:object_r:vendor_dmabuf_audio_ml_heap_device:s0
 
-/dev/mem_buf_vm/qcom,trusted_vm			u:object_r:vendor_vm_primary_device:s0
-/dev/mem_buf_vm/qcom,primary_vm			u:object_r:vendor_vm_trusted_device:s0
+# mem-buf device used for inter-VM memory transactions
+/dev/membuf                                     u:object_r:vendor_membuf_dev:s0
+
+# mem_buf_vm device end points to be used in inter-VM memory transactions
+/dev/mem_buf_vm/qcom,self			u:object_r:vendor_vm_self_device:s0
+/dev/mem_buf_vm/qcom,trusted_vm			u:object_r:vendor_vm_trusted_device:s0
 /dev/mem_buf_vm/qcom,hlos			u:object_r:vendor_vm_hlos_device:s0
 /dev/mem_buf_vm/qcom,cp_touch			u:object_r:vendor_vm_cp_touch_device:s0
 /dev/mem_buf_vm/qcom,cp_bitstream		u:object_r:vendor_vm_cp_bitstream_device:s0
@@ -227,6 +231,8 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qdutils_disp@1\.0-service-qti u:object_r:vendor_hal_qdutils_disp_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.trustedui@1\.0-service-qti u:object_r:vendor_hal_trustedui_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.capabilityconfigstore@1\.0-service u:object_r:vendor_hal_capabilityconfigstore_qti_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.camera\.provider@2\.[0-9]+-service u:object_r:hal_camera_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.camera\.provider@2\.[0-9]+-service_64 u:object_r:hal_camera_default_exec:s0
 
 /(vendor|system/vendor)/bin/power_off_alarm        u:object_r:vendor_power_off_alarm_exec:s0
 
@@ -515,6 +521,7 @@
 
 #Light AIDL HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.qti   u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.lights\.service                   u:object_r:hal_light_default_exec:s0
 
 # Qti Dumpstate HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.dumpstate@1\.1-service\.qti   u:object_r:hal_dumpstate_default_exec:s0

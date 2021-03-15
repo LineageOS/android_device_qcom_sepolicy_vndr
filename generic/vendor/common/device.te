@@ -46,21 +46,23 @@ type vendor_modem_efs_partition_device, dev_type;
 type vendor_mdtp_device, dev_type;
 type vendor_persist_block_device, dev_type;
 
-type vendor_dmabuf_system_heap_device, dev_type, mlstrustedobject;
-type vendor_dmabuf_secure_pixel, dev_type;
-type vendor_dmabuf_secure_non_pixel, dev_type;
-type vendor_dmabuf_adsp_heap_device, dev_type;
-type vendor_dmabuf_secure_cdsp_heap_device, dev_type;
-type vendor_dmabuf_sp_hlos_heap_device, dev_type;
-type vendor_dmabuf_secure_sp_modem_heap_device, dev_type;
-type vendor_dmabuf_secure_sp_tz_heap_device, dev_type;
-type vendor_dmabuf_user_contig_heap_device, dev_type;
-type vendor_dmabuf_qseecom_heap_device, dev_type;
-type vendor_dmabuf_qseecom_ta_heap_device, dev_type;
-type vendor_dmabuf_display_heap_device, dev_type;
-type vendor_dmabuf_audio_ml_heap_device, dev_type;
+type vendor_dmabuf_system_heap_device, dmabuf_heap_device_type, dev_type, mlstrustedobject;
+type vendor_dmabuf_secure_pixel, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_secure_non_pixel, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_adsp_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_secure_cdsp_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_sp_hlos_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_secure_sp_modem_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_secure_sp_tz_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_user_contig_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_qseecom_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_qseecom_ta_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_display_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_audio_ml_heap_device, dmabuf_heap_device_type, dev_type;
 
-type vendor_vm_primary_device, dev_type;
+type vendor_membuf_dev, dev_type;
+
+type vendor_vm_self_device, dev_type;
 type vendor_vm_trusted_device, dev_type;
 type vendor_vm_hlos_device, dev_type;
 type vendor_vm_cp_touch_device, dev_type;

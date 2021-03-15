@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018,2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -37,3 +37,6 @@ allow vendor_hal_keymaster_qti vendor_spss_utils_device:chr_file rw_file_perms;
 allow vendor_hal_keymaster_qti vendor_sp_keymaster_device:chr_file rw_file_perms;
 allow vendor_hal_keymaster_qti vendor_sp_ssr_device:chr_file rw_file_perms;
 get_prop(vendor_hal_keymaster_qti, vendor_spcomlib_prop)
+
+# As each dma buf is seperate device, need to allow access to those devices
+allow vendor_hal_keymaster_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;

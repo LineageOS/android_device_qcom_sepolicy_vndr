@@ -59,3 +59,6 @@ allow vendor_qti_init_shell {
     vendor_sysfs_mmc_host
     sysfs_dm
 }:file w_file_perms;
+
+# Allow init shell to access vendor pasr properties
+set_prop(vendor_qti_init_shell, vendor_pasr_prop)

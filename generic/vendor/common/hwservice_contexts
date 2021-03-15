@@ -64,3 +64,5 @@ vendor.qti.hardware.display.mapper::IQtiMapper               u:object_r:hal_grap
 vendor.qti.hardware.camera.postproc::IPostProcService        u:object_r:vendor_hal_camera_postproc_hwservice:s0
 vendor.qti.hardware.embmssl::IEmbms                          u:object_r:vendor_hal_embmssl_hwservice:s0
 vendor.qti.hardware.dsp::IDspService                         u:object_r:vendor_hal_dspmanager_hwservice:s0
+vendor.qti.hardware.camera.aon::IAONService                  u:object_r:vendor_hal_camera_aon_hwservice:s0
+vendor.qti.hardware.power.powermodule::IPowerModule          u:object_r:vendor_hal_poweroptservice_hwservice:s0

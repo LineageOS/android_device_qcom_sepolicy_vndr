@@ -41,6 +41,7 @@ get_prop(vendor_cdsprpcd, vendor_adsprpc_prop)
 allow vendor_cdsprpcd vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_cdsprpcd vendor_xdsp_device:chr_file r_file_perms;
 allow vendor_cdsprpcd ion_device:chr_file r_file_perms;
+allow vendor_cdsprpcd vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 
 r_dir_file(vendor_cdsprpcd, vendor_sysfs_devfreq)
 allow vendor_cdsprpcd vendor_sysfs_devfreq_l3cdsp:dir r_dir_perms;

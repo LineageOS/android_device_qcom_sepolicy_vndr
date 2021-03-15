@@ -40,3 +40,6 @@ hal_client_domain(platform_app, vendor_hal_qspmhal)
 hal_client_domain(platform_app, hal_fingerprint)
 # allow platform_app to interact with pasr hal
 hal_client_domain(platform_app, vendor_hal_pasrmanager)
+
+# allow platform_app access to NFC service
+allow platform_app nfc_service:service_manager find;

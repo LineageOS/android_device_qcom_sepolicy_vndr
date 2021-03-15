@@ -1,5 +1,5 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
-#
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
+
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
 # met:
@@ -25,41 +25,23 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-## vendor_usta_app
-##
-## This file defines the permissions that vendor_usta_apps can carry
+# Define domain
+type hal_display_demura_default, domain;
+hal_server_domain(hal_display_demura_default, vendor_hal_display_demura)
+type hal_display_demura_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_display_demura_default)
 
-type vendor_usta_app, domain, mlstrustedsubject;
+# Allow hwbinder call from hal client to server
+binder_call(vendor_hal_display_demura_client, vendor_hal_display_demura_server)
+binder_call(vendor_hal_display_demura_server, vendor_hal_display_demura_client)
 
-app_domain(vendor_usta_app)
-hal_client_domain(vendor_usta_app, vendor_hal_perf)
-get_prop(vendor_usta_app, vendor_sensors_prop)
+# Add hwservice related rules
+hal_attribute_hwservice(vendor_hal_display_demura, vendor_hal_display_demura_hwservice)
 
-#allow only vendor_usta_app with userdebug to access ioctl
-userdebug_or_eng(`
-  diag_use(vendor_usta_app)
-  get_prop(vendor_usta_app, vendor_sensors_dbg_prop)
-  allowxperm vendor_usta_app self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
-  allow vendor_usta_app self:{ socket qipcrtr_socket } create_socket_perms;
-  allow vendor_usta_app vendor_xdsp_device:chr_file r_file_perms;
-')
+# Rule for vndbinder usage
+allow vendor_hal_display_demura vendor_qdisplay_service:service_manager find;
+vndbinder_use(vendor_hal_display_demura);
 
-allow vendor_usta_app {
-  app_api_service
-  surfaceflinger_service
-}:service_manager find;
-
-allow vendor_usta_app vendor_usta_app_data_file:dir create_dir_perms;
-allow vendor_usta_app vendor_usta_app_data_file:file create_file_perms;
-
-allow vendor_usta_app vendor_sensors_vendor_data_file:dir create_dir_perms;
-allow vendor_usta_app vendor_sensors_vendor_data_file:file create_file_perms;
-
-dontaudit vendor_usta_app system_data_file:file open;
-allow vendor_usta_app cgroup:file w_file_perms;
-
-dontaudit vendor_usta_app vendor_hal_qspmhal_hwservice:hwservice_manager find;
-dontaudit vendor_usta_app gpuservice:binder call;
-userdebug_or_eng(`
-  dontaudit vendor_usta_app vendor_diag-router:unix_stream_socket connectto;
-')
+# Allow reading/writing to "/data/vendor/display"
+allow hal_display_demura_default vendor_display_vendor_data_file:dir create_dir_perms;
+allow hal_display_demura_default vendor_display_vendor_data_file:file create_file_perms;
