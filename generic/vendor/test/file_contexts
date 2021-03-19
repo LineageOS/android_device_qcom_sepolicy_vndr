@@ -100,8 +100,10 @@
 # snapcam libs
 /vendor/lib(64)?/libjni_mfnrutil\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libjni_aidenoiserutil\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libjni_aidenoiserutilv2\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmmcamera_mfnr\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libaidenoiser\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libaidenoiserv2\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libopencv\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libofflinelog\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libbitmlengine\.so       u:object_r:same_process_hal_file:s0
