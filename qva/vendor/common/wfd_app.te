@@ -26,3 +26,4 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 dontaudit vendor_wfd_app vendor_hal_perf_hwservice:hwservice_manager find;
+dontaudit vendor_wfd_app gpuservice:binder call;
