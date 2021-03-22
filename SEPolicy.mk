@@ -59,21 +59,4 @@ ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     endif
 endif
 
-ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
-    BOARD_SEPOLICY_DIRS := \
-                 $(BOARD_SEPOLICY_DIRS) \
-                 $(SEPOLICY_PATH) \
-                 $(SEPOLICY_PATH)/legacy/vendor/ssg \
-                 $(SEPOLICY_PATH)/legacy/vendor/common
-
-    ifeq ($(TARGET_SEPOLICY_DIR),)
-      BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/$(TARGET_BOARD_PLATFORM)
-    else
-      BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/$(TARGET_SEPOLICY_DIR)
-    endif
-    ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-    BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test
-    BOARD_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/test/sysmonapp
-    endif
-endif
 endif

@@ -68,6 +68,9 @@ vendor_internal_prop(vendor_time_service_prop);
 # Audio props
 vendor_restricted_prop(vendor_audio_prop);
 
+# kernel modprobe prop
+vendor_restricted_prop(vendor_modprobe_prop);
+
 # shsusrd props
 vendor_restricted_prop(vendor_data_shsusr_prop);
 
@@ -97,6 +100,12 @@ vendor_internal_prop(vendor_wifi_prop);
 
 #qdcmss property
 vendor_internal_prop(vendor_qdcmss_prop);
+neverallow {
+  domain
+  -init
+  -vendor_init
+  -vendor_hal_display_color
+} vendor_qdcmss_prop:property_service set;
 
 #adsprpc props
 vendor_restricted_prop(vendor_adsprpc_prop);

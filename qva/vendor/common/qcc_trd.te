@@ -101,3 +101,11 @@ allow vendor_qcc_trd fuse:file create_file_perms;
 allow vendor_qcc_trd mnt_user_file:dir search;
 allow vendor_qcc_trd mnt_user_file:lnk_file read;
 ')
+
+# allow creating unix-domain-sockets for LTC
+allow vendor_qcc_trd vendor_qcc_trd_socket:dir rw_dir_perms;
+allow vendor_qcc_trd vendor_qcc_trd_socket:sock_file create_file_perms;
+net_domain(vendor_qcc_trd)
+
+# allow to read /proc/sys/net/core/somaxconn - needed for grpc lib
+allow vendor_qcc_trd proc_net:file r_file_perms;

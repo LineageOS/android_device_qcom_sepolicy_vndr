@@ -94,6 +94,9 @@ ro.vendor.radio            u:object_r:vendor_radio_prop:s0
 
 persist.vendor.sys.        u:object_r:vendor_system_prop:s0
 
+# kernel modprobe
+vendor.all.modules.ready   u:object_r:vendor_modprobe_prop:s0
+
 #ss-restart
 persist.vendor.ssr.    u:object_r:vendor_ssr_prop:s0
 

@@ -109,3 +109,7 @@ hal_client_domain(hal_graphics_composer_default, vendor_hal_perf);
 # Allow access to qipcrtr_socket
 # Remove this when QMI service moves to pfmd
 allow hal_graphics_composer self: qipcrtr_socket create_socket_perms_no_ioctl;
+
+# Allow display config aidl service
+hal_attribute_service(hal_graphics_composer, vendor_hal_displayconfig_service);
+binder_call(hal_graphics_composer, servicemanager);

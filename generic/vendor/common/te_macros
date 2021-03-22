@@ -169,3 +169,12 @@ define(`use_vendor_fwk_detect', `
 define(`use_libsoc_helper', `
 get_prop($1, vendor_soc_id_prop);
 ')
+
+#######################################
+# Allow domains to use QTR SDK for metric collection
+# syntax: qtr_sdk_use(clientdomain)
+#define(`qtr_sdk_use', `
+#allow $1 vendor_qcc_trd_socket:dir r_dir_perms;
+#unix_socket_connect($1, vendor_qcc_trd, vendor_qcc_trd)
+#allow $1 vendor_qcc_trd_socket:sock_file { read getattr write };
+#')

@@ -62,6 +62,7 @@
 /dev/socket/wigig/wpa_wigig[0-9]                u:object_r:vendor_wigig_vendor_wpa_socket:s0
 /dev/socket/wigig/wigignpt                      u:object_r:vendor_wigignpt_socket:s0
 /dev/socket/wigig/sensingdaemon                 u:object_r:vendor_sensingdaemon_socket:s0
+/dev/socket/qcc_trd(/.*)?                       u:object_r:vendor_qcc_trd_socket:s0
 
 
 /dev/smcinvoke                                  u:object_r:tee_device:s0
@@ -72,6 +73,7 @@
 /(vendor|system/vendor)/bin/dpmQmiMgr                                              u:object_r:vendor_hal_dpmQmiMgr_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.0-strongbox-service-qti             u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-strongbox-service-qti             u:object_r:vendor_hal_keymaster_qti_exec:s0
+/vendor/bin/hw/android\.hardware\.keymaster@4\.1-javacard.service                  u:object_r:hal_keymaster_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.cryptfshw@1\.0-service-qti                   u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.authsecret@1\.0-service-qti                      u:object_r:vendor_hal_authsecret_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.drm@1\.2-service.clearkey                        u:object_r:vendor_hal_drm_clearkey_exec:s0
@@ -161,6 +163,7 @@
 #perf
 /sys/module/cpu_boost(/.*)?                                         u:object_r:vendor_sysfs_cpu_boost:s0
 /sys/module/msm_performance(/.*)?                                   u:object_r:vendor_sysfs_msm_perf:s0
+/sys/kernel/msm_performance(/.*)?                                   u:object_r:vendor_sysfs_msm_perf:s0
 /sys/module/process_reclaim(/.*)?                                   u:object_r:vendor_sysfs_process_reclaim:s0
 /sys/module/vmpressure(/.*)?                                        u:object_r:vendor_sysfs_vmpressure:s0
 

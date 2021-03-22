@@ -37,3 +37,10 @@ hal_client_domain(vendor_qdcm-ss, hal_graphics_composer)
 
 # Allow adbd to connect to qdcm
 unix_socket_connect(adbd, vendor_qdcmsocket, vendor_qdcm-ss);
+
+# Allow qdcmss to read/write to /data/vendor/display and /mnt/vendor/persist/display/
+allow vendor_qdcm-ss vendor_display_vendor_data_file:dir rw_dir_perms;
+allow vendor_qdcm-ss vendor_display_vendor_data_file:file create_file_perms;
+allow vendor_qdcm-ss vendor_persist_display_file:dir rw_dir_perms;
+allow vendor_qdcm-ss vendor_persist_display_file:file create_file_perms;
+allow vendor_qdcm-ss mnt_vendor_file:dir search;

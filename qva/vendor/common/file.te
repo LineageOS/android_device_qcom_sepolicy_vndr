@@ -62,6 +62,7 @@ type vendor_sysfs_sku, fs_type, sysfs_type;
 
 # qcc-trd data files
 type vendor_qcc_trd_data_file, file_type, data_file_type;
+type vendor_qcc_trd_socket, file_type;
 
 type vendor_sysfs_npu, fs_type, sysfs_type;
 
