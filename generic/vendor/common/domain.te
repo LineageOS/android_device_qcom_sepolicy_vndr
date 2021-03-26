@@ -28,14 +28,6 @@ userdebug_or_eng(`
   allow domain vendor_diag_device:chr_file rw_file_perms;
 ')
 
-# In order for /sys/kernel/debug/kgsl/proc/<pid>/mem
-# to be created for memory tracking, the domain of
-# the tracked process must have permission to search
-# in /sys/kernel/debug/kgsl
-allow domain vendor_debugfs_kgsl:dir search;
-
-allow domain vendor_debugfs_ion:dir search;
-
 get_prop(domain, vendor_gralloc_prop)
 
 r_dir_file({domain - isolated_app - untrusted_app_all }, vendor_sysfs_soc);
