@@ -40,3 +40,10 @@ hal_client_domain(platform_app, vendor_hal_qspmhal)
 hal_client_domain(platform_app, hal_fingerprint)
 # allow platform_app to interact with pasr hal
 hal_client_domain(platform_app, vendor_hal_pasrmanager)
+#allow platform_app to interact with wificfr hal
+hal_client_domain(platform_app, hal_wificfr)
+#allow platform_app to interact with wpa_supplicant
+# adding typeattribute instead of macro because hal_wifi_supplicant has already
+# been defined
+typeattribute platform_app hal_wifi_supplicant_client;
+
