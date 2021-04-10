@@ -30,3 +30,4 @@
 
 # allow location_app to access perf hal
 hal_client_domain(vendor_location_app, vendor_hal_perf)
+binder_call(vendor_location_app, gpuservice);
