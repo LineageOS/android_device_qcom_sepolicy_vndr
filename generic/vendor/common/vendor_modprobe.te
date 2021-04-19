@@ -30,4 +30,4 @@ allow vendor_modprobe vendor_shell_exec:file rx_file_perms;
 allow vendor_modprobe vendor_toolbox_exec:file rx_file_perms;
 allow vendor_modprobe proc_version:file r_file_perms;
 # Allow the below search permission for modprobe only in user builds too.
-allow vendor_modprobe { vendor_debugfs_ipc debugfs_tracing_instances }:dir search;
+allow vendor_modprobe { debugfs_tracing_instances }:dir search;
