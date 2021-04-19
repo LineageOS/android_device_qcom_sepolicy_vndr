@@ -1,4 +1,4 @@
-# Copyright (c) 2016, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,18 +24,4 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-type logdumpd, domain;
-type logdumpd_exec, exec_type, vendor_file_type, file_type;
-
-init_daemon_domain(logdumpd)
-
-
-userdebug_or_eng(`
-#logcat
-#allow logdumpd logcat_exec:file entrypoint;
-#read_logd( logdumpd );
-#logdump partition access
-allow logdumpd block_device:dir r_dir_perms;
-allow logdumpd logdump_partition:blk_file rw_file_perms;
-')
+vendor.qti.hardware.display.demura::IDemuraFileFinder           u:object_r:vendor_hal_display_demura_hwservice:s0

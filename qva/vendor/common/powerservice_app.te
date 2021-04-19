@@ -41,3 +41,6 @@ hal_client_domain(vendor_powerservice_app, vendor_hal_mem_pasrmanager)
 
 # allow Power service to interact with pasr power hal
 hal_client_domain(vendor_powerservice_app, vendor_hal_pasrmanager)
+
+# allow Power service to interact with perf hal
+hal_client_domain(vendor_powerservice_app, vendor_hal_perf)

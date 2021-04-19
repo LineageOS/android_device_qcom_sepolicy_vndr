@@ -29,4 +29,4 @@
 #qspm hal debug
 type vendor_qspm_dbg_prop, property_type;
 type vendor_dbg_brkpoint_prop, property_type;
-type vendor_myapp_prop, property_type;
+type vendor_fda_prop, property_type;

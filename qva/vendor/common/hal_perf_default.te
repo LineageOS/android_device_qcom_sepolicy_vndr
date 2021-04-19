@@ -123,5 +123,18 @@ allow vendor_hal_perf_default graphics_device:chr_file rw_file_perms;
 # Allow shared memory access
 hal_client_domain(vendor_hal_perf_default, hal_allocator);
 
+# Allow perf hal to interact with pasr memory hal
+hal_client_domain(vendor_hal_perf_default, vendor_hal_mem_pasrmanager);
+
 allow vendor_hal_perf_default block_device:dir { open read search };
 allow vendor_hal_perf_default proc_diskstats:file { getattr open read };
+
+allow vendor_hal_perf_default surfaceflinger:process setsched;
+allow vendor_hal_perf_default hal_graphics_composer_default:process setsched;
+allow vendor_hal_perf_default self:capability { sys_nice setuid };
+
+# Rule for vndbinder usage
+allow vendor_hal_perf vendor_qdisplay_service:service_manager find;
+vndbinder_use(vendor_hal_perf);
+
+hal_client_domain(vendor_hal_perf_default, hal_thermal);

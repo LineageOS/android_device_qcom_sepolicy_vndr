@@ -58,3 +58,6 @@ r_dir_file(vendor_ssg_app, proc)
 
 # Fix the permission error for lib resource link.
 allow vendor_ssg_app app_data_file:lnk_file read;
+
+# Allow vendor_ssg_app to make binder call to gpuservice
+binder_call(vendor_ssg_app, gpuservice);
