@@ -45,3 +45,4 @@ r_dir_file(vendor_poweroptservice, sysfs_android_usb)
 allow vendor_poweroptservice vendor_qdisplay_service:service_manager find;
 allow vendor_poweroptservice input_device:dir r_dir_perms;
 allow vendor_poweroptservice input_device:chr_file rw_file_perms;
+dontaudit vendor_poweroptservice self:capability kill;
