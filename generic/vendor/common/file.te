@@ -72,17 +72,6 @@ type vendor_sysfs_trusted_touch_enable, sysfs_type, fs_type;
 type vendor_sysfs_trusted_touch_event, sysfs_type, fs_type;
 type vendor_sysfs_trusted_touch_type, sysfs_type, fs_type;
 
-type vendor_debugfs_clk, debugfs_type, fs_type;
-type vendor_debugfs_ion, debugfs_type, fs_type;
-type vendor_debugfs_ipc, debugfs_type, fs_type;
-type vendor_debugfs_kgsl, debugfs_type, fs_type;
-type vendor_debugfs_rpm, debugfs_type, fs_type;
-type vendor_debugfs_rmt_storage, debugfs_type, fs_type;
-type vendor_debugfs_usb, debugfs_type, fs_type;
-type vendor_debugfs_wlan, debugfs_type, fs_type;
-type vendor_debugfs_mdp, debugfs_type, fs_type;
-type vendor_debugfs_icnss, debugfs_type, fs_type;
-
 # /proc
 type vendor_proc_wifi_dbg, fs_type, proc_type;
 type vendor_proc_audiod, fs_type, proc_type;

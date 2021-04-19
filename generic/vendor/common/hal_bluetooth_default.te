@@ -48,8 +48,6 @@ allow hal_bluetooth_default vendor_ramdump_vendor_data_file:dir create_dir_perms
 
 allow hal_bluetooth_default proc_sysrq:file rw_file_perms;
 
-allow hal_bluetooth_default vendor_debugfs_ipc:file rw_file_perms;
-allow hal_bluetooth_default vendor_debugfs_ipc:dir  rw_dir_perms;
 allow hal_bluetooth_default vendor_bt_data_file:dir ra_dir_perms;
 allow hal_bluetooth_default vendor_bt_data_file:file create_file_perms;
 allow hal_bluetooth_default self:{ socket } create_socket_perms_no_ioctl;
