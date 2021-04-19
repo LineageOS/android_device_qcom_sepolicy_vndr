@@ -39,6 +39,8 @@ get_prop(vendor_init, vendor_mmi_prop)
 set_prop(vendor_init, vendor_usb_prop)
 
 get_prop(vendor_init, vendor_video_prop)
+set_prop(vendor_init, vendor_video_prop)
+get_prop(vendor_init, vendor_sys_video_prop)
 set_prop(vendor_init, vendor_sys_video_prop)
 
 set_prop(vendor_init, vendor_wigig_prop)
@@ -57,3 +59,7 @@ set_prop(vendor_init, vendor_persist_dpm_prop)
 
 # Allow vendor_init to set vendor_pasr_prop
 set_prop(vendor_init, vendor_pasr_prop)
+
+# allow vendor_init to use wait for qseecom
+allow vendor_init tee_device:chr_file getattr;
+

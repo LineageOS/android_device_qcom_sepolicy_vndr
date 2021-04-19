@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -103,3 +103,5 @@ genfscon sysfs /devices/platform/soc/c800000.qcom,icnss u:object_r:sysfs_net:s0
 
 #fps sysfs-node
 
+#ssr nodes
+genfscon sysfs /devices/platform/soc/5ab0000.qcom,venus/subsys1/name u:object_r:vendor_sysfs_ssr:s0

@@ -56,11 +56,11 @@ use_vendor_per_mgr(vendor_spdaemon)
 hal_client_domain(vendor_spdaemon, hal_telephony)
 
 # Allow to access IAR-DB at /mnt/vendor/persist/iar_db
-allow vendor_spdaemon vendor_persist_iar_db_file:dir rw_dir_perms;
+allow vendor_spdaemon vendor_persist_iar_db_file:dir create_dir_perms;
 allow vendor_spdaemon vendor_persist_iar_db_file:file create_file_perms;
 
-# Allow to access IAR-DB at /mnt/vendor/spunvm
-allow vendor_spdaemon vendor_spunvm_file:dir rw_dir_perms;
+# Allow to access IAR-DB at /mnt/vendor/spunvm/iar_db
+allow vendor_spdaemon vendor_spunvm_file:dir create_dir_perms;
 allow vendor_spdaemon vendor_spunvm_file:file create_file_perms;
 
 allow vendor_spdaemon vendor_sysfs_data:file r_file_perms;

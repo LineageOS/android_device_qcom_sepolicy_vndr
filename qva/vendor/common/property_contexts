@@ -70,6 +70,7 @@ vendor.sys.boot_mode                         u:object_r:vendor_boot_mode_prop:s0
 vendor.media.target.version                  u:object_r:vendor_video_prop:s0
 vendor.video.disable.ubwc                    u:object_r:vendor_video_prop:s0
 vendor.media.target_variant                  u:object_r:vendor_video_prop:s0
+vendor.media.target.qssi                     u:object_r:vendor_video_prop:s0
 vendor.netflix.bsp_rev                       u:object_r:vendor_video_prop:s0
 
 # factory properties
@@ -133,3 +134,6 @@ persist.vendor.slm.                          u:object_r:vendor_slm_prop:s0
 #pasr property
 vendor.pasr.                                 u:object_r:vendor_pasr_prop:s0
 ro.vendor.pasr.                              u:object_r:vendor_pasr_prop:s0
+
+#MWQEM
+persist.vendor.mwqem.                        u:object_r:vendor_mwqem_prop:s0

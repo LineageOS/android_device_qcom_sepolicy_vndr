@@ -120,9 +120,9 @@
 /vendor/bin/hw/android\.hardware\.vr@1\.0-service.crosshatch      u:object_r:hal_vr_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fpc u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android.hardware.thermal@2.0-service.qti      u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/hw/vendor.qti.hardware.limits@1.0-service      u:object_r:vendor_hal_limits_qti_exec:s0
 /vendor/bin/thermal-engine      u:object_r:vendor_thermal-engine_exec:s0
-/vendor/bin/sensors.qcom        u:object_r:vendor_sensors_exec:s0
-/vendor/bin/sensors.qti         u:object_r:vendor_sensors_exec:s0
+/vendor/bin/sensors.qti         u:object_r:vendor_sensors_qti_exec:s0
 /vendor/bin/ssr_setup           u:object_r:vendor_ssr_setup_exec:s0
 /vendor/bin/ssr_diag            u:object_r:vendor_ssr_diag_exec:s0
 /vendor/bin/pm-service          u:object_r:vendor_per_mgr_exec:s0
