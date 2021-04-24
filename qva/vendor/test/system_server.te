@@ -29,8 +29,6 @@
 # userdebug_or_eng macro
 
 userdebug_or_eng(`
-allow system_server vendor_binder_state:file r_file_perms;
-
 # allow system_server to access IMyFtm HAL service
 hal_client_domain(system_server, vendor_hal_wifimyftm);
 ')

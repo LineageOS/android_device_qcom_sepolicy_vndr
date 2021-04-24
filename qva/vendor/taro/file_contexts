@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020,2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -36,3 +36,5 @@
 ###################################
 #camera
 /sys/firmware/devicetree/base/memory/ddr_device_type                               u:object_r:vendor_sysfs_ddr:s0
+
+/sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/spm_lvl                u:object_r:vendor_sysfs_scsi_host:s0

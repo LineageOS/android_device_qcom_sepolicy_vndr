@@ -71,6 +71,7 @@
 #
 
 /(vendor|system/vendor)/bin/dpmQmiMgr                                              u:object_r:vendor_hal_dpmQmiMgr_exec:s0
+/vendor/bin/vendor.dpmd                                                            u:object_r:vendor_dpmd_vndr_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.0-strongbox-service-qti             u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-strongbox-service-qti             u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-javacard.service                  u:object_r:hal_keymaster_default_exec:s0
@@ -119,7 +120,7 @@
 /(vendor|system/vendor)/bin/mlid                                                   u:object_r:vendor_mlid_exec:s0
 /(vendor|system/vendor)/bin/qcc-trd                                             u:object_r:vendor_qcc_trd_exec:s0
 /(vendor|system/vendor)/bin/seemp_healthd                                          u:object_r:vendor_seemp_health_daemon_exec:s0
-/(vendor|system/vendor)/bin/qfp-daemon                                             u:object_r:vendor_qfp-daemon_exec:s0
+/(vendor|system/vendor)/bin/hw/qfp-daemon                                          u:object_r:vendor_qfp-daemon_exec:s0
 /(vendor|system/vendor)/bin/adpl                                                   u:object_r:vendor_adpl_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.esepowermanager@1\.0-service           u:object_r:vendor_hal_esepowermanager_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.esepowermanager@1\.1-service           u:object_r:vendor_hal_esepowermanager_qti_exec:s0
@@ -191,6 +192,7 @@
 ###################################
 # data files
 #
+/data/vendor/dpm_vndr(/.*)?                                         u:object_r:vendor_dpm_vndr_data_file:s0
 /data/vendor/iop(/.*)?                                              u:object_r:vendor_iop_data_file:s0
 /data/vendor/misc/qti_fp(/.*)?                                      u:object_r:vendor_qfp-daemon_data_file:s0
 /data/vendor/wifi(/.*)?                                             u:object_r:vendor_wifi_vendor_data_file:s0

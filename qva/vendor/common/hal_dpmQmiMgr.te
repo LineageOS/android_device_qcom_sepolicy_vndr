@@ -33,17 +33,13 @@ init_daemon_domain(vendor_hal_dpmQmiMgr)
 
 net_domain(vendor_hal_dpmQmiMgr)
 
-#Add hal_dpmQMiMgr as hwservice
-add_hwservice(vendor_hal_dpmQmiMgr, vendor_hal_dpmqmi_hwservice)
-
-#Allow hwbinder usage
-hwbinder_use(vendor_hal_dpmQmiMgr)
+hal_server_domain_bypass(vendor_hal_dpmQmiMgr, vendor_hal_dpmqmiservice_qti)
+binder_call(vendor_hal_dpmqmiservice_qti_client, vendor_hal_dpmqmiservice_qti_server)
+binder_call(vendor_hal_dpmqmiservice_qti_server, vendor_hal_dpmqmiservice_qti_client)
+hal_attribute_hwservice(vendor_hal_dpmqmiservice_qti,vendor_hal_dpmqmi_hwservice)
 
 #Allow to get hwservice_prop
-get_prop(vendor_hal_dpmQmiMgr, hwservicemanager_prop)
-
-#Allow binder call from dpmd
-binder_call(vendor_hal_dpmQmiMgr,vendor_dpmd)
+get_prop(vendor_hal_dpmQmiMgr, vendor_persist_dpm_prop)
 
 #sysfs_data file permissions
 allow vendor_hal_dpmQmiMgr vendor_sysfs_data:file r_file_perms;

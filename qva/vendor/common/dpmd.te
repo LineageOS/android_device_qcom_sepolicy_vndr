@@ -34,11 +34,7 @@ wakelock_use(vendor_dpmd)
 
 r_dir_file(vendor_dpmd, vendor_sysfs_data)
 
-#Allow vendor_dpmd to connect to hal_dpmQMiMgr
-allow vendor_dpmd vendor_hal_dpmqmi_hwservice:hwservice_manager find;
-get_prop(vendor_dpmd, hwservicemanager_prop)
-binder_call(vendor_dpmd,vendor_hal_dpmQmiMgr)
-hwbinder_use(vendor_dpmd)
+hal_client_domain(vendor_dpmd,vendor_hal_dpmqmiservice_qti)
 
 #diag
 userdebug_or_eng(`

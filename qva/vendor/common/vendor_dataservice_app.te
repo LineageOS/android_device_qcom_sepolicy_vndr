@@ -32,3 +32,6 @@ get_prop(vendor_dataservice_app, vendor_slm_prop)
 allow vendor_dataservice_app vendor_hal_mwqemadapter_hwservice:hwservice_manager find;
 
 get_prop(vendor_dataservice_app, vendor_mwqem_prop)
+
+hal_client_domain(vendor_dataservice_app,vendor_hal_dpmapiservice_qti)
+

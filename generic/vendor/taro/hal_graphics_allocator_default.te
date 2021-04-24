@@ -26,3 +26,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 allow hal_graphics_allocator_default vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_dmabuf_secure_pixel:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_dmabuf_display_heap_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_dmabuf_secure_cdsp_heap_device:chr_file r_file_perms;

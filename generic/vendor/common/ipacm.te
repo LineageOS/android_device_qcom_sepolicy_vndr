@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -60,8 +60,8 @@ allow hal_tetheroffload self:{
     netlink_generic_socket
 } create_socket_perms_no_ioctl;
 
-# Allow creating and modifying the PID file
-allow hal_tetheroffload vendor_ipa_vendor_data_file:dir w_dir_perms;
+# Allow creating, watching and modifying the PID file
+allow hal_tetheroffload vendor_ipa_vendor_data_file:dir rw_dir_perms;
 allow hal_tetheroffload vendor_ipa_vendor_data_file:file create_file_perms;
 
 # To register vendor_ipacm to hwbinder

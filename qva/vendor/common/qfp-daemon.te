@@ -54,6 +54,10 @@ r_dir_file(vendor_qfp-daemon, firmware_file)
 r_dir_file(vendor_qfp-daemon, mnt_vendor_file)
 r_dir_file(vendor_qfp-daemon, vendor_persist_qti_fp_file)
 
+# Read file perms for vendor_dmabuf_qseecom
+allow vendor_qfp-daemon vendor_dmabuf_qseecom_heap_device:chr_file { read write open ioctl };
+allow vendor_qfp-daemon vendor_dmabuf_qseecom_ta_heap_device:chr_file { read write open ioctl };
+
 #diag
 userdebug_or_eng(`
     diag_use(vendor_qfp-daemon)

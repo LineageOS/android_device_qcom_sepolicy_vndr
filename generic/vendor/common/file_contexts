@@ -159,8 +159,7 @@
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fpc u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android.hardware.thermal@2.0-service.qti      u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/thermal-engine      u:object_r:vendor_thermal-engine_exec:s0
-/vendor/bin/sensors.qcom        u:object_r:vendor_sensors_exec:s0
-/vendor/bin/sensors.qti         u:object_r:vendor_sensors_exec:s0
+/vendor/bin/sensors.qti         u:object_r:vendor_sensors_qti_exec:s0
 /vendor/bin/ssr_setup           u:object_r:vendor_ssr_setup_exec:s0
 /vendor/bin/ssr_diag            u:object_r:vendor_ssr_diag_exec:s0
 /vendor/bin/pm-service          u:object_r:vendor_per_mgr_exec:s0
@@ -215,7 +214,7 @@
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/init\.qti\.keymaster\.sh                                 u:object_r:vendor_init-qti-keymaster-sh_exec:s0
 /vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service-qti        u:object_r:vendor_hal_gatekeeper_qti_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@.*-service-qti u:object_r:vendor_hal_gnss_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gnss.*-service-qti u:object_r:vendor_hal_gnss_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti         u:object_r:hal_bluetooth_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine    u:object_r:vendor_hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service.widevine    u:object_r:vendor_hal_drm_widevine_exec:s0
@@ -363,6 +362,7 @@
 
 /data/vendor/mdmhelperdata(/.*)?       u:object_r:vendor_mdmhelperdata_data_file:s0
 /data/vendor/bluetooth(/.*)?           u:object_r:vendor_bt_data_file:s0
+/data/vendor/imslogs(/.*)?             u:object_r:vendor_imsd_data_file:s0
 # audio_data_file
 /data/vendor/audio(/.*)? u:object_r:vendor_audio_data_file:s0
 
@@ -392,6 +392,7 @@
 /dev/dri/card0                                  u:object_r:graphics_device:s0
 /dev/dri/controlD64                             u:object_r:graphics_device:s0
 /dev/dri/renderD128                             u:object_r:graphics_device:s0
+/dev/spec_sync                                  u:object_r:graphics_device:s0
 
 #TODO: move this to genfs_context or target based file_context
 # sysfs_leds

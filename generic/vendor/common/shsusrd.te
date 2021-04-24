@@ -41,4 +41,4 @@ allow vendor_shsusrd vendor_shsusr_data_file:file create_file_perms;
 
 hal_client_domain(vendor_shsusrd, vendor_hal_perf);
 allow vendor_shsusrd vendor_ipa_vendor_data_file:dir r_dir_perms;
-allow vendor_shsusrd vendor_ipa_vendor_data_file:file r_file_perms;
+allow vendor_shsusrd vendor_ipa_vendor_data_file:file rw_file_perms;

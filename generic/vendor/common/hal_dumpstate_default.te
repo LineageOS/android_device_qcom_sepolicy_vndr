@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,32 +24,8 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-# Policy for pm-service and pm-proxy
-type vendor_per_mgr, domain;
-type vendor_per_mgr_exec, exec_type, vendor_file_type, file_type;
 
-init_daemon_domain(vendor_per_mgr);
-
-add_service(vendor_per_mgr, vendor_per_mgr_service)
-
-vndbinder_use(vendor_per_mgr)
-binder_call(vendor_per_mgr, hal_gnss)
-binder_call(vendor_per_mgr, vendor_per_proxy)
-binder_call(vendor_per_mgr, vendor_wcnss_service)
-binder_call(vendor_per_mgr, rild)
-
-allow vendor_per_mgr self:capability net_bind_service;
-
-allow vendor_per_mgr firmware_file:file r_file_perms;
-allow vendor_per_mgr firmware_file:dir search;
-
-allow vendor_per_mgr self:socket create_socket_perms;
-allowxperm vendor_per_mgr self:socket ioctl msm_sock_ipc_ioctls;
-allow vendor_per_mgr vendor_ssr_device:chr_file rw_file_perms;
-
-# Needed by libmdmdetect to get subsystem info and to check their states
-allow vendor_per_mgr vendor_sysfs_data:file r_file_perms;
-
-# Set the peripheral state property
-set_prop(vendor_per_mgr, vendor_per_mgr_state_prop);
-
+# Give access to dumpstate hal for debugfs nodes.
+userdebug_or_eng(`
+allow hal_dumpstate_default debugfs:dir { open read };
+')

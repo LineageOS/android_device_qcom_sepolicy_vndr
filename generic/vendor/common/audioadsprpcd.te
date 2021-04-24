@@ -37,6 +37,9 @@ r_dir_file(vendor_audioadsprpcd, adsprpcd_file)
 get_prop(vendor_audioadsprpcd, vendor_adsprpc_prop)
 
 allow vendor_audioadsprpcd mnt_vendor_file:dir r_dir_perms;
+
+# Allocate DMA-BUF Heap memory through libadsprpc
+allow vendor_audioadsprpcd dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_audioadsprpcd vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_audioadsprpcd vendor_dmabuf_adsp_heap_device:chr_file r_file_perms;
 allow vendor_audioadsprpcd vendor_dmabuf_secure_pixel:chr_file r_file_perms;

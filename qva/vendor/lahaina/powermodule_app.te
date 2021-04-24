@@ -1,4 +1,4 @@
-# Copyright (c) 2019, 2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,27 +24,13 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
-type vendor_audioftm, domain;
-type vendor_audioftm_exec, exec_type, vendor_file_type, file_type;
 
-init_daemon_domain(vendor_audioftm)
-domain_auto_trans(vendor_mmi, vendor_audioftm_exec, vendor_audioftm)
+#Define Domain for Power module
+type vendor_powermodule_app, domain;
+app_domain(vendor_powermodule_app);
 
-allow vendor_audioftm vendor_audioftm_exec:file { rx_file_perms entrypoint };
+hal_client_domain(vendor_powermodule_app, vendor_hal_perf);
+hal_client_domain(vendor_powermodule_app, vendor_hal_poweroptservice)
 
-allow vendor_audioftm vendor_proc_audiod:file r_file_perms;
-allow vendor_audioftm vendor_proc_audiod:dir search;
-
-allow vendor_audioftm proc_asound:dir search;
-allow vendor_audioftm proc_asound:file r_file_perms;
-
-hal_client_domain(vendor_audioftm, hal_audio)
-
-allow vendor_audioftm devpts:chr_file rw_file_perms;
-
-allow vendor_audioftm vendor_audio_data_file:dir create_dir_perms;
-allow vendor_audioftm vendor_audio_data_file:file create_file_perms;
-
-allow vendor_audioftm audio_device:dir r_dir_perms;
-allow vendor_audioftm audio_device:chr_file rw_file_perms;
+# Allow invoking activity of vendor_powermodule_app
+allow vendor_powermodule_app app_api_service:service_manager find;

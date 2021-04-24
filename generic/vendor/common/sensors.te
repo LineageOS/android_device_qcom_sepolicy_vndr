@@ -37,24 +37,12 @@ allow vendor_sensors self:capability {
     net_bind_service
 };
 
-# Access to tests from userdebug/eng builds
-userdebug_or_eng(`
-  diag_use(vendor_sensors)
-  get_prop(vendor_sensors, vendor_sensors_dbg_prop)
-
-  #allow starting of diag_mdlog
-  allow vendor_sensors vendor_qlogd_exec:file rx_file_perms;
-  allow vendor_sensors vendor_shell_exec:file rx_file_perms;
-')
-
 allow vendor_sensors self:{ socket qipcrtr_socket } create_socket_perms;
 # ioctlcmd=c304
 allowxperm vendor_sensors self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
 
 allow vendor_sensors mnt_vendor_file:dir r_dir_perms;
 
-allow vendor_sensors vendor_sensors_vendor_data_file:dir create_dir_perms;
-allow vendor_sensors vendor_sensors_vendor_data_file:file create_file_perms;
 
 allow vendor_sensors system_file:dir r_dir_perms;
 allow vendor_sensors sensors_device:chr_file rw_file_perms;
@@ -62,7 +50,9 @@ allow vendor_sensors sensors_device:chr_file rw_file_perms;
 allow vendor_sensors vendor_sysfs_soc:file w_file_perms;
 allow vendor_sensors vendor_sysfs_data:file r_file_perms;
 
+# Allocate DMA-BUF Heap memory through libadsprpc
 allow vendor_sensors ion_device:chr_file r_file_perms;
+allow vendor_sensors dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_sensors vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_sensors vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_sensors vendor_xdsp_device:chr_file r_file_perms;
@@ -72,14 +62,9 @@ r_dir_file(vendor_sensors, adsprpcd_file)
 # For reading adsprpc_prop
 get_prop(vendor_sensors, vendor_adsprpc_prop)
 
-allow vendor_sensors vendor_persist_sensors_file:fifo_file create_file_perms;
-allow vendor_sensors vendor_sensors_vendor_data_file:fifo_file create_file_perms;
 # Access to /persist/vendor_sensors
 allow vendor_sensors vendor_persist_sensors_file:dir create_dir_perms;
 allow vendor_sensors vendor_persist_sensors_file:file create_file_perms;
+
 # Access to wakelock sysfs
 wakelock_use(vendor_sensors)
-
-#Allow to search SSR node directory
-allow vendor_sensors vendor_sysfs_slpi:dir search;
-allow vendor_sensors vendor_sysfs_slpi:file getattr;

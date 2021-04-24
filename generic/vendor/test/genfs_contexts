@@ -30,3 +30,4 @@ genfscon debugfs /dri/0/debug/recovery_reg u:object_r:vendor_qti_display_debugfs
 genfscon debugfs /dri/0/debug/recovery_dbgbus u:object_r:vendor_qti_display_debugfs:s0
 genfscon debugfs /dri/0/debug/recovery_vbif_dbgbus u:object_r:vendor_qti_display_debugfs:s0
 genfscon debugfs /dri/0/debug/recovery_dsi_dbgbus u:object_r:vendor_qti_display_debugfs:s0
+genfscon tracefs /instances/hsuart u:object_r:vendor_debugfs_bt_tracing:s0

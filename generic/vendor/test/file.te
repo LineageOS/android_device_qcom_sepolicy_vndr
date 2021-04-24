@@ -44,3 +44,5 @@ type vendor_ts_loopback_data_file, file_type, data_file_type;
 type vendor_usta_app_data_file, file_type, data_file_type, app_data_file_type;
 
 typeattribute vendor_sensors_vendor_data_file mlstrustedobject;
+
+type vendor_debugfs_bt_tracing, debugfs_type, fs_type;
