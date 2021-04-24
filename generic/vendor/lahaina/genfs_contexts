@@ -157,6 +157,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qco
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/wireless/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 
+# PMIC UI peripherals
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0 u:object_r:sysfs_rtc:s0
+
 # Wakeup node needed for a Lahaina variant
 genfscon sysfs /devices/platform/soc/soc:gpio_keys/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 
