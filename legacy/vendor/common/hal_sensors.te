@@ -25,9 +25,11 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+get_prop(hal_sensors_default, sensors_prop)
 
 userdebug_or_eng(`
     diag_use(hal_sensors)
+    get_prop(hal_sensors_default, sensors_dbg_prop)
     allow hal_sensors debugfs_tracing:file { open write };
 ')
 set_prop(hal_sensors, slpi_prop);
@@ -52,7 +54,6 @@ allow hal_sensors input_device:chr_file r_file_perms;
 #following to set the ssr
 allow hal_sensors_default sysfs_slpi:dir search;
 allow hal_sensors_default sysfs_slpi:file w_file_perms;
-allow hal_sensors_default sensors_prop:file { read open getattr };
 allow hal_sensors_default sensors_persist_file:file create_file_perms;
 allow hal_sensors_default sensors_persist_file:dir create_dir_perms;
 allow hal_sensors_default mnt_vendor_file:dir r_dir_perms;
