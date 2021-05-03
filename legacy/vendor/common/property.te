@@ -162,6 +162,10 @@ type vendor_softap_prop, property_type;
 #mm-video
 type vendor_video_prop, property_type;
 
+#qtccconnector
+type vendor_qteeconnector_opti_prop, property_type;
+
+
 #rmt_storage
 type ctl_vendor_rmt_storage_prop, property_type;
 
