@@ -34,8 +34,10 @@ hal_server_domain(vendor_biometricsface, hal_face)
 
 r_dir_file(vendor_biometricsface, adsprpcd_file)
 
-#  Access for ion_memory
-allow vendor_biometricsface ion_device:chr_file rw_file_perms;
+#  DMA buf access
+allow vendor_biometricsface vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow vendor_biometricsface vendor_dmabuf_user_contig_heap_device:chr_file r_file_perms;
+allow vendor_biometricsface vendor_dmabuf_secure_cdsp_heap_device:chr_file r_file_perms;
 
 #  Access for qseecom_memory
 allow vendor_biometricsface tee_device:chr_file rw_file_perms;

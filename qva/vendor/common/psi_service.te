@@ -56,3 +56,9 @@ allow vendor_psiservice vendor_sysfs_mem_offline:dir r_dir_perms;
 
 # For reading "vendor.pasr." properties
 get_prop(vendor_psiservice, vendor_pasr_prop)
+
+# allow access to hal allocator
+hal_client_domain(vendor_psiservice, hal_allocator)
+
+# allow access to boot status property
+get_prop(vendor_psiservice, boot_status_prop)

@@ -68,17 +68,6 @@ type vendor_sysfs_lcd, sysfs_type, fs_type;
 type vendor_sysfs_adsp_ssr, sysfs_type, fs_type;
 type vendor_sysfs_svm_neuron, sysfs_type, fs_type;
 
-type vendor_debugfs_clk, debugfs_type, fs_type;
-type vendor_debugfs_ion, debugfs_type, fs_type;
-type vendor_debugfs_ipc, debugfs_type, fs_type;
-type vendor_debugfs_kgsl, debugfs_type, fs_type;
-type vendor_debugfs_rpm, debugfs_type, fs_type;
-type vendor_debugfs_rmt_storage, debugfs_type, fs_type;
-type vendor_debugfs_usb, debugfs_type, fs_type;
-type vendor_debugfs_wlan, debugfs_type, fs_type;
-type vendor_debugfs_mdp, debugfs_type, fs_type;
-type vendor_debugfs_icnss, debugfs_type, fs_type;
-
 # /proc
 type vendor_proc_wifi_dbg, fs_type, proc_type;
 type vendor_proc_audiod, fs_type, proc_type;

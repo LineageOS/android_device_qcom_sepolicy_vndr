@@ -26,6 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 binder_call(rild, vendor_per_mgr)
 binder_call(rild, vendor_qtidataservices_app)
+binder_call(rild, vendor_ims_service)
 
 vndbinder_use(rild)
 

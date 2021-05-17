@@ -29,6 +29,9 @@ type vendor_hal_neuralnetworks_default, domain;
 hal_server_domain(vendor_hal_neuralnetworks_default, hal_neuralnetworks)
 hal_client_domain(vendor_hal_neuralnetworks_default, hal_graphics_allocator)
 
+# allow access to hal_allocator
+hal_client_domain(vendor_hal_neuralnetworks_default, hal_allocator)
+
 type vendor_hal_neuralnetworks_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_hal_neuralnetworks_default)
 
@@ -38,7 +41,7 @@ allow vendor_hal_neuralnetworks_default vendor_xdsp_device:chr_file r_file_perms
 allow vendor_hal_neuralnetworks_default ion_device:chr_file r_file_perms;
 
 # Allow access to dmabuf
-allow vendor_hal_neuralnetworks_default vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow vendor_hal_neuralnetworks_default dmabuf_system_heap_device:chr_file r_file_perms;
 
 allow vendor_hal_neuralnetworks_default app_data_file:file { read getattr map };
 allow vendor_hal_neuralnetworks_default shell_data_file:file { read getattr map };

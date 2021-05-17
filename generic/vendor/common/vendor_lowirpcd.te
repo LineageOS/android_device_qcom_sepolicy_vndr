@@ -28,7 +28,7 @@ type vendor_lowirpcd_service, domain;
 type vendor_lowirpcd_service_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_lowirpcd_service)
 
-allow vendor_lowirpcd_service ion_device:chr_file r_file_perms;
+allow vendor_lowirpcd_service vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_lowirpcd_service vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_lowirpcd_service vendor_xdsp_device:chr_file r_file_perms;
 

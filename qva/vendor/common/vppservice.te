@@ -53,11 +53,14 @@ r_dir_file(vendor_vppservice, vendor_persist_vpp_file)
 allow vendor_vppservice mnt_vendor_file:dir search;
 
 # allow vppservice to access ion, video device & qdsp_device
-allow vendor_vppservice ion_device:chr_file rw_file_perms;
 allow vendor_vppservice video_device:chr_file rw_file_perms;
 allow vendor_vppservice vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_vppservice vendor_xdsp_device:chr_file r_file_perms;
 allow vendor_vppservice gpu_device:chr_file rw_file_perms;
+allow vendor_vppservice vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow vendor_vppservice vendor_dmabuf_secure_pixel:chr_file r_file_perms;
+allow vendor_vppservice dmabuf_system_heap_device:chr_file r_file_perms;
+
 # allow vppservice to access dsp read_prop
 get_prop(vendor_vppservice, vendor_adsprpc_prop)
 
