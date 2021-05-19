@@ -48,6 +48,7 @@ vendor_restricted_prop(vendor_km_strongbox_version_prop);
 vendor_restricted_prop(vendor_display_prop);
 vendor_internal_prop(vendor_usb_prop);
 vendor_restricted_prop(vendor_radio_prop);
+vendor_internal_prop(vendor_qteeconnector_opti_prop);
 
 #Needed for ubwc support
 vendor_restricted_prop(vendor_gralloc_prop);

@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -238,3 +238,7 @@
 
 #wifilearner daemon
 /(vendor|system/vendor)/bin/wifilearner    u:object_r:vendor_wifilearnersvc_exec:s0
+
+#wificfr daemon
+/(vendor|system/vendor)/bin/wificfrtool    u:object_r:wificfrsvc_exec:s0
+

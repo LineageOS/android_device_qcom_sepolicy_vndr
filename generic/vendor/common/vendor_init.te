@@ -94,6 +94,9 @@ set_prop(vendor_init, exported_system_prop)
 # Access vendor sensor properties
 set_prop(vendor_init, vendor_sensors_prop)
 
+# Access qteeconnector properties
+set_prop(vendor_init, vendor_qteeconnector_opti_prop)
+
 #Access vendor bluetooth properties
 set_prop(vendor_init, vendor_bluetooth_prop)
 userdebug_or_eng(`
