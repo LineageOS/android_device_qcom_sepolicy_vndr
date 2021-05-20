@@ -48,4 +48,6 @@ userdebug_or_eng(`
 
   # reboot
   set_prop(vendor_hang_guard, powerctl_prop)
+
+  dontaudit vendor_hang_guard default_prop:file read;
 ')
