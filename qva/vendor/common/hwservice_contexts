@@ -80,4 +80,4 @@ vendor.qti.hardware.slmadapter::ISlmAdapter                  u:object_r:vendor_h
 vendor.qti.hardware.perf::IPerfCallback                      u:object_r:vendor_hal_perfcallback_hwservice:s0
 vendor.qti.hardware.mwqemadapter::IMwqemAdapter              u:object_r:vendor_hal_mwqemadapter_hwservice:s0
 vendor.qti.hardware.wifi.wificfr::IWificfr                   u:object_r:hal_wificfr_hwservice:s0
-
+vendor.qti.hardware.sxrhal::ISxrCrypto                       u:object_r:vendor_sxrhalservice_hwservice:s0

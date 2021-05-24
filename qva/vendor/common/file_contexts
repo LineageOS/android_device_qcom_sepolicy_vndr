@@ -140,6 +140,7 @@
 /vendor/bin/modemManager                                                           u:object_r:vendor_modem_manager_exec:s0
 
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qccvndhal@1\.0-service       u:object_r:vendor_hal_qccvndhal_qti_exec:s0
+/(vendor|system/vendor)/bin/sxrhalservice                                       u:object_r:vendor_sxrhalservice_qti_exec:s0
 
 #### Context for location features
 ## location daemons and binaries
