@@ -65,3 +65,6 @@ allow rild vendor_rild_socket:sock_file create_file_perms;
 
 r_dir_file(rild, vendor_mbn_data_file)
 allow rild self:qipcrtr_socket create_socket_perms_no_ioctl;
+
+# Fallback for seccomp
+crash_dump_fallback(rild)
