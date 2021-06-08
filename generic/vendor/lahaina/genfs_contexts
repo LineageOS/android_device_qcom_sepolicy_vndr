@@ -142,6 +142,8 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-02/c440000.qcom,
 # Vibrator nodes needed for a Lahaina variant
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm7325b@3:qcom,vibrator@df00/leds/vibrator u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-03/c440000.qcom,spmi:qcom,pm7325b@3:qcom,vibrator@df00/leds/vibrator u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-09/c440000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-09/c440000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator u:object_r:sysfs_leds:s0
 
 #PMIC devices wakeup nodes
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/wakeup/wakeup u:object_r:sysfs_wakeup:s0

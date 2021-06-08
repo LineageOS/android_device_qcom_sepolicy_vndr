@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,26 +24,30 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#allow embms app to access vendor radio property
 
-#perf
-hal_client_domain(platform_app, vendor_hal_perf)
-#cvp
-hal_client_domain(platform_app, vendor_hal_cvp)
-#scve
-hal_client_domain(platform_app, vendor_hal_scve)
-#allow platform_app to read vendor_mpctl_prop
-get_prop(platform_app, vendor_mpctl_prop)
-#qspmhal
-hal_client_domain(platform_app, vendor_hal_qspmhal)
-#fingerprint
-hal_client_domain(platform_app, hal_fingerprint)
-# allow platform_app to interact with pasr hal
-hal_client_domain(platform_app, vendor_hal_pasrmanager)
-#allow platform_app to interact with wificfr hal
-hal_client_domain(platform_app, hal_wificfr)
-#allow platform_app to interact with wpa_supplicant
-# adding typeattribute instead of macro because hal_wifi_supplicant has already
-# been defined
-typeattribute platform_app hal_wifi_supplicant_client;
+#Define Domain
+type vendor_sxrhalservice_qti, domain;
+type vendor_sxrhalservice_qti_exec, exec_type, vendor_file_type, file_type;
 
+#Allow for transition from init domain to sxrhalservice
+init_daemon_domain(vendor_sxrhalservice_qti)
+
+#Allow sxrhalservice to use Vendor Binder IPC
+vndbinder_use(vendor_sxrhalservice)
+hal_server_domain(vendor_sxrhalservice_qti,vendor_sxrhalservice)
+
+# Allow hwbinder call from hal client to server
+binder_call(vendor_sxrhalservice_client, vendor_sxrhalservice_server)
+binder_call(vendor_sxrhalservice_server, vendor_sxrhalservice_client)
+
+# Add hwservice related rules
+hal_attribute_hwservice(vendor_sxrhalservice, vendor_sxrhalservice_hwservice)
+
+#Allow access to firmware files for HDCP session
+r_dir_file(vendor_sxrhalservice_qti, firmware_file)
+
+#Allow access to tee/ion device and tcp socket for HDCP sessions
+allow vendor_sxrhalservice_qti tee_device:chr_file rw_file_perms;
+
+#Allow ion device access
+allow vendor_sxrhalservice_qti ion_device:chr_file r_file_perms;
