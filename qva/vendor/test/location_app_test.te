@@ -64,4 +64,6 @@ userdebug_or_eng(`
     hal_client_domain(vendor_location_app_test, vendor_hal_diaghal);
 
     dontaudit vendor_location_app_test vendor_hal_qspmhal_default:binder {call};
+
+    dontaudit vendor_location_app_test qti-testscripts:binder {call};
 ')
