@@ -39,6 +39,8 @@ allow vendor_hal_usb_qti configfs:file create_file_perms;
 allow vendor_hal_usb_qti vendor_sysfs_usb_c:dir r_dir_perms;
 allow vendor_hal_usb_qti vendor_sysfs_usb_c:lnk_file r_file_perms;
 allow vendor_hal_usb_qti vendor_sysfs_usb_c:file rw_file_perms;
+allow vendor_hal_usb_qti vendor_sysfs_usb_node:dir r_dir_perms;
+allow vendor_hal_usb_qti vendor_sysfs_usb_node:file rw_file_perms;
 r_dir_file(vendor_hal_usb_qti, vendor_sysfs_battery_supply);
 r_dir_file(vendor_hal_usb_qti, vendor_sysfs_usb_supply);
 dontaudit vendor_hal_usb_qti self:capability kill;

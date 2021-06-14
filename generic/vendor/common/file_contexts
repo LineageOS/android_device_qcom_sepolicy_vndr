@@ -172,6 +172,7 @@
 /vendor/bin/hw/qcrilNrd         u:object_r:rild_exec:s0
 /vendor/bin/hw/android\.hardware\.drm@1\.0-service.widevine          u:object_r:vendor_hal_drm_widevine_exec:s0
 /vendor/bin/hw/android\.hardware\.vibrator@1\.1-service.crosshatch        u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/android\.hardware\.identity-service-qti       u:object_r:vendor_hal_identity_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@3\.0-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.0-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-service-qti         u:object_r:vendor_hal_keymaster_qti_exec:s0
@@ -302,7 +303,7 @@
 /data/vendor/nfc(/.*)?                 u:object_r:vendor_nfc_vendor_data_file:s0
 /data/vendor/radio(/.*)?               u:object_r:vendor_radio_vendor_data_file:s0
 /data/vendor/wifi/wlan_logs(/.*)?      u:object_r:vendor_wifi_vendor_log_data_file:s0
-/data/vendor/log/wifi(/.*)?            u:object_r:vendor_log_wifi_data_file:s0
+/data/vendor/log(/.*)?                 u:object_r:vendor_log_file:s0
 /data/vendor/ramdump(/.*)?             u:object_r:vendor_ramdump_vendor_data_file:s0
 /data/vendor/ssrdump(/.*)?             u:object_r:vendor_ramdump_vendor_data_file:s0
 /data/vendor/pddump(/.*)?              u:object_r:vendor_pddump_data_file:s0
@@ -321,6 +322,7 @@
 
 /data/vendor/mdmhelperdata(/.*)?       u:object_r:vendor_mdmhelperdata_data_file:s0
 /data/vendor/bluetooth(/.*)?           u:object_r:vendor_bt_data_file:s0
+/data/vendor/imslogs(/.*)?             u:object_r:vendor_imsd_data_file:s0
 # audio_data_file
 /data/vendor/audio(/.*)? u:object_r:vendor_audio_data_file:s0
 

@@ -71,6 +71,7 @@ vendor.media.target.version                  u:object_r:vendor_video_prop:s0
 vendor.video.disable.ubwc                    u:object_r:vendor_video_prop:s0
 vendor.media.target_variant                  u:object_r:vendor_video_prop:s0
 vendor.media.target.qssi                     u:object_r:vendor_video_prop:s0
+vendor.media.system.build_codename           u:object_r:vendor_video_prop:s0
 vendor.netflix.bsp_rev                       u:object_r:vendor_video_prop:s0
 
 # factory properties

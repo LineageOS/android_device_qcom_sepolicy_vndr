@@ -106,4 +106,5 @@
 /vendor/lib(64)?/libaidenoiserv2\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libopencv\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libofflinelog\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libbitmlenginev2\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libbitmlengine\.so       u:object_r:same_process_hal_file:s0

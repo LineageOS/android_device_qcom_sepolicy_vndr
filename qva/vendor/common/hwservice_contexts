@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -79,3 +79,5 @@ vendor.qti.spu::ISPUManager                                  u:object_r:vendor_h
 vendor.qti.hardware.slmadapter::ISlmAdapter                  u:object_r:vendor_hal_slmadapter_hwservice:s0
 vendor.qti.hardware.perf::IPerfCallback                      u:object_r:vendor_hal_perfcallback_hwservice:s0
 vendor.qti.hardware.mwqemadapter::IMwqemAdapter              u:object_r:vendor_hal_mwqemadapter_hwservice:s0
+vendor.qti.hardware.wifi.wificfr::IWificfr                   u:object_r:hal_wificfr_hwservice:s0
+
