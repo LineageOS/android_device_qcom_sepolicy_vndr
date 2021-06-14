@@ -69,3 +69,7 @@ binder_call(vendor_ims_service, vendor_dataservice_app)
 
 # imsdaemon needs read/write access to devpts
 allow vendor_ims_service devpts:chr_file rw_file_perms;
+
+allow vendor_ims_service vendor_imsd_data_file:dir rw_dir_perms;
+allow vendor_ims_service vendor_imsd_data_file:file create_file_perms;
+neverallow {domain -vendor_ims_service} vendor_imsd_data_file:chr_file no_rw_file_perms;

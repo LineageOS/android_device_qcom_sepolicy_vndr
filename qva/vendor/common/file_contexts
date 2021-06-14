@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -137,6 +137,7 @@
 /vendor/bin/hw/android\.hardware\.usb\.gadget\@1\.[0-2]-service-qti                u:object_r:vendor_hal_usb_qti_exec:s0
 /vendor/bin/vendor\.qti\.qspmhal@1\.0-service                                      u:object_r:vendor_hal_qspmhal_default_exec:s0
 /(vendor|system/vendor)/bin/mutualex                                               u:object_r:vendor_mutualex_exec:s0
+/vendor/bin/modemManager                                                           u:object_r:vendor_modem_manager_exec:s0
 
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qccvndhal@1\.0-service       u:object_r:vendor_hal_qccvndhal_qti_exec:s0
 
@@ -237,3 +238,7 @@
 
 #wifilearner daemon
 /(vendor|system/vendor)/bin/wifilearner    u:object_r:vendor_wifilearnersvc_exec:s0
+
+#wificfr daemon
+/(vendor|system/vendor)/bin/wificfrtool    u:object_r:wificfrsvc_exec:s0
+
