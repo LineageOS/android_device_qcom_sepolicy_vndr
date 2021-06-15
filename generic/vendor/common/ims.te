@@ -58,5 +58,5 @@ userdebug_or_eng(`
 
 hwbinder_use(vendor_ims)
 allow vendor_ims vendor_hal_cne_hwservice:hwservice_manager find;
-allow vendor_ims vendor_hal_datafactory_hwservice:hwservice_manager find;
-binder_call(vendor_ims, vendor_cnd)
+
+hal_client_domain(vendor_ims, vendor_hal_datafactory_qti)

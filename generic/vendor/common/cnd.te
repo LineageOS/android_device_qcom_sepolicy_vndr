@@ -68,15 +68,12 @@ allow vendor_cnd vendor_ipa_vendor_data_file:dir r_dir_perms;
 allow vendor_cnd vendor_ipa_vendor_data_file:file r_file_perms;
 
 # To register vendor_cnd to hwbinder
+hal_server_domain_bypass(vendor_cnd, vendor_hal_datafactory_qti)
+binder_call(vendor_hal_datafactory_qti_client, vendor_hal_datafactory_qti_server)
+binder_call(vendor_hal_datafactory_qti_server, vendor_hal_datafactory_qti_client)
+hal_attribute_hwservice(vendor_hal_datafactory_qti, vendor_hal_datafactory_hwservice)
 hal_attribute_service(vendor_hal_datafactory_qti, vendor_hal_factory_aidlservice)
-add_hwservice(vendor_cnd, vendor_hal_datafactory_hwservice)
-hwbinder_use(vendor_cnd)
-get_prop(vendor_cnd, hwservicemanager_prop)
-binder_call(vendor_cnd, vendor_dataservice_app)
-binder_call(vendor_cnd, vendor_qtidataservices_app)
 binder_call(vendor_cnd, vendor_ims)
-binder_call(vendor_cnd, vendor_ims_service)
-binder_call(vendor_cnd, vendor_location)
 
 r_dir_file(vendor_cnd, vendor_sysfs_ssr)
 
