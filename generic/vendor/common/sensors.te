@@ -51,7 +51,6 @@ allow vendor_sensors vendor_sysfs_soc:file w_file_perms;
 allow vendor_sensors vendor_sysfs_data:file r_file_perms;
 
 allow vendor_sensors ion_device:chr_file r_file_perms;
-allow vendor_sensors vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_sensors vendor_xdsp_device:chr_file r_file_perms;
 
 # For reading dir/files on /dsp
