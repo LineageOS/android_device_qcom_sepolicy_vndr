@@ -199,6 +199,7 @@
 /sys/devices/platform/soc/4c90000.i2c/i2c-2/2-0034/4c90000.i2c:qcom,smb1396@34:qcom,div2_cp/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/4c90000.i2c/i2c-2/2-0035/4c90000.i2c:qcom,smb1396@35:qcom,div2_cp_slave/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/4c90000.i2c/i2c-1/1-0034/4c90000.i2c:qcom,smb1394@34:qcom,div2_cp_pry/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c90000.i2c/i2c-2/2-0034/4c90000.i2c:qcom,smb1394@34:qcom,div2_cp_pry/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/class/drm/card0/device/power/control      u:object_r:vendor_sysfs_graphics:s0
 
 #SSR nodes
