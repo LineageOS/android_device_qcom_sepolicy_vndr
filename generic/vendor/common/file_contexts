@@ -445,7 +445,7 @@
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_rotator/video4linux/video[0-9]+/name(/.*)?   u:object_r:vendor_sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_rotator/caps       u:object_r:vendor_sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,vidc/video4linux/video[0-9]+/name(/.*)?   u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,cci/[a-f0-9]+.qcom,cci:qcom,camera@[0-2]/video4linux/video[0-9]+/name(/.*)?   u:object_r:vendor_sysfs_graphics:s0
+/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,cci/[a-f0-9]+.qcom,cci:qcom,camera@[0-3]/video4linux/video[0-9]+/name(/.*)?   u:object_r:vendor_sysfs_graphics:s0
 
 /sys/devices(/platform)?/soc/[a-f0-9]+.sdhci/mmc_host/mmc0/clk_scaling(/.*)? u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/clkscale_enable        u:object_r:vendor_sysfs_scsi_host:s0
