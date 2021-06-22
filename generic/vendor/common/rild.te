@@ -26,7 +26,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 binder_call(rild, vendor_per_mgr)
 binder_call(rild, vendor_qtidataservices_app)
-binder_call(rild, vendor_ims_service)
 
 vndbinder_use(rild)
 
@@ -66,3 +65,9 @@ allow rild vendor_rild_socket:sock_file create_file_perms;
 
 r_dir_file(rild, vendor_mbn_data_file)
 allow rild self:qipcrtr_socket create_socket_perms_no_ioctl;
+
+# rild would be a client for ims factory hal
+hal_client_domain(rild, vendor_hal_imsfactory)
+
+# Fallback for seccomp
+crash_dump_fallback(rild)

@@ -43,3 +43,5 @@ allow vendor_audioadsprpcd dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_audioadsprpcd vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_audioadsprpcd vendor_dmabuf_adsp_heap_device:chr_file r_file_perms;
 allow vendor_audioadsprpcd vendor_dmabuf_secure_pixel:chr_file r_file_perms;
+allow vendor_audioadsprpcd vendor_membuf_dev:chr_file r_file_perms;
+allow vendor_audioadsprpcd vendor_vm_cp_pixel_device:chr_file r_file_perms;

@@ -67,13 +67,16 @@ wakelock_use(vendor_cnd)
 allow vendor_cnd vendor_ipa_vendor_data_file:dir r_dir_perms;
 allow vendor_cnd vendor_ipa_vendor_data_file:file r_file_perms;
 
+netmgr_socket(vendor_cnd)
+allow vendor_cnd vendor_netmgrd:fd use;
+allow vendor_cnd vendor_netmgrd:udp_socket { read write };
+
 # To register vendor_cnd to hwbinder
 add_hwservice(vendor_cnd, vendor_hal_datafactory_hwservice)
 hwbinder_use(vendor_cnd)
 get_prop(vendor_cnd, hwservicemanager_prop)
 binder_call(vendor_cnd, vendor_dataservice_app)
 binder_call(vendor_cnd, vendor_qtidataservices_app)
-binder_call(vendor_cnd, vendor_ims)
 binder_call(vendor_cnd, vendor_ims_service)
 binder_call(vendor_cnd, vendor_location)
 

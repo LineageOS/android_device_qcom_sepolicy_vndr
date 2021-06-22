@@ -1,4 +1,4 @@
-# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,32 +25,17 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Use generic netlink socket
-allow vendor_ims self:{
-    netlink_socket
-    socket
-    netlink_generic_socket
-} create_socket_perms_no_ioctl;
-allow vendor_ims self:{ qipcrtr_socket } rw_socket_perms_no_ioctl;
+type vendor_hal_keymint_qti, domain;
+hal_server_domain(vendor_hal_keymint_qti, hal_keymint)
 
-# To run NDC command
-allow vendor_ims {
-    vendor_shell_exec
-    # IMS route installation
-    vendor_wcnss_service_exec
-}:file rx_file_perms;
+type vendor_hal_keymint_qti_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_keymint_qti)
 
+dontaudit vendor_hal_keymint_qti firmware_file:dir search;
 
-set_prop(vendor_ims, vendor_ctl_vendor_imsrcsservice_prop)
+get_prop(vendor_hal_keymint_qti, vendor_tee_listener_prop)
 
-# Inherit and use open files from radio.
-allow vendor_ims radio:fd use;
+allow vendor_hal_keymint_qti tee_device:chr_file rw_file_perms;
 
-allow vendor_ims self:{ udp_socket } ioctl;
-
-# ioctlcmd=89fd
-allowxperm vendor_ims self:udp_socket ioctl priv_sock_ioctls;
-allow vendor_ims vendor_sysfs_data:file r_file_perms;
-
-get_prop(vendor_ims, vendor_cnd_vendor_prop)
-allow vendor_ims vendor_hal_datafactory_hwservice:hwservice_manager find;
+# As each dma buf is seperate device, need to allow access to those devices
+allow vendor_hal_keymint_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;

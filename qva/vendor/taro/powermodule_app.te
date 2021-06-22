@@ -34,3 +34,5 @@ hal_client_domain(vendor_powermodule_app, vendor_hal_poweroptservice)
 
 # Allow invoking activity of vendor_powermodule_app
 allow vendor_powermodule_app app_api_service:service_manager find;
+
+dontaudit vendor_powermodule_app default_prop:file read;

@@ -36,4 +36,6 @@ userdebug_or_eng(`
   allow vendor_sectest vendor_persist_drm_file:dir create_dir_perms;
   allow vendor_sectest vendor_persist_drm_file:file create_file_perms;
   allow vendor_sectest tee_device:chr_file rw_file_perms;
+  allow vendor_sectest vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+  allow vendor_sectest vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
 ')

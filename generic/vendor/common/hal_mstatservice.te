@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,37 +24,17 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-type vendor_hal_rcsservice, domain;
-type vendor_hal_rcsservice_exec, exec_type, vendor_file_type, file_type;
 
-# Started by init
-init_daemon_domain(vendor_hal_rcsservice)
-net_domain(vendor_hal_rcsservice)
+type vendor_hal_mstatservice, domain;
+type vendor_hal_mstatservice_exec, exec_type, vendor_file_type, file_type;
 
+init_daemon_domain(vendor_hal_mstatservice)
 
-get_prop(vendor_hal_rcsservice, vendor_ims_prop)
-set_prop(vendor_hal_rcsservice, vendor_ims_prop)
+hal_server_domain(vendor_hal_mstatservice, vendor_hal_mstatservice_qti)
+hal_attribute_hwservice(vendor_hal_mstatservice_qti,vendor_hal_mstatservice_hwservice)
 
-allow vendor_hal_rcsservice vendor_sysfs_data:file r_file_perms;
-allow vendor_hal_rcsservice self: { socket qipcrtr_socket } create_socket_perms_no_ioctl;
-#required for socket creation
-unix_socket_connect(vendor_hal_rcsservice, vendor_ims, vendor_ims)
+r_dir_file(vendor_hal_mstatservice,proc_net_tcp_udp)
 
-# imsrcsd to bind with UceShimService.apk
-binder_call(vendor_hal_rcsservice, vendor_dataservice_app)
+binder_call(vendor_hal_mstatservice_qti_client, vendor_hal_mstatservice_qti_server)
+binder_call(vendor_hal_mstatservice_qti_server, vendor_hal_mstatservice_qti_client)
 
-# imsrcsd needs read/write access to devpts
-allow vendor_hal_rcsservice devpts:chr_file rw_file_perms;
-
-# allow imsrcsd capabilities
-wakelock_use(vendor_hal_rcsservice)
-allow vendor_hal_rcsservice self:capability net_bind_service;
-allow vendor_hal_rcsservice self:capability2 wake_alarm;
-
-#diag
-userdebug_or_eng(`
-  diag_use(vendor_hal_rcsservice)
-  binder_call(vendor_hal_rcsservice, radio)
-')
-
-set_prop(vendor_hal_rcsservice, vendor_ctl_vendor_imsrcsservice_prop)

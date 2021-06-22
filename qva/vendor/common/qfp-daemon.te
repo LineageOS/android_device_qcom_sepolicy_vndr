@@ -58,6 +58,9 @@ r_dir_file(vendor_qfp-daemon, vendor_persist_qti_fp_file)
 allow vendor_qfp-daemon vendor_dmabuf_qseecom_heap_device:chr_file { read write open ioctl };
 allow vendor_qfp-daemon vendor_dmabuf_qseecom_ta_heap_device:chr_file { read write open ioctl };
 
+# Allow block suspend and wake capabilites
+allow vendor_qfp-daemon self:capability2 { block_suspend wake_alarm };
+
 #diag
 userdebug_or_eng(`
     diag_use(vendor_qfp-daemon)

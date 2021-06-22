@@ -42,7 +42,7 @@ allow vendor_location_engine_service vendor_location_data_file:dir create_dir_pe
 allow vendor_location_engine_service vendor_location_data_file:file create_file_perms;
 
 # allows socket access in /dev/socket/location
-allow vendor_location_engine_service vendor_location_socket:sock_file { create write };
+allow vendor_location_engine_service vendor_location_socket:sock_file { create write unlink};
 allow vendor_location_engine_service vendor_location_socket: {sock_file lnk_file } r_file_perms;
 allow vendor_location_engine_service vendor_location_socket:dir rw_dir_perms;
 

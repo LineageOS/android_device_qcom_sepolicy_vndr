@@ -31,6 +31,7 @@ type vendor_sysfs_bond0, fs_type, sysfs_type;
 type vendor_sysfs_boot_adsp, sysfs_type, fs_type;
 type vendor_sysfs_camera, sysfs_type, fs_type;
 type vendor_sysfs_cpu_boost, fs_type, sysfs_type;
+type vendor_sysfs_devcd, fs_type, sysfs_type;
 type vendor_sysfs_devfreq, fs_type, sysfs_type;
 type vendor_sysfs_easel, sysfs_type, fs_type;
 type vendor_sysfs_esoc, sysfs_type, fs_type;
@@ -67,6 +68,9 @@ type vendor_sysfs_vadc_dev, sysfs_type, fs_type;
 type vendor_sysfs_lcd, sysfs_type, fs_type;
 type vendor_sysfs_adsp_ssr, sysfs_type, fs_type;
 type vendor_sysfs_svm_neuron, sysfs_type, fs_type;
+type vendor_sysfs_trusted_touch_enable, sysfs_type, fs_type;
+type vendor_sysfs_trusted_touch_event, sysfs_type, fs_type;
+type vendor_sysfs_trusted_touch_type, sysfs_type, fs_type;
 
 # /proc
 type vendor_proc_wifi_dbg, fs_type, proc_type;
@@ -82,7 +86,7 @@ type vendor_thermal_socket, file_type;
 #Define the qti socket type
 type vendor_dataqti_socket, file_type;
 
-type vendor_ims_socket, file_type;
+type vendor_ims_service_socket, file_type;
 type vendor_ipacm_socket, file_type;
 type vendor_cnd_socket, file_type;
 type vendor_chre_socket, file_type;

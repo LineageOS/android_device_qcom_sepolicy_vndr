@@ -27,11 +27,14 @@
 
 type vendor_hal_qesdhal_default, domain;
 type vendor_hal_qesdhal_default_exec, exec_type, vendor_file_type, file_type;
+allow vendor_hal_qesdhal_default vendor_qesd_socket:sock_file w_file_perms;
 
 init_daemon_domain(vendor_hal_qesdhal_default)
 
 hal_server_domain(vendor_hal_qesdhal_default, vendor_hal_qesdhal)
 hal_client_domain(vendor_hal_qesdhal_default, hal_allocator)
+
+allow vendor_hal_qesdhal_default vendor_qesdk_service:service_manager find;
 
 binder_call(vendor_hal_qesdhal_client, vendor_hal_qesdhal_server)
 binder_call(vendor_hal_qesdhal_server, vendor_hal_qesdhal_client)
@@ -39,3 +42,5 @@ binder_call(vendor_hal_qesdhal_server, vendor_hal_qesdhal_client)
 # Add hwservice related rules
 hal_attribute_hwservice(vendor_hal_qesdhal, vendor_hal_qesdhal_hwservice)
 
+binder_call(vendor_hal_qesdhal_default, servicemanager)
+allow vendor_hal_qesdhal_default tee_device:chr_file rw_file_perms;

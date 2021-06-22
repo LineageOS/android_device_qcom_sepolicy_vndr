@@ -28,3 +28,5 @@
 #WFD
 wfd.native.mm.service                          u:object_r:vendor_wfdnativemm_service:s0
 wfdhdcpvndservice                              u:object_r:vendor_wfdhdcpvndservice_service:s0
+#QTR SDK
+vendor_qtrsdkservice                           u:object_r:vendor_qtrsdkservice_service:s0

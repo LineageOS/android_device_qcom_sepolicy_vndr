@@ -31,6 +31,7 @@ com.qualcomm.qti.uceservice::IUceService                        u:object_r:vendo
 com.qualcomm.qti.imscmservice::IImsCmService                    u:object_r:vendor_hal_imsrcsd_hwservice:s0
 vendor.qti.ims.callinfo::IService                               u:object_r:vendor_hal_imscallinfo_hwservice:s0
 vendor.qti.imsrtpservice::IRTPService                          u:object_r:vendor_hal_imsrtp_hwservice:s0
+vendor.qti.mstatservice::IMStatService                          u:object_r:vendor_hal_mstatservice_hwservice:s0
 vendor.qti.data.factory::IFactory                               u:object_r:vendor_hal_datafactory_hwservice:s0
 vendor.qti.ims.factory::IImsFactory                             u:object_r:vendor_hal_imsfactory_hwservice:s0
 vendor.qti.hardware.data.connection::IDataConnection            u:object_r:vendor_hal_dataconnection_hwservice:s0

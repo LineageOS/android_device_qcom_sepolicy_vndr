@@ -47,3 +47,9 @@ r_dir_file(vendor_hal_soter_qti, firmware_file)
 allow vendor_hal_soter_qti ion_device:chr_file r_file_perms;
 
 get_prop(vendor_hal_soter_qti, vendor_tee_listener_prop)
+
+#Allow soter HAL to interract with qseecom
+allow vendor_hal_soter_qti vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+
+#Allow soter HAL to interract with DMABUF
+allow vendor_hal_soter_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;

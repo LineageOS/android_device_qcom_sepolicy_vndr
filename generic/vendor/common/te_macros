@@ -178,3 +178,9 @@ get_prop($1, vendor_soc_id_prop);
 #unix_socket_connect($1, vendor_qcc_trd, vendor_qcc_trd)
 #allow $1 vendor_qcc_trd_socket:sock_file { read getattr write };
 #')
+
+#####################################
+# qesdk_access(clientdomain)
+define(`qesdk_access', `
+unix_socket_connect($1, vendor_qesd, vendor_hal_qesdhal)
+')

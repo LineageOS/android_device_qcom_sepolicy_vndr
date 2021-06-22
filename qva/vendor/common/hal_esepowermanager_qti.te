@@ -58,3 +58,6 @@ allow vendor_hal_esepowermanager_qti vendor_dmabuf_qseecom_ta_heap_device:chr_fi
 
 # Allow esepowermanager HAL to interract with DMABUF
 allow vendor_hal_esepowermanager_qti vendor_dmabuf_qseecom_heap_device:chr_file rw_file_perms;
+
+# Allow esepowermanager HAL to interact with NFC service
+hal_client_domain(vendor_hal_esepowermanager_qti, hal_nfc)

@@ -46,7 +46,7 @@ allow vendor_ims_service ion_device:chr_file r_file_perms;
 unix_socket_connect(vendor_ims_service, vendor_cnd, vendor_cnd)
 
 allow vendor_ims_service self: { socket qipcrtr_socket } create_socket_perms_no_ioctl;
-allow vendor_ims_service vendor_ims_socket:sock_file write;
+allow vendor_ims_service vendor_ims_service_socket:sock_file write;
 netmgr_socket(vendor_ims_service);
 allowxperm vendor_ims_service self:udp_socket ioctl RMNET_IOCTL_EXTENDED;
 allow vendor_ims_service self:tipc_socket { create_socket_perms_no_ioctl };
@@ -64,8 +64,15 @@ allow vendor_ims_service vendor_hal_cne_hwservice:hwservice_manager find;
 allow vendor_ims_service vendor_hal_datafactory_hwservice:hwservice_manager find;
 binder_call(vendor_ims_service, vendor_cnd)
 
-# imsdaemon to bind with UceShimService.apk
-binder_call(vendor_ims_service, vendor_dataservice_app)
+#add IUceService, IImsCmServiceService, IService and IImsFactory to HIDL interface
+
+#hal server domain for ims_service
+hal_server_domain_bypass(vendor_ims_service, vendor_hal_imsfactory)
+binder_call(vendor_hal_imsfactory_client, vendor_hal_imsfactory_server)
+binder_call(vendor_hal_imsfactory_server, vendor_hal_imsfactory_client)
+hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsfactory_hwservice)
+hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsrcsd_hwservice)
+hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imscallinfo_hwservice)
 
 # imsdaemon needs read/write access to devpts
 allow vendor_ims_service devpts:chr_file rw_file_perms;

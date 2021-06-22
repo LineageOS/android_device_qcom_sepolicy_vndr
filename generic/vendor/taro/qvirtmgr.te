@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,7 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#add IUceService, IImsCmServiceService, IService and IImsFactory to HIDL interface
-add_hwservice(vendor_ims_service, vendor_hal_imsrcsd_hwservice)
-add_hwservice(vendor_ims_service, vendor_hal_imscallinfo_hwservice)
-add_hwservice(vendor_ims_service, vendor_hal_imsfactory_hwservice)
+# Qvirtmgr Policies
+allow vendor_qvirtmgr vendor_sysfs_guestvm:file rw_file_perms;
+allow vendor_qvirtmgr vendor_virtio_chr_device:chr_file rw_file_perms;
+allow vendor_qvirtmgr vendor_vm_system_file:dir r_dir_perms;
+allow vendor_qvirtmgr vendor_vm_system_file:file r_file_perms;
