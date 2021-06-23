@@ -97,3 +97,5 @@ unix_socket_send(vendor_location, vendor_wifihal,  hal_wifi_default);
 ##############
 allow vendor_location {vendor_hal_cacert_hwservice vendor_hal_datafactory_hwservice vendor_hal_cne_hwservice}:hwservice_manager find;
 binder_call(vendor_location, vendor_qtidataservices_app)
+
+crash_dump_fallback(vendor_location)
