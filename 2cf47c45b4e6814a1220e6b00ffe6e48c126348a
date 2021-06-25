@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0c596b3_e8ca2001",
+        "filename": "generic/vendor/common/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2021-06-25T10:03:53Z",
+      "side": 1,
+      "message": "At this point do [0-9]+, else there can be others that have more cameras and will increase the number again",
+      "revId": "2cf47c45b4e6814a1220e6b00ffe6e48c126348a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
