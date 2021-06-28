@@ -52,3 +52,12 @@ genfscon sysfs /kernel/slab/zspage/store_user u:object_r:vendor_sysfs_slab_zspag
 
 genfscon sysfs /kernel/msm_performance/parameters/cpu_min_freq u:object_r:vendor_sysfs_msm_perf:s0
 genfscon sysfs /kernel/msm_performance/parameters/cpu_max_freq u:object_r:vendor_sysfs_msm_perf:s0
+genfscon sysfs /kernel/msm_performance/parameters/core_ctl_register u:object_r:vendor_sysfs_msm_perf:s0
+genfscon sysfs /kernel/msm_performance/parameters/evnt_gplaf_pid u:object_r:vendor_sysfs_msm_perf:s0
+genfscon sysfs /kernel/msm_performance/parameters/inst u:object_r:vendor_sysfs_msm_perf:s0
+
+genfscon sysfs /kernel/msm_performance/notify/aggr_big_nr u:object_r:vendor_sysfs_msm_perf:s0
+genfscon sysfs /kernel/msm_performance/notify/aggr_top_load u:object_r:vendor_sysfs_msm_perf:s0
+genfscon sysfs /kernel/msm_performance/notify/curr_cap_cluster u:object_r:vendor_sysfs_msm_perf:s0
+genfscon sysfs /kernel/msm_performance/notify/gfx_evt u:object_r:vendor_sysfs_msm_perf:s0
+genfscon sysfs /kernel/msm_performance/notify/top_load_cluster u:object_r:vendor_sysfs_msm_perf:s0
