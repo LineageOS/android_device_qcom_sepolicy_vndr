@@ -123,6 +123,9 @@ r_dir_file(vendor_qti_init_shell, firmware_file)
 allow vendor_qti_init_shell block_device:dir r_dir_perms;
 allow vendor_qti_init_shell swap_block_device:blk_file rw_file_perms;
 
+# /sys/kernel/mm/transparent_hugepage
+allow vendor_qti_init_shell sysfs_transparent_hugepage:file rw_file_perms;
+
 #For configfs permission
 allow vendor_qti_init_shell configfs:dir r_dir_perms;
 allow vendor_qti_init_shell configfs:file rw_file_perms;
