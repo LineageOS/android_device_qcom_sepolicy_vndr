@@ -736,3 +736,4 @@
 
 #Thermal HAL
 /vendor/bin/hw/android.hardware.thermal@2.0-service.qti    u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/hw/vendor.qti.hardware.limits@1.0-service      u:object_r:vendor_hal_limits_qti_exec:s0
