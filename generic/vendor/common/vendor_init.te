@@ -109,3 +109,6 @@ allow vendor_init tee_device:chr_file getattr;
 
 # Allow vendor init to read vendor_pcie_prop
 get_prop(vendor_init, vendor_pcie_prop);
+
+#Access rcs service
+set_prop(vendor_init, vendor_persist_rcs_prop)
