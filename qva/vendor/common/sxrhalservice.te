@@ -51,3 +51,6 @@ allow vendor_sxrhalservice_qti tee_device:chr_file rw_file_perms;
 
 #Allow ion device access
 allow vendor_sxrhalservice_qti ion_device:chr_file r_file_perms;
+
+#allow access to and use of graphics allocator
+hal_client_domain(vendor_sxrhalservice_qti, hal_graphics_allocator)

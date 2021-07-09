@@ -30,7 +30,6 @@ type vendor_hbtp_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_hbtp)
 hal_server_domain(vendor_hbtp, vendor_hal_hbtp)
 # Allow access for /dev/vendor_hbtp_input and /dev/jdi-bu21150
-allow vendor_hbtp { vendor_hbtp_device vendor_qdsp_device vendor_dsp_device vendor_bu21150_device vendor_xdsp_device }:chr_file rw_file_perms;
 
 allow vendor_hbtp vendor_hbtp_log_file:dir rw_dir_perms;
 allow vendor_hbtp vendor_hbtp_log_file:file create_file_perms;
