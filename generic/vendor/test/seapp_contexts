@@ -46,3 +46,6 @@ user=system seinfo=platform name=com.qti.diagservices domain=qtidiagservices_app
 
 #Add new domain for snapcam app
 user=_app isPrivApp=true name=org.codeaurora.snapcam domain=vendor_snapcam_app type=app_data_file levelFrom=all
+
+#Add new domain for VT loopback app
+user=_app seinfo=platform name=com.qti.vtloopback domain=vtloopback_app type=app_data_file levelfrom=all
