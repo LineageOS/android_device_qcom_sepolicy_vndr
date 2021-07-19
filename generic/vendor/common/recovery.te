@@ -45,4 +45,5 @@ recovery_only(`
  allow recovery sysfs_dm:dir r_dir_perms;
  allow recovery sysfs_dm:file r_file_perms;
  allow recovery proc_bootconfig:file r_file_perms;
+ allow recovery vendor_sysfs_mmc_device_type:file r_file_perms;
 ')

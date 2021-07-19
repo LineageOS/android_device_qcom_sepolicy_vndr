@@ -95,5 +95,5 @@ unix_socket_send(vendor_location, vendor_wifihal,  hal_wifi_default);
 
 ## xtra-daemon
 ##############
-allow vendor_location {vendor_hal_cacert_hwservice vendor_hal_datafactory_hwservice vendor_hal_cne_hwservice}:hwservice_manager find;
-binder_call(vendor_location, vendor_qtidataservices_app)
+hal_client_domain(vendor_location , vendor_hal_datafactory_qti)
+hal_client_domain(vendor_location , vendor_hal_cacertservice_qti)

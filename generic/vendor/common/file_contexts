@@ -77,6 +77,7 @@
 /dev/synx_device                                u:object_r:vendor_synx_device:s0
 /dev/ipa_odl_ctl                                u:object_r:vendor_ipa_dev:s0
 /dev/ipa_adpl                                   u:object_r:vendor_ipa_dev:s0
+/dev/byte-cntr                                  u:object_r:vendor_qdss_device:s0
 
 # dev socket nodes
 /dev/socket/chre                                u:object_r:vendor_chre_socket:s0
@@ -160,7 +161,9 @@
 /vendor/bin/thermal-engine      u:object_r:vendor_thermal-engine_exec:s0
 /vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2      u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/thermal-engine-v2      u:object_r:vendor_thermal-engine_exec:s0
+/vendor/bin/hw/vendor.qti.hardware.limits@1.1-service    u:object_r:vendor_limits-hal_exec:s0
 /vendor/bin/sensors.qti         u:object_r:vendor_sensors_qti_exec:s0
+/vendor/bin/sensors-qesdk       u:object_r:vendor_sensors_qesdk_exec:s0
 /vendor/bin/ssr_setup           u:object_r:vendor_ssr_setup_exec:s0
 /vendor/bin/ssr_diag            u:object_r:vendor_ssr_diag_exec:s0
 /vendor/bin/pm-service          u:object_r:vendor_per_mgr_exec:s0

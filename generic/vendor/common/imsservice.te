@@ -61,8 +61,8 @@ set_prop(vendor_ims_service, vendor_ctl_vendor_imsrcsservice_prop)
 
 hwbinder_use(vendor_ims_service)
 allow vendor_ims_service vendor_hal_cne_hwservice:hwservice_manager find;
-allow vendor_ims_service vendor_hal_datafactory_hwservice:hwservice_manager find;
-binder_call(vendor_ims_service, vendor_cnd)
+
+hal_client_domain(vendor_ims_service , vendor_hal_datafactory_qti)
 
 #add IUceService, IImsCmServiceService, IService and IImsFactory to HIDL interface
 

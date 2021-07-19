@@ -32,6 +32,5 @@ get_prop(vendor_qtelephony, vendor_audio_prop)
 get_prop(vendor_qtelephony, vendor_video_prop)
 
 allow vendor_qtelephony vendor_hal_imsrtp_hwservice:hwservice_manager find;
-allow vendor_qtelephony vendor_hal_datafactory_hwservice:hwservice_manager find;
 binder_call(vendor_qtelephony, vendor_hal_imsrtp)
-binder_call(vendor_qtelephony, vendor_cnd)
+hal_client_domain(vendor_qtelephony , vendor_hal_datafactory_qti)

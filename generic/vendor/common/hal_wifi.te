@@ -52,3 +52,9 @@ userdebug_or_eng(`
   allow hal_wifi_server vendor_tombstone_data_file:dir rw_dir_perms;
   allow hal_wifi_server vendor_tombstone_data_file:file create_file_perms;
 ')
+
+# allow hal_wifi to operate on bridged interfaces
+allowxperm hal_wifi_default self:udp_socket ioctl { SIOCBRADDBR
+                                                    SIOCBRDELBR
+                                                    SIOCBRADDIF
+                                                    SIOCBRDELIF };

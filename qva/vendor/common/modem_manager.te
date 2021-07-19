@@ -29,5 +29,9 @@ type vendor_modem_manager, domain;
 type vendor_modem_manager_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_modem_manager)
 
-get_prop(vendor_modem_manager, vendor_cnd_vendor_prop)
+# Should provide all policies for QESDK
+qesdk_access(vendor_modem_manager)
+
+# Policies to connect to CND HALs
+hal_client_domain(vendor_modem_manager , vendor_hal_datafactory_qti)
 

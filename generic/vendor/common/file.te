@@ -71,6 +71,7 @@ type vendor_sysfs_svm_neuron, sysfs_type, fs_type;
 type vendor_sysfs_trusted_touch_enable, sysfs_type, fs_type;
 type vendor_sysfs_trusted_touch_event, sysfs_type, fs_type;
 type vendor_sysfs_trusted_touch_type, sysfs_type, fs_type;
+type vendor_sysfs_mmc_device_type, fs_type, sysfs_type;
 
 # /proc
 type vendor_proc_wifi_dbg, fs_type, proc_type;

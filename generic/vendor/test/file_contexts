@@ -64,6 +64,7 @@
 /(vendor|system/vendor)/bin/ParserApp                           u:object_r:vendor_sectest_exec:s0
 /(vendor|system/vendor)/bin/StoreKeybox         u:object_r:vendor_sectest_exec:s0
 /(vendor|system/vendor)/bin/InstallKeybox                       u:object_r:vendor_sectest_exec:s0
+/(vendor|system/vendor)/bin/tracing_config\.sh        u:object_r:vendor_smtrace_tracing_exec:s0
 
 #Authentication and FIDO
 /(vendor|system/vendor)/bin/sampleauthdaemon    u:object_r:vendor_fidotest_exec:s0

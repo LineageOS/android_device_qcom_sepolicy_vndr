@@ -37,7 +37,6 @@ userdebug_or_eng(`
   allow hal_sensors_default proc_sysrq:file rw_file_perms;
 ')
 
-allow hal_sensors_default vendor_qdsp_device:chr_file r_file_perms;
 allow hal_sensors_default vendor_xdsp_device:chr_file r_file_perms;
 
 allow hal_sensors vendor_sysfs_data:file r_file_perms;

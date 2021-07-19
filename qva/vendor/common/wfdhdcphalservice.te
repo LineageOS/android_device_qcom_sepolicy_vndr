@@ -43,5 +43,11 @@ hal_client_domain(vendor_wfdhdcphalservice_qti, hal_graphics_composer)
 #Allow to use fd from mediacodec and wfd app
 allow vendor_wfdhdcphalservice_qti { mediacodec vendor_wfd_app }:fd use;
 
+#Allow /dev/dma_heap file access
+allow vendor_wfdhdcphalservice_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow vendor_wfdhdcphalservice_qti vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow vendor_wfdhdcphalservice_qti vendor_membuf_dev:chr_file r_file_perms;
+allow vendor_wfdhdcphalservice_qti vendor_vm_cp_bitstream_device:chr_file r_file_perms;
+
 #Fallback for seccomp
 crash_dump_fallback(vendor_wfdhdcphalservice_qti)

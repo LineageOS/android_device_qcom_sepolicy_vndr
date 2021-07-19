@@ -56,3 +56,9 @@ allow vendor_hal_trustedui_qti sysfs_devices_system_cpu:file rw_file_perms;
 
 allow vendor_hal_trustedui_qti tee_device:chr_file rw_file_perms;
 binder_call(vendor_hal_trustedui_qti, vendor_systemhelper_app)
+
+#DMA Buf
+allow vendor_hal_trustedui_qti vendor_vm_trusted_device:chr_file r_file_perms;
+allow vendor_hal_trustedui_qti vendor_dmabuf_display_heap_device:chr_file r_file_perms;
+allow vendor_hal_trustedui_qti vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow vendor_hal_trustedui_qti vendor_membuf_dev:chr_file r_file_perms;

@@ -32,3 +32,5 @@
 hal_client_domain(vendor_location_app, vendor_hal_perf)
 
 hal_client_domain(vendor_location_app, vendor_hal_diaghal);
+
+dontaudit vendor_location_app default_prop:file {read};

@@ -110,13 +110,13 @@ allow vendor_qcc_trd mnt_user_file:dir search;
 allow vendor_qcc_trd mnt_user_file:lnk_file read;
 ')
 
-# allow creating unix-domain-sockets for LTC
-allow vendor_qcc_trd vendor_qcc_trd_socket:dir rw_dir_perms;
-allow vendor_qcc_trd vendor_qcc_trd_socket:sock_file create_file_perms;
-net_domain(vendor_qcc_trd)
-
-# allow to read /proc/sys/net/core/somaxconn - needed for grpc lib
-allow vendor_qcc_trd proc_net:file r_file_perms;
-
 # allow qcc-trd to add and find vendor service
 add_service(vendor_qcc_trd, vendor_qtrsdkservice_service)
+
+# allow qcc-trd to add qccvndhal service to hwservicemanager
+hal_server_domain(vendor_qcc_trd, vendor_hal_qccvndhal)
+hal_attribute_hwservice(vendor_hal_qccvndhal, vendor_hal_qccvndhal_hwservice)
+
+#Allow hwbinder call from hal client to server
+binder_call(vendor_hal_qccvndhal_client, vendor_hal_qccvndhal_server)
+binder_call(vendor_hal_qccvndhal_server, vendor_hal_qccvndhal_client)

@@ -39,4 +39,8 @@ userdebug_or_eng(`
   diag_use(system_app)
   hal_client_domain(system_app, vendor_hal_diaghal)
   hal_client_domain(system_app, hal_allocator)
+
+  allow system_app vendor_sysfs_qdss_dev:dir r_dir_perms;
+  allow system_app vendor_sysfs_qdss_dev:file rw_file_perms;
+  allow system_app vendor_qdss_device:chr_file rw_file_perms;
 ')

@@ -1,4 +1,4 @@
-# Copyright (c) 2020-2021 The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,26 +24,25 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-type vendor_shsusrd, domain;
-type vendor_shsusrd_exec, exec_type, vendor_file_type, file_type;
 
-init_daemon_domain(vendor_shsusrd)
+type vendor_limits-hal, domain;
+hal_server_domain(vendor_limits-hal, vendor_hal_limits)
 
-allow vendor_shsusrd vendor_proc_shs:file rw_file_perms;
-allow vendor_shsusrd vendor_proc_shs:dir r_dir_perms;
-allow vendor_shsusrd self:netlink_generic_socket create_socket_perms_no_ioctl;
+type vendor_limits-hal_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_limits-hal)
 
-allow vendor_shsusrd self:qipcrtr_socket create_socket_perms_no_ioctl;
-allow vendor_shsusrd self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+# Allow hwbinder call from hal client to server
+binder_call(vendor_hal_limits_client, vendor_hal_limits_server)
+binder_call(vendor_hal_limits_server, vendor_hal_limits_client)
 
-allow vendor_shsusrd vendor_shsusr_data_file:dir rw_dir_perms;
-allow vendor_shsusrd vendor_shsusr_data_file:file create_file_perms;
-get_prop(vendor_shsusrd, vendor_mpctl_prop)
+# Add hwservice related rules
+hal_attribute_hwservice(vendor_hal_limits, vendor_hal_limits_hwservice);
 
-hal_client_domain(vendor_shsusrd, vendor_hal_perf);
-allow vendor_shsusrd vendor_ipa_vendor_data_file:dir r_dir_perms;
-allow vendor_shsusrd vendor_ipa_vendor_data_file:file rw_file_perms;
+# Thermal HAL access
+hal_client_domain(vendor_limits-hal, hal_thermal);
 
-allow vendor_shsusrd self:udp_socket create_socket_perms;
-allowxperm vendor_shsusrd self:udp_socket ioctl SIOCDEVPRIVATE_D;
-allow vendor_shsusrd self:capability net_admin;
+# This is required for thermal sysfs access
+allow vendor_limits-hal sysfs_thermal:file w_file_perms;
+
+# netlink access
+allow vendor_limits-hal self: { netlink_generic_socket } create_socket_perms_no_ioctl;

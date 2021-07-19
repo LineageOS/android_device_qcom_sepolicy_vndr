@@ -37,6 +37,7 @@ allow vendor_sys_seccam2_app app_data_file:dir create_dir_perms;
 allow vendor_sys_seccam2_app app_data_file:file create_file_perms;
 allow vendor_sys_seccam2_app { app_api_service } :service_manager find;
 allow vendor_sys_seccam2_app cameraserver_service:service_manager find;
+dontaudit vendor_sys_seccam2_app default_prop:file read;
 
 binder_call(vendor_sys_seccam2_app, gpuservice);
 get_prop(vendor_sys_seccam2_app, vendor_persist_camera_prop)
