@@ -45,5 +45,8 @@ userdebug_or_eng(`
 allow vendor_qti vendor_mhi_device:chr_file rw_file_perms;
 allow vendor_qti vendor_sysfs_mhi:dir r_dir_perms;
 
+# Ignore AOSP debug-type properties
+dontaudit vendor_qti default_prop:file read;
+
 #Allow vendor_qti to create vendor_qti socket
 allow vendor_qti vendor_dataqti_socket:sock_file rw_file_perms;
