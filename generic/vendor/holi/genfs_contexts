@@ -52,6 +52,7 @@ genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-000c/4c90000.i2c:qcom,smb1355@c:qcom,smb1355-charger@1000/power_supply/parallel u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0034/4c90000.i2c:qcom,smb1396@34:qcom,div2_cp/power_supply/charge_pump_master u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0035/4c90000.i2c:qcom,smb1396@35:qcom,div2_cp_slave/power_supply/cp_slave u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0034/4c90000.i2c:qcom,smb1394@34:qcom,div2_cp_pry/power_supply/charge_pump_master u:object_r:vendor_sysfs_battery_supply:s0
 
 #IIO device nodes
 genfscon sysfs /bus/iio/devices u:object_r:vendor_sysfs_battery_supply:s0
