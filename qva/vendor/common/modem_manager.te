@@ -30,4 +30,5 @@ type vendor_modem_manager_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_modem_manager)
 
 get_prop(vendor_modem_manager, vendor_cnd_vendor_prop)
+crash_dump_fallback(vendor_modem_manager);
 
