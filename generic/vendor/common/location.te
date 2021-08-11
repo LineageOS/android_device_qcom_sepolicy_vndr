@@ -93,6 +93,9 @@ allow vendor_location hal_wifi_supplicant_default:unix_dgram_socket sendto;
 allow vendor_location vendor_wifihal_socket:dir search;
 unix_socket_send(vendor_location, vendor_wifihal,  hal_wifi_default);
 
+# /dev/socket/mlid
+allow vendor_location vendor_mlid:unix_dgram_socket sendto;
+
 ## xtra-daemon
 ##############
 allow vendor_location {vendor_hal_cacert_hwservice vendor_hal_datafactory_hwservice vendor_hal_cne_hwservice}:hwservice_manager find;
