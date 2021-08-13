@@ -39,3 +39,5 @@ allowxperm vendor_pd_mapper self:socket ioctl IPC_ROUTER_IOCTL_BIND_CONTROL_PORT
 
 allow vendor_pd_mapper vendor_sysfs_data:file r_file_perms;
 get_prop(vendor_pd_mapper, vendor_pd_locater_dbg_prop)
+
+userdebug_or_eng(`allow vendor_pd_mapper kmsg_device:chr_file {getattr write}');
