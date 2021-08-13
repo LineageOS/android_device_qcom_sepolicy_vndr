@@ -36,3 +36,5 @@ hal_client_domain(vendor_libsochelpertest_app, vendor_hal_qspmhal);
 binder_call(vendor_libsochelpertest_app, gpuservice);
 allow vendor_libsochelpertest_app app_api_service:service_manager find;
 allow vendor_libsochelpertest_app vendor_sysfs_kgsl_gpu_model:file r_file_perms;
+allow vendor_libsochelpertest_app vendor_sysfs_kgsl:file r_file_perms;
+dontaudit vendor_libsochelpertest_app default_prop:file {read};

@@ -44,3 +44,4 @@ hal_attribute_hwservice(vendor_hal_qesdhal, vendor_hal_qesdhal_hwservice)
 
 binder_call(vendor_hal_qesdhal_default, servicemanager)
 allow vendor_hal_qesdhal_default tee_device:chr_file rw_file_perms;
+crash_dump_fallback(vendor_hal_qesdhal_default);

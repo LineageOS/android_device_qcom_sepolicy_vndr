@@ -29,6 +29,8 @@ type vendor_sysfs_sndcard, fs_type, sysfs_type;
 type vendor_sysfs_battery_supply, sysfs_type, fs_type;
 type vendor_sysfs_bond0, fs_type, sysfs_type;
 type vendor_sysfs_boot_adsp, sysfs_type, fs_type;
+type vendor_sysfs_boot_cdsp, sysfs_type, fs_type;
+type vendor_sysfs_boot_cvp, sysfs_type, fs_type;
 type vendor_sysfs_camera, sysfs_type, fs_type;
 type vendor_sysfs_cpu_boost, fs_type, sysfs_type;
 type vendor_sysfs_devcd, fs_type, sysfs_type;
@@ -83,6 +85,7 @@ type vendor_rild_socket, file_type;
 type vendor_netmgrd_socket, file_type;
 type vendor_port-bridge_socket, file_type;
 type vendor_thermal_socket, file_type;
+type vendor_notify-topology_socket, file_type;
 
 #Define the qti socket type
 type vendor_dataqti_socket, file_type;

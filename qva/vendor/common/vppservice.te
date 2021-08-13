@@ -58,7 +58,6 @@ allow vendor_vppservice vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_vppservice vendor_xdsp_device:chr_file r_file_perms;
 allow vendor_vppservice gpu_device:chr_file rw_file_perms;
 allow vendor_vppservice vendor_dmabuf_system_heap_device:chr_file r_file_perms;
-allow vendor_vppservice vendor_dmabuf_secure_pixel:chr_file r_file_perms;
 allow vendor_vppservice dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_vppservice vendor_membuf_dev:chr_file r_file_perms;
 allow vendor_vppservice vendor_vm_cp_pixel_device:chr_file r_file_perms;
