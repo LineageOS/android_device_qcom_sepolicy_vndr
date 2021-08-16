@@ -54,7 +54,7 @@ add_hwservice(rild, vendor_hal_iwlan_hwservice)
 add_hwservice(rild, vendor_hal_dataconnection_hwservice)
 hal_server_domain(rild, vendor_hal_dataconnection_qti)
 
-get_prop(rild, exported3_radio_prop)
+get_prop(rild, radio_control_prop)
 get_prop(rild, vendor_dataqdp_prop)
 
 allow rild vendor_qmuxd_socket:dir w_dir_perms;
