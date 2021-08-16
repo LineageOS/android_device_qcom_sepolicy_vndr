@@ -49,6 +49,8 @@
 /dev/qg                               u:object_r:vendor_qg_device:s0
 /dev/qg_battery                       u:object_r:vendor_qg_device:s0
 /dev/qvr_external_sensor_ioctl        u:object_r:vendor_qvr_external_sensor_device:s0
+/dev/hidraw[0-5]                      u:object_r:vendor_qvr_hidraw_device:s0
+
 ###################################
 # Dev socket nodes
 #
@@ -62,7 +64,8 @@
 /dev/socket/wigig/wpa_wigig[0-9]                u:object_r:vendor_wigig_vendor_wpa_socket:s0
 /dev/socket/wigig/wigignpt                      u:object_r:vendor_wigignpt_socket:s0
 /dev/socket/wigig/sensingdaemon                 u:object_r:vendor_sensingdaemon_socket:s0
-
+/dev/socket/qvrservice_vndr                     u:object_r:vendor_qvrd_vndr_socket:s0
+/dev/socket/qvrservice_vndr_camera              u:object_r:vendor_qvrd_vndr_socket:s0
 
 /dev/smcinvoke                                  u:object_r:tee_device:s0
 ###################################
@@ -138,6 +141,7 @@
 /vendor/bin/vendor\.qti\.qspmhal@1\.0-service                                      u:object_r:vendor_hal_qspmhal_default_exec:s0
 /vendor/bin/qesdk-manager                                                          u:object_r:vendor_hal_qesdhal_default_exec:s0
 /(vendor|system/vendor)/bin/mutualex                                               u:object_r:vendor_mutualex_exec:s0
+/(vendor|system/vendor)/bin/hw/qvrservice                                          u:object_r:vendor_qvrd_vndr_exec:s0
 /vendor/bin/modemManager                                                           u:object_r:vendor_modem_manager_exec:s0
 
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qccvndhal@1\.0-service       u:object_r:vendor_hal_qccvndhal_qti_exec:s0
@@ -209,6 +213,7 @@
 /data/vendor/secure_element(/.*)?                                   u:object_r:vendor_secure_element_vendor_data_file:s0
 /data/vendor/sensing(/.*)?                                          u:object_r:vendor_sensing_vendor_data_file:s0
 /data/vendor/gaming(/.*)?                                           u:object_r:vendor_qspmhal_data_file:s0
+/data/vendor/qvr(/.*)?                                              u:object_r:vendor_qvrd_vndr_data_file:s0
 
 ###################################
 # persist files
