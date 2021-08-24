@@ -421,7 +421,6 @@
 #power off alarm file
 /mnt/vendor/persist/alarm(/.*)?                                     u:object_r:vendor_persist_alarm_file:s0
 
-/(vendor|system/vendor)/bin/hbtp_daemon                             u:object_r:vendor_hbtp_exec:s0
 /(vendor|system/vendor)/bin/sscrpcd                                 u:object_r:vendor_sensors_exec:s0
 /(vendor|system/vendor)/bin/lowirpcd                                u:object_r:vendor_lowirpcd_service_exec:s0
 
@@ -574,3 +573,6 @@
 
 # Devcoredump framework
 /sys/devices/virtual/devcoredump/devcd[0-9]+/data       u:object_r:vendor_sysfs_devcd:s0
+
+# Microdump collector parameters
+/sys/module/microdump_collector/parameters/.*  u:object_r:vendor_sysfs_microdump:s0

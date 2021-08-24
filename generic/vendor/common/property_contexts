@@ -69,6 +69,7 @@ vendor.wlan.driver.version       u:object_r:vendor_wifi_version:s0
 vendor.wlan.firmware.version     u:object_r:vendor_wifi_version:s0
 persist.vendor.usb.        u:object_r:vendor_usb_prop:s0
 ro.vendor.usb.             u:object_r:vendor_usb_prop:s0
+vendor.display.disable_rounded_corner_thread  u:object_r:vendor_display_prop:s0
 vendor.display.               u:object_r:vendor_display_prop:s0
 ro.vendor.display.            u:object_r:vendor_display_prop:s0
 persist.vendor.display.       u:object_r:vendor_display_prop:s0

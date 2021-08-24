@@ -39,11 +39,15 @@ allow vendor_qcc_trd vendor_qcc_trd_data_file:dir create_dir_perms;
 
 # microdumpstats
 allow vendor_qcc_trd vendor_sysfs_devicetree_soc:dir {search};
-allow vendor_qcc_trd vendor_sysfs_devicetree_soc:file {read open};
+allow vendor_qcc_trd vendor_sysfs_devicetree_soc:file {read open getattr};
 #for uevent socket
 allow vendor_qcc_trd self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 #for r/w in devcd nodes
 allow vendor_qcc_trd vendor_sysfs_devcd:file rw_file_perms;
+#for checking stat of sysfs
+allow vendor_qcc_trd sysfs:file {getattr};
+#for r/w in microdump parameters
+allow vendor_qcc_trd vendor_sysfs_microdump:file rw_file_perms;
 
 # cpustats
 # access to /sys/class/power_supply/bms/charge_counter
