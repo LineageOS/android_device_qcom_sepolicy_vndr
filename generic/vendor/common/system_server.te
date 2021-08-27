@@ -56,3 +56,5 @@ hal_client_domain(system_server, vendor_hal_dataconnection_qti)
 
 allow system_server vendor_netmgrd:fd use;
 allow system_server vendor_netmgrd:udp_socket { getattr getopt read write };
+
+dontaudit system_server vendor_proc_shs:dir search;

@@ -25,36 +25,39 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type vendor_qcc_trd_exec, file_type, vendor_file_type, exec_type;
+# vendor_qcc_trd is deprecated, vendor_qcc_trd_2 is the newer version
+type vendor_qcc_trd_2, domain;
 
-init_daemon_domain(vendor_qcc_trd)
+type vendor_qcc_trd_2_exec, file_type, vendor_file_type, exec_type;
 
-vndbinder_use(vendor_qcc_trd)
+init_daemon_domain(vendor_qcc_trd_2)
 
-allow vendor_qcc_trd vendor_qcc_trd_data_file:file create_file_perms;
-allow vendor_qcc_trd vendor_qcc_trd_data_file:dir create_dir_perms;
+vndbinder_use(vendor_qcc_trd_2)
+
+allow vendor_qcc_trd_2 vendor_qcc_trd_data_file:file create_file_perms;
+allow vendor_qcc_trd_2 vendor_qcc_trd_data_file:dir create_dir_perms;
 
 # access to /dev/ramdump_microdump_modem - deprecated
 # allow vendor_qcc_trd vendor_ramdump_microdump_modem_device:chr_file r_file_perms;
 
 # microdumpstats
-allow vendor_qcc_trd vendor_sysfs_devicetree_soc:dir {search};
-allow vendor_qcc_trd vendor_sysfs_devicetree_soc:file {read open getattr};
+allow vendor_qcc_trd_2 vendor_sysfs_devicetree_soc:dir {search};
+allow vendor_qcc_trd_2 vendor_sysfs_devicetree_soc:file {read open getattr};
 #for uevent socket
-allow vendor_qcc_trd self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow vendor_qcc_trd_2 self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 #for r/w in devcd nodes
-allow vendor_qcc_trd vendor_sysfs_devcd:file rw_file_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_devcd:file rw_file_perms;
 #for checking stat of sysfs
-allow vendor_qcc_trd sysfs:file {getattr};
+allow vendor_qcc_trd_2 sysfs:file {getattr};
 #for r/w in microdump parameters
-allow vendor_qcc_trd vendor_sysfs_microdump:file rw_file_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_microdump:file rw_file_perms;
 
 # cpustats
 # access to /sys/class/power_supply/bms/charge_counter
 # access to /sys/class/power_supply/battery/capacity
 # access to /sys/class/power_supply/battery/status
-allow vendor_qcc_trd vendor_sysfs_battery_supply:{file lnk_file} r_file_perms;
-allow vendor_qcc_trd vendor_sysfs_battery_supply:dir r_dir_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_battery_supply:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_battery_supply:dir r_dir_perms;
 
 # gpustats
 # /sys/class/kgsl/kgsl-3d0/gpu_busy_percentage
@@ -62,65 +65,68 @@ allow vendor_qcc_trd vendor_sysfs_battery_supply:dir r_dir_perms;
 # /sys/class/kgsl/kgsl-3d0/gpu_clock_stats
 # /sys/class/kgsl/kgsl-3d0/num_pwrlevels
 # /sys/class/kgsl/kgsl-3d0/gpu_available_frequencies
-allow vendor_qcc_trd vendor_sysfs_kgsl:{file lnk_file} r_file_perms;
-allow vendor_qcc_trd vendor_sysfs_kgsl:dir r_dir_perms;
-allow vendor_qcc_trd vendor_sysfs_kgsl_gpuclk:{file lnk_file} r_file_perms;
-allow vendor_qcc_trd vendor_sysfs_kgsl_gpuclk:dir r_dir_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_kgsl:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_kgsl:dir r_dir_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_kgsl_gpuclk:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_kgsl_gpuclk:dir r_dir_perms;
 
 # cpustats /sys/class/leds/lcd-backlight/brightness
-allow vendor_qcc_trd sysfs_leds:{file lnk_file} r_file_perms;
-allow vendor_qcc_trd sysfs_leds:dir r_dir_perms;
+allow vendor_qcc_trd_2 sysfs_leds:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd_2 sysfs_leds:dir r_dir_perms;
 
 # cpustats /sys/class/backlight/panel0-backlight/brightness
-allow vendor_qcc_trd vendor_sysfs_graphics:{file lnk_file} r_file_perms;
-allow vendor_qcc_trd vendor_sysfs_graphics:dir r_dir_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_graphics:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd_2 vendor_sysfs_graphics:dir r_dir_perms;
 
 # cpustats /sys/class/thermal/thermal_zone%d
-allow vendor_qcc_trd sysfs_thermal:{file lnk_file} r_file_perms;
-allow vendor_qcc_trd sysfs_thermal:dir r_dir_perms;
+allow vendor_qcc_trd_2 sysfs_thermal:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd_2 sysfs_thermal:dir r_dir_perms;
 
 # cpustats /proc/stat
-allow vendor_qcc_trd proc_stat:file r_file_perms;
-allow vendor_qcc_trd proc_stat:dir r_dir_perms;
+allow vendor_qcc_trd_2 proc_stat:file r_file_perms;
+allow vendor_qcc_trd_2 proc_stat:dir r_dir_perms;
 
 #access to taskstats interface for process stats
-allow vendor_qcc_trd self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow vendor_qcc_trd_2 self:netlink_generic_socket create_socket_perms_no_ioctl;
 
 # mps /persist/hlos_rfs/shared
-allow vendor_qcc_trd mnt_vendor_file:dir r_dir_perms;
-allow vendor_qcc_trd vendor_persist_rfs_shared_hlos_file:dir rw_dir_perms;
-allow vendor_qcc_trd vendor_persist_rfs_shared_hlos_file:file create_file_perms;
+allow vendor_qcc_trd_2 mnt_vendor_file:dir r_dir_perms;
+allow vendor_qcc_trd_2 vendor_persist_rfs_shared_hlos_file:dir rw_dir_perms;
+allow vendor_qcc_trd_2 vendor_persist_rfs_shared_hlos_file:file create_file_perms;
 
 # for logcat
-unix_socket_connect(vendor_qcc_trd, logdr, logd);
+unix_socket_connect(vendor_qcc_trd_2, logdr, logd);
 
 # allow qcc_prop
-set_prop(vendor_qcc_trd, vendor_qcc_prop);
+set_prop(vendor_qcc_trd_2, vendor_qcc_prop);
 
 # qmi
-qmux_socket(vendor_qcc_trd);
-allow vendor_qcc_trd self:{ qipcrtr_socket } create_socket_perms_no_ioctl;
+qmux_socket(vendor_qcc_trd_2);
+allow vendor_qcc_trd_2 self:{ qipcrtr_socket } create_socket_perms_no_ioctl;
 
 # read ver_info.txt
-allow vendor_qcc_trd vendor_firmware_file:dir r_dir_perms;
-allow vendor_qcc_trd vendor_firmware_file:file r_file_perms;
+allow vendor_qcc_trd_2 vendor_firmware_file:dir r_dir_perms;
+allow vendor_qcc_trd_2 vendor_firmware_file:file r_file_perms;
 
 # store data in sdcard
 userdebug_or_eng(`
-allow vendor_qcc_trd fuse_device:chr_file rw_file_perms;
-allow vendor_qcc_trd fuse:dir create_dir_perms;
-allow vendor_qcc_trd fuse:file create_file_perms;
-allow vendor_qcc_trd mnt_user_file:dir search;
-allow vendor_qcc_trd mnt_user_file:lnk_file read;
+allow vendor_qcc_trd_2 fuse_device:chr_file rw_file_perms;
+allow vendor_qcc_trd_2 fuse:dir create_dir_perms;
+allow vendor_qcc_trd_2 fuse:file create_file_perms;
+allow vendor_qcc_trd_2 mnt_user_file:dir search;
+allow vendor_qcc_trd_2 mnt_user_file:lnk_file read;
 ')
 
 # allow qcc-trd to add and find vendor service
-add_service(vendor_qcc_trd, vendor_qtrsdkservice_service)
+add_service(vendor_qcc_trd_2, vendor_qtrsdkservice_service)
 
 # allow qcc-trd to add qccvndhal service to hwservicemanager
-hal_server_domain(vendor_qcc_trd, vendor_hal_qccvndhal)
+hal_server_domain(vendor_qcc_trd_2, vendor_hal_qccvndhal)
 hal_attribute_hwservice(vendor_hal_qccvndhal, vendor_hal_qccvndhal_hwservice)
 
 #Allow hwbinder call from hal client to server
 binder_call(vendor_hal_qccvndhal_client, vendor_hal_qccvndhal_server)
 binder_call(vendor_hal_qccvndhal_server, vendor_hal_qccvndhal_client)
+
+#allow access to qccsyshal
+hal_client_domain(vendor_qcc_trd_2, vendor_qccsyshal);
