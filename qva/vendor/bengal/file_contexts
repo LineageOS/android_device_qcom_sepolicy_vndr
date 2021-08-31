@@ -194,3 +194,6 @@
 
 #Brightness
 /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/backlight(/.*)?  u:object_r:vendor_sysfs_graphics:s0
+
+#Graphics
+/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpubusy u:object_r:vendor_sysfs_kgsl_gpubusy:s0
