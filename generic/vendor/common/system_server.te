@@ -56,3 +56,5 @@ get_prop(system_server, vendor_display_notch_prop)
 get_prop(system_server, vendor_per_mgr_state_prop);
 
 hal_client_domain(system_server, vendor_hal_dataconnection_qti)
+
+dontaudit system_server vendor_proc_shs:dir search;
