@@ -62,16 +62,12 @@ genfscon sysfs /module/qpnp_rtc/parameters/poweron_alarm u:object_r:sysfs_powero
 genfscon sysfs /devices/platform/cam_sync/video4linux/video0/name u:object_r:sysfs_graphics:s0
 
 genfscon sysfs /devices/virtual/npu/msm_npu/pwr u:object_r:sysfs_npu:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/name u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/cable.0/ u:object_r:sysfs_graphics:s0
 
 genfscon sysfs /devices/platform/soc/soc:qcom,mdm3/esoc0 u:object_r:sysfs_esoc:s0
 genfscon sysfs /devices/soc0/soc_id                                     u:object_r:vendor_sysfs_public:s0
 genfscon sysfs /devices/system/soc/soc0/id                              u:object_r:vendor_sysfs_public:s0
 genfscon sysfs /devices/soc0/family                                     u:object_r:vendor_sysfs_public:s0
 
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/name u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/cable.0/ u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/system/memory/ u:object_r:sysfs_memory_offline:s0
 
 genfscon sysfs /kernel/qvr_external_sensor u:object_r:sysfs_qvr_external_sensor:s0
@@ -91,3 +87,7 @@ genfscon sysfs /devices/0306_02.01.00/time_us u:object_r:sysfs_mhi:s0
 genfscon sysfs /devices/1101_00.01.00/time_us u:object_r:sysfs_mhi:s0
 genfscon sysfs /devices/1101_01.01.00/time_us u:object_r:sysfs_mhi:s0
 genfscon sysfs /devices/1101_02.01.00/time_us u:object_r:sysfs_mhi:s0
+
+# Extcon
+genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon             u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon            u:object_r:sysfs_extcon:s0
