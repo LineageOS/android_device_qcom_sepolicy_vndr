@@ -31,12 +31,6 @@ genfscon proc /asound/card0/state u:object_r:vendor_proc_audiod:s0
 genfscon proc /asound/cards u:object_r:vendor_proc_audiod:s0
 genfscon sysfs /module/msm_thermal/core_control/cpus_offlined           u:object_r:vendor_sysfs_mpctl:s0
 
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/name u:object_r:vendor_sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/cable.0/ u:object_r:vendor_sysfs_graphics:s0
-
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/name u:object_r:vendor_sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/cable.0/ u:object_r:vendor_sysfs_graphics:s0
-
 genfscon sysfs /module/rmnet_perf/parameters u:object_r:vendor_sysfs_rmnet:s0
 
 genfscon sysfs /kernel/load_guestvm/boot_guestvm u:object_r:vendor_sysfs_bootguestvm:s0
@@ -49,3 +43,14 @@ genfscon sysfs /kernel/slab/zs_handle/store_user u:object_r:vendor_sysfs_slab_zs
 genfscon sysfs /kernel/slab/zspage/store_user u:object_r:vendor_sysfs_slab_zspage_storeuser:s0
 
 genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.2.auto/usb    u:object_r:vendor_sysfs_usb_node:s0
+
+# Extcon
+genfscon sysfs /devices/platform/soc/1610000.qcom,msm-eud/extcon             u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon             u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,usb-pdphy@1700/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/extcon/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,usb-pdphy@1700/extcon/extcon u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon            u:object_r:sysfs_extcon:s0
