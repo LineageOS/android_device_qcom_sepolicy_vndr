@@ -38,6 +38,9 @@ allow vendor_hal_neuralnetworks_default vendor_qdsp_device:chr_file r_file_perms
 allow vendor_hal_neuralnetworks_default vendor_xdsp_device:chr_file r_file_perms;
 allow vendor_hal_neuralnetworks_default ion_device:chr_file r_file_perms;
 
+#allow to read adsp related properties
+get_prop(vendor_hal_neuralnetworks_default, vendor_adsprpc_prop)
+
 allow vendor_hal_neuralnetworks_default app_data_file:file { read getattr map };
 allow vendor_hal_neuralnetworks_default shell_data_file:file { read getattr map };
 allow vendor_hal_neuralnetworks_default vendor_hal_neuralnetworks_data_file:dir create_dir_perms;
