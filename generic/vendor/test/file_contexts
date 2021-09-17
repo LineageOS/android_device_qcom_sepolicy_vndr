@@ -77,8 +77,8 @@
 /(vendor|system/vendor)/bin/test-fake-ap                        u:object_r:vendor_location_exec:s0
 /(vendor|system/vendor)/bin/test-fdal                           u:object_r:vendor_location_exec:s0
 
-#### Context for hang_guard
-/(vendor|system/vendor)/bin/hang_guard        u:object_r:vendor_hang_guard_exec:s0
+#### Context for qguard
+/(vendor|system/vendor)/bin/qguard        u:object_r:vendor_qguard_exec:s0
 
 #For debug script
 /(vendor|system/vendor)/bin/init\.qti\.kernel\.debug\.sh        u:object_r:vendor_qti_init_shell_exec:s0

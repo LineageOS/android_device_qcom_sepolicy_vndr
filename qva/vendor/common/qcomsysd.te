@@ -42,7 +42,7 @@ r_dir_file(vendor_qcomsysd, vendor_sysfs_soc)
 allow vendor_qcomsysd vendor_sysfs_soc:file w_file_perms;
 allow vendor_qcomsysd self:socket create;
 
-allow vendor_qcomsysd self:capability { sys_boot };
+allow vendor_qcomsysd self:capability { sys_boot kill };
 allow vendor_qcomsysd self:qipcrtr_socket create_socket_perms_no_ioctl;
 use_vendor_per_mgr(vendor_qcomsysd);
 #allow qcomsysd access boot mode switch

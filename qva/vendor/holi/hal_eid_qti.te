@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2019, 2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,32 +24,24 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-type vendor_port-bridge, domain;
-type vendor_port-bridge_exec, exec_type, vendor_file_type, file_type;
 
-init_daemon_domain(vendor_port-bridge)
+type vendor_hal_eid_qti, domain;
+hal_server_domain(vendor_hal_eid_qti, vendor_hal_eid)
 
-userdebug_or_eng(`
-  domain_auto_trans(shell, vendor_port-bridge_exec, vendor_netmgrd)
-  #domain_auto_trans(adbd, vendor_port-bridge_exec, netmgrd)
-  diag_use(vendor_port-bridge)
-')
+type vendor_hal_eid_qti_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(vendor_hal_eid_qti)
 
-# Allow operations on different types of sockets
-allow vendor_port-bridge vendor_port-bridge:netlink_kobject_uevent_socket { create bind read };
+binder_call(vendor_hal_eid_client, vendor_hal_eid_server)
+binder_call(vendor_hal_eid_server, vendor_hal_eid_client)
 
-allow vendor_port-bridge {
-    # Allow operations on mhi transport
-    vendor_mhi_device
-    # Allow operations on ATCoP g-link transport
-    vendor_at_device
-}:chr_file rw_file_perms;
+hal_attribute_hwservice(vendor_hal_eid, vendor_hal_eid_hwservice)
 
-#access ipa sysfs node
-allow vendor_port-bridge vendor_sysfs_data:file r_file_perms;
+# Allow access to load firmware images
+r_dir_file(vendor_hal_eid_qti, firmware_file)
 
-allow vendor_port-bridge vendor_port_bridge_data_file:file create_file_perms;
-allow vendor_port-bridge vendor_port_bridge_data_file:dir w_dir_perms;
-allow vendor_port-bridge vendor_port-bridge_socket:dir w_dir_perms;
-allow vendor_port-bridge vendor_port-bridge_socket:sock_file create_file_perms;
-allow vendor_port-bridge self:tipc_socket { read };
+# Allow access to interract with ion_device
+allow vendor_hal_eid_qti ion_device:chr_file r_file_perms;
+
+get_prop(vendor_hal_eid_qti, vendor_tee_listener_prop)
+
+hal_client_domain(vendor_hal_eid_qti, vendor_hal_qteeconnector)

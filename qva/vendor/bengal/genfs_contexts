@@ -127,6 +127,12 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq u:object_r:
 genfscon sysfs /devices/platform/soc/c800000.qcom,icnss u:object_r:sysfs_net:s0
 
 #fps sysfs-node
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/measured_fps u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-2/measured_fps u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/fps_periodicity_ms u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/fps_periodicity_ms u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-2/fps_periodicity_ms u:object_r:vendor_sysfs_graphics:s0
 
 #ssr nodes
 genfscon sysfs /devices/platform/soc/5ab0000.qcom,venus/subsys1/name u:object_r:vendor_sysfs_ssr:s0
