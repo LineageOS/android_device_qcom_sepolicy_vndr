@@ -59,6 +59,9 @@ allow vendor_agmservice_qti self:qipcrtr_socket create_socket_perms_no_ioctl;
 allow vendor_agmservice_qti vendor_audio_data_file:dir w_dir_perms;
 allow vendor_agmservice_qti vendor_audio_data_file:file create_file_perms;
 
+# agm audio thread needs RT scheduling for LL/ULL audio, allow sys_nice
+allow vendor_agmservice_qti self:global_capability_class_set sys_nice;
+
 userdebug_or_eng(`
 #Allow for property access
   get_prop(vendor_agmservice_qti,vendor_audio_debug_prop)

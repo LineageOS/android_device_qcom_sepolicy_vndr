@@ -66,3 +66,4 @@ allow vendor_hal_qteeconnector_client vendor_hal_qteeconnector_hwservice:hwservi
 
 #Allow access to qseecom DMABUF device
 allow vendor_hal_qteeconnector_qti vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+allow vendor_hal_qteeconnector_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;

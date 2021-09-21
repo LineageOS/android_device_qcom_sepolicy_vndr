@@ -100,12 +100,16 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/uefi_[ab]             u:object_r:vendor_uefi_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/aop_config_[ab]       u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/vendor_dlkm_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/xbl_ramdump_[ab]      u:object_r:vendor_custom_ab_block_device:s0
 
 # Block device holding the GPT, where the A/B attributes are stored.
 /dev/block/platform/soc/1d84000.ufshc/sd[ade]                       u:object_r:vendor_gpt_block_device:s0
 
 # Block devices for the drive that holds the xbl_a and xbl_b partitions.
 /dev/block/platform/soc/1d84000.ufshc/sd[bc]                        u:object_r:vendor_xbl_block_device:s0
+
+# Block device for hal_bootctl
+/dev/block/sdf                                                      u:object_r:boot_block_device:s0
 
 # Same process file
 /vendor/lib(64)?/hw/gralloc\.lahaina\.so                               u:object_r:same_process_hal_file:s0
@@ -248,3 +252,5 @@
 
 /vendor/bin/hw/vendor\.qti\.hardware\.display\.demura-service u:object_r:hal_display_demura_default_exec:s0
 
+# VM Specific
+/vendor/vm-system(/.*)?              u:object_r:same_process_hal_file:s0

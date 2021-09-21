@@ -131,6 +131,7 @@
 /dev/dma_heap/qcom,qseecom-ta           u:object_r:vendor_dmabuf_qseecom_ta_heap_device:s0
 /dev/dma_heap/qcom,display              u:object_r:vendor_dmabuf_display_heap_device:s0
 /dev/dma_heap/qcom,audio-ml             u:object_r:vendor_dmabuf_audio_ml_heap_device:s0
+/dev/dma_heap/qcom,demura               u:object_r:vendor_dmabuf_demura_heap_device:s0
 
 # mem-buf device used for inter-VM memory transactions
 /dev/membuf                                     u:object_r:vendor_membuf_dev:s0
@@ -247,6 +248,7 @@
 /vendor/bin/hw/hardware\.google\.media\.c2@1\.0-service-software u:object_r:mediacodec_exec:s0
 /vendor/bin/feature_enabler_client          u:object_r:vendor_feature_enabler_client_exec:s0
 /(vendor|system/vendor)/bin/qdcmss              u:object_r:vendor_qdcm-ss_exec:s0
+/vendor/bin/perf_qesdk_client       u:object_r:vendor_perf_qesdk_exec:s0
 
 ###############################################
 # same-process HAL files and their dependencies
@@ -379,7 +381,6 @@
 # /
 /tombstones                          u:object_r:rootfs:s0
 /vendor/dsp(/.*)?                    u:object_r:adsprpcd_file:s0
-/vendor/vm-system(/.*)?              u:object_r:vendor_vm_system_file:s0
 
 # /persist
 /mnt/vendor/persist/data(/.*)?       u:object_r:vendor_persist_data_file:s0

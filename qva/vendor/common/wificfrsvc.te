@@ -1,5 +1,5 @@
-# Copyright (c) 2019, The Linux Foundation. All rights reserved.
-
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
+#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
 # met:
@@ -25,9 +25,20 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-hal_client_domain(mediaserver, hal_audio)
+# This domain is for wificfr hal service
 
-#to read audio props
-get_prop(mediaserver, vendor_audio_prop)
+type wificfrsvc, domain;
+type wificfrsvc_exec, exec_type, vendor_file_type, file_type;
 
-dontaudit mediaserver vendor_hal_qspmhal_hwservice:hwservice_manager find;
+init_daemon_domain(wificfrsvc)
+hal_server_domain(wificfrsvc, hal_wificfr)
+
+#allows calls between client and server and vice-versa
+binder_call(hal_wificfr_client, hal_wificfr_server)
+binder_call(hal_wificfr_server, hal_wificfr_client)
+
+#register hal service and allow hal clients to find the service
+hal_attribute_hwservice(hal_wificfr, hal_wificfr_hwservice)
+
+allow hal_wificfr self:netlink_generic_socket create_socket_perms_no_ioctl;
+

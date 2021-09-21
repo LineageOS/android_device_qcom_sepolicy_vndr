@@ -59,6 +59,7 @@ type vendor_dmabuf_qseecom_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_qseecom_ta_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_display_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_audio_ml_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_demura_heap_device, dmabuf_heap_device_type, dev_type;
 
 type vendor_membuf_dev, dev_type;
 

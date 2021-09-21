@@ -28,5 +28,4 @@
 # Qvirtmgr Policies
 allow vendor_qvirtmgr vendor_sysfs_guestvm:file rw_file_perms;
 allow vendor_qvirtmgr vendor_virtio_chr_device:chr_file rw_file_perms;
-allow vendor_qvirtmgr vendor_vm_system_file:dir r_dir_perms;
-allow vendor_qvirtmgr vendor_vm_system_file:file r_file_perms;
+allow vendor_qvirtmgr same_process_hal_file:file r_file_perms;

@@ -52,6 +52,11 @@ allow vendor_hal_spu_qti vendor_cryptoapp_device:chr_file rw_file_perms;
 allow vendor_hal_spu_qti vendor_iuicc_device:chr_file rw_file_perms;
 allow vendor_hal_spu_qti vendor_spu_hal_ssr_device:chr_file rw_file_perms;
 
+# Allow read sysfs
+allow vendor_hal_spu_qti vendor_sysfs_data:file r_file_perms;
+allow vendor_hal_spu_qti vendor_sysfs_spdaemon:file r_file_perms;
+r_dir_file(vendor_hal_spu_qti, vendor_sysfs_spss);
+
 # Allow set / get spcomlib prop
 set_prop(vendor_hal_spu_qti, vendor_spcomlib_prop)
 

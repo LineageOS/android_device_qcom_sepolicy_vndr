@@ -60,7 +60,7 @@ allow vendor_qvrd_vndr vendor_qvrd_vndr_socket:sock_file rw_file_perms;
 allow vendor_qvrd_vndr self:socket create_socket_perms_no_ioctl;
 
 # Allow access to ADSP & SLPI
-allow vendor_qvrd_vndr { dmabuf_system_heap_device vendor_qdsp_device vendor_dsp_device vendor_xdsp_device }:chr_file r_file_perms;
+allow vendor_qvrd_vndr { dmabuf_system_heap_device vendor_qdsp_device }:chr_file r_file_perms;
 
 #
 # Display

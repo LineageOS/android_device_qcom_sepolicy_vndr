@@ -65,7 +65,10 @@ add_hwservice(vendor_cnd, vendor_hal_slmadapter_hwservice)
 
 get_prop(vendor_cnd, vendor_slm_prop)
 
-add_hwservice(vendor_cnd, vendor_hal_mwqemadapter_hwservice)
+hal_server_domain_bypass(vendor_cnd, vendor_hal_mwqemadapter_qti)
+binder_call(vendor_hal_mwqemadapter_qti_client, vendor_hal_mwqemadapter_qti_server)
+binder_call(vendor_hal_mwqemadapter_qti_server, vendor_hal_mwqemadapter_qti_client)
+hal_attribute_hwservice(vendor_hal_mwqemadapter_qti, vendor_hal_mwqemadapter_hwservice)
 
 get_prop(vendor_cnd, vendor_mwqem_prop)
 

@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -68,6 +68,7 @@
 /dev/socket/qesd                                u:object_r:vendor_qesd_socket:s0
 /dev/socket/qvrservice_vndr                     u:object_r:vendor_qvrd_vndr_socket:s0
 /dev/socket/qvrservice_vndr_camera              u:object_r:vendor_qvrd_vndr_socket:s0
+/dev/socket/sxrservice_vndr                     u:object_r:vendor_sxrd_vndr_socket:s0
 
 /dev/smcinvoke                                  u:object_r:tee_device:s0
 ###################################
@@ -92,6 +93,7 @@
 /vendor/bin/hw/vendor\.qti\.hardware\.qseecom@1\.0-service                         u:object_r:vendor_hal_qseecom_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.scve\.objecttracker@1\.0-service             u:object_r:vendor_scve_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.spu@1\.[0-1]-service                   u:object_r:vendor_hal_spu_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.spu@2\.0-service                       u:object_r:vendor_hal_spu_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.scve\.panorama@1\.0-service  u:object_r:vendor_scve_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.sensorscalibrate@1\.0-service                u:object_r:vendor_hal_sensorscalibrate_qti_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.soter@1\.0-service           u:object_r:vendor_hal_soter_qti_exec:s0
@@ -146,6 +148,7 @@
 /vendor/bin/qesdk-manager                                                          u:object_r:vendor_hal_qesdhal_default_exec:s0
 /(vendor|system/vendor)/bin/mutualex                                               u:object_r:vendor_mutualex_exec:s0
 /(vendor|system/vendor)/bin/hw/qvrservice                                          u:object_r:vendor_qvrd_vndr_exec:s0
+/(vendor|system/vendor)/bin/hw/sxrservice                                          u:object_r:vendor_sxrd_vndr_exec:s0
 /vendor/bin/modemManager                                                           u:object_r:vendor_modem_manager_exec:s0
 
 #### Context for location features
@@ -217,6 +220,7 @@
 /data/vendor/sensing(/.*)?                                          u:object_r:vendor_sensing_vendor_data_file:s0
 /data/vendor/gaming(/.*)?                                           u:object_r:vendor_qspmhal_data_file:s0
 /data/vendor/qvr(/.*)?                                              u:object_r:vendor_qvrd_vndr_data_file:s0
+/data/vendor/sxr(/.*)?                                              u:object_r:vendor_sxrd_vndr_data_file:s0
 
 ###################################
 # persist files
@@ -249,3 +253,7 @@
 
 #wifilearner daemon
 /(vendor|system/vendor)/bin/wifilearner    u:object_r:vendor_wifilearnersvc_exec:s0
+
+#wificfr daemon
+/(vendor|system/vendor)/bin/wificfrtool    u:object_r:wificfrsvc_exec:s0
+

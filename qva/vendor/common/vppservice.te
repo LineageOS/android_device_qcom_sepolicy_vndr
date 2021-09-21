@@ -55,7 +55,6 @@ allow vendor_vppservice mnt_vendor_file:dir search;
 # allow vppservice to access ion, video device & qdsp_device
 allow vendor_vppservice video_device:chr_file rw_file_perms;
 allow vendor_vppservice vendor_qdsp_device:chr_file r_file_perms;
-allow vendor_vppservice vendor_xdsp_device:chr_file r_file_perms;
 allow vendor_vppservice gpu_device:chr_file rw_file_perms;
 allow vendor_vppservice vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_vppservice dmabuf_system_heap_device:chr_file r_file_perms;

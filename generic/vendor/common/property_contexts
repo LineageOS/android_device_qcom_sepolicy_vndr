@@ -144,6 +144,9 @@ ro.vendor.qti.soc_id         u:object_r:vendor_soc_id_prop:s0
 ro.vendor.qti.soc_name       u:object_r:vendor_soc_name_prop:s0
 ro.vendor.qti.soc_model      u:object_r:vendor_soc_model_prop:s0
 
+# Property to set media performance class
+ro.vendor.media_performance_class      u:object_r:vendor_media_performance_class:s0
+
 #kernel console log level
 persist.vendor.console.silent.config    u:object_r:vendor_console_log_level_prop:s0
 

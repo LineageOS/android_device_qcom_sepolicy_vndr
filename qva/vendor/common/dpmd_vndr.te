@@ -54,6 +54,9 @@ hal_attribute_hwservice(vendor_hal_dpmapiservice_qti,vendor_hal_dpmapi_hwservice
 allow vendor_dpmd_vndr vendor_dpm_vndr_data_file:file create_file_perms;
 allow vendor_dpmd_vndr vendor_dpm_vndr_data_file:dir create_dir_perms;
 
+#mwqemadapter client
+hal_client_domain(vendor_dpmd_vndr , vendor_hal_mwqemadapter_qti)
+
 r_dir_file(vendor_dpmd_vndr,proc_net)
 
 allow vendor_dpmd_vndr self:capability {
