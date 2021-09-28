@@ -51,7 +51,7 @@ r_dir_file(vendor_hal_imsrtp, vendor_sysfs_diag)
 get_prop(vendor_hal_imsrtp, vendor_ims_prop)
 binder_call(vendor_hal_imsrtp, vendor_qtelephony)
 
-userdebug_or_eng('
+userdebug_or_eng(`
 binder_call(vendor_hal_imsrtp, vtloopback_app)
 ')
 
