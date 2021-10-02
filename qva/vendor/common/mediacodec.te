@@ -32,6 +32,7 @@ allow mediacodec audio_device:chr_file rw_file_perms;
 binder_call(mediacodec, vendor_wifidisplayhalservice_qti);
 
 get_prop(mediacodec, vendor_video_prop)
+get_prop(mediacodec, vendor_audio_prop)
 
 #Allow mediacodec to access vpp
 hal_client_domain(mediacodec, vendor_hal_vpp)
