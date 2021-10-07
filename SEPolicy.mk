@@ -2,22 +2,22 @@
 SEPOLICY_PATH:= device/qcom/sepolicy_vndr
 QSSI_SEPOLICY_PATH:= device/qcom/sepolicy
 SYS_ATTR_PROJECT_PATH := $(TOP)/device/qcom/sepolicy/generic/public/attribute
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR := \
-    $(BOARD_PLAT_PUBLIC_SEPOLICY_DIR) \
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS := \
+    $(SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS) \
     $(QSSI_SEPOLICY_PATH)/generic/public \
     $(QSSI_SEPOLICY_PATH)/generic/public/attribute
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
-    $(BOARD_PLAT_PRIVATE_SEPOLICY_DIR) \
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS := \
+    $(SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS) \
     $(QSSI_SEPOLICY_PATH)/generic/private
 
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR := \
-    $(BOARD_PLAT_PUBLIC_SEPOLICY_DIR) \
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS := \
+    $(SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS) \
     $(QSSI_SEPOLICY_PATH)/qva/public \
     $(QSSI_SEPOLICY_PATH)/qva/public/attribute
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
-    $(BOARD_PLAT_PRIVATE_SEPOLICY_DIR) \
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS := \
+    $(SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS) \
     $(QSSI_SEPOLICY_PATH)/qva/private
 
 #once all the services are moved to Product /ODM above lines will be removed.
