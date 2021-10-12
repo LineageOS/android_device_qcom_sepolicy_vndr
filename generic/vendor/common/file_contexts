@@ -536,6 +536,9 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.qti   u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.lights\.service                   u:object_r:hal_light_default_exec:s0
 
+#Memtrack AIDL HAL
+/(vendor|system/vendor)/bin/hw/vendor\.qti.hardware\.memtrack-service   u:object_r:hal_memtrack_default_exec:s0
+
 # Qti Dumpstate HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.dumpstate@1\.1-service\.qti   u:object_r:hal_dumpstate_default_exec:s0
 

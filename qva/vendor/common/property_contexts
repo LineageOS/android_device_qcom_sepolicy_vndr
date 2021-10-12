@@ -64,6 +64,7 @@ vendor.qti.nfc.                              u:object_r:vendor_nfc_nq_prop:s0
 
 # eSE-StrongBox
 ctl.start$vendor.ese-strongbox_4_1           u:object_r:vendor_ese_strongbox_prop:s0
+ctl.stop$vendor.ese-strongbox_4_1           u:object_r:vendor_ese_strongbox_prop:s0
 
 #Disable SPU property
 vendor.gatekeeper.disable_spu                u:object_r:vendor_disable_spu_prop:s0

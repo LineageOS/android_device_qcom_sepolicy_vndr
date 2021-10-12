@@ -1,4 +1,4 @@
-# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019, 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -34,4 +34,5 @@ allow vendor_modprobe { debugfs_tracing_instances }:dir search;
 set_prop(vendor_modprobe, vendor_modprobe_prop)
 userdebug_or_eng(`
   allow vendor_modprobe kmsg_debug_device:chr_file { w_file_perms getattr ioctl };
+  allow vendor_modprobe { vendor_debugfs_kgsl_fence_tracing }:dir search;
 ')

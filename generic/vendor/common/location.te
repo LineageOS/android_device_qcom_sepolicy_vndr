@@ -100,3 +100,5 @@ allow vendor_location vendor_mlid:unix_dgram_socket sendto;
 ##############
 hal_client_domain(vendor_location , vendor_hal_datafactory_qti)
 hal_client_domain(vendor_location , vendor_hal_cacertservice_qti)
+
+crash_dump_fallback(vendor_location)
