@@ -41,6 +41,7 @@ allow vendor_qvrd_vndr vendor_hal_qvrservice_qti_socket_client:unix_stream_socke
 allow vendor_hal_qvrservice_qti_socket_fd_use_client vendor_qvrd_vndr: fd use;
 
 binder_use(vendor_qvrd_vndr);
+allow vendor_qvrd_vndr vendor_hal_qvrservice_qti_socket_fd_use_client:process setsched;
 
 #
 # General
