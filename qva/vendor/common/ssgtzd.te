@@ -33,6 +33,7 @@ init_daemon_domain(vendor_ssgtzd)
 
 #Allow access to smcinvoke device
 allow vendor_ssgtzd tee_device:chr_file rw_file_perms;
+allow vendor_ssgtzd vendor_cs_app:unix_stream_socket connectto;
 
 allow vendor_ssgtzd vendor_ssg_app:unix_stream_socket connectto;
 #Allow access to firmware/image
