@@ -225,3 +225,6 @@ type vendor_sysfs_devicetree_cpu, sysfs_type, fs_type;
 
 type vendor_sysfs_devicetree_soc, sysfs_type, fs_type;
 type vendor_sysfs_microdump, fs_type, sysfs_type;
+
+# display boot param files
+type vendor_sysfs_disp_boot_param, fs_type, sysfs_type;
