@@ -60,6 +60,16 @@ unix_socket_connect($1, vendor_port-bridge, vendor_port-bridge)
 allow $1 vendor_port-bridge_socket:sock_file { read write };
 ')
 
+#####################################
+# use_shsusrd_socket(clientdomain)
+# Allow client domain to connecto and send
+# via a local socket to the shsusrd domain.
+define(`use_shsusrd_socket', `
+allow $1 vendor_shsusrd_socket:dir r_dir_perms;
+unix_socket_connect($1, vendor_shsusrd, vendor_shsusrd)
+allow $1 vendor_shsusrd_socket:sock_file { read write };
+')
+
 ########################################
 # peripheral_manager
 # Allow clients to interact with peripheral

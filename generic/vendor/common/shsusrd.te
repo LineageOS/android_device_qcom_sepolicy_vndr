@@ -47,3 +47,8 @@ allow vendor_shsusrd vendor_ipa_vendor_data_file:file rw_file_perms;
 allow vendor_shsusrd self:udp_socket create_socket_perms;
 allowxperm vendor_shsusrd self:udp_socket ioctl SIOCDEVPRIVATE_D;
 allow vendor_shsusrd self:capability net_admin;
+
+netmgr_socket(vendor_shsusrd);
+allow vendor_shsusrd vendor_shsusrd_socket:dir w_dir_perms;
+allow vendor_shsusrd vendor_shsusrd_socket:sock_file { create setattr unlink };
+allow vendor_shsusrd self:netlink_route_socket { nlmsg_read nlmsg_write nlmsg_readpriv create_socket_perms_no_ioctl };

@@ -61,6 +61,9 @@ allow vendor_vppservice dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_vppservice vendor_membuf_dev:chr_file r_file_perms;
 allow vendor_vppservice vendor_vm_cp_pixel_device:chr_file r_file_perms;
 
+# suppress xdsp denial, since it is expected
+dontaudit vendor_vppservice vendor_xdsp_device:chr_file { open read ioctl };
+
 # allow vppservice to access dsp read_prop
 get_prop(vendor_vppservice, vendor_adsprpc_prop)
 

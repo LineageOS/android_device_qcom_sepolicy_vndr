@@ -84,6 +84,7 @@ type vendor_proc_shs, fs_type, proc_type;
 type vendor_qmuxd_socket, file_type;
 type vendor_rild_socket, file_type;
 type vendor_netmgrd_socket, file_type;
+type vendor_shsusrd_socket, file_type;
 type vendor_port-bridge_socket, file_type;
 type vendor_thermal_socket, file_type;
 type vendor_notify-topology_socket, file_type;
