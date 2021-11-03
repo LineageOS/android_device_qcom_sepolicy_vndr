@@ -7,5 +7,4 @@ type vendor_awareagent_service, hal_service_type,service_manager_type;
 type vendor_aware_platform_service_service, hal_service_type,service_manager_type;
 type vendor_hal_perf2_service, hal_service_type,service_manager_type;
 type vendor_aidl_rcsservice, hal_service_type,service_manager_type;
-type vendor_hal_vnddisplayconfig_service, hal_service_type,service_manager_type;
 

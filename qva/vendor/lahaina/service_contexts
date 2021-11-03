@@ -7,6 +7,5 @@ vendor.qti.sec.featuremanager.IFeatureManager/default   u:object_r:vendor_sec_fe
 vendor.qti.sec.datamanager.IDataManager/default         u:object_r:vendor_sec_datamanager_service:s0
 vendor.qti.hardware.perf2.IPerf/default                           u:object_r:vendor_hal_perf2_service:s0
 vendor.qti.ims.uceaidlservice.IUceService/default                 u:object_r:vendor_aidl_rcsservice:s0
-vendor.qti.hardware.display.config.IDisplayConfig/default         u:object_r:vendor_hal_vnddisplayconfig_service:s0
 
 
