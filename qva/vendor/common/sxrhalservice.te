@@ -33,15 +33,15 @@ type vendor_sxrhalservice_qti_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_sxrhalservice_qti)
 
 #Allow sxrhalservice to use Vendor Binder IPC
-vndbinder_use(vendor_sxrhalservice)
-hal_server_domain(vendor_sxrhalservice_qti,vendor_sxrhalservice)
+vndbinder_use(vendor_hal_sxrservice_qti)
+hal_server_domain(vendor_sxrhalservice_qti,vendor_hal_sxrservice_qti)
 
 # Allow hwbinder call from hal client to server
-binder_call(vendor_sxrhalservice_client, vendor_sxrhalservice_server)
-binder_call(vendor_sxrhalservice_server, vendor_sxrhalservice_client)
+binder_call(vendor_hal_sxrservice_qti_client, vendor_hal_sxrservice_qti_server)
+binder_call(vendor_hal_sxrservice_qti_server, vendor_hal_sxrservice_qti_client)
 
 # Add hwservice related rules
-hal_attribute_hwservice(vendor_sxrhalservice, vendor_sxrhalservice_hwservice)
+hal_attribute_hwservice(vendor_hal_sxrservice_qti, vendor_sxrhalservice_hwservice)
 
 #Allow access to firmware files for HDCP session
 r_dir_file(vendor_sxrhalservice_qti, firmware_file)
