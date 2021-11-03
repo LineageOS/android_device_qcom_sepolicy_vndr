@@ -65,5 +65,5 @@ userdebug_or_eng(`
 
     dontaudit vendor_location_app_test vendor_hal_qspmhal_default:binder {call};
 
-    dontaudit vendor_location_app_test qti-testscripts:binder {call};
+    dontaudit vendor_location_app_test vendor-qti-testscripts:binder {call};
 ')
