@@ -33,7 +33,7 @@ get_prop(vendor_snapcam_app, vendor_persist_camera_prop)
 allow vendor_snapcam_app nfc_service:service_manager find;
 binder_call(vendor_snapcam_app, gpuservice)
 userdebug_or_eng(`
-allow vendor_snapcam_app qti-testscripts:binder call;
+allow vendor_snapcam_app vendor-qti-testscripts:binder call;
 ')
 
 allow vendor_snapcam_app app_api_service:service_manager find;
