@@ -35,7 +35,3 @@ hal_client_domain(vendor_hal_qesdhal_default, hal_allocator)
 
 binder_call(vendor_hal_qesdhal_client, vendor_hal_qesdhal_server)
 binder_call(vendor_hal_qesdhal_server, vendor_hal_qesdhal_client)
-
-# Add hwservice related rules
-hal_attribute_hwservice(vendor_hal_qesdhal, vendor_hal_qesdhal_hwservice)
-
