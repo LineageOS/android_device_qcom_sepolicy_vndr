@@ -46,6 +46,9 @@ allow vendor_cnd self:{
 allow vendor_cnd vendor_wifi_vendor_data_file:dir r_dir_perms;
 allow vendor_cnd vendor_wifi_vendor_wpa_socket:sock_file write;
 
+# allow vendor_cnd to read wifi_hal_prop
+get_prop(vendor_cnd, wifi_hal_prop)
+
 #allow vendor_cnd daemon to invoke hostapd_cli
 domain_auto_trans(vendor_cnd, vendor_hostapd_exec, vendor_hostapd)
 allow vendor_cnd vendor_hostapd_socket:dir r_dir_perms;
