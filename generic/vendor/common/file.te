@@ -151,7 +151,7 @@ type vendor_cnd_data_file, file_type, data_file_type;
 type vendor_location_data_file, file_type, data_file_type;
 type vendor_audio_data_file, file_type, data_file_type;
 type vendor_audio_dsp_data_file, file_type, data_file_type;
-type vendor_radio_data_file, file_type, data_file_type;
+type vendor_radio_data_file, file_type, data_file_type, app_data_file_type;
 type vendor_wifi_vendor_log_data_file, file_type, data_file_type;
 type vendor_log_wifi_data_file, file_type, data_file_type;
 # for mount /persist
