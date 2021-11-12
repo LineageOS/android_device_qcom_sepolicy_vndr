@@ -30,3 +30,6 @@ hal_client_domain(hal_secure_element_default, vendor_hal_esepowermanager)
 
 allow hal_secure_element_default vendor_secure_element_vendor_data_file:dir rw_dir_perms;
 allow hal_secure_element_default vendor_secure_element_vendor_data_file:file create_file_perms;
+
+# Allow secure-element HAL to retrieve NFC vendor properties
+get_prop(hal_secure_element_default, vendor_nfc_nq_prop)
