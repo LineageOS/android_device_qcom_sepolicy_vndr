@@ -29,4 +29,5 @@ set_prop(hal_telephony_server, vendor_radio_prop);
 
 # Allow Telephony AIDL Service
 hal_attribute_service(hal_telephony, vendor_hal_telephony_service)
+hal_attribute_service(hal_telephony, vendor_hal_telephony_service2)
 binder_call(hal_telephony_server, servicemanager)

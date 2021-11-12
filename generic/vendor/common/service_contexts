@@ -63,3 +63,7 @@ android.hardware.neuralnetworks.IDevice/qti-default        u:object_r:hal_neural
 android.hardware.neuralnetworks.IDevice/qti-gpu            u:object_r:hal_neuralnetworks_service:s0
 android.hardware.neuralnetworks.IDevice/qti-dsp            u:object_r:hal_neuralnetworks_service:s0
 vendor.qti.hardware.display.config.IDisplayConfig/default u:object_r:vendor_hal_vnddisplayconfig_service:s0
+vendor.qti.hardware.radio.ims.IImsRadio/imsradio0         u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.ims.IImsRadio/imsradio1         u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.qtiradio.IQtiRadioStable/slot1  u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.qtiradio.IQtiRadioStable/slot2  u:object_r:vendor_hal_telephony_service2:s0
