@@ -47,6 +47,10 @@ set_prop(vendor_init, vendor_wigig_prop)
 set_prop(vendor_init, vendor_qspm_prop)
 
 set_prop(vendor_init, vendor_mpctl_prop)
+get_prop(vendor_init, vendor_procomp_prop)
+allow vendor_init kernel:process setsched;
+allow vendor_init kernel:dir search;
+allow vendor_init kernel:file { open write };
 
 userdebug_or_eng(`
   set_prop(vendor_init, vendor_audio_debug_prop)
