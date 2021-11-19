@@ -94,6 +94,7 @@
 /dev/socket/qwes_ipc                            u:object_r:vendor_qwesd_socket:s0
 /dev/socket/ssgqmig                             u:object_r:vendor_ssgqmig_socket:s0
 /dev/socket/ssgtzd                              u:object_r:vendor_ssgtzd_socket:s0
+/dev/socket/ssgtzd_opener                       u:object_r:vendor_ssgtzd_opener_socket:s0
 /dev/socket/adpl_cmd_uds_file                   u:object_r:vendor_dataadpl_socket:s0
 /dev/socket/vendor_wpa_wlan[0-9]                u:object_r:vendor_wifi_vendor_wpa_socket:s0
 /dev/socket/wigig/wpa_wigig[0-9]                u:object_r:vendor_wigig_vendor_wpa_socket:s0
