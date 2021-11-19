@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b96fd1dc_1e060cc4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2021-11-19T12:06:11Z",
+      "side": 1,
+      "message": "If preferred to not land this for all sdm845 devices, i can also make it device specific.",
+      "revId": "44e047c58f269bb7ff6cf41e5dd1c264a9a64982",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
