@@ -26,4 +26,5 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 binder_call(vendor_systemhelper_app, vendor_hal_trustedui_qti)
+binder_call(vendor_systemhelper_app, vendor_trusteduilistener)
 hal_client_domain(vendor_systemhelper_app, vendor_hal_perf)
