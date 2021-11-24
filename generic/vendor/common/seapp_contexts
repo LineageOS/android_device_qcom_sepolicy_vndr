@@ -44,3 +44,6 @@ user=_app seinfo=platform name=com.qualcomm.qti.qms.service.trustzoneaccess doma
 
 #allow embms msdc app to access embmssl hal
 user=_app seinfo=platform name=com.qti.ltebc domain=vendor_embmssl_app type=app_data_file levelFrom=all
+
+#Add new domain for connection security service app
+user=_app seinfo=platform name=com.qualcomm.qti.qms.service.connectionsecurity domain=vendor_cs_app type=app_data_file levelFrom=all

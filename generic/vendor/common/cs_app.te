@@ -1,4 +1,4 @@
-# Copyright (c) 2015-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,27 +25,36 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#Add new domain for pdt apps
-user=system seinfo=platform name=.pdtapps domain=vendor_pdt_app type=system_app_data_file
+## vendor_cs_app
+##
+## This file defines the permissions that vendor_cs_apps can carry
 
-#Add new domain for usta app
-user=_app seinfo=platform name=com.qualcomm.qti.usta domain=vendor_usta_app type=app_data_file levelFrom=all
+type vendor_cs_app, domain;
 
-#Add new domain for qsta app
-user=_app seinfo=platform name=com.qualcomm.qti.sensors.qsensortest domain=vendor_qsta_app type=app_data_file
+app_domain(vendor_cs_app)
+net_domain(vendor_cs_app)
 
-#Add new domain for ustaservice app
-# Needed for USTA test app
-user=system seinfo=platform name=com.qualcomm.qti.ustaservice domain=vendor_ustaservice_app type=system_app_data_file
+hal_client_domain(vendor_cs_app, vendor_qccsyshal);
 
-#Add new domain for LibsochelperTest app
-user=_app seinfo=platform name=com.qualcomm.qti.libsochelpertest domain=vendor_libsochelpertest_app type=app_data_file levelFrom=all
+# Allow access to sockets
+unix_socket_connect(vendor_cs_app, vendor_mlid, vendor_mlid)
+unix_socket_connect(vendor_cs_app, vendor_ssgqmig, vendor_ssgqmigd)
+unix_socket_connect(vendor_cs_app, vendor_ssgtzd, vendor_ssgtzd)
 
-#Add new domain for qtidiagservices app
-user=system seinfo=platform name=com.qti.diagservices domain=qtidiagservices_app type=system_app_data_file
+# Allow access to Android APK service IPCs
+allow vendor_cs_app radio_service:service_manager find;
+allow vendor_cs_app surfaceflinger_service:service_manager find;
+allow vendor_cs_app app_api_service:service_manager find;
 
-#Add new domain for snapcam app
-user=_app isPrivApp=true name=org.codeaurora.snapcam domain=vendor_snapcam_app type=app_data_file levelFrom=all
+# access to qipcrtr socket (allow creating needed by qmi_cci_xprt_qrtr_supported)
+allow vendor_cs_app self:qipcrtr_socket create_socket_perms_no_ioctl;
 
-#Add new domain for VT loopback app
-user=_app seinfo=platform name=com.qti.vtloopback domain=vtloopback_app type=app_data_file levelfrom=all
+# To get uuid and device info
+allow vendor_cs_app proc_cpuinfo:file r_file_perms;
+allow vendor_cs_app proc_meminfo:file r_file_perms;
+
+#allow vendor_cs_app vendor_hal_perf_hwservice:hwservice_manager find;
+hal_client_domain(vendor_cs_app, vendor_hal_perf)
+
+allow vendor_cs_app vendor_mlid_socket:sock_file write;
+allow vendor_cs_app vendor_ssgtzd_socket:sock_file write;

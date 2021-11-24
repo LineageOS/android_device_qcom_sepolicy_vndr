@@ -138,3 +138,5 @@ allow vendor_hal_perf vendor_qdisplay_service:service_manager find;
 vndbinder_use(vendor_hal_perf);
 
 hal_client_domain(vendor_hal_perf_default, hal_thermal);
+
+dontaudit vendor_hal_perf_default self:capability dac_override;

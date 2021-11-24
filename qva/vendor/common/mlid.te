@@ -24,6 +24,7 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
 
 # vendor_mlid - Mink-Lowi Interface daemon
 type vendor_mlid, domain, mlstrustedsubject;
@@ -34,3 +35,9 @@ init_daemon_domain(vendor_mlid)
 # Allow access to location socket
 allow vendor_mlid self:netlink_generic_socket create_socket_perms_no_ioctl;
 unix_socket_connect(vendor_mlid, vendor_location, vendor_location)
+
+allow vendor_mlid vendor_hal_gnss_qti:unix_dgram_socket sendto;
+allow vendor_mlid vendor_location:unix_dgram_socket sendto;
+allow vendor_mlid vendor_location_socket:dir rw_dir_perms;
+allow vendor_mlid vendor_location_socket:lnk_file read;
+allow vendor_mlid vendor_location_socket:sock_file create_file_perms;
