@@ -32,9 +32,12 @@ get_prop(hal_sensors_default, vendor_sensors_prop)
 # Access to tests from userdebug/eng builds
 userdebug_or_eng(`
   diag_use(hal_sensors_default)
-  get_prop(hal_sensors_default, vendor_sensors_dbg_prop)
+  # access to debug props from userdebug/eng builds
+  get_prop(hal_sensors_default, vendor_sensors_debug_prop)
   # allow to trigger force crash to collect ramdump
   allow hal_sensors_default proc_sysrq:file rw_file_perms;
+  # allow to trigger SSR for ADSP
+  allow hal_sensors_default vendor_sysfs_adsp_ssr:file w_file_perms;
 ')
 
 allow hal_sensors_default vendor_xdsp_device:chr_file r_file_perms;
@@ -47,7 +50,6 @@ allow hal_sensors vendor_sysfs_sensors:lnk_file read;
 #following to set the ssr
 allow hal_sensors_default vendor_sysfs_slpi:dir search;
 allow hal_sensors_default vendor_sysfs_slpi:file rw_file_perms;
-allow hal_sensors_default vendor_sysfs_adsp_ssr:file w_file_perms;
 
 allow hal_sensors_default vendor_persist_sensors_file:dir rw_dir_perms;
 allow hal_sensors_default vendor_persist_sensors_file:file create_file_perms;

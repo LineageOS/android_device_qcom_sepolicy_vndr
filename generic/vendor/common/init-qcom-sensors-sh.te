@@ -31,6 +31,10 @@ type vendor_init-qcom-sensors-sh_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_init-qcom-sensors-sh)
 
 get_prop(vendor_init-qcom-sensors-sh, vendor_sensors_prop)
+userdebug_or_eng(`
+  # access to debug props from userdebug/eng builds
+  set_prop(vendor_init-qcom-sensors-sh, vendor_sensors_debug_prop)
+')
 
 allow vendor_init-qcom-sensors-sh vendor_shell_exec:file rx_file_perms;
 allow vendor_init-qcom-sensors-sh vendor_toolbox_exec:file rx_file_perms;
