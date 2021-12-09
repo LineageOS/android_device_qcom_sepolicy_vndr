@@ -73,6 +73,24 @@ hal_attribute_hwservice(vendor_hal_mwqemadapter_qti, vendor_hal_mwqemadapter_hws
 get_prop(vendor_cnd, vendor_mwqem_prop)
 
 use_shsusrd_socket(vendor_cnd)
+hal_client_domain(vendor_cnd,hal_wifi_hostapd)
+
+hal_client_domain(vendor_cnd,hal_wifi_supplicant)
+
+# allow cnd to access wpa_socket
+allow vendor_cnd vendor_wifi_vendor_data_file:dir r_dir_perms;
+allow vendor_cnd vendor_wifi_vendor_wpa_socket:sock_file write;
+
+#communicating with wpa supplicant for sending commands/listening to events
+unix_socket_send(vendor_cnd, wpa, hal_wifi_supplicant)
+allow vendor_cnd wpa_data_file:dir w_dir_perms;
+allow vendor_cnd wpa_data_file:sock_file create_file_perms;
+
+
+#communicating with hostapd for sending commands/listening to events
+allow vendor_cnd hostapd_data_file:dir rw_dir_perms;
+allow vendor_cnd hostapd_data_file:sock_file create_file_perms;
+allow vendor_cnd { hal_wifi_hostapd_default }:unix_dgram_socket sendto;
 
 ##############################################################
 #for using public interface vendor.qti.data.factory

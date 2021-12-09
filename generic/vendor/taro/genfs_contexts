@@ -203,6 +203,7 @@ genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_event
 #genfscon sysfs /devices/platform/soc/988000.i2c/i2c-1/1-0038/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
 genfscon sysfs /devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_type u:object_r:vendor_sysfs_trusted_touch_type:s0
+genfscon sysfs /devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_type u:object_r:vendor_sysfs_trusted_touch_type:s0
 
 # Feature configs for Cedros
 genfscon sysfs /devices/platform/soc/soc:qfprom@0/feat_conf_m7 u:object_r:vendor_sysfs_qfprom:s0
@@ -213,3 +214,5 @@ genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-a
 # Guest vm nodes
 genfscon sysfs /kernel/load_guestvm_cpusys_vm/boot_guestvm u:object_r:vendor_sysfs_guestvm:s0
 genfscon sysfs /kernel/load_guestvm_trustedvm/boot_guestvm u:object_r:vendor_sysfs_guestvm:s0
+
+genfscon sysfs /devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model u:object_r:vendor_sysfs_kgsl_gpu_model:s0

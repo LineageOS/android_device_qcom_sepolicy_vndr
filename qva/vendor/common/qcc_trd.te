@@ -51,6 +51,8 @@ allow vendor_qcc_trd_2 vendor_sysfs_devcd:file rw_file_perms;
 allow vendor_qcc_trd_2 sysfs:file {getattr};
 #for r/w in microdump parameters
 allow vendor_qcc_trd_2 vendor_sysfs_microdump:file rw_file_perms;
+#for checking access of devcd nodes till sepolicy set
+dontaudit vendor_qcc_trd_2 sysfs:file rw_file_perms;
 
 # cpustats
 # access to /sys/class/power_supply/bms/charge_counter
