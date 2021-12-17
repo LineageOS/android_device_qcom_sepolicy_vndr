@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb06dd5b_dd5fdf7b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2021-12-17T15:22:50Z",
+      "side": 1,
+      "message": "Wellll, this causes 174475 neverallow failures",
+      "revId": "0223dc18dd9aa861230d97797108c4b7bd7bbe24",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
