@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "929d1fbb_cd10fa67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-12-17T18:52:10Z",
+      "side": 1,
+      "message": "topic:12-qc-sepolicy-bringup",
+      "revId": "1fc5173aa7d452a592904e00f457d86dddbc8732",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
