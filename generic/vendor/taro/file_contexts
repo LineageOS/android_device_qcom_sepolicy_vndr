@@ -244,6 +244,7 @@
 
 # Feature configs
 /sys/devices/platform/soc/780000.qfprom/qfprom0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
+/sys/devices/platform/soc/soc:qfprom@0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
 
 # mmc device type
 /sys/devices/platform/soc/8804000.sdhci/mmc_host/mmc0/mmc0:[a-f0-9]+/type u:object_r:vendor_sysfs_mmc_device_type:s0
