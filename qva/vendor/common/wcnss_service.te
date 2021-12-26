@@ -32,3 +32,10 @@ unix_socket_connect(vendor_wcnss_service, vendor_wigignpt, vendor_wigignpt)
 allow vendor_wcnss_service self:capability net_admin;
 allow vendor_wcnss_service kmsg_device:chr_file { write open };
 allow vendor_wcnss_service proc_net:file read;
+
+allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:dir create_dir_perms;
+allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:dir r_dir_perms;
+allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:sock_file create_file_perms;
+allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:sock_file rw_file_perms;
+allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:file create_file_perms;
+allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:file rw_file_perms;
