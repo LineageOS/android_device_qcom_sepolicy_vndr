@@ -134,6 +134,7 @@ genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qco
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-02/c42d000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/red u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-02/c42d000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/green u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-02/c42d000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/blue u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-09/c42d000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator u:object_r:sysfs_leds:s0
 
 #PMIC devices wakeup nodes
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:pwrkey/wakeup/wakeup u:object_r:sysfs_wakeup:s0
@@ -197,13 +198,16 @@ genfscon sysfs /devices/platform/soc/soc:qcom,remoteproc-esoc0/esoc0 u:object_r:
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
 #genfscon sysfs /devices/platform/soc/988000.i2c/i2c-1/1-0038/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
 genfscon sysfs /devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+genfscon sysfs /devices/platform/soc/980000.i2c/i2c-0/0-0062/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
 
 #genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0049/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
 #genfscon sysfs /devices/platform/soc/988000.i2c/i2c-1/1-0038/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
 genfscon sysfs /devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
+genfscon sysfs /devices/platform/soc/980000.i2c/i2c-0/0-0062/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_type u:object_r:vendor_sysfs_trusted_touch_type:s0
 genfscon sysfs /devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_type u:object_r:vendor_sysfs_trusted_touch_type:s0
+genfscon sysfs /devices/platform/soc/980000.i2c/i2c-0/0-0062/trusted_touch_type u:object_r:vendor_sysfs_trusted_touch_type:s0
 
 # Feature configs for Cedros
 genfscon sysfs /devices/platform/soc/soc:qfprom@0/feat_conf_m7 u:object_r:vendor_sysfs_qfprom:s0
@@ -216,3 +220,41 @@ genfscon sysfs /kernel/load_guestvm_cpusys_vm/boot_guestvm u:object_r:vendor_sys
 genfscon sysfs /kernel/load_guestvm_trustedvm/boot_guestvm u:object_r:vendor_sysfs_guestvm:s0
 
 genfscon sysfs /devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model u:object_r:vendor_sysfs_kgsl_gpu_model:s0
+
+#net sysfs
+genfscon sysfs /devices/platform/soc/17110040.qcom,wcn6750/net u:object_r:sysfs_net:s0
+
+#wakeup sysfs nodes listed by SuspendSepolicyTests.sh
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:rtc@6100/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0/alarmtimer.0.auto/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,qbt_handler/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p_sleepstate/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink_log/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/188101c.remoteproc-spss/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/894000.qcom,qup_uart/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a84000.i2c/i2c-1/1-0028/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:pwrkey/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd/wakeup24 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd-secure/wakeup25 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:resin/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/mhi0/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/3000000.remoteproc-adsp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:gpio_keys/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/32300000.remoteproc-cdsp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/2400000.remoteproc-slpi/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4080000.remoteproc-mss/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/3e00000.qcom,ipa/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-adsp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:spf_core_platform/soc:spf_core_platform:lpass-cdc/va-macro/va_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/power_supply/ucsi-source-psy-soc:qcom,pmic_glink:qcom,ucsi1/wakeup58 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c08000.qcom,pcie/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-dsps/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-cdsp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-modem/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/dummy_hcd.0/usb1/wakeup u:object_r:sysfs_wakeup:s0

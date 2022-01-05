@@ -24,6 +24,39 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Changes from Qualcomm Innovation Center are provided under the following license:
+#
+# Copyright (c) 2021 Qualcomm Innovation Center, Inc. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted (subject to the limitations in the
+# disclaimer below) provided that the following conditions are met:
+#
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#
+#     * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
+# GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+# HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+# ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+# IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /(vendor|system/vendor)/bin/kernel-tests/smd.* u:object_r:vendor_smd_test_exec:s0
 /(vendor|system/vendor)/bin/qmi-framework-tests/qmi_ping.*      u:object_r:vendor_qmi_ping_exec:s0
@@ -66,6 +99,11 @@
 /(vendor|system/vendor)/bin/InstallKeybox                       u:object_r:vendor_sectest_exec:s0
 /(vendor|system/vendor)/bin/tracing_config\.sh        u:object_r:vendor_smtrace_tracing_exec:s0
 
+# Sprhd
+/vendor/bin/sprhdd                                              u:object_r:vendor_sprhdd_exec:s0
+/vendor/bin/dlsc                                                u:object_r:vendor_dlsc_exec:s0
+/dev/socket/sprhd(/.*)?                                         u:object_r:vendor_sprhdd_socket:s0
+
 #Authentication and FIDO
 /(vendor|system/vendor)/bin/sampleauthdaemon    u:object_r:vendor_fidotest_exec:s0
 /(vendor|system/vendor)/bin/qseeproxysampledaemon u:object_r:vendor_qseeproxysample_exec:s0
@@ -99,6 +137,7 @@
 /data/vendor/ts_loopback(/.*)?                                  u:object_r:vendor_ts_loopback_data_file:s0
 
 # snapcam libs
+/vendor/lib(64)?/libjni_imageutil\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libjni_mfnrutil\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libjni_aidenoiserutil\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libjni_aidenoiserutilv2\.so       u:object_r:same_process_hal_file:s0

@@ -62,6 +62,9 @@ allow vendor_agmservice_qti vendor_audio_data_file:file create_file_perms;
 # agm audio thread needs RT scheduling for LL/ULL audio, allow sys_nice
 allow vendor_agmservice_qti self:global_capability_class_set sys_nice;
 
+#Allow to trigger SSR when unable to communicate with ADSP
+allow vendor_agmservice_qti vendor_sysfs_adsp_ssr:file w_file_perms;
+
 userdebug_or_eng(`
 #Allow for property access
   get_prop(vendor_agmservice_qti,vendor_audio_debug_prop)
