@@ -215,6 +215,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-a
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/wsa-macro/wsa_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
 
+# Feature config for Fillmore
+genfscon sysfs /devices/platform/soc/soc:qfprom@0/feat_conf12 u:object_r:vendor_sysfs_qfprom:s0
+
 # Guest vm nodes
 genfscon sysfs /kernel/load_guestvm_cpusys_vm/boot_guestvm u:object_r:vendor_sysfs_guestvm:s0
 genfscon sysfs /kernel/load_guestvm_trustedvm/boot_guestvm u:object_r:vendor_sysfs_guestvm:s0
