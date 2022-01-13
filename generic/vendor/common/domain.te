@@ -38,9 +38,9 @@ allow domain vendor_debugfs_ion:dir search;
 
 get_prop(domain, vendor_gralloc_prop)
 
-r_dir_file({domain - isolated_app}, vendor_sysfs_soc);
-r_dir_file({domain - isolated_app}, vendor_sysfs_esoc);
-r_dir_file({domain - isolated_app}, vendor_sysfs_ssr);
+r_dir_file({domain - isolated_app - untrusted_app_all }, vendor_sysfs_soc);
+r_dir_file({domain - isolated_app - untrusted_app_all }, vendor_sysfs_esoc);
+r_dir_file({domain - isolated_app - untrusted_app_all }, vendor_sysfs_ssr);
 r_dir_file({domain - isolated_app}, sysfs_thermal);
 
 get_prop(domain, vendor_public_vendor_default_prop)
