@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, 2022 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -27,3 +27,6 @@
 
 #net sysfs
 genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net u:object_r:sysfs_net:s0
+
+#ssr nodes
+genfscon sysfs /devices/platform/soc/soc:remoteproc-wpss@8A00000/remoteproc/remoteproc3/name u:object_r:vendor_sysfs_ssr:s0
