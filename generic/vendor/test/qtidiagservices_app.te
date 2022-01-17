@@ -30,7 +30,7 @@
 ## This file defines the permissions that qtidiagservices can carry
 
 userdebug_or_eng(`
-  type qtidiagservices_app, domain;
+  type qtidiagservices_app, domain, mlstrustedsubject;
   app_domain(qtidiagservices_app)
 
   hal_client_domain(qtidiagservices_app, vendor_hal_diaghal)
