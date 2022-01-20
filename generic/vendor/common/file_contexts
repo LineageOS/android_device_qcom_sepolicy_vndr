@@ -26,6 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # dev nodes
 /dev/btpower                                    u:object_r:vendor_bt_device:s0
+/dev/btfmslim                                   u:object_r:vendor_bt_device:s0
 /dev/diag                                       u:object_r:vendor_diag_device:s0
 /dev/kgsl-3d0                                   u:object_r:gpu_device:s0
 /dev/rtc0                                       u:object_r:rtc_device:s0
@@ -369,6 +370,7 @@
 
 #persist_bluetooth_file
 /mnt/vendor/persist/bluetooth(/.*)?                                 u:object_r:vendor_persist_bluetooth_file:s0
+/mnt/vendor/persist/wlan(/.*)?                                      u:object_r:vendor_persist_wcnss_service_file:s0
 
 #power off alarm file
 /mnt/vendor/persist/alarm(/.*)?                                     u:object_r:vendor_persist_alarm_file:s0
