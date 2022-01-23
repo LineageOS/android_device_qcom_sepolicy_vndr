@@ -32,7 +32,10 @@ typeattribute vendor_sxrd_vndr vendor_sys_sxrauxservice_qti_socket_client;
 
 init_daemon_domain(vendor_sxrd_vndr)
 
-hal_server_domain(vendor_sxrd_vndr, vendor_hal_sxrservice_qti)
+#Inherit base network permissions from netd
+net_domain(vendor_sxrd_vndr)
+
+hal_server_domain_bypass(vendor_sxrd_vndr, vendor_hal_sxrservice_qti)
 binder_call(vendor_hal_sxrservice_qti_client, vendor_hal_sxrservice_qti_server)
 binder_call(vendor_hal_sxrservice_qti_server, vendor_hal_sxrservice_qti_client)
 
@@ -58,6 +61,12 @@ hal_client_domain(vendor_sxrd_vndr, hal_graphics_allocator);
 
 #Allow audio hal permission
 hal_client_domain(vendor_sxrd_vndr, hal_audio);
+
+#Access sxr properties
+get_prop(vendor_sxrd_vndr, vendor_sxr_prop)
+
+#Allow udp socket
+allow vendor_sxrd_vndr self:udp_socket create_socket_perms_no_ioctl;
 
 #access to usb device
 allow vendor_sxrd_vndr usb_device:chr_file rw_file_perms;
