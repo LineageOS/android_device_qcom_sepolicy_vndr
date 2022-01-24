@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a69a81f_23c8d9f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-01-24T12:02:51Z",
+      "side": 1,
+      "message": "Already part of LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0",
+      "revId": "232bba82c6c72cf9d326fe11c19f7fc41c3f0fa8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
