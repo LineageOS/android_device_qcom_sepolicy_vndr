@@ -16,6 +16,23 @@
       "message": "Already part of LA.UM.9.14.r1-18900-LAHAINA.QSSI12.0",
       "revId": "cc9aed58c2a6f6145db99d693cfe292213b521fd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2f17781_b5e0a785",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-01-24T17:56:24Z",
+      "side": 1,
+      "message": "\u003e Patch Set 1:\n\u003e \n\u003e kill topic\n\nI can\u0027t, but the full topic is merged anyway. You don\u0027t need to pick anymore.",
+      "revId": "cc9aed58c2a6f6145db99d693cfe292213b521fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
