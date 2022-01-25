@@ -30,6 +30,8 @@ type vendor_qvrd_vndr_exec, vendor_file_type, exec_type, file_type;
 
 init_daemon_domain(vendor_qvrd_vndr)
 
+binder_service(vendor_qvrd_vndr)
+
 hal_server_domain(vendor_qvrd_vndr, vendor_hal_qvrservice_qti)
 binder_call(vendor_hal_qvrservice_qti_client, vendor_hal_qvrservice_qti_server)
 binder_call(vendor_hal_qvrservice_qti_server, vendor_hal_qvrservice_qti_client)

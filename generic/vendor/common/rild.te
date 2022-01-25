@@ -73,3 +73,5 @@ hal_client_domain(rild, vendor_hal_imsfactory)
 
 # Fallback for seccomp
 crash_dump_fallback(rild)
+#CTS failure
+binder_service(rild)
