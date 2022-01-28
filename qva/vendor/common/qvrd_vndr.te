@@ -44,6 +44,9 @@ allow vendor_hal_qvrservice_qti_socket_fd_use_client vendor_qvrd_vndr: fd use;
 binder_use(vendor_qvrd_vndr);
 allow vendor_qvrd_vndr vendor_hal_qvrservice_qti_socket_fd_use_client:process setsched;
 
+#allow qvrd_vndr to call sensor native service
+binder_call(vendor_qvrd_vndr, system_server);
+
 #
 # General
 #
@@ -152,3 +155,6 @@ get_prop(vendor_qvrd_vndr, vendor_adsprpc_prop)
 get_prop(vendor_qvrd_vndr, vendor_mpctl_prop)
 allow vendor_qvrd_vndr proc_uptime:file r_file_perms;
 unix_socket_connect(vendor_qvrd_vndr, logdr, logd)
+
+#suppressing the error messages
+dontaudit vendor_qvrd_vndr vendor_xdsp_device:chr_file r_file_perms;
