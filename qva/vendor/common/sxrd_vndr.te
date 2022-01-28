@@ -35,6 +35,8 @@ init_daemon_domain(vendor_sxrd_vndr)
 #Inherit base network permissions from netd
 net_domain(vendor_sxrd_vndr)
 
+binder_service(vendor_sxrd_vndr)
+
 hal_server_domain_bypass(vendor_sxrd_vndr, vendor_hal_sxrservice_qti)
 binder_call(vendor_hal_sxrservice_qti_client, vendor_hal_sxrservice_qti_server)
 binder_call(vendor_hal_sxrservice_qti_server, vendor_hal_sxrservice_qti_client)
