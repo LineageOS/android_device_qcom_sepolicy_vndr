@@ -366,6 +366,7 @@
 
 #persist_bluetooth_file
 /mnt/vendor/persist/bluetooth(/.*)?                                 u:object_r:vendor_persist_bluetooth_file:s0
+/mnt/vendor/persist/wlan(/.*)?                                      u:object_r:vendor_persist_wcnss_service_file:s0
 
 #power off alarm file
 /mnt/vendor/persist/alarm(/.*)?                                     u:object_r:vendor_persist_alarm_file:s0
