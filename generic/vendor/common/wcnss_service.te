@@ -41,6 +41,10 @@ allow vendor_wcnss_service vendor_toolbox_exec:file rx_file_perms;
 allow vendor_wcnss_service vendor_wifi_vendor_data_file:dir create_dir_perms;
 allow vendor_wcnss_service vendor_wifi_vendor_data_file:file create_file_perms;
 
+allow vendor_wcnss_service mnt_vendor_file:dir search;
+allow vendor_wcnss_service vendor_persist_wcnss_service_file:dir rw_dir_perms;
+allow vendor_wcnss_service vendor_persist_wcnss_service_file:file create_file_perms;
+
 allow vendor_wcnss_service proc_net:file rw_file_perms;
 
 allow vendor_wcnss_service self:{ socket qipcrtr_socket }  create_socket_perms;
