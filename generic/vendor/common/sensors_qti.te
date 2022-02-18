@@ -31,12 +31,11 @@ type vendor_sensors_qti_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_sensors_qti)
 get_prop(vendor_sensors_qti, vendor_sensors_prop)
 
-
 # Access to tests from userdebug/eng builds
 userdebug_or_eng(`
   diag_use(vendor_sensors_qti)
-  get_prop(vendor_sensors_qti, vendor_sensors_dbg_prop)
-
+  # access to debug props from userdebug/eng builds
+  get_prop(vendor_sensors_qti, vendor_sensors_debug_prop)
   #allow starting of diag_mdlog
   allow vendor_sensors_qti vendor_qlogd_exec:file rx_file_perms;
   allow vendor_sensors_qti vendor_shell_exec:file rx_file_perms;

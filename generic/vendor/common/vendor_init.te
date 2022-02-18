@@ -98,6 +98,8 @@ set_prop(vendor_init, vendor_qteeconnector_opti_prop)
 set_prop(vendor_init, vendor_bluetooth_prop)
 userdebug_or_eng(`
   allow vendor_init proc_security:file rw_file_perms;
+  # access to debug props from userdebug/eng builds
+  set_prop(vendor_init, vendor_sensors_debug_prop)
 ')
 
 set_prop(vendor_init,vendor_dcvs_prop)

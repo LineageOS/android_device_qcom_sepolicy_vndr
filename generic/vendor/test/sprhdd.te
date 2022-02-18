@@ -1,4 +1,4 @@
-# Copyright (c) 2021 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2021-2022 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -52,6 +52,12 @@ allow vendor_sprhdd vendor_sprhdd:unix_stream_socket connectto;
 allow vendor_sprhdd sysfs_net:dir r_dir_perms;
 allow vendor_sprhdd sysfs_net:file rw_file_perms;
 allow vendor_sprhdd vendor_sysfs_data:file r_file_perms;
+
+allow vendor_sprhdd vendor_sprhdd_exec:file execute_no_trans;
+
+allow vendor_sprhdd vendor_sprhdd_data_file:fifo_file { open read getattr write };
+allow vendor_sprhdd vendor_sprhdd_data_file:dir create_dir_perms;
+allow vendor_sprhdd vendor_sprhdd_data_file:file create_file_perms;
 
 use_netutils(vendor_sprhdd)
 

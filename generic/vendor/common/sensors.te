@@ -30,6 +30,11 @@ type vendor_sensors_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vendor_sensors)
 get_prop(vendor_sensors, vendor_sensors_prop)
+userdebug_or_eng(`
+  # access debug props from userdebug/eng builds
+  get_prop(vendor_sensors, vendor_sensors_debug_prop)
+')
+
 
 allow vendor_sensors self:capability {
     setuid

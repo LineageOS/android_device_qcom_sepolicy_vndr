@@ -24,7 +24,6 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-persist.vendor.debug.sensors.             u:object_r:vendor_sensors_dbg_prop:s0
 
 #Wifi Display
 persist.vendor.debug.mux.                    u:object_r:vendor_wfd_vendor_debug_prop:s0
@@ -33,3 +32,6 @@ persist.vendor.debug.wfd.                    u:object_r:vendor_wfd_vendor_debug_
 
 #CNE IWLAN Logging
 persist.vendor.iwlan.logging.logcat          u:object_r:vendor_cnd_prop:s0
+
+#Sensors
+persist.vendor.sensors.debug.    u:object_r:vendor_sensors_debug_prop:s0

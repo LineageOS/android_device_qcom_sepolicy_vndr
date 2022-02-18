@@ -87,6 +87,11 @@ set_prop(vendor_qti_init_shell, vendor_gpu_prop)
 set_prop(vendor_qti_init_shell, vendor_sensors_prop)
 set_prop(vendor_qti_init_shell, vendor_adsprpc_prop)
 
+userdebug_or_eng(`
+  # access to debug props from userdebug/eng builds
+  set_prop(vendor_qti_init_shell, vendor_sensors_debug_prop)
+')
+
 allow vendor_qti_init_shell {
     sysfs_devices_system_cpu
     sysfs_lowmemorykiller
