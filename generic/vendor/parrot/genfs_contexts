@@ -75,9 +75,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qco
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/wireless u:object_r:vendor_sysfs_usb_supply:s0
 
 # LED device nodes
-genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-02/c42d000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/red u:object_r:vendor_sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-02/c42d000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/green u:object_r:vendor_sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-02/c42d000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/blue u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/red u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/green u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/blue u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-09/c42d000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator u:object_r:sysfs_leds:s0
 
 #PMIC devices wakeup nodes
