@@ -149,6 +149,7 @@ ro.vendor.media_performance_class      u:object_r:vendor_media_performance_class
 
 #kernel console log level
 persist.vendor.console.silent.config    u:object_r:vendor_console_log_level_prop:s0
+ctl.vendor.console         u:object_r:vendor_console_prop:s0
 
 #qteeconnector properties
 persist.vendor.qteeconnector.           u:object_r:vendor_qteeconnector_opti_prop:s0
