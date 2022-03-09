@@ -204,3 +204,6 @@ vendor.dcvs.prop                 u:object_r:vendor_dcvs_prop:s0
 
 #pcie property
 persist.vendor.pcie. u:object_r:vendor_pcie_prop:s0
+
+#Dynamic sensor
+vendor.dynamic_sensor. u:object_r:vendor_dynamic_sensor_prop:s0
