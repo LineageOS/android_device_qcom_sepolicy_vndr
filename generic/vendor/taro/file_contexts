@@ -252,7 +252,7 @@
 /sys/devices/platform/soc/780000.qfprom/qfprom0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
 
 # mmc device type
-/sys/devices/platform/soc/8804000.sdhci/mmc_host/mmc0/mmc0:[a-f0-9]+/type u:object_r:vendor_sysfs_mmc_device_type:s0
+/sys/devices/platform/soc/8804000.sdhci/mmc_host/mmc[0-1]/mmc[0-1]:[a-f0-9]+/type u:object_r:vendor_sysfs_mmc_device_type:s0
 
 # ufs device type
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
