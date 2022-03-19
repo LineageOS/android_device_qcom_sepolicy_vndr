@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d9ac4fa_a556302f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-03-19T15:58:14Z",
+      "side": 1,
+      "message": "maybe labeling it for legacy isn\u0027t really worth it if gts4lv is likely the only one that can actually use it...",
+      "revId": "8d72f9d5bffb33fed1b6223362b84e5a36941c2a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
