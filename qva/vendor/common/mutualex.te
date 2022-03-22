@@ -29,10 +29,18 @@ type vendor_mutualex, domain;
 type vendor_mutualex_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_mutualex)
 
+allow vendor_mutualex self:capability {
+    net_admin
+};
+
 allow vendor_mutualex vendor_mutualex:{
+    netlink_socket
     qipcrtr_socket
     netlink_generic_socket
+    netlink_route_socket
 }create_socket_perms_no_ioctl;
+
+allow vendor_mutualex self:udp_socket create_socket_perms;
 
 hal_client_domain(vendor_mutualex,hal_wifi_hostapd)
 hal_client_domain(vendor_mutualex,hal_wifi_supplicant)
