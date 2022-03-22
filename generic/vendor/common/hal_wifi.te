@@ -30,6 +30,9 @@
 # allow hal_wifi to write into /proc/debugdriver/driverdump
 r_dir_file(hal_wifi_default, vendor_proc_wifi_dbg)
 
+# allow hal_wifi_default sys_module capability
+allow hal_wifi_default self:capability sys_module;
+
 # write to files owned by location daemon
 allow hal_wifi_default vendor_location_socket:dir rw_dir_perms;
 allow hal_wifi_default vendor_location_socket: {sock_file lnk_file } create_file_perms;
