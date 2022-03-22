@@ -145,6 +145,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qco
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/wireless/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 
+#spcom device wakeup nodes
+genfscon sysfs /devices/platform/soc/soc:qcom,spcom/wakeup u:object_r:sysfs_wakeup:s0
+
 # USB device wakeup nodes
 genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a800000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
