@@ -213,6 +213,9 @@ type vendor_hexagon_halide_file, vendor_file_type, file_type;
 # vendor media files
 type vendor_media_data_file, file_type, data_file_type;
 
+# vendor sysfs sku version
+type vendor_sysfs_sku, fs_type, sysfs_type;
+
 type adsprpcd_file, file_type, mlstrustedobject, vendor_file_type;
 
 # vm system files
