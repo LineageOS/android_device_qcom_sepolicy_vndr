@@ -30,9 +30,12 @@ type vendor_qvrd_vndr_exec, vendor_file_type, exec_type, file_type;
 
 init_daemon_domain(vendor_qvrd_vndr)
 
+#Inherit base network permissions from netd
+net_domain(vendor_qvrd_vndr)
+
 binder_service(vendor_qvrd_vndr)
 
-hal_server_domain(vendor_qvrd_vndr, vendor_hal_qvrservice_qti)
+hal_server_domain_bypass(vendor_qvrd_vndr, vendor_hal_qvrservice_qti)
 binder_call(vendor_hal_qvrservice_qti_client, vendor_hal_qvrservice_qti_server)
 binder_call(vendor_hal_qvrservice_qti_server, vendor_hal_qvrservice_qti_client)
 hal_attribute_service(vendor_hal_qvrservice_qti, vendor_hal_qvrd_service)
@@ -132,6 +135,11 @@ get_prop(vendor_qvrd_vndr, vendor_qvrd_prop)
 get_prop(vendor_qvrd_vndr, vendor_qvr_persist_prop)
 get_prop(vendor_qvrd_vndr, vendor_qvrd_persist_prop)
 allow vendor_qvrd_vndr video_device:chr_file w_file_perms;
+
+#Allow udp socket
+allow vendor_qvrd_vndr self:udp_socket create_socket_perms_no_ioctl;
+
+allow vendor_qvrd_vndr self:netlink_route_socket create_socket_perms_no_ioctl;
 
 #allow qvrd_vndr to access hid event
 allow vendor_qvrd_vndr vendor_sysfs_usb_node:dir r_dir_perms;
