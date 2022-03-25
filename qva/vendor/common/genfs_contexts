@@ -117,3 +117,5 @@ genfscon sysfs /kernel/msm_performance/notify/curr_cap_cluster u:object_r:vendor
 genfscon sysfs /kernel/msm_performance/notify/gfx_evt u:object_r:vendor_sysfs_msm_perf:s0
 genfscon sysfs /kernel/msm_performance/notify/top_load_cluster u:object_r:vendor_sysfs_msm_perf:s0
 genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.2.auto/usb u:object_r:vendor_sysfs_usb_node:s0
+
+genfscon sysfs /devices/platform/soc/aa00000.qcom,vidc/sku_version    u:object_r:vendor_sysfs_sku:s0
