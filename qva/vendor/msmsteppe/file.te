@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +13,7 @@
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
-# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -59,17 +59,5 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-###################################
-
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc u:object_r:vendor_hal_fingerprint_fpc_exec:s0
-
-###################################
-#Dev nodes
-#
-/dev/power_state                      u:object_r:vendor_power_state_device:s0
-
-###################################
-# System files
-#
-/vendor/bin/hw/vendor\.qti\.hardware\.powerstateservice@1\.0-service			   u:object_r:vendor_hal_powerstateservice_qti_exec:s0
-/vendor/bin/hw/vendor\.qti\.hardware\.powerstateutility@1\.0-service			   u:object_r:vendor_hal_powerstateutility_qti_exec:s0
+# System power-disk file type
+type sysfs_power_disk, sysfs_type, fs_type;
