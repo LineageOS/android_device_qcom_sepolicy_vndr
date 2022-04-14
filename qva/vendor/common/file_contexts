@@ -28,7 +28,7 @@
 # Changes from Qualcomm Innovation Center are provided under the following
 # license:
 #
-# Copyright (c) 2021 Qualcomm Innovation Center, Inc.
+# Copyright (c) 2021-2022 Qualcomm Innovation Center, Inc.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -149,7 +149,6 @@
 /(vendor|system/vendor)/bin/sec_nvm                                                u:object_r:vendor_sec_nvm_exec:s0
 /(vendor|system/vendor)/bin/hostapd_cli                                            u:object_r:vendor_hostapd_exec:s0
 /(vendor|system/vendor)/bin/qcom-system-daemon                                     u:object_r:vendor_qcomsysd_exec:s0
-/(vendor|system/vendor)/bin/init\.qti\.media\.sh                                   u:object_r:vendor_qti_media_exec:s0
 /(vendor|system/vendor)/bin/vppservice                                             u:object_r:vendor_vppservice_exec:s0
 /(vendor|system/vendor)/bin/hw/qconfigservice                                      u:object_r:vendor_qconfigservice_exec:s0
 /(vendor|system/vendor)/bin/wifidisplayhalservice                                  u:object_r:vendor_wifidisplayhalservice_qti_exec:s0
@@ -232,7 +231,6 @@
 /sys/class/kgsl/kgsl/proc(/.*)?                                    u:object_r:vendor_sysfs_kgsl_proc:s0
 
 /sys/devices(/platform)?/soc/soc:qcom,spss_utils(/.*)?             u:object_r:vendor_sysfs_spss:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,vidc/sku_version       u:object_r:vendor_sysfs_sku:s0
 
 ###################################
 # data files
