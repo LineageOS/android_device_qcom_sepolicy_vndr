@@ -370,6 +370,8 @@
 /vendor/lib(64)?/libOpenCL\.so              u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libq3dtools_adreno\.so     u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libadreno_compiler_cl\.so  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libkernelmanager\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libkcl\.so                 u:object_r:same_process_hal_file:s0
 
 # Loaded by native loader (zygote) for all processes
 /vendor/lib(64)?/libadsprpc\.so             u:object_r:same_process_hal_file:s0
