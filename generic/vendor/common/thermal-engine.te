@@ -81,7 +81,6 @@ allow vendor_thermal-engine vendor_sysfs_graphics:file rw_file_perms;
 allow vendor_thermal-engine vendor_sysfs_graphics:lnk_file r_file_perms;
 
 r_dir_file(vendor_thermal-engine, sysfs_leds)
-allow vendor_thermal-engine audio_device:chr_file rw_file_perms;
 
 # reboot/shutdown for thermal limits exceeded
 set_prop(vendor_thermal-engine, powerctl_prop)
