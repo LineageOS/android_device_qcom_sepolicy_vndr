@@ -74,6 +74,7 @@ vendor_internal_prop(vendor_boot_mode_prop);
 #mpctl
 vendor_restricted_prop(vendor_mpctl_prop);
 vendor_internal_prop(vendor_freq_prop);
+vendor_internal_prop(vendor_procomp_prop);
 #service opts
 vendor_restricted_prop(vendor_bservice_prop);
 vendor_restricted_prop(vendor_reschedule_service_prop);
