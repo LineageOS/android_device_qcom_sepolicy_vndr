@@ -31,6 +31,7 @@ init_daemon_domain(vendor_rfs_access)
 
 #For tftp server
 allow vendor_rfs_access self:capability { chown setgid setpcap setuid net_bind_service };
+dontaudit vendor_rfs_access self:capability { dac_override dac_read_search };
 
 wakelock_use(vendor_rfs_access)
 
