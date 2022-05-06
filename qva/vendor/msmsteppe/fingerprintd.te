@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +13,7 @@
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
-# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -24,7 +24,7 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
+
 # Changes from Qualcomm Innovation Center are provided under the following license:
 #
 # Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
@@ -59,86 +59,8 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-vendor_internal_prop(vendor_dataadpl_prop);
-vendor_internal_prop(vendor_cnd_vendor_prop);
-vendor_internal_prop(vendor_spcomlib_prop);
-vendor_public_prop(vendor_qcc_prop);
-vendor_internal_prop(vendor_mdm_helper_prop);
-vendor_internal_prop(vendor_disable_spu_prop);
-
-vendor_restricted_prop(vendor_confqmaa);
-
-# boot mode property
-vendor_internal_prop(vendor_boot_mode_prop);
-
-#mpctl
-vendor_restricted_prop(vendor_mpctl_prop);
-vendor_internal_prop(vendor_freq_prop);
-vendor_internal_prop(vendor_procomp_prop);
-#service opts
-vendor_restricted_prop(vendor_bservice_prop);
-vendor_restricted_prop(vendor_reschedule_service_prop);
-vendor_restricted_prop(vendor_cgroup_follow_prop);
-vendor_restricted_prop(vendor_scroll_prop);
-
-vendor_restricted_prop(vendor_qspm_prop);
-#iop
-vendor_restricted_prop(vendor_iop_prop);
-
-#properties for nfc
-vendor_restricted_prop(vendor_nfc_nq_prop);
-
-# properties for eSE-StrongBox
-vendor_internal_prop(vendor_ese_strongbox_prop);
-
-# factory properties
-vendor_internal_prop(vendor_ctl_vendor_mmid_prop);
-
-# mmi
-vendor_internal_prop(vendor_mmi_prop);
-
-#mm-video
-vendor_restricted_prop(vendor_video_prop);
-
-# Audio debug props
-vendor_internal_prop(vendor_audio_debug_prop);
-
-# Seccam Prop
-vendor_internal_prop(vendor_core_ctl_prop);
-
-# property for location
-vendor_internal_prop(vendor_location_prop);
-
-# Netmgrd prop
-vendor_internal_prop(vendor_data_ko_prop);
-# WIGIG
-vendor_internal_prop(vendor_wigig_prop);
-vendor_internal_prop(vendor_ctl_vendor_wigigsvc_prop);
-
-# Display
-vendor_internal_prop(vendor_ctl_vendor_display_prop);
-
-# hvdcp_opti prop
-vendor_internal_prop(vendor_hvdcp_opti_prop);
-
-# property for xlat
-vendor_restricted_prop(vendor_xlat_prop);
-
-#qvr property
-vendor_restricted_prop(vendor_qvr_prop);
-vendor_restricted_prop(vendor_sxr_prop);
-vendor_restricted_prop(vendor_qvrd_prop);
-vendor_restricted_prop(vendor_qvr_persist_prop);
-vendor_restricted_prop(vendor_qvrd_persist_prop);
-
-#qmuxd property
-vendor_internal_prop(vendor_ctl_qmuxd_prop);
-
-#slm property
-vendor_restricted_prop(vendor_slm_prop);
-
-#mwqem property
-vendor_restricted_prop(vendor_mwqem_prop);
-
-#pasr property
-vendor_internal_prop(vendor_pasr_prop);
+allow hal_fingerprint input_device:dir r_dir_perms;
+allow hal_fingerprint vendor_sysfs_fps_attr:file rw_file_perms;
+allow hal_fingerprint uhid_device:chr_file rw_file_perms;
+r_dir_file(hal_fingerprint, firmware_file);
+r_dir_file(hal_fingerprint, sysfs_leds);

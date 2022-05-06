@@ -33,3 +33,11 @@ neverallow {
    -vendor_spdaemon
    -vendor_hal_authsecret_qti
 } vendor_spunvm_file_type: { dir file } *;
+
+neverallow {
+    domain
+    -init
+    -dumpstate
+    -vendor_init
+    -vendor_hal_perf_default
+} vendor_procomp_prop:file *;
