@@ -55,7 +55,7 @@ allow vendor_sprhdd vendor_sysfs_data:file r_file_perms;
 
 allow vendor_sprhdd vendor_sprhdd_exec:file execute_no_trans;
 
-allow vendor_sprhdd vendor_sprhdd_data_file:fifo_file { open read getattr write };
+allow vendor_sprhdd vendor_sprhdd_data_file:fifo_file { create open read getattr write };
 allow vendor_sprhdd vendor_sprhdd_data_file:dir create_dir_perms;
 allow vendor_sprhdd vendor_sprhdd_data_file:file create_file_perms;
 
