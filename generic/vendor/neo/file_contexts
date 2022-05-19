@@ -35,6 +35,7 @@
 
 # Block device for hal_bootctl
 /dev/block/sdf                                                      u:object_r:boot_block_device:s0
+/dev/block/mmcblk0                                                  u:object_r:root_block_device:s0
 
 #emmc node
 /dev/block/platform/soc/7c4000.sdhci/by-name/abl_[ab]          u:object_r:vendor_custom_ab_block_device:s0
