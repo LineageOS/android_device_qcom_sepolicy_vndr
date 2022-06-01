@@ -143,9 +143,6 @@ vendor.gatekeeper.disable_spu                u:object_r:vendor_disable_spu_prop:
 #boot mode property
 vendor.sys.boot_mode                         u:object_r:vendor_boot_mode_prop:s0
 
-#Display
-ctl.stop$vendor.qti.hardware.display.demura  u:object_r:vendor_ctl_vendor_display_prop:s0
-
 # factory properties
 ctl.vendor.mmid                              u:object_r:vendor_ctl_vendor_mmid_prop:s0
 
