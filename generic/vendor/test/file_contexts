@@ -102,6 +102,8 @@
 # Sprhd
 /vendor/bin/sprhdd                                              u:object_r:vendor_sprhdd_exec:s0
 /vendor/bin/dlsc                                                u:object_r:vendor_dlsc_exec:s0
+/vendor/bin/ipa_lnx_agent                                       u:object_r:vendor_ipa_lnx_agent_exec:s0
+/dev/ipa_lnx_stats_ioctl                                        u:object_r:vendor_ipa_lnx_agent_file:s0
 /dev/socket/sprhd(/.*)?                                         u:object_r:vendor_sprhdd_socket:s0
 /data/vendor/sprhd(/.*)?                                        u:object_r:vendor_sprhdd_data_file:s0
 

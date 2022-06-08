@@ -78,6 +78,8 @@ type vendor_debugfs_kgsl_fence_tracing, tracefs_type, debugfs_type, fs_type;
 
 type vendor_dlsc_socket, file_type;
 
+type vendor_ipa_lnx_agent_file, dev_type;
+
 type vendor_sprhdd_socket, file_type;
 
 type vendor_sprhdd_data_file, file_type, data_file_type;
