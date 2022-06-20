@@ -60,5 +60,3 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 hal_client_domain(hal_graphics_composer_default, vendor_hal_eid);
-
-set_prop(hal_graphics_composer_default, vendor_ctl_vendor_display_prop)
