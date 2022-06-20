@@ -63,3 +63,4 @@ type vendor_sysfs_fps_attr, fs_type, sysfs_type;
 type vendor_subsys_hvdcp, fs_type, sysfs_type;
 type sysfs_hvdcp, fs_type, sysfs_type;
 type vendor_ims_socket, file_type;
+type vendor_sysfs_devfreqw, fs_type, sysfs_type;
