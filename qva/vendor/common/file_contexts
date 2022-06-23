@@ -105,6 +105,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.soter@1\.0-service           u:object_r:vendor_hal_soter_qti_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator@1\.[0-3]-service                    u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service                            u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/android\.hardware\.health-service\.qti                              u:object_r:hal_health_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.power\.pasrmanager\@1\.0-service       u:object_r:vendor_hal_pasrmanager_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.memory\.pasrmanager\@1\.0-service      u:object_r:vendor_pasrmanager_memory_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.psiclient\@1\.0-service                u:object_r:vendor_psiservice_exec:s0
