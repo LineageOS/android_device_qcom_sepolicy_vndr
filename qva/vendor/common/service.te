@@ -28,3 +28,4 @@
 type vendor_dun_service,                 service_manager_type;
 type vendor_imsrcs_service,              service_manager_type;
 type vendor_hal_qvrd_service,            vendor_service,service_manager_type;
+type vendor_hal_sxrd_service,            vendor_service,service_manager_type;

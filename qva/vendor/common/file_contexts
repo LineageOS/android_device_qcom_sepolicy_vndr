@@ -66,6 +66,7 @@
 /dev/socket/wigig/sensingdaemon                 u:object_r:vendor_sensingdaemon_socket:s0
 /dev/socket/qvrservice_vndr                     u:object_r:vendor_qvrd_vndr_socket:s0
 /dev/socket/qvrservice_vndr_camera              u:object_r:vendor_qvrd_vndr_socket:s0
+/dev/socket/sxrservice_vndr                     u:object_r:vendor_sxrd_vndr_socket:s0
 
 /dev/smcinvoke                                  u:object_r:tee_device:s0
 ###################################
@@ -140,6 +141,7 @@
 /vendor/bin/qesdk-manager                                                          u:object_r:vendor_hal_qesdhal_default_exec:s0
 /(vendor|system/vendor)/bin/mutualex                                               u:object_r:vendor_mutualex_exec:s0
 /(vendor|system/vendor)/bin/hw/qvrservice                                          u:object_r:vendor_qvrd_vndr_exec:s0
+/(vendor|system/vendor)/bin/hw/sxrservice                                          u:object_r:vendor_sxrd_vndr_exec:s0
 /vendor/bin/modemManager                                                           u:object_r:vendor_modem_manager_exec:s0
 
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qccvndhal@1\.0-service       u:object_r:vendor_hal_qccvndhal_qti_exec:s0
@@ -212,6 +214,7 @@
 /data/vendor/sensing(/.*)?                                          u:object_r:vendor_sensing_vendor_data_file:s0
 /data/vendor/gaming(/.*)?                                           u:object_r:vendor_qspmhal_data_file:s0
 /data/vendor/qvr(/.*)?                                              u:object_r:vendor_qvrd_vndr_data_file:s0
+/data/vendor/sxr(/.*)?                                              u:object_r:vendor_sxrd_vndr_data_file:s0
 
 ###################################
 # persist files
