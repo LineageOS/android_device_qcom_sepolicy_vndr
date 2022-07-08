@@ -1,4 +1,4 @@
-# Copyright (c) 2019, 2021 The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -29,11 +29,16 @@
 # Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
-#Add new domain for perfdump app
-user=system seinfo=platform name=com.qualcomm.qti.perfdump domain=vendor_perfdump_app type=system_app_data_file
+type powerstatemanager_service, domain;
 
-#Add new domain for powerservice app
-user=_app seinfo=platform name=.pasr domain=vendor_powerservice_app type=app_data_file levelFrom=all
+# Domain to run powerstatemanager_service Service (com.qualcomm.qti.powerstatemanagerservice)
+app_domain(powerstatemanager_service)
 
-#Add new domain for powerstatemanager services
-user=_app seinfo=platform name=com.qualcomm.qti.powerstatemanagerservice domain=powerstatemanager_service type=app_data_file levelFrom=all
+# Allow powerstatemanager Service to access certain system services.
+allow powerstatemanager_service { activity_service bluetooth_manager_service surfaceflinger_service wifi_service audio_service location_service radio_service tethering_service thermal_service}:service_manager find;
+allow powerstatemanager_service system_app_data_file:dir create_dir_perms;
+allow powerstatemanager_service system_app_data_file:{ file lnk_file } create_file_perms;
+allow powerstatemanager_service fs_bpf:dir search;
+#get_prop(powerstatemanager_service, vendor_qc_aon_prop);
+
+hal_client_domain(powerstatemanager_service, vendor_hal_powerstateservice)
