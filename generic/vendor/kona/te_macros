@@ -33,7 +33,7 @@
 #######################################
 # Allow domains to use QTR SDK for metric collection
 # syntax: qtr_sdk_use(clientdomain)
-define(`qtr_sdk_use',
+define(`qtr_sdk_use', `
 # qtrsdkservice client for registering & start/stop campaign
 allow $1 vendor_qtrsdkservice_service:service_manager find;
 binder_call($1, vendor_qcc_trd)
