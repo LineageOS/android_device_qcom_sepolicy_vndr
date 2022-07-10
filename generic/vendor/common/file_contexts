@@ -443,7 +443,7 @@
 
 # graphics device
 /dev/mdss_rotator                               u:object_r:graphics_device:s0
-/dev/dri/card0                                  u:object_r:graphics_device:s0
+/dev/dri/card[0-9]                              u:object_r:graphics_device:s0
 /dev/dri/controlD64                             u:object_r:graphics_device:s0
 /dev/dri/renderD128                             u:object_r:graphics_device:s0
 /dev/spec_sync                                  u:object_r:graphics_device:s0
