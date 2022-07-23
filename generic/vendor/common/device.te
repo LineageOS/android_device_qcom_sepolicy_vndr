@@ -51,6 +51,7 @@ type vendor_dmabuf_secure_pixel, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_secure_non_pixel, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_adsp_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_secure_cdsp_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_cma_secure_cdsp_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_sp_hlos_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_secure_sp_modem_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_secure_sp_tz_heap_device, dmabuf_heap_device_type, dev_type;
