@@ -24,6 +24,11 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center are provided under the following license:
+#
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 # generic/vendor_location.te - sepolicy rules for generic vendor_location modules
 
@@ -92,6 +97,9 @@ allow vendor_location hal_wifi_supplicant_default:unix_dgram_socket sendto;
 # /dev/socket/wifihal
 allow vendor_location vendor_wifihal_socket:dir search;
 unix_socket_send(vendor_location, vendor_wifihal,  hal_wifi_default);
+
+# /dev/socket/mlid
+allow vendor_location vendor_mlid:unix_dgram_socket sendto;
 
 ## xtra-daemon
 ##############
