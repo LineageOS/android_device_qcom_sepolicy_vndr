@@ -34,6 +34,7 @@ net_domain(vendor_ims_service)
 set_prop(vendor_ims_service, vendor_ims_prop)
 get_prop(vendor_ims_service, vendor_ims_prop)
 get_prop(vendor_ims_service, vendor_cnd_prop)
+set_prop(vendor_ims_service, vendor_persist_rcs_qti_prop)
 
 allow vendor_ims_service vendor_sysfs_data:file r_file_perms;
 
