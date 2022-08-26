@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82ff9352_8128b7b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2022-08-26T14:20:30Z",
+      "side": 1,
+      "message": "This was part of the caf repo in lineage-18.1 but it was missing in the lahaina branch and we didn\u0027t pick it for lineage-19.1.",
+      "revId": "458349b5fd120779cd4342f79ad41a9eab931a5c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
