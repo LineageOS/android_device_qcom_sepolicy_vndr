@@ -16,6 +16,23 @@
       "message": "TODO: Fix the two entries currently commented out.",
       "revId": "f4d8e5d4cf36c2487f6d1944de877bb149749b45",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e60d1918_cbf5d447",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2022-09-02T22:50:57Z",
+      "side": 1,
+      "message": "lahaina is supposed to use lineage-20.0-legacy-um branch",
+      "revId": "f4d8e5d4cf36c2487f6d1944de877bb149749b45",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
