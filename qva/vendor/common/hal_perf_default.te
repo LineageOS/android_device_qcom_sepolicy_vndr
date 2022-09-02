@@ -145,4 +145,4 @@ allow vendor_hal_perf_default appdomain:process getsched;
 allow vendor_hal_perf_default self:capability sys_nice;
 dontaudit vendor_hal_perf_default self:capability dac_override;
 dontaudit vendor_hal_perf_default system_server:dir search;
-dontaudit vendor_hal_perf_default { domain – appdomain }:process { getsched setsched };
+dontaudit vendor_hal_perf_default { domain - appdomain }:process { getsched setsched };
