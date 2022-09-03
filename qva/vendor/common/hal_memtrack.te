@@ -26,7 +26,9 @@
 # # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #debugfs access to audio
+no_debugfs_restriction(`
 userdebug_or_eng(`
 allow hal_memtrack_default vendor_qti_debugfs:dir r_dir_perms;
 allow hal_memtrack_default vendor_qti_debugfs:file rw_file_perms;
+')
 ')
