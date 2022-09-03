@@ -33,6 +33,24 @@
       "message": "lahaina is supposed to use lineage-20.0-legacy-um branch",
       "revId": "f4d8e5d4cf36c2487f6d1944de877bb149749b45",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "839f439e_62061c6d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 18745
+      },
+      "writtenOn": "2022-09-03T02:04:11Z",
+      "side": 1,
+      "message": "My mistake. Thanks.",
+      "parentUuid": "e60d1918_cbf5d447",
+      "revId": "f4d8e5d4cf36c2487f6d1944de877bb149749b45",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
