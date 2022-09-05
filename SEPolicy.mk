@@ -64,6 +64,12 @@ ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
                  $(SEPOLICY_PATH)/legacy/vendor/ssg \
                  $(SEPOLICY_PATH)/legacy/vendor/common
 
+    ifeq ($(TARGET_USES_LOGDUMP_AS_METADATA),true)
+        BOARD_SEPOLICY_M4DEFS += logdump_partition=metadata_block_device
+    else
+        BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/common/logdump
+    endif
+
     ifeq ($(TARGET_SEPOLICY_DIR),)
       BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/legacy/vendor/$(TARGET_BOARD_PLATFORM)
     else
