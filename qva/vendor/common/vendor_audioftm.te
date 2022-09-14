@@ -48,3 +48,5 @@ allow vendor_audioftm vendor_audio_data_file:file create_file_perms;
 
 allow vendor_audioftm audio_device:dir r_dir_perms;
 allow vendor_audioftm audio_device:chr_file rw_file_perms;
+
+allow vendor_audioftm vendor_sysfs_sndcard:file rw_file_perms;
