@@ -80,3 +80,9 @@ allow vendor_hal_powerstateutility_qti proc_drop_caches:file rw_file_perms;
 #allow service to communicate with sysfs nodes
 allow vendor_hal_powerstateutility_qti sysfs_power:file rw_file_perms;
 allow vendor_hal_powerstateutility_qti sysfs_power_disk:file rw_file_perms;
+
+#allow service to communicate with swappiness node
+allow vendor_hal_powerstateutility_qti proc_swappiness:file rw_file_perms;
+
+#allow service to communicate with image_size node
+allow vendor_hal_powerstateutility_qti sysfs_power_imagesize:file rw_file_perms;
