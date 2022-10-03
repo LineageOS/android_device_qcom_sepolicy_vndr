@@ -399,6 +399,7 @@
 /sys/devices/virtual/graphics/fb([0-3])+/hist_event                 u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-3])+/vsync_event                u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-3])+/lineptr_event              u:object_r:vendor_sysfs_graphics:s0
+/sys/class/drm/sde-crtc-([0-9])+/lineptr_value                      u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-3])+/idle_notify                u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-3])+/msm_fb_thermal_level       u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-3])+/idle_power_collapse        u:object_r:vendor_sysfs_graphics:s0
