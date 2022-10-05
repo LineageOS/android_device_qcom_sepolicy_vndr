@@ -57,10 +57,6 @@ allow vendor_vppservice ion_device:chr_file rw_file_perms;
 allow vendor_vppservice video_device:chr_file rw_file_perms;
 allow vendor_vppservice vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_vppservice gpu_device:chr_file rw_file_perms;
-
-# suppress xdsp denial, since it is expected
-dontaudit vendor_vppservice vendor_xdsp_device:chr_file { open read ioctl };
-
 # allow vppservice to access dsp read_prop
 get_prop(vendor_vppservice, vendor_adsprpc_prop)
 
