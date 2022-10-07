@@ -35,3 +35,6 @@ permissive vendor_hal_debugutils_default;
 binder_call(vendor_hal_debugutils_server, vendor_hal_debugutils_client);
 binder_call(vendor_hal_debugutils_client, vendor_hal_debugutils_server);
 hal_attribute_hwservice(vendor_hal_debugutils,hal_debugutils_hwservice);
+
+allow domain vendor_hal_debugutils_default:fd use;
+allow domain vendor_hal_debugutils_default:fifo_file write;
