@@ -58,6 +58,7 @@ allow hal_perf {
     sysfs_mmc_host
     sysfs_scsi_host
     sysfs_kgsl
+    sysfs_kgsl_proc
     sysfs_cpu_boost
     sysfs_msm_perf
     sysfs_memory
@@ -71,6 +72,7 @@ allow hal_perf {
     sysfs_devices_system_cpu
     sysfs_mpdecision
     sysfs_kgsl
+    sysfs_kgsl_proc
     sysfs_cpu_boost
     sysfs_msm_perf
     sysfs_memory
