@@ -16,6 +16,23 @@
       "message": "chain compiles and works fine on eqs (Moto Edge 30 Ultra) with selinux set to enforcing",
       "revId": "7d43d53f8b62695bda11fe5f54a629f6a7443f01",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce90d302_3cc111bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-11-04T18:39:41Z",
+      "side": 1,
+      "message": "Rebase this one. I have abandoned the previous change.",
+      "revId": "7d43d53f8b62695bda11fe5f54a629f6a7443f01",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
