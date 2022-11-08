@@ -111,3 +111,6 @@ get_prop(vendor_init, vendor_soc_name_prop);
 get_prop(vendor_init, vendor_soc_model_prop);
 
 allow vendor_init tee_device:chr_file getattr;
+
+#Access rcs service
+set_prop(vendor_init, vendor_persist_rcs_qti_prop)
