@@ -184,13 +184,26 @@
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DP-1/enabled u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-2/enabled u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-Virtual-1/enabled u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/15600000.qcom,mdss_mdp/backlight(/.*)?     u:object_r:vendor_sysfs_graphics:s0
 
 #poweropt-service
 /(vendor|system/vendor)/bin/poweropt-service u:object_r:vendor_hal_poweroptservice_qti_exec:s0
 
+# ufs device type
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:1/block/sdb/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:2/block/sdc/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:3/block/sdd/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:4/block/sde/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:5/block/sdf/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:6/block/sdg/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:7/block/sdh/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
+
 # Feature configs
 /sys/devices/platform/soc/780000.qfprom/qfprom0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
 
+# mmc device type
+/sys/devices/platform/soc/1c10000.qcom,pcie/pci[0-9]+:[0-9]+/[0-9]+:[0-9]+:[0-9]+.[0-9]+/[0-9]+:[0-9]+:[0-9]+.[0-9]+/nvme/nvme0/transport u:object_r:vendor_sysfs_mmc_device_type:s0
 
 /vendor/bin/hw/vendor\.qti\.hardware\.display\.demura@1\.0-service u:object_r:hal_display_demura_default_exec:s0
 
