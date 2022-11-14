@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f864ddd8_e77ffecd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31334
+      },
+      "writtenOn": "2022-11-14T10:22:14Z",
+      "side": 1,
+      "message": "A temporary fix. Maybe there are better ways. Tested on dipper and problem solved.",
+      "revId": "e14ceb6d3352db8863890d5eca6b6131efb46104",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
