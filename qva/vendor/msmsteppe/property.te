@@ -63,3 +63,6 @@
 vendor_restricted_prop(vendor_media_sm6150_version_prop);
 vendor_restricted_prop(vendor_media_sdmmagpie_version_prop);
 vendor_restricted_prop(vendor_chre_enabled_prop);
+
+#keymaster quickboot prop
+vendor_restricted_prop(vendor_tee_km_quickboot);
