@@ -28,3 +28,7 @@
 allow network_stack vendor_dpmd:unix_stream_socket connectto;
 allow network_stack vendor_dpmtcm_socket:sock_file write;
 hal_client_domain(network_stack, vendor_hal_perf);
+
+# allow Tethering(network_stack process) to run/update/read the eBPF maps to offload tethering traffic by eBPF.
+allow network_stack fs_bpf :dir search;
+allow network_stack fs_bpf :file { read write };
