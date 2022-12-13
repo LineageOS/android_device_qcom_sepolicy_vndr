@@ -67,6 +67,8 @@
 #Dev nodes
 #
 /dev/power_state                      u:object_r:vendor_power_state_device:s0
+#swap partition node
+/dev/block/by-name/swap				  u:object_r:vendor_hibernate_swap:s0
 
 ###################################
 # System files
