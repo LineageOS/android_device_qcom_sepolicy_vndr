@@ -37,6 +37,7 @@ ctl.vendor.hvdcp_opti                        u:object_r:vendor_hvdcp_opti_prop:s
 
 # qcc property
 vendor.qti.qdma.                             u:object_r:vendor_qcc_prop:s0
+vendor.qti.qcc.                              u:object_r:vendor_qcc_prop:s0
 
 #perf
 vendor.post_boot.parsed                u:object_r:vendor_mpctl_prop:s0
