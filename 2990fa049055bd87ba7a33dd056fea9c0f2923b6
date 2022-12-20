@@ -16,6 +16,24 @@
       "message": "this is rather device specific though.",
       "revId": "2990fa049055bd87ba7a33dd056fea9c0f2923b6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2edcaa2d_34543ae5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2022-12-20T13:12:28Z",
+      "side": 1,
+      "message": "Standard android partitions can go here",
+      "parentUuid": "a307a479_3200f820",
+      "revId": "2990fa049055bd87ba7a33dd056fea9c0f2923b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
