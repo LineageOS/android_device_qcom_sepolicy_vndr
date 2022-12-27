@@ -33,5 +33,7 @@ allow charger {
     vendor_sysfs_usb_supply
 }:file w_file_perms;
 
+get_prop(charger, vendor_display_prop);
+
 dontaudit charger device:dir r_dir_perms;
 dontaudit charger self:capability sys_admin;
