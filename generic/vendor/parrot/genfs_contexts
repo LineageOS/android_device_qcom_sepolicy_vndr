@@ -80,6 +80,17 @@ genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/blue u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-09/c42d000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator u:object_r:sysfs_leds:s0
 
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,leds@d000/leds/red u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,leds@d000/leds/blue u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,leds@d000/leds/green u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:flash_0 u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:flash_1 u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:switch_0 u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:switch_1 u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:torch_0 u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:torch_1 u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-03/c42d000.qcom,spmi:qcom,pmi632@3:qcom,vibrator@5700/leds/vibrator u:object_r:sysfs_leds:s0
+
 #PMIC devices wakeup nodes
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:pwrkey/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:resin/wakeup/wakeup u:object_r:sysfs_wakeup:s0

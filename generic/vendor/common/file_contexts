@@ -115,6 +115,7 @@
 /dev/ipa_odl_ctl                                u:object_r:vendor_ipa_dev:s0
 /dev/ipa_adpl                                   u:object_r:vendor_ipa_dev:s0
 /dev/byte-cntr                                  u:object_r:vendor_qdss_device:s0
+/dev/byte-cntr1                                  u:object_r:vendor_qdss_device:s0
 /dev/msm_adsp_sleepmon                          u:object_r:vendor_adsp_sleepmon_device:s0
 
 # dev socket nodes

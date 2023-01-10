@@ -86,3 +86,7 @@ allow vendor_hal_powerstateutility_qti proc_swappiness:file rw_file_perms;
 
 #allow service to communicate with image_size node
 allow vendor_hal_powerstateutility_qti sysfs_power_imagesize:file rw_file_perms;
+
+allow vendor_hal_powerstateutility_qti block_device:dir { search };
+allow vendor_hal_powerstateutility_qti vendor_hibernate_swap:blk_file { getattr ioctl open read write };
+allow vendor_hal_powerstateutility_qti self:capability sys_admin;

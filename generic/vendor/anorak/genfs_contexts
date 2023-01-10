@@ -169,6 +169,7 @@ genfscon sysfs /devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_mod
 #net sysfs
 genfscon sysfs /devices/platform/soc/17110040.qcom,wcn6750/net u:object_r:sysfs_net:s0
 genfscon sysfs /devices/platform/soc/1c08000.qcom,pcie/pci0001:00/0001:00:00.0/0001:01:00.0/mhi0/mhi_0308_01.01.00_IP_HW0/net u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net u:object_r:sysfs_net:s0
 
 #wakeup sysfs nodes listed by SuspendSepolicyTests.sh
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8550@0:rtc@6100/wakeup u:object_r:sysfs_wakeup:s0
