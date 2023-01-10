@@ -242,10 +242,12 @@
 /sys/devices/virtual/fastrpc/adsprpc-smd/wakeup[0-9]+(/.*)?            u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_qcelp/wakeup[0-9]+(/.*)?                 u:object_r:sysfs_wakeup:s0
 #vendor_hvdcp
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5/iio:device2/.*     u:object_r:sysfs_hvdcp:s0
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qpnp,qg/iio:device3/.*   u:object_r:sysfs_hvdcp:s0
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm6150l@4:vadc@3100/iio:device1/name  u:object_r:sysfs_hvdcp:s0
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:vadc@3100/iio:device0/name   u:object_r:sysfs_hvdcp:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qpnp,qg/iio:device[0-9](/.*?)  u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm6150l@4:vadc@3100/iio:device[0-9](/.*?)  u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/88c000.i2c/i2c-1/1-0010/88c000.i2c:qcom,smb1390@10:qcom,charge_pump/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/88c000.i2c/i2c-1/1-000c/88c000.i2c:qcom,smb1355@c:qcom,smb1355-charger@1000/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 
 /vendor/bin/imsqmidaemon        u:object_r:vendor_ims_exec:s0
 /vendor/bin/imsdatadaemon       u:object_r:vendor_ims_exec:s0

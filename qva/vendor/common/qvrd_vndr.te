@@ -97,6 +97,7 @@ allow vendor_qvrd_vndr vendor_qvrd_vndr_socket:sock_file rw_file_perms;
 #
 # Sensors
 #
+allow vendor_qvrd_vndr vendor_xdsp_device:chr_file r_file_perms;
 
 # Allow access to sensor1 API
 allow vendor_qvrd_vndr self:socket create_socket_perms_no_ioctl;
@@ -194,5 +195,3 @@ get_prop(vendor_qvrd_vndr, vendor_mpctl_prop)
 allow vendor_qvrd_vndr proc_uptime:file r_file_perms;
 unix_socket_connect(vendor_qvrd_vndr, logdr, logd)
 
-#suppressing the error messages
-dontaudit vendor_qvrd_vndr vendor_xdsp_device:chr_file r_file_perms;
