@@ -150,3 +150,5 @@ persist.vendor.console.silent.config    u:object_r:vendor_console_log_level_prop
 persist.vendor.qteeconnector.           u:object_r:vendor_qteeconnector_opti_prop:s0
 
 vendor.dcvs.prop                 u:object_r:vendor_dcvs_prop:s0
+
+persist.vendor.rcs.singlereg.                        u:object_r:vendor_persist_rcs_qti_prop:s0
