@@ -29,3 +29,4 @@
 get_prop(nfc, vendor_nfc_nq_prop)
 # allow nfc to access perf hal
 hal_client_domain(nfc, vendor_hal_perf)
+allow nfc vendor_hal_nxpnfc_service:service_manager find;
