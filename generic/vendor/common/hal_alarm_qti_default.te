@@ -34,3 +34,7 @@ type vendor_hal_alarm_qti_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_hal_alarm_qti_default)
 
 allow vendor_hal_alarm_qti_default rtc_device:chr_file r_file_perms;
+
+#Add rules for power off alarm AIDL hal
+hal_attribute_service(vendor_hal_alarm_qti, vendor_hal_alarm_qti_aidl_service)
+binder_call(vendor_hal_alarm_qti_server, servicemanager)
