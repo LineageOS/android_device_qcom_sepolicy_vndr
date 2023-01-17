@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b314c19c_cabeec64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2023-01-17T04:16:39Z",
+      "side": 1,
+      "message": "Nice to know SuspendSepolicyTests.sh is a thing. However, the script probably reports some false positives. Is it safe to ignore them?",
+      "revId": "001793d67dfb46caf69bbe5c0e39232b632c3e39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64472089_3e09d9a3",
+        "filename": "generic/vendor/kona/genfs_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2023-01-17T04:16:39Z",
+      "side": 1,
+      "message": "For instance, this rule labels a subdir `/sys/.../power-on@800/wakeup/wakeup0` and I don\u0027t see denials regarding this one in dmesg. However, the script complains that its parent dir `/sys/.../power-on@800/wakeup` misses a label.",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 100,
+        "endChar": 161
+      },
+      "revId": "001793d67dfb46caf69bbe5c0e39232b632c3e39",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
