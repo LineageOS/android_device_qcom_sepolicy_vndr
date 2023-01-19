@@ -43,3 +43,5 @@ hal_client_domain(mediacodec, vendor_hal_qconfig)
 
 #Allow mediacodec to access audio HAL
 hal_client_domain(mediacodec, hal_audio)
+
+dontaudit mediacodec vendor_hal_qspmhal_hwservice:hwservice_manager find;
