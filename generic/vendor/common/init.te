@@ -75,6 +75,8 @@ allow init sysfs_zram:file r_file_perms;
 
 allow init vendor_sysfs_boot_adsp:file w_file_perms;
 
+allow init vendor_sysfs_mmc_host:file w_file_perms;
+
 allow init bt_firmware_file:filesystem getattr;
 allow init firmware_file:filesystem getattr;
 
