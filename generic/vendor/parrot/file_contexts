@@ -175,6 +175,7 @@
 /dev/block/platform/soc/7c4000.sdhci/by-name/msadp_[ab]        u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/pmic_[ab]         u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/rpm_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/shrm_[ab]         u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/system_[ab]       u:object_r:system_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/tz_[ab]           u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/vendor_[ab]       u:object_r:system_block_device:s0
@@ -195,6 +196,15 @@
 /dev/block/platform/soc/7c4000.sdhci/by-name/featenabler_[ab]  u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/core_nhlos_[ab]   u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/vbmeta_system_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/aop_config_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/xbl_ramdump_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/uefi_[ab]             u:object_r:vendor_uefi_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/cpucp_[ab]            u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/multiimgqti_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/qweslicstore_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/vm-bootsys_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/vendor_dlkm_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/product_[ab]          u:object_r:system_block_device:s0
 
 #non A/B
 /dev/block/platform/soc/7c4000.sdhci/by-name/system                            u:object_r:system_block_device:s0
