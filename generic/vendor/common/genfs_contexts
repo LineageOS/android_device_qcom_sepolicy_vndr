@@ -95,6 +95,7 @@ genfscon sysfs /class/typec                                             u:object
 genfscon sysfs /class/typec/usbc0                                       u:object_r:vendor_sysfs_usb_c:s0
 genfscon sysfs /devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb1 u:object_r:vendor_sysfs_usb_device:s0
 genfscon sysfs /devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb2 u:object_r:vendor_sysfs_usb_device:s0
+genfscon sysfs /devices/platform/soc/4e00000.ssusb/mode                 u:object_r:vendor_sysfs_usb_device:s0
 genfscon sysfs /devices/platform/soc/a600000.ssusb/mode                 u:object_r:vendor_sysfs_usb_device:s0
 genfscon sysfs /devices/platform/soc/a800000.ssusb/mode                 u:object_r:vendor_sysfs_usb_device:s0
 genfscon sysfs /devices/platform/soc/4e00000.ssusb/usb_data_enabled     u:object_r:vendor_sysfs_usb_data_enabled:s0
