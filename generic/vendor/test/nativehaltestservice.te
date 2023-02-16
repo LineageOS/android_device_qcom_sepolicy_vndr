@@ -38,45 +38,45 @@ init_daemon_domain(vendor_nativehaltestservice);
 # ignore spurious denial
 dontaudit vendor_nativehaltestservice graphics_device:dir search;
 
+# This is needed to get priority for Camera process
+allow vendor_nativehaltestservice self:capability sys_nice;
+
+set_prop(vendor_nativehaltestservice, vendor_camera_prop)
+
+allow vendor_nativehaltestservice vendor_camera_data_file:dir create_dir_perms;
+allow vendor_nativehaltestservice vendor_camera_data_file:file create_file_perms;
+unix_socket_connect(vendor_nativehaltestservice, vendor_thermal, vendor_thermal-engine)
+
 userdebug_or_eng(`
-  set_prop(vendor_nativehaltestservice, vendor_camera_prop)
-  unix_socket_connect(vendor_nativehaltestservice, vendor_thermal, vendor_thermal-engine)
-
   allow vendor_nativehaltestservice vendor_diag_device:chr_file rw_file_perms;
-
-  allow vendor_nativehaltestservice vendor_camera_data_file:dir create_dir_perms;
-  allow vendor_nativehaltestservice vendor_camera_data_file:file create_file_perms;
-
-  # This is needed to get priority for Camera process
-  allow vendor_nativehaltestservice self:capability sys_nice;
-
-  # access hexagon
-  allow vendor_nativehaltestservice vendor_qdsp_device:chr_file r_file_perms;
-
-  #Allow camera to access synx device
-  allow vendor_nativehaltestservice vendor_synx_device:chr_file rw_file_perms;
-
-  #allow camera to access /dsp
-  r_dir_file(vendor_nativehaltestservice, adsprpcd_file);
-  #allow camera to access adsprpc_prop
-  get_prop(vendor_nativehaltestservice, vendor_adsprpc_prop)
-
-  allow vendor_nativehaltestservice mnt_media_rw_file:dir { getattr open read };
-  allow vendor_nativehaltestservice aac_drc_prop:file { getattr map open };
-  allow vendor_nativehaltestservice ab_update_gki_prop:file { getattr map open };
-  allow vendor_nativehaltestservice adbd_config_prop:file { getattr map open };
-  allow vendor_nativehaltestservice apexd_config_prop:file open;
-  allow vendor_nativehaltestservice dmabuf_system_heap_device:chr_file { open read };
-  allow vendor_nativehaltestservice hal_graphics_allocator_default:binder call;
-  allow vendor_nativehaltestservice hal_graphics_allocator_default:fd use;
-  allow vendor_nativehaltestservice hal_graphics_mapper_hwservice:hwservice_manager find;
-  allow vendor_nativehaltestservice hidl_base_hwservice:hwservice_manager add;
-  allow vendor_nativehaltestservice hwservicemanager:binder { call transfer };
-  allow vendor_nativehaltestservice self:qipcrtr_socket { create getattr read write };
-  allow vendor_nativehaltestservice servicemanager:binder call;
-  allow vendor_nativehaltestservice vendor_camera_data_file:file rw_file_perms;
-  allow vendor_nativehaltestservice vendor_camera_data_file:dir rw_dir_perms;
-  allow vendor_nativehaltestservice vendor_hal_perf_default:binder call;
-  allow vendor_nativehaltestservice vendor_hal_perf_hwservice:hwservice_manager find;
-  allow vendor_nativehaltestservice video_device:chr_file ioctl;
 ')
+
+# access hexagon
+allow vendor_nativehaltestservice vendor_qdsp_device:chr_file r_file_perms;
+
+#Allow camera to access synx device
+allow vendor_nativehaltestservice vendor_synx_device:chr_file rw_file_perms;
+
+#allow camera to access /dsp
+r_dir_file(vendor_nativehaltestservice, adsprpcd_file);
+#allow camera to access adsprpc_prop
+get_prop(vendor_nativehaltestservice, vendor_adsprpc_prop)
+
+allow vendor_nativehaltestservice mnt_media_rw_file:dir { getattr open read };
+allow vendor_nativehaltestservice aac_drc_prop:file { getattr map open };
+allow vendor_nativehaltestservice ab_update_gki_prop:file { getattr map open };
+allow vendor_nativehaltestservice adbd_config_prop:file { getattr map open };
+allow vendor_nativehaltestservice apexd_config_prop:file open;
+allow vendor_nativehaltestservice dmabuf_system_heap_device:chr_file { open read };
+allow vendor_nativehaltestservice hal_graphics_allocator_default:binder call;
+allow vendor_nativehaltestservice hal_graphics_allocator_default:fd use;
+allow vendor_nativehaltestservice hal_graphics_mapper_hwservice:hwservice_manager find;
+allow vendor_nativehaltestservice hidl_base_hwservice:hwservice_manager add;
+allow vendor_nativehaltestservice hwservicemanager:binder { call transfer };
+allow vendor_nativehaltestservice self:qipcrtr_socket { create getattr read write };
+allow vendor_nativehaltestservice servicemanager:binder call;
+allow vendor_nativehaltestservice vendor_camera_data_file:file rw_file_perms;
+allow vendor_nativehaltestservice vendor_camera_data_file:dir rw_dir_perms;
+allow vendor_nativehaltestservice vendor_hal_perf_default:binder call;
+allow vendor_nativehaltestservice vendor_hal_perf_hwservice:hwservice_manager find;
+allow vendor_nativehaltestservice video_device:chr_file ioctl;
