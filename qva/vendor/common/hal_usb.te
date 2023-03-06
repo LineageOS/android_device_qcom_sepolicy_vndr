@@ -44,3 +44,4 @@ allow vendor_hal_usb_qti vendor_sysfs_usb_node:dir r_dir_perms;
 allow vendor_hal_usb_qti vendor_sysfs_usb_node:file rw_file_perms;
 r_dir_file(vendor_hal_usb_qti, vendor_sysfs_battery_supply);
 r_dir_file(vendor_hal_usb_qti, vendor_sysfs_usb_supply);
+allow vendor_hal_usb_qti vendor_sysfs_usb_device:file rw_file_perms;
