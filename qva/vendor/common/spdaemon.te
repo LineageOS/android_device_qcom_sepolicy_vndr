@@ -78,3 +78,5 @@ allow vendor_spdaemon vendor_vm_cp_spss_sp_shared_device:chr_file r_file_perms;
 allow vendor_spdaemon vendor_vm_cp_spss_hlos_shared_device:chr_file r_file_perms;
 allow vendor_spdaemon vendor_membuf_dev:chr_file r_file_perms;
 
+# Access to wakelock sysfs
+wakelock_use(vendor_spdaemon)
