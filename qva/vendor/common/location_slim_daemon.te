@@ -71,3 +71,5 @@ allow vendor_location_slim_daemon vendor_location_xtwifi_client:unix_dgram_socke
 
 ## send to /dev/socket/location/mq/LOWI-SERVER
 allow vendor_location_slim_daemon vendor_location_lowi_server:unix_dgram_socket sendto;
+
+binder_call(vendor_location_slim_daemon, servicemanager)
