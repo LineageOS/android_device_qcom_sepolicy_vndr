@@ -44,7 +44,7 @@ allow init vendor_ab_block_device:lnk_file relabelto;
 #Allow init to mount non-hlos partitions in A/B builds
 allow init { bt_firmware_file vendor_firmware_file  firmware_file } :dir mounton;
 
-allow init { bt_firmware_file firmware_file }:filesystem  { relabelfrom  mount };
+allow init { bt_firmware_file firmware_file }:filesystem  { relabelfrom  mount unmount };
 allow { bt_firmware_file firmware_file  }self:filesystem associate;
 
 allow init vendor_qmcs_file:dir { mounton };
