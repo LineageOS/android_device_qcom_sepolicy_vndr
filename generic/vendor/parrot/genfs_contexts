@@ -150,6 +150,8 @@ genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:5/scs
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:6/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:7/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
 
+genfscon sysfs /devices/platform/soc/8a00000.remoteproc-wpss/wakeup u:object_r:sysfs_wakeup:s0
+
 #MDM Helper
 genfscon sysfs /devices/platform/soc/soc:qcom,remoteproc-esoc0/esoc0 u:object_r:vendor_sysfs_esoc:s0
 
