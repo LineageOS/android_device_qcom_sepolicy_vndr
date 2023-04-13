@@ -70,6 +70,7 @@ vendor.perf.gestureflingboost.enable   u:object_r:vendor_scroll_prop:s0
 # NFC
 vendor.qti.nfc.                              u:object_r:vendor_nfc_nq_prop:s0
 
+vendor.nfc.min_firmware                      u:object_r:vendor_nfc_prop:s0
 # eSE
 vendor.qti.ese.                              u:object_r:vendor_ese_prop:s0
 
