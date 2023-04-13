@@ -33,6 +33,9 @@ userdebug_or_eng(`
 get_prop(hal_nfc_default, vendor_mink_trace_prop)
 ')
 
+get_prop(hal_nfc, vendor_nfc_prop)
+set_prop(hal_nfc, vendor_nfc_prop)
+
 #allow servicemanager to call nfc aidl binder
 hal_attribute_service(hal_nfc, vendor_hal_nxpnfc_service)
 binder_use(hal_nfc)
