@@ -113,3 +113,5 @@ vendor_restricted_prop(vendor_mwqem_prop);
 
 #pasr property
 vendor_internal_prop(vendor_pasr_prop);
+
+vendor_internal_prop(vendor_nfc_prop)
