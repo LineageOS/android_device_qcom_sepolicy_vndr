@@ -16,6 +16,24 @@
       "message": "This affects lots of devices, so there must be a communication about it.",
       "revId": "38fd3740c6d881506c52183dac29c25ff002abd9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "696c4b9a_11753e3b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 15346
+      },
+      "writtenOn": "2023-04-14T16:00:39Z",
+      "side": 1,
+      "message": "gitlab announcement required?",
+      "parentUuid": "c1f89c58_2d9d513b",
+      "revId": "38fd3740c6d881506c52183dac29c25ff002abd9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
