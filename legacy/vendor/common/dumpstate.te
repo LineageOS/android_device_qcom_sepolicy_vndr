@@ -38,7 +38,6 @@ allow dumpstate firmware_file:filesystem getattr;
 # with too many variables  1d84000.ufshc  , target[0-5]:0:[0-5], sdd/sdd2  or sda/sdd/sdf  or sdf[1-5]
 # so instead of labeling this suppressing this access.
 dontaudit dumpstate sysfs:file * ;
-allow dumpstate debugfs_mmc:dir search;
 
 binder_call(dumpstate, hal_light_default)
 binder_call(dumpstate, hal_power_default)
