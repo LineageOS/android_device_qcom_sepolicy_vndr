@@ -34,7 +34,6 @@ allow system_app {
 }:service_manager add;
 
 userdebug_or_eng(`
-  allow system_app qti_debugfs:file r_file_perms;
   allow system_app su:unix_dgram_socket sendto;
 
   # Access to tombstone segfaults
