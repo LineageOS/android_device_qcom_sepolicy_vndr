@@ -177,3 +177,6 @@ genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-a
 genfscon sysfs /devices/platform/soc/ab00000.qcom,lpass/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/va-macro/va_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/b300000.qcom,turing/wakeup u:object_r:sysfs_wakeup:s0
+
+# UFS
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:4/block/sde/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0
