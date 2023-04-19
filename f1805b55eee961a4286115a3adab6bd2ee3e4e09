@@ -16,6 +16,24 @@
       "message": "Does this affect pro1x?",
       "revId": "f1805b55eee961a4286115a3adab6bd2ee3e4e09",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce873894_d2b69888",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-04-19T14:43:38Z",
+      "side": 1,
+      "message": "It probably solves the issue I have just noticed yesterday, that is imsrcsd crashing in the background.",
+      "parentUuid": "455beac4_10b616ad",
+      "revId": "f1805b55eee961a4286115a3adab6bd2ee3e4e09",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
