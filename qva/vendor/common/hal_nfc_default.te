@@ -30,7 +30,6 @@ add_hwservice(hal_nfc_default, hal_nfc_hwservice)
 # Get NFC properties
 get_prop(hal_nfc_default, vendor_nfc_nq_prop)
 
-get_prop(hal_nfc, vendor_nfc_prop)
 set_prop(hal_nfc, vendor_nfc_prop)
 
 #Allow access to firmware
