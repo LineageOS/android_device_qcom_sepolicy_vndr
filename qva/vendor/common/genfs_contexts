@@ -46,6 +46,7 @@ genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.2.auto/
 
 # Extcon
 genfscon sysfs /devices/platform/soc/1610000.qcom,msm-eud/extcon             u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pmi632@2:qcom,qpnp-smb5/extcon u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon             u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5/extcon u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,usb-pdphy@1700/extcon u:object_r:sysfs_extcon:s0
