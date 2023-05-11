@@ -79,6 +79,7 @@ genfscon sysfs /devices/virtual/graphics/fb0                            u:object
 genfscon sysfs /devices/virtual/graphics/fb1                            u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/soc/8c0000.qcom,msm-cam                         u:object_r:vendor_sysfs_camera:s0
 genfscon sysfs /devices/soc0                                            u:object_r:vendor_sysfs_soc:s0
+genfscon sysfs /devices/soc0/serial_number                              u:object_r:vendor_sysfs_soc_sensitive:s0
 genfscon sysfs /devices/soc0/soc_id                                     u:object_r:vendor_sysfs_public:s0
 genfscon sysfs /devices/system/soc/soc0/id                              u:object_r:vendor_sysfs_public:s0
 genfscon sysfs /devices/soc0/family                                     u:object_r:vendor_sysfs_public:s0
