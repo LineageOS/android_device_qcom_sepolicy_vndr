@@ -64,3 +64,6 @@ userdebug_or_eng(`
 ')
 
 dontaudit vendor_location kernel:system module_request;
+
+# xtra-daemon control
+get_prop(vendor_location, xtra_control_prop)
