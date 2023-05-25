@@ -107,3 +107,6 @@ hal_client_domain(vendor_location , vendor_hal_datafactory_qti)
 hal_client_domain(vendor_location , vendor_hal_cacertservice_qti)
 
 crash_dump_fallback(vendor_location)
+
+# xtra-daemon control
+get_prop(vendor_location, xtra_control_prop)
