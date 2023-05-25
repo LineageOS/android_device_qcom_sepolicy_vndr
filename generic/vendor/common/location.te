@@ -102,3 +102,6 @@ allow vendor_location {vendor_hal_cacert_hwservice vendor_hal_datafactory_hwserv
 binder_call(vendor_location, vendor_qtidataservices_app)
 
 crash_dump_fallback(vendor_location)
+
+# xtra-daemon control
+get_prop(vendor_location, xtra_control_prop)
