@@ -39,3 +39,6 @@ allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:sock_file create_file_p
 allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:sock_file rw_file_perms;
 allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:file create_file_perms;
 allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:file rw_file_perms;
+
+# allow vendor_wcnss_service vendor_hal_perf_hwservice:hwservice_manager find
+hal_client_domain(vendor_wcnss_service, vendor_hal_perf)
