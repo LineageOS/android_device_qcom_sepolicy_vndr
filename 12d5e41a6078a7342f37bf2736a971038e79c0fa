@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27f517e2_8508ce10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-05-31T16:34:34Z",
+      "side": 1,
+      "message": "```\n05-31 18:33:16.190   726   726 E SELinux : avc:  denied  { find } for interface\u003dvendor.qti.hardware.cacert::IService sid\u003du:r:radio:s0 pid\u003d20201 scontext\u003du:r:radio:s0 tcontext\u003du:object_r:hal_cacert_hwservice:s0 tclass\u003dhwservice_manager permissive\u003d1\n05-31 18:33:16.191   726   726 E SELinux : avc:  denied  { add } for interface\u003dvendor.qti.hardware.cacert::IService sid\u003du:r:radio:s0 pid\u003d20201 scontext\u003du:r:radio:s0 tcontext\u003du:object_r:hal_cacert_hwservice:s0 tclass\u003dhwservice_manager permissive\u003d1\n```",
+      "revId": "12d5e41a6078a7342f37bf2736a971038e79c0fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
