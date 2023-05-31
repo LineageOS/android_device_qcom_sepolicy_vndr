@@ -130,3 +130,8 @@ allow location self:capability2 wake_alarm;
 
 #allow qdma prop
 #get_prop(location, vendor_qdma_prop);
+
+## xtra-daemon
+##############
+allow location {hal_cacert_hwservice hal_datafactory_hwservice}:hwservice_manager find;
+binder_call(location, qtidataservices_app)
