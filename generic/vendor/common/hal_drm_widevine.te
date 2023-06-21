@@ -53,6 +53,7 @@ allow vendor_hal_drm_widevine vendor_dmabuf_qseecom_heap_device:chr_file r_file_
 allow vendor_hal_drm_widevine vendor_membuf_dev:chr_file r_file_perms;
 allow vendor_hal_drm_widevine vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 allow vendor_hal_drm_widevine vendor_vm_cp_bitstream_device:chr_file r_file_perms;
+allow vendor_hal_drm_widevine vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
 
 #socket change
 unix_socket_connect(vendor_hal_drm_widevine, vendor_notify-topology, tee);
