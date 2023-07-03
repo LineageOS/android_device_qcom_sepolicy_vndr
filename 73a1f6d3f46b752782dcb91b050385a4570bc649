@@ -16,6 +16,24 @@
       "message": "Reason? These partitions should not be touched from userspace on A-only devices",
       "revId": "73a1f6d3f46b752782dcb91b050385a4570bc649",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "179c793b_f9eddb88",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 18106
+      },
+      "writtenOn": "2023-07-03T09:59:08Z",
+      "side": 1,
+      "message": "it\u0027s needed for fastbootd flashing, and they\u0027re labeled on A/B supposedly for the same reason",
+      "parentUuid": "dff3c275_d9207109",
+      "revId": "73a1f6d3f46b752782dcb91b050385a4570bc649",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
