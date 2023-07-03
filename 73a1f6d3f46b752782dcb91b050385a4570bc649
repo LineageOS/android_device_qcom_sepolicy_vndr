@@ -52,6 +52,24 @@
       "parentUuid": "179c793b_f9eddb88",
       "revId": "73a1f6d3f46b752782dcb91b050385a4570bc649",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "719b069a_2bbc9df5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 18106
+      },
+      "writtenOn": "2023-07-03T10:13:45Z",
+      "side": 1,
+      "message": "in this case it can be useful for flashing partitions from fastbootd and most likely also to update firmwares while flashing the package from recovery.",
+      "parentUuid": "26282ae9_77b7db24",
+      "revId": "73a1f6d3f46b752782dcb91b050385a4570bc649",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
