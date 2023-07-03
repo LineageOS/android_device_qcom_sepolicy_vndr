@@ -88,6 +88,24 @@
       "parentUuid": "719b069a_2bbc9df5",
       "revId": "73a1f6d3f46b752782dcb91b050385a4570bc649",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1ae6941_dd5b4323",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 18106
+      },
+      "writtenOn": "2023-07-03T11:27:37Z",
+      "side": 1,
+      "message": "for fastbootd flashing I\u0027m sure it didn\u0027t work without labeling them, at least on my device. I tried flashing abl and without the partition being labeled, it just couldn\u0027t find the partition to flash on.",
+      "parentUuid": "fe0ce38f_294060ca",
+      "revId": "73a1f6d3f46b752782dcb91b050385a4570bc649",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
