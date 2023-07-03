@@ -34,6 +34,24 @@
       "parentUuid": "dff3c275_d9207109",
       "revId": "73a1f6d3f46b752782dcb91b050385a4570bc649",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26282ae9_77b7db24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-07-03T10:01:43Z",
+      "side": 1,
+      "message": "They\u0027re labeled for update_engine to do OTAs",
+      "parentUuid": "179c793b_f9eddb88",
+      "revId": "73a1f6d3f46b752782dcb91b050385a4570bc649",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
