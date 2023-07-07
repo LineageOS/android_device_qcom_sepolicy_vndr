@@ -64,3 +64,6 @@ userdebug_or_eng(`
   get_prop(hal_gnss, vendor_pd_locater_dbg_prop)
 ')
 use_vendor_per_mgr(hal_gnss)
+
+# xtra-daemon control
+get_prop(hal_gnss_qti, xtra_control_prop)
