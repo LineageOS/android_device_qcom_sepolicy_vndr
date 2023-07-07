@@ -16,6 +16,23 @@
       "message": "this is not necessary for the xtra toggle functionality (usually?) but the qcom gnss hidl uses libgps.utils to read the config too leading to this denial.\nhttps://github.com/LineageOS/android_hardware_qcom_sm8150_gps/blob/lineage-20.0/gnss/GnssAdapter.cpp#L6519",
       "revId": "cd3247d25d9139662403705efb2c22d359c19168",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29bece1c_ae8f1a87",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2023-07-07T10:31:04Z",
+      "side": 1,
+      "message": "Do we want to allow this?\n\nCurrently it leads to this during boot:\n07-07 11:42:58.985   897   931 W libc    : Access denied finding property \"persist.sys.xtra-daemon.enabled\"\n07-07 11:42:58.979   897   897 W Loc_hal_worker: type\u003d1400 audit(0.0:17): avc: denied { read } for name\u003d\"u:object_r:xtra_control_prop:s0\" dev\u003d\"tmpfs\" ino\u003d16335 scontext\u003du:r:vendor_hal_gnss_qti:s0 tcontext\u003du:object_r:xtra_control_prop:s0 tclass\u003dfile permissive\u003d0",
+      "revId": "cd3247d25d9139662403705efb2c22d359c19168",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
