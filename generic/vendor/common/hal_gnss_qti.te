@@ -66,3 +66,6 @@ hal_client_domain(vendor_hal_gnss_qti, hal_health)
 # libqdi and have all its clients use netlink route
 # sockets.
 dontaudit vendor_hal_gnss_qti self:udp_socket create;
+
+# xtra-daemon control
+get_prop(vendor_hal_gnss_qti, xtra_control_prop)
