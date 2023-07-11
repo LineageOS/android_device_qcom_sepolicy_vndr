@@ -30,6 +30,3 @@
 vendor_restricted_prop(vendor_qspm_dbg_prop);
 vendor_restricted_prop(vendor_dbg_brkpoint_prop);
 vendor_restricted_prop(vendor_fda_prop);
-
-#kineticsxr
-type vendor_kineticsxr_prop, property_type;
