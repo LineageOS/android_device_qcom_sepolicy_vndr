@@ -5,3 +5,12 @@
 # Sensors
 #
 allow vendor_qvrd_vndr self:qipcrtr_socket { create getattr write read setopt };
+
+#
+# Camera
+#
+allow vendor_qvrd_vndr vendor_camera_data_file:dir create_dir_perms;
+allow vendor_qvrd_vndr vendor_camera_data_file:file create_file_perms;
+
+# Allow access thermal
+unix_socket_connect(vendor_qvrd_vndr, vendor_thermal, vendor_thermal-engine)
