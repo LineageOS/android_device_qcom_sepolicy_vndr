@@ -75,6 +75,7 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/dtbo_[ab]             u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/featenabler_[ab]      u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/hyp_[ab]              u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/init_boot_[ab]        u:object_r:boot_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/keymaster_[ab]        u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/mdtp_[ab]             u:object_r:vendor_mdtp_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/mdtpsecapp_[ab]       u:object_r:vendor_mdtp_device:s0
@@ -128,6 +129,7 @@
 /dev/block/platform/soc/7c4000.sdhci/by-name/vendor_boot_[ab]  u:object_r:boot_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/cmnlib_[ab]       u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/cmnlib64_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/init_boot_[ab]    u:object_r:boot_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/devcfg_[ab]       u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/hyp_[ab]          u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/7c4000.sdhci/by-name/multiimgoem_[ab]  u:object_r:vendor_custom_ab_block_device:s0
@@ -273,3 +275,5 @@
 
 /vendor/bin/hw/vendor\.qti\.hardware\.display\.demura-service u:object_r:hal_display_demura_default_exec:s0
 
+#brightness node for eDP
+/sys/devices/platform/soc/soc:backlight/backlight/soc:backlight/brightness(/.*)?     u:object_r:vendor_sysfs_graphics:s0
