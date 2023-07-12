@@ -16,6 +16,24 @@
       "message": "Maybe keep the semicolon?",
       "revId": "8550844dc790feb283f8f6e3a48d71d0f64f58ec",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2af98562_17c0aa6e",
+        "filename": "qva/vendor/kona/hal_nordic_default.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-07-12T11:43:43Z",
+      "side": 1,
+      "message": "That\u0027s one of the issues, then all the properties make the isolation checks fail, so the entire change is broken.",
+      "parentUuid": "053b3f33_2df18723",
+      "revId": "8550844dc790feb283f8f6e3a48d71d0f64f58ec",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
