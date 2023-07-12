@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "053b3f33_2df18723",
+        "filename": "qva/vendor/kona/hal_nordic_default.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-07-12T11:40:55Z",
+      "side": 1,
+      "message": "Maybe keep the semicolon?",
+      "revId": "8550844dc790feb283f8f6e3a48d71d0f64f58ec",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
