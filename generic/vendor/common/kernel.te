@@ -28,12 +28,12 @@
 userdebug_or_eng(`
   allow kernel self:socket create;
   allow kernel self:qipcrtr_socket create;
-  allow kernel self:perf_event { open cpu };
   allow kernel vendor_debugfs_kgsl_fence_tracing:dir search;
   allow kernel debugfs_mmc:dir search;
-  neverallow kernel self:perf_event ~{ open cpu };
 ')
 
+   allow kernel self:perf_event { open cpu };
+   neverallow kernel self:perf_event ~{ open cpu };
 # Access firmware_file
 r_dir_file(kernel, firmware_file)
 
