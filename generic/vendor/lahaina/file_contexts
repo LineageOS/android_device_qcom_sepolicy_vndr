@@ -199,6 +199,9 @@
 /dev/block/platform/soc/4804000.ufshc/by-name/limits                u:object_r:vendor_limits_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/limits-cdsp           u:object_r:vendor_limits_block_device:s0
 
+# hdmi device
+/dev/hdmi_bdg_irq_handler             u:object_r:vendor_hdmi_bdg_irq_device:s0
+
 #subsys nodes
 /sys/devices/platform/soc/soc:qcom,wpss@8a00000/subsys[0-9]+/name      u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/soc:qcom,wpss@8a00000/subsys[0-9]+/restart_level      u:object_r:vendor_sysfs_ssr_toggle:s0
