@@ -24,6 +24,11 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center are provided under the following license:
+#
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 type vendor_embmssl_app, domain;
 app_domain(vendor_embmssl_app);
@@ -32,6 +37,7 @@ app_domain(vendor_embmssl_app);
 net_domain(vendor_embmssl_app)
 unix_socket_connect(vendor_embmssl_app, vendor_dpmtcm, vendor_dpmd)
 allow vendor_embmssl_app { app_api_service radio_service }:service_manager find;
+dontaudit vendor_embmssl_app system_file:dir write;
 
 #allow embmssl app to access embmssl hal
 hal_client_domain(vendor_embmssl_app, vendor_hal_embmssl);

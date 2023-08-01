@@ -1,4 +1,5 @@
 # Copyright (c) 2019, 2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -29,6 +30,8 @@ domain_trans(init, vendor_modinstall-sh_exec, vendor_modprobe)
 allow vendor_modprobe vendor_shell_exec:file rx_file_perms;
 allow vendor_modprobe vendor_toolbox_exec:file rx_file_perms;
 allow vendor_modprobe proc_version:file r_file_perms;
+allow vendor_modprobe system_dlkm_file:system module_load;
+r_dir_file(vendor_modprobe, { system_dlkm_file });
 # Allow the below search permission for modprobe only in user builds too.
 allow vendor_modprobe { debugfs_tracing_instances }:dir search;
 set_prop(vendor_modprobe, vendor_modprobe_prop)
@@ -36,3 +39,4 @@ userdebug_or_eng(`
   allow vendor_modprobe kmsg_debug_device:chr_file { w_file_perms getattr ioctl };
   allow vendor_modprobe { vendor_debugfs_kgsl_fence_tracing debugfs_bootreceiver_tracing debugfs_wifi_tracing }:dir search;
 ')
+dontaudit vendor_modprobe self:capability sys_admin;

@@ -41,9 +41,9 @@ userdebug_or_eng(`
 	allow vendor_ipa_lnx_agent self:capability {net_admin net_raw kill};
 ')
 
-allow vendor_ipa_lnx_agent self:qipcrtr_socket create;
-allow vendor_ipa_lnx_agent self:netlink_socket { create bind read};
-allow vendor_ipa_lnx_agent vendor_sprhdd_socket:dir search;
-unix_socket_connect(vendor_ipa_lnx_agent, vendor_sprhdd, vendor_sprhdd)
-allow vendor_ipa_lnx_agent vendor_ipa_lnx_agent_file:dir w_dir_perms;
-allow vendor_ipa_lnx_agent vendor_ipa_lnx_agent_file:chr_file { open read write ioctl};
+allow vendor_ipa_lnx_agent self:qipcrtr_socket create_socket_perms_no_ioctl;
+allow vendor_ipa_lnx_agent self:netlink_socket create_socket_perms_no_ioctl;
+allow vendor_ipa_lnx_agent vendor_tlpd_socket:dir search;
+allow vendor_ipa_lnx_agent self:tipc_socket create_socket_perms_no_ioctl;
+unix_socket_connect(vendor_ipa_lnx_agent, vendor_tlpd, vendor_tlpd)
+allow vendor_ipa_lnx_agent vendor_ipa_lnx_agent_device:chr_file rw_file_perms;

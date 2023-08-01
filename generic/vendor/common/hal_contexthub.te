@@ -24,6 +24,15 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#Changes from Qualcomm Innovation Center are provided under the following license:
+#Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+#SPDX-License-Identifier: BSD-3-Clause-Clear
 
-# Allow context hub HAL to communicate with daemon via socket
-unix_socket_connect(hal_contexthub, vendor_chre, vendor_chre)
+allow hal_contexthub_default self:qipcrtr_socket create_socket_perms_no_ioctl;
+allow hal_contexthub_default vendor_xdsp_device:chr_file r_file_perms;
+allow hal_contexthub_default vendor_dsp_device:chr_file r_file_perms;
+get_prop(hal_contexthub_default, vendor_adsprpc_prop)
+allow hal_contexthub_default dmabuf_system_heap_device:chr_file r_file_perms;
+
+wakelock_use(hal_contexthub_default)

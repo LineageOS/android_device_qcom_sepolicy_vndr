@@ -27,5 +27,12 @@
 
 hal_server_domain(hal_bluetooth_default, vendor_hal_fm)
 hal_server_domain(hal_bluetooth_default, vendor_hal_btconfigstore)
-# hal_bluetooth_default needes  open read on fm_radio_device
+# hal_bluetooth_default needs  open read on fm_radio_device
 allow hal_bluetooth_default vendor_fm_radio_device:chr_file r_file_perms;
+
+#allow BT transport HAL to connect, write ssgtzd socket
+unix_socket_connect(hal_bluetooth_default, vendor_ssgtzd, vendor_ssgtzd)
+
+# BT Tpi service
+hal_attribute_service(hal_bluetooth, vendor_hal_bttpi_service)
+binder_call(hal_bluetooth, servicemanager)

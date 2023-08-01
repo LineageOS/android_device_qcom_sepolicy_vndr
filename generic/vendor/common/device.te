@@ -24,6 +24,10 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 type vendor_ab_block_device, dev_type;
 type vendor_agm_device, dev_type;
 type vendor_at_device, dev_type;
@@ -47,6 +51,7 @@ type vendor_mdtp_device, dev_type;
 type vendor_persist_block_device, dev_type;
 
 type vendor_dmabuf_system_heap_device, dmabuf_heap_device_type, dev_type, mlstrustedobject;
+type vendor_dmabuf_system_uncached_heap_device, dmabuf_heap_device_type, dev_type, mlstrustedobject;
 type vendor_dmabuf_secure_pixel, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_secure_non_pixel, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_adsp_heap_device, dmabuf_heap_device_type, dev_type;
@@ -92,6 +97,7 @@ type vendor_rpmb_device, dev_type;
 type vendor_seemplog_device, dev_type;
 type vendor_sg_device, dev_type;
 type vendor_bsg_device, dev_type;
+type vendor_ufs_lun4_bsg_device, dev_type;
 type vendor_smd_device, dev_type;
 type vendor_spcom_device, dev_type;
 type vendor_ssd_block_device, dev_type;
@@ -105,3 +111,4 @@ type vendor_npu_device, dev_type;
 type vendor_qmcs_block_device, dev_type;
 type vendor_qdss_device, dev_type;
 type vendor_adsp_sleepmon_device, dev_type;
+type vendor_hidraw_device, dev_type;

@@ -29,3 +29,5 @@ userdebug_or_eng(`
   allow vendor_qti_init_shell fuse:dir create_dir_perms;
   allow vendor_qti_init_shell fuse:file create_file_perms;
 ')
+
+set_prop(vendor_qti_init_shell, vendor_ipa_lnx_agent_prop)

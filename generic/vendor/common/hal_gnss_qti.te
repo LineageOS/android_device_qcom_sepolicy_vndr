@@ -25,7 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# generic/vendor_hal_gnss_qti.te - generic sepolicy rules for vendor_location hidl
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+# generic/vendor/common/hal_gnss_qti.te - generic sepolicy rules for vendor_location hidl
 
 type vendor_hal_gnss_qti, domain;
 hal_server_domain(vendor_hal_gnss_qti, hal_gnss)
@@ -46,6 +49,12 @@ allow vendor_hal_gnss_qti vendor_location_socket: {sock_file lnk_file } create_f
 allow vendor_hal_gnss_qti vendor_location_socket:dir rw_dir_perms;
 allow vendor_hal_gnss_qti vendor_location:unix_stream_socket connectto;
 allow vendor_hal_gnss_qti vendor_location:unix_dgram_socket sendto;
+allow vendor_hal_gnss_qti vendor_location_xtra_daemon:unix_dgram_socket sendto;
+allow vendor_hal_gnss_qti vendor_location_lowi_server:unix_dgram_socket sendto;
+
+# /dev/socket/qsap_location
+allow vendor_hal_gnss_qti vendor_qsap_location_socket:sock_file create_file_perms;
+allow vendor_hal_gnss_qti vendor_qsap_location_socket:dir rw_dir_perms;
 
 # allow reading /sys/bus/mhi/devices/.../time_us files, this files hold the
 # time offset between local and remote for dual SoC architectures
@@ -53,6 +62,16 @@ allow vendor_hal_gnss_qti vendor_sysfs_mhi:file r_file_perms;
 
 # Allow Gnss HAL to get updates from health hal
 hal_client_domain(vendor_hal_gnss_qti, hal_health)
+
+# allows Gnss HAL to access ssgtzd socket
+unix_socket_connect(vendor_hal_gnss_qti, vendor_ssgtzd, vendor_ssgtzd)
+
+# read boot status
+get_prop(vendor_hal_gnss_qti, boot_status_prop)
+
+#Allow Gnss HAL to access ril socket
+allow vendor_hal_gnss_qti vendor_rild_socket:dir search;
+unix_socket_connect(vendor_hal_gnss_qti, vendor_rild, rild)
 
 # Most HALs are not allowed to use network sockets. QTI library
 # libqdi is used across multiple processes which are clients of

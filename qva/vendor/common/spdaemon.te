@@ -31,6 +31,8 @@ type vendor_spdaemon, domain;
 type vendor_spdaemon_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vendor_spdaemon)
+binder_call(vendor_spdaemon, servicemanager)
+hal_client_domain(vendor_spdaemon, vendor_hal_qms_qti)
 
 # Allow access to spss_utils device
 allow vendor_spdaemon vendor_spss_utils_device:chr_file rw_file_perms;
@@ -54,6 +56,11 @@ allow vendor_spdaemon ion_device:chr_file rw_file_perms;
 r_dir_file(vendor_spdaemon, firmware_file);
 use_vendor_per_mgr(vendor_spdaemon)
 hal_client_domain(vendor_spdaemon, hal_telephony)
+
+#Allow to access SPU-DC at /mnt/vendor/persist/spudc
+allow vendor_spdaemon vendor_persist_spudc_file:dir rw_dir_perms;
+allow vendor_spdaemon vendor_persist_spudc_file:file create_file_perms;
+get_prop(vendor_spdaemon, vendor_disable_spu_prop)
 
 # Allow to access IAR-DB at /mnt/vendor/persist/iar_db
 allow vendor_spdaemon vendor_persist_iar_db_file:dir rw_dir_perms;

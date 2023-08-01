@@ -42,6 +42,13 @@ binder_call(vendor_hal_qesdhal_server, vendor_hal_qesdhal_client)
 # Add hwservice related rules
 hal_attribute_hwservice(vendor_hal_qesdhal, vendor_hal_qesdhal_hwservice)
 
-binder_call(vendor_hal_qesdhal_default, servicemanager)
+binder_use(vendor_hal_qesdhal_default)
 allow vendor_hal_qesdhal_default tee_device:chr_file rw_file_perms;
 crash_dump_fallback(vendor_hal_qesdhal_default);
+
+#allow qesdhal to read boot complete prop
+get_prop(vendor_hal_qesdhal_default, boot_status_prop)
+
+#allow qesdhal to get/set qesdk_ready_prop
+set_prop(vendor_hal_qesdhal_default, vendor_qesdk_ready_prop)
+get_prop(vendor_hal_qesdhal_default, vendor_qesdk_ready_prop)

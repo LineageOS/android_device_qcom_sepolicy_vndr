@@ -25,14 +25,25 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# qva/vendor_hal_gnss_qti.te - generic sepolicy rules for qti value added
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# qva/vendor/common/hal_gnss_qti.te - generic sepolicy rules for qti value added
 # location hidl
 
-# allow socket communication with engine-service
+# allow socket communication with location daemons
 allow vendor_hal_gnss_qti vendor_location_engine_service:unix_dgram_socket sendto;
+allow vendor_hal_gnss_qti vendor_location_edgnss_daemon:unix_dgram_socket sendto;
+allow vendor_hal_gnss_qti vendor_qsap_location:unix_dgram_socket sendto;
+allow vendor_hal_gnss_qti vendor_location_slim_daemon:unix_dgram_socket sendto;
+allow vendor_hal_gnss_qti vendor_location_xtwifi_client:unix_dgram_socket sendto;
 
 userdebug_or_eng(`
   get_prop(vendor_hal_gnss_qti, vendor_pd_locater_dbg_prop)
 ')
 
 allow hal_gnss self:qipcrtr_socket create_socket_perms_no_ioctl;
+
+# qhdc sdk
+hal_client_domain(vendor_hal_gnss_qti, vendor_hal_qms_qti)

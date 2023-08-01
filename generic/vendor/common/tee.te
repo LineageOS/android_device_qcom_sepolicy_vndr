@@ -38,6 +38,7 @@ allowxperm tee vendor_rpmb_device:chr_file ioctl { MMC_IOC_MULTI_CMD };
 allow tee vendor_ssd_block_device:blk_file rw_file_perms;
 allow tee vendor_sg_device:chr_file { rw_file_perms setattr };
 allow tee vendor_bsg_device:chr_file rw_file_perms;
+allow tee vendor_ufs_lun4_bsg_device:chr_file rw_file_perms;
 
 allow tee mnt_vendor_file:dir r_dir_perms;
 allow tee vendor_persist_drm_file:dir create_dir_perms;

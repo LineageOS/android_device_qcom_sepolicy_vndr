@@ -29,3 +29,5 @@
 userdebug_or_eng(`
 allow hal_dumpstate_default debugfs:dir { open read };
 ')
+
+binder_use(hal_dumpstate_default)

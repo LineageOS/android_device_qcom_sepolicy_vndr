@@ -64,3 +64,5 @@ set_prop(vendor_init, vendor_persist_dpm_prop)
 
 # Allow vendor_init to set vendor_pasr_prop
 set_prop(vendor_init, vendor_pasr_prop)
+get_prop(vendor_init, persist_debug_prop)
+allow vendor_init vendor_ipa_dev:file create_file_perms;

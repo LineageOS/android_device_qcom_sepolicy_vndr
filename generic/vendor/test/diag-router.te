@@ -35,6 +35,8 @@ userdebug_or_eng(`
   binder_call(vendor_hal_diaghal_server, vendor_hal_diaghal_client)
 # Add hwservice related rules
   hal_attribute_hwservice(vendor_hal_diaghal, vendor_hal_diaghal_hwservice)
+  r_dir_file(vendor_diag-router, vendor_sysfs_soc)
+  r_dir_file(vendor_diag-router, vendor_sysfs_qdss_dev)
   allow vendor_diag-router functionfs:dir r_dir_perms;
   allow vendor_diag-router functionfs:file rw_file_perms;
   allowxperm vendor_diag-router functionfs:file ioctl FUNCTIONFS_ENDPOINT_DESC;
@@ -43,5 +45,7 @@ userdebug_or_eng(`
   allow vendor_diag-router self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
   allow vendor_diag-router self:capability kill;
   allow vendor_diag-router su:process signal;
+  allow vendor_diag-router  vendor_sysfs_soc:file w_file_perms;
+  allow vendor_diag-router  vendor_sysfs_qdss_dev:file w_file_perms;
   allow { domain -coredomain -hal_configstore -vendor_init} vendor_diag-router:unix_stream_socket connectto;
 ')

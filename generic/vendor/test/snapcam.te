@@ -29,17 +29,17 @@ hal_client_domain(vendor_snapcam_app, vendor_hal_perf);
 app_domain(vendor_snapcam_app);
 
 allow vendor_snapcam_app cameraserver_service:service_manager find;
-dontaudit vendor_snapcam_app default_prop:file read;
 get_prop(vendor_snapcam_app, vendor_persist_camera_prop)
-get_prop(vendor_snapcam_app, camera_config_prop)
 set_prop(vendor_snapcam_app, vendor_camera_prop)
 allow vendor_snapcam_app nfc_service:service_manager find;
+dontaudit vendor_snapcam_app default_prop:file {read};
 binder_call(vendor_snapcam_app, gpuservice)
 
 allow vendor_snapcam_app app_api_service:service_manager find;
-allow vendor_snapcam_app vendor_xdsp_device:chr_file r_file_perms;
 
 allow vendor_snapcam_app audioserver_service:service_manager find;
 allow vendor_snapcam_app mediaextractor_service:service_manager find;
 allow vendor_snapcam_app mediametrics_service:service_manager find;
 allow vendor_snapcam_app mediaserver_service:service_manager find;
+
+get_prop(vendor_snapcam_app, camera_config_prop)

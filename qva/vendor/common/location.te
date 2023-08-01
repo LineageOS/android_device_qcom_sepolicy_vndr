@@ -25,19 +25,12 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# qva/location.te - sepolicy rules for qti value added location modules
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+# qva/vendor/common/location.te - sepolicy rules for qti value added location modules
 
-## xtwifi-client
-################
-wakelock_use(vendor_location)
-allow vendor_location self:capability2 wake_alarm;
-unix_socket_connect(vendor_location, property, init);
-allow vendor_location mnt_vendor_file:dir search;
-# access to /persist/hlos_rfs/shared
-allow vendor_location vendor_persist_rfs_shared_hlos_file:dir r_dir_perms;
-allow vendor_location vendor_persist_rfs_shared_hlos_file:file rw_file_perms;
-set_prop(vendor_location, vendor_location_prop);
-
-## xtra-daemon
-##############
-hal_client_domain(vendor_location, vendor_qccsyshal);
+userdebug_or_eng(`
+  # stop or kill loc_launcher, it will send signal Sigkill or Sigstop to child processes.
+  allow vendor_location {vendor_location_slim_daemon vendor_location_edgnss_daemon vendor_qsap_location vendor_location_engine_service vendor_location_xtwifi_client}:process { signal sigkill sigstop };
+')

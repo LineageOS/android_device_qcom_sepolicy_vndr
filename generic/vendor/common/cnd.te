@@ -79,6 +79,10 @@ hal_attribute_hwservice(vendor_hal_datafactory_qti, vendor_hal_datafactory_hwser
 
 r_dir_file(vendor_cnd, vendor_sysfs_ssr)
 
+#allow vendor_cnd to connect, write ssgtzd socket and write wlan device
+allow vendor_cnd vendor_wlan_device:chr_file w_file_perms;
+unix_socket_connect(vendor_cnd, vendor_ssgtzd, vendor_ssgtzd)
+
 #diag
 userdebug_or_eng(`
     diag_use(vendor_cnd)

@@ -26,3 +26,5 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 attribute vendor_qmcs_file_type;
+# vendor halserver
+attribute vendor_halserverdomain;

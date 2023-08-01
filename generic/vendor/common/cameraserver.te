@@ -39,3 +39,6 @@ binder_call(cameraserver, mediacodec)
 
 #allow cameraserver to read adsprpc_prop
 get_prop(cameraserver, vendor_adsprpc_prop)
+
+#allow cameraserver to read sys_video_prop
+get_prop(cameraserver, vendor_sys_video_prop)
