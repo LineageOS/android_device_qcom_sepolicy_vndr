@@ -24,6 +24,11 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center are provided under the following license:
+#
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 type vendor_ims_service, domain;
 type vendor_ims_service_exec, exec_type, vendor_file_type, file_type;
@@ -65,7 +70,7 @@ allow vendor_ims_service vendor_hal_cne_hwservice:hwservice_manager find;
 
 hal_client_domain(vendor_ims_service , vendor_hal_datafactory_qti)
 
-#add IUceService, IImsCmServiceService, IService and IImsFactory to HIDL interface
+#add IService and IImsFactory to HIDL interface
 
 #hal server domain for ims_service
 hal_server_domain_bypass(vendor_ims_service, vendor_hal_imsfactory)
@@ -74,6 +79,7 @@ binder_call(vendor_hal_imsfactory_server, vendor_hal_imsfactory_client)
 hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsfactory_hwservice)
 hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsrcsd_hwservice)
 hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imscallinfo_hwservice)
+
 
 # imsdaemon needs read/write access to devpts
 allow vendor_ims_service devpts:chr_file rw_file_perms;

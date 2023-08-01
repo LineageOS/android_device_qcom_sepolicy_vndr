@@ -44,6 +44,7 @@ type vendor_mhi_device, dev_type;
 type vendor_efs_boot_dev, dev_type;
 type vendor_smem_log_device, dev_type;
 type vendor_fm_radio_device, dev_type;
+type vendor_ese_gpio_device, dev_type;
 
 #define qg char device
 type vendor_qg_device, dev_type;
@@ -51,3 +52,6 @@ type vendor_qg_device, dev_type;
 #define qvr external sensor device
 type vendor_qvr_external_sensor_device, dev_type;
 type vendor_qvr_hidraw_device, dev_type;
+
+type vendor_qmc_dma_device, dev_type;
+type vendor_qmc_cma_device, dev_type;

@@ -31,8 +31,11 @@ binder_call(system_server, hal_camera_default)
 
 binder_call(system_server, hal_graphics_composer)
 
-# vendor_location
+# vendor_location modules
 binder_call(system_server, vendor_location);
+binder_call(system_server, vendor_location_xtra_daemon);
+binder_call(system_server, vendor_location_lowi_server);
+
 allow system_server vendor_wlan_device:chr_file rw_file_perms;
 allow system_server hal_audio_default:file w_file_perms;
 

@@ -24,6 +24,10 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Changes from Qualcomm Innovation Center are provided under the following license:
+
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 # Add new domain for location test apps
 user=_app seinfo=platform name=com.qualcomm.qct.dlt levelfrom=all domain=vendor_location_app_test type=app_data_file
@@ -36,3 +40,4 @@ user=_app seinfo=platform name=com.qualcomm.qti.dualstaapp domain=vendor_dualsta
 user=_app seinfo=platform name=com.qualcomm.qti.cam2test domain=vendor_sys_seccam2_app type=app_data_file levelFrom=all
 user=system seinfo=platform name=com.qualcomm.wrd.ue.kpitool.base domain=vendor_cta_app type=system_app_data_file
 user=_app seinfo=platform name=com.qualcomm.aontest domain=aoncameraservice_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=default name=com.qti.episteme domain=vendor_episteme_app type=privapp_data_file levelFrom=all

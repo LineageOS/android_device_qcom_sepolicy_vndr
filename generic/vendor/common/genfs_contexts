@@ -27,7 +27,7 @@
 
 # Changes from Qualcomm Innovation Center are provided under the following license:
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -145,6 +145,7 @@ genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/sde-crtc-2/
 genfscon sysfs /devices/platform/soc/a600000.ssusb/mode                 u:object_r:vendor_sysfs_usb_device:s0
 genfscon sysfs /devices/platform/soc/a800000.ssusb/mode                 u:object_r:vendor_sysfs_usb_device:s0
 genfscon sysfs /devices/platform/soc/4e00000.ssusb/mode                 u:object_r:vendor_sysfs_usb_device:s0
+genfscon sysfs /devices/platform/soc/a600000.ssusb/dynamic_disable      u:object_r:vendor_sysfs_usb_device:s0
 
 genfscon sysfs /devices/platform/hypervisor/hypervisor:qcom,gh-watchdog/wakeup_enable u:object_r:vendor_sysfs_wdog_device:s0
 
@@ -182,6 +183,10 @@ genfscon sysfs /power/mem_sleep u:object_r:vendor_sysfs_suspend:s0
 genfscon sysfs /kernel/boot_adsp/ssr                                   u:object_r:vendor_sysfs_adsp_ssr:s0
 genfscon sysfs /firmware/devicetree/base/soc  u:object_r:vendor_sysfs_devicetree_soc:s0
 
+genfscon sysfs /class/qcom-haptics/primitive_duration  u:object_r:vendor_sysfs_haptics:s0
+genfscon sysfs /class/qcom-battery/soh        u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/resistance u:object_r:vendor_sysfs_battery_supply:s0
+
 genfscon sysfs /module/rmnet_aps/parameters u:object_r:vendor_sysfs_rmnet:s0
 genfscon sysfs /module/rmnet_offload/parameters u:object_r:vendor_sysfs_rmnet:s0
 genfscon sysfs /module/rmnet_perf/parameters u:object_r:vendor_sysfs_rmnet:s0
@@ -189,3 +194,12 @@ genfscon sysfs /module/rmnet_perf_tether/parameters u:object_r:vendor_sysfs_rmne
 genfscon sysfs /module/rmnet_sch/parameters u:object_r:vendor_sysfs_rmnet:s0
 genfscon sysfs /module/rmnet_shs/parameters u:object_r:vendor_sysfs_rmnet:s0
 genfscon sysfs /module/rmnet_wlan/parameters u:object_r:vendor_sysfs_rmnet:s0
+
+genfscon sysfs /kernel/camera/num_ifes u:object_r:vendor_sysfs_camera:s0
+genfscon sysfs /kernel/camera/num_ife_lites u:object_r:vendor_sysfs_camera:s0
+genfscon sysfs /kernel/camera/num_sfes u:object_r:vendor_sysfs_camera:s0
+genfscon sysfs /kernel/camera/num_sbi u:object_r:vendor_sysfs_camera:s0
+genfscon sysfs /kernel/camera/subparts_info u:object_r:vendor_sysfs_camera:s0
+
+genfscon sysfs /kernel/qts/primary/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+genfscon sysfs /kernel/qts/secondary/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0

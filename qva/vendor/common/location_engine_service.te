@@ -25,7 +25,7 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# qva/location_engine_service.te - sepolicy rules for qti value added location module engine-service
+# qva/vendor/common/location_engine_service.te - sepolicy rules for qti value added location module engine-service
 
 type vendor_location_engine_service, domain;
 type vendor_location_engine_service_exec, exec_type, vendor_file_type, file_type;
@@ -42,9 +42,10 @@ allow vendor_location_engine_service vendor_location_data_file:dir create_dir_pe
 allow vendor_location_engine_service vendor_location_data_file:file create_file_perms;
 
 # allows socket access in /dev/socket/location
-allow vendor_location_engine_service vendor_location_socket:sock_file { create write unlink};
-allow vendor_location_engine_service vendor_location_socket: {sock_file lnk_file } r_file_perms;
+allow vendor_location_engine_service vendor_location_socket:lnk_file r_file_perms;
+allow vendor_location_engine_service vendor_location_socket:sock_file create_file_perms;
 allow vendor_location_engine_service vendor_location_socket:dir rw_dir_perms;
+allow vendor_location_engine_service vendor_location:unix_dgram_socket { read write sendto };
 
 # allow socket communication with gnss hal
 allow vendor_location_engine_service vendor_hal_gnss_qti:unix_dgram_socket sendto;
@@ -53,3 +54,6 @@ allow vendor_location_engine_service vendor_hal_gnss_qti:unix_dgram_socket sendt
 userdebug_or_eng(`
   allow shell vendor_location_engine_service_exec:file rx_file_perms;
 ')
+
+# IPC Router
+allow vendor_location_engine_service self:qipcrtr_socket create_socket_perms_no_ioctl;

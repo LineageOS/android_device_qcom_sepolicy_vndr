@@ -57,3 +57,6 @@ allow vendor_hal_drm_widevine vendor_dmabuf_qseecom_ta_heap_device:chr_file r_fi
 
 #socket change
 unix_socket_connect(vendor_hal_drm_widevine, vendor_notify-topology, tee);
+
+# Required for idle thread
+wakelock_use(vendor_hal_drm_widevine);

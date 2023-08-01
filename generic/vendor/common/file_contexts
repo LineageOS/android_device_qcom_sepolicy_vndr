@@ -1,4 +1,5 @@
 # Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,10 +26,9 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Changes from Qualcomm Innovation Center are provided under the following
-# license:
+# Changes from Qualcomm Innovation Center are provided under the following license:
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc.
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -42,7 +42,7 @@
 #       disclaimer in the documentation and/or other materials provided
 #       with the distribution.
 #
-#     * Neither the name of Qualcomm Innovation Center nor the names of its
+#     * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
@@ -89,12 +89,9 @@
 /dev/adsprpc-smd                                u:object_r:vendor_qdsp_device:s0
 /dev/adsprpc-smd-secure                         u:object_r:vendor_xdsp_device:s0
 /dev/sdsprpc-smd                                u:object_r:vendor_dsp_device:s0
-/dev/wcd-dsp-glink                              u:object_r:audio_device:s0
-/dev/wcd_dsp0_control                           u:object_r:audio_device:s0
-/dev/wcd-spi-ac-client                          u:object_r:audio_device:s0
 /dev/msm_audio_ion                              u:object_r:vendor_agm_device:s0
 /dev/aud_pasthru_adsp                           u:object_r:vendor_agm_device:s0
-/dev/msm_.*                                     u:object_r:audio_device:s0
+/dev/msm_audio_ion_cma                          u:object_r:audio_device:s0
 /dev/avtimer                                    u:object_r:vendor_avtimer_device:s0
 /dev/subsys_.*                                  u:object_r:vendor_ssr_device:s0
 /dev/remoteproc.*                               u:object_r:vendor_ssr_device:s0
@@ -105,6 +102,7 @@
 /dev/sg[0-9]+                                   u:object_r:vendor_sg_device:s0
 /dev/ufs-bsg.*                                   u:object_r:vendor_bsg_device:s0
 /dev/0:0:0:49476                                u:object_r:vendor_bsg_device:s0
+/dev/0:0:0:4                                    u:object_r:vendor_ufs_lun4_bsg_device:s0
 /dev/sensors                                    u:object_r:sensors_device:s0
 /dev/mnh_sm                                     u:object_r:vendor_easel_device:s0
 /dev/easelcomm-client                           u:object_r:vendor_easel_device:s0
@@ -115,7 +113,7 @@
 /dev/ipa_odl_ctl                                u:object_r:vendor_ipa_dev:s0
 /dev/ipa_adpl                                   u:object_r:vendor_ipa_dev:s0
 /dev/byte-cntr                                  u:object_r:vendor_qdss_device:s0
-/dev/byte-cntr1                                  u:object_r:vendor_qdss_device:s0
+/dev/byte-cntr1                                 u:object_r:vendor_qdss_device:s0
 /dev/msm_adsp_sleepmon                          u:object_r:vendor_adsp_sleepmon_device:s0
 
 # dev socket nodes
@@ -131,13 +129,19 @@
 /dev/socket/netmgr(/.*)?                        u:object_r:vendor_netmgrd_socket:s0
 /dev/socket/shsusrd(/.*)?                       u:object_r:vendor_shsusrd_socket:s0
 /dev/socket/port-bridge(/.*)?                   u:object_r:vendor_port-bridge_socket:s0
+/dev/socket/tlpd(/.*)?                          u:object_r:vendor_tlpd_socket:s0
 /dev/socket/qti_dpm_uds_file                    u:object_r:vendor_dataqti_socket:s0
 /dev/socket/location(/.*)?                      u:object_r:vendor_location_socket:s0
+/dev/socket/qsap_location(/.*)?                 u:object_r:vendor_qsap_location_socket:s0
 /dev/socket/wifihal(/.*)?                       u:object_r:vendor_wifihal_socket:s0
 /dev/socket/pps                                 u:object_r:vendor_pps_socket:s0
 /dev/socket/notify-topology                     u:object_r:vendor_notify-topology_socket:s0
+/dev/socket/vuidmgr                             u:object_r:vendor_vuidmgr_socket:s0
 /dev/nq-nci                                     u:object_r:nfc_device:s0
+/dev/st21nfc                                     u:object_r:nfc_device:s0
 /dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
+/dev/bt_cp_ctrl                                 u:object_r:hci_attach_dev:s0
+/dev/btfmcodec_dev                              u:object_r:hci_attach_dev:s0
 /dev/wlan                                       u:object_r:vendor_wlan_device:s0
 /dev/socket/qmux_radio(/.*)?                    u:object_r:vendor_qmuxd_socket:s0
 /dev/socket/qcrild(/.*)?                        u:object_r:vendor_rild_socket:s0
@@ -158,6 +162,7 @@
 
 # Vendor DMA-BUF Heaps
 /dev/dma_heap/qcom,system               u:object_r:vendor_dmabuf_system_heap_device:s0
+/dev/dma_heap/qcom,system-uncached      u:object_r:vendor_dmabuf_system_uncached_heap_device:s0
 /dev/dma_heap/qcom,secure-pixel         u:object_r:vendor_dmabuf_secure_pixel:s0
 /dev/dma_heap/qcom,secure-non-pixel     u:object_r:vendor_dmabuf_secure_non_pixel:s0
 /dev/dma_heap/qcom,adsp                 u:object_r:vendor_dmabuf_adsp_heap_device:s0
@@ -192,7 +197,8 @@
 /dev/mem_buf_vm/qcom,cp_spss_hlos_shared	u:object_r:vendor_vm_cp_spss_hlos_shared_device:s0
 /dev/mem_buf_vm/qcom,cp_cdsp			u:object_r:vendor_vm_cp_cdsp_device:s0
 /dev/mem_buf_vm/qcom,cp_app			u:object_r:vendor_vm_cp_app_device:s0
-
+# Raw HID Device
+/dev/hidraw[0-9]*                  u:object_r:vendor_hidraw_device:s0
 
 # files in /vendor
 /vendor/firmware(/.*)?          u:object_r:vendor_firmware_file:s0
@@ -206,8 +212,9 @@
 /vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2      u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/thermal-engine-v2      u:object_r:vendor_thermal-engine_exec:s0
 /vendor/bin/hw/vendor.qti.hardware.limits@1.1-service    u:object_r:vendor_limits-hal_exec:s0
+/vendor/bin/hw/vendor.qti.hardware.limits@1.2-service    u:object_r:vendor_limits-hal_exec:s0
 /vendor/bin/sensors.qti         u:object_r:vendor_sensors_qti_exec:s0
-/vendor/bin/sensors-qesdk       u:object_r:vendor_sensors_qesdk_exec:s0
+/vendor/bin/qsap_sensors        u:object_r:vendor_sensors_qesdk_exec:s0
 /vendor/bin/ssr_setup           u:object_r:vendor_ssr_setup_exec:s0
 /vendor/bin/ssr_diag            u:object_r:vendor_ssr_diag_exec:s0
 /vendor/bin/pm-service          u:object_r:vendor_per_mgr_exec:s0
@@ -230,14 +237,20 @@
 /vendor/bin/qmipriod            u:object_r:vendor_qmipriod_exec:s0
 /vendor/bin/shsusrd             u:object_r:vendor_shsusrd_exec:s0
 /vendor/bin/port-bridge         u:object_r:vendor_port-bridge_exec:s0
+/vendor/bin/tlpd                u:object_r:vendor_tlpd_exec:s0
+/vendor/bin/dlsc                u:object_r:vendor_dlsc_exec:s0
 /vendor/bin/qti                 u:object_r:vendor_qti_exec:s0
+/vendor/bin/qsap_voiceui        u:object_r:vendor_vui_dmgr_exec:s0
+## Context for location features - start
 /vendor/bin/loc_launcher        u:object_r:vendor_location_exec:s0
-/vendor/bin/lowi-server         u:object_r:vendor_location_exec:s0
-/vendor/bin/xtra-daemon         u:object_r:vendor_location_exec:s0
+/vendor/bin/lowi-server         u:object_r:vendor_location_lowi_server_exec:s0
+/vendor/bin/xtra-daemon         u:object_r:vendor_location_xtra_daemon_exec:s0
+## Context for location features - end
 /vendor/bin/pd-mapper           u:object_r:vendor_pd_mapper_exec:s0
 /vendor/bin/ims_rtp_daemon      u:object_r:vendor_hal_imsrtp_exec:s0
 /vendor/bin/mstatdaemon			u:object_r:vendor_hal_mstatservice_exec:s0
-/vendor/bin/imsdaemon           u:object_r:vendor_ims_service_exec:s0
+/vendor/bin/imsdaemon                        u:object_r:vendor_ims_service_exec:s0
+/vendor/bin/ims-dataservice-daemon           u:object_r:vendor_ims_dcservice_exec:s0
 /vendor/bin/ipacm               u:object_r:hal_tetheroffload_default_exec:s0
 /vendor/bin/ipacm-diag          u:object_r:hal_tetheroffload_default_exec:s0
 /vendor/bin/cnd                 u:object_r:vendor_cnd_exec:s0
@@ -261,10 +274,14 @@
 /vendor/bin/hw/android\.hardware\.security\.keymint-service-qti		     u:object_r:vendor_hal_keymint_qti_exec:s0
 /vendor/bin/init\.qti\.keymaster\.sh                                 u:object_r:vendor_init-qti-keymaster-sh_exec:s0
 /vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service-qti        u:object_r:vendor_hal_gatekeeper_qti_exec:s0
+/vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service-spu-qti    u:object_r:vendor_hal_gatekeeper_spu_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss.*-service-qti u:object_r:vendor_hal_gnss_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti         u:object_r:hal_bluetooth_default_exec:s0
+/vendor/bin/hw/android\.hardware\.bluetooth@1\.1-service-qti         u:object_r:hal_bluetooth_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]+\.[0-9]+-service.widevine    u:object_r:vendor_hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]+\.[2-9]+-service-lazy.widevine    u:object_r:vendor_hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm-service\.widevine	  u:object_r:vendor_hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm-service-lazy\.widevine  u:object_r:vendor_hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.allocator@1\.0-service   u:object_r:hal_graphics_allocator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.allocator-service   u:object_r:hal_graphics_allocator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.composer@1\.0-service   u:object_r:hal_graphics_composer_default_exec:s0
@@ -276,6 +293,8 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.capabilityconfigstore@1\.0-service u:object_r:vendor_hal_capabilityconfigstore_qti_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.camera\.provider@2\.[0-9]+-service u:object_r:hal_camera_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.camera\.provider@2\.[0-9]+-service_64 u:object_r:hal_camera_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.camera\.provider-service u:object_r:hal_camera_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.camera\.provider-service_64 u:object_r:hal_camera_default_exec:s0
 
 /(vendor|system/vendor)/bin/power_off_alarm        u:object_r:vendor_power_off_alarm_exec:s0
 
@@ -288,7 +307,7 @@
 /vendor/bin/hw/hardware\.google\.media\.c2@1\.0-service-software u:object_r:mediacodec_exec:s0
 /vendor/bin/feature_enabler_client          u:object_r:vendor_feature_enabler_client_exec:s0
 /(vendor|system/vendor)/bin/qdcmss              u:object_r:vendor_qdcm-ss_exec:s0
-/vendor/bin/perf_qesdk_client       u:object_r:vendor_perf_qesdk_exec:s0
+/vendor/bin/qsap_qapeservice        u:object_r:vendor_perf_qesdk_exec:s0
 
 ###############################################
 # same-process HAL files and their dependencies
@@ -301,6 +320,7 @@
 /vendor/lib(64)?/vendor\.qti\.hardware\.display\.mapperextensions@1\.0\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor\.qti\.hardware\.display\.mapperextensions@1\.1\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor\.qti\.hardware\.display\.mapperextensions@1\.2\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.qti\.hardware\.display\.mapperextensions@1\.3\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@3\.0-impl-qti-display\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor\.qti\.hardware\.display\.mapper@3\.0\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@4\.0-impl-qti-display\.so   u:object_r:same_process_hal_file:s0
@@ -323,7 +343,7 @@
 /vendor/lib(64)?/libadreno_app_profiles\.so    u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libgpudataproducer\.so        u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/egl/libq3dtools_esx\.so       u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/egl/libVkLayer_ADRENO_qprofiler\.so        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/egl/libVkLayer_ADRENO_qprofiler\.so  u:object_r:same_process_hal_file:s0
 
 /vendor/lib(64)?/libdrmutils\.so           u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libdrm\.so                u:object_r:same_process_hal_file:s0
@@ -395,6 +415,7 @@
 /data/vendor/qmipriod(/.*)?            u:object_r:vendor_qmipriod_data_file:s0
 /data/vendor/shsusr(/.*)?              u:object_r:vendor_shsusr_data_file:s0
 /data/vendor/location(/.*)?            u:object_r:vendor_location_data_file:s0
+/data/vendor/location-partner(/.*)?    u:object_r:vendor_location_data_file:s0
 /data/vendor/camera(/.*)?              u:object_r:vendor_camera_data_file:s0
 /data/vendor/display(/.*)?             u:object_r:vendor_display_vendor_data_file:s0
 /data/vendor/nfc(/.*)?                 u:object_r:vendor_nfc_vendor_data_file:s0
@@ -408,6 +429,8 @@
 /data/vendor/ipa(/.*)?                 u:object_r:vendor_ipa_vendor_data_file:s0
 /data/vendor/sensors(/.*)?             u:object_r:vendor_sensors_vendor_data_file:s0
 /data/vendor/port_bridge(/.*)?         u:object_r:vendor_port_bridge_data_file:s0
+/data/vendor/tlpd(/.*)?                u:object_r:vendor_tlpd_data_file:s0
+/data/vendor/dlsc(/.*)?                u:object_r:vendor_dlsc_data_file:s0
 /data/vendor/tloc(/.*)?                u:object_r:vendor_tlocd_data_file:s0
 /data/vendor/connectivity(/.*)?        u:object_r:vendor_cnd_data_file:s0
 /data/vendor/misc/qsee(/.*)?           u:object_r:vendor_data_qsee_file:s0
@@ -422,6 +445,7 @@
 /data/vendor/imslogs(/.*)?             u:object_r:vendor_imsd_data_file:s0
 # audio_data_file
 /data/vendor/audio(/.*)? u:object_r:vendor_audio_data_file:s0
+/data/vendor/audio_dsp(/.*)? u:object_r:vendor_audio_dsp_data_file:s0
 
 # /
 /tombstones                          u:object_r:rootfs:s0
@@ -432,7 +456,6 @@
 /mnt/vendor/persist/display(/.*)?    u:object_r:vendor_persist_display_file:s0
 /mnt/vendor/persist/drm(/.*)?        u:object_r:vendor_persist_drm_file:s0
 /mnt/vendor/persist/elabel(/.*)?     u:object_r:vendor_persist_elabel_file:s0
-/mnt/vendor/persist/haptics(/.*)?    u:object_r:vendor_persist_haptics_file:s0
 /mnt/vendor/persist/hlos_rfs(/.*)?   u:object_r:vendor_persist_rfs_shared_hlos_file:s0
 /mnt/vendor/persist/rfs(/.*)?        u:object_r:vendor_persist_rfs_file:s0
 /mnt/vendor/persist/sensors(/.*)?    u:object_r:vendor_persist_sensors_file:s0
@@ -449,13 +472,6 @@
 /dev/dri/controlD64                             u:object_r:graphics_device:s0
 /dev/dri/renderD128                             u:object_r:graphics_device:s0
 /dev/spec_sync                                  u:object_r:graphics_device:s0
-
-#TODO: move this to genfs_context or target based file_context
-# sysfs_leds
-/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,haptics@c000/leds/vibrator(/.*)?   u:object_r:sysfs_leds:s0
-
-# vendor_sysfs_devfreq
-/sys/devices(/platform)?/soc/soc:qcom,l3-cpu[0-9]/devfreq/soc:qcom,l3-cpu[0-9](/.*)? u:object_r:vendor_sysfs_devfreq:s0
 
 #vendor_sysfs_data
 /sys/devices/virtual/xt_hardidletimer/timers(/.*)?                  u:object_r:vendor_sysfs_data:s0
@@ -520,52 +536,16 @@
 /sys/class/lcd_bias/secure_mode                                     u:object_r:vendor_sysfs_graphics:s0
 /sys/class/leds/wled/secure_mode                                    u:object_r:vendor_sysfs_graphics:s0
 
-/sys/devices/platform/vfb.([0-3])+/graphics/fb([0-3])+/modes        u:object_r:vendor_sysfs_graphics:s0
-/sys/devices/platform/vfb.([0-3])+/graphics/fb([0-3])+/mode         u:object_r:vendor_sysfs_graphics:s0
-/sys/module/drm/parameters/vblankoffdelay                           u:object_r:vendor_sysfs_graphics:s0
-/sys/module/msm_drm/parameters/dsi_display([0-1])                   u:object_r:vendor_sysfs_disp_boot_param:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/modes u:object_r:vendor_sysfs_graphics:s0
-/sys/devices/platform/soc/[a-f0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/status u:object_r:vendor_sysfs_graphics:s0
 /sys/class/graphics/fb([0-3])+/mdp/caps                             u:object_r:vendor_sysfs_graphics:s0
 /sys/class/graphics/fb([0-3])+/ad                                   u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[0-9a-f]+.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/[0-9a-f]+.qcom,spmi:qcom,pmi[0-9]+@[0-9]+:qcom,leds@[a-f0-9]+(/.*)? u:object_r:vendor_sysfs_graphics:s0
-/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight(/.*)?     u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/virtual/switch/hdmi(/.*)?                              u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/[a-f0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)?   u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/soc.0/[a-f0-9]+.qcom,mdss_mdp/qcom,mdss_fb_primary.+[a-f0-9]/leds/lcd-backlight(/.*)?   u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/caps           u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/soc/[a-f0-9]+.qcom,mdss_mdp/bw_mode_bitmap             u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/bw_mode_bitmap             u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/soc.0/[a-f0-9]+.qcom,mdss_mdp/bw_mode_bitmap            u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/soc.0/[a-f0-9]+.qcom,mdss_mdp/caps                      u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_cam/video4linux/video[0-33]/name(/.*)?   u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_rotator/video4linux/video[0-33]/name(/.*)?   u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_rotator/caps       u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,vidc/video4linux/video[0-33]/name(/.*)?   u:object_r:vendor_sysfs_graphics:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,cci/[a-f0-9]+.qcom,cci:qcom,camera@[0-2]/video4linux/video[0-33]/name(/.*)?   u:object_r:vendor_sysfs_graphics:s0
-
-/sys/devices(/platform)?/soc/[a-f0-9]+.sdhci/mmc_host/mmc0/clk_scaling(/.*)? u:object_r:vendor_sysfs_mmc_host:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/clkscale_enable        u:object_r:vendor_sysfs_scsi_host:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/auto_hibern8           u:object_r:vendor_sysfs_scsi_host:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+/host0/scsi_host/host0(/.*)?  u:object_r:vendor_sysfs_scsi_host:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/host0/target0:0:0/0:0:0:[0-9]+/scsi_generic(/.*)?     u:object_r:vendor_sysfs_scsi_target:s0
-
-# VM Neuron block device mapping node
-/sys/devices/platform/soc/soc:qcom,svm_neuron_block/soc:qcom,svm_neuron_block:application/blk_name  u:object_r:vendor_sysfs_svm_neuron:s0
 
 /data/vendor/media(/.*)?                                            u:object_r:vendor_media_data_file:s0
 /data/vendor/mediadrm(/.*)?                                         u:object_r:vendor_mediadrm_vendor_data_file:s0
-/data/vendor/nnhal(/.*)?                                            u:object_r:vendor_hal_neuralnetworks_data_file:s0
-
-# Moved to target specfic folder so removing this from common file
-#/sys/devices(/platform)?/soc/[a-f0-9\.:]+,[a-f0-9\-\_]+/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
-
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,kgsl-3d0/kgsl/kgsl-3d0(/.*)? u:object_r:vendor_sysfs_kgsl:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,kgsl-3d0/devfreq/[a-f0-9]+.qcom,kgsl-3d0(/.*)? u:object_r:vendor_sysfs_kgsl:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model u:object_r:vendor_sysfs_kgsl_gpu_model:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk u:object_r:vendor_sysfs_kgsl_gpuclk:s0
-/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,kgsl-3d0/kgsl/kgsl-3d0/perfcounter u:object_r:vendor_sysfs_kgsl_shell:s0
-/sys/devices/platform/soc/3d00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpubusy u:object_r:vendor_sysfs_kgsl_gpubusy:s0
 
 /sys/devices/soc/[a-f0-9]+.ssusb/power_supply/usb(/.*)?             u:object_r:vendor_sysfs_usb_supply:s0
 
@@ -573,9 +553,6 @@
 /vendor/etc/hbtp/*                                                  u:object_r:vendor_hbtp_cfg_file:s0
 
 /sys/devices/soc/qpnp-vadc-[0-9]+(/.*)?                             u:object_r:vendor_sysfs_vadc_dev:s0
-
-#Android NN Driver
-/vendor/bin/hw/android\.hardware\.neuralnetworks-shim-service-qti   u:object_r:vendor_hal_neuralnetworks_default_exec:s0
 
 #Light AIDL HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.qti   u:object_r:hal_light_default_exec:s0
@@ -586,6 +563,7 @@
 
 # Qti Dumpstate HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.dumpstate@1\.1-service\.qti   u:object_r:hal_dumpstate_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.dumpstate-service\.qti        u:object_r:hal_dumpstate_default_exec:s0
 
 /(vendor|system/vendor)/bin/init\.class_main\.sh        u:object_r:vendor_qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.crda\.sh              u:object_r:vendor_qti_init_shell_exec:s0
@@ -614,15 +592,13 @@
 /(vendor|system/vendor)/bin/init\.qti\.qcv\.sh          u:object_r:vendor_qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.qti\.media\.sh        u:object_r:vendor_qti_media_exec:s0
 
-#Limits sysfs node
-/sys/module/msm_isense_cdsp/data                        u:object_r:sysfs_thermal:s0
-
 /(vendor|system/vendor)/bin/vendor_modprobe\.sh        u:object_r:vendor_modinstall-sh_exec:s0
+/(vendor|system/vendor)/bin/system_dlkm_modprobe\.sh        u:object_r:vendor_modinstall-sh_exec:s0
 
 /vendor/bin/embmsslServer       u:object_r:vendor_hal_embmssl_qti_exec:s0
 
 # Devcoredump framework
 /sys/devices/virtual/devcoredump/devcd[0-9]+/data       u:object_r:vendor_sysfs_devcd:s0
 
-# Microdump collector parameters
-/sys/module/microdump_collector/parameters/.*  u:object_r:vendor_sysfs_microdump:s0
+# CHRE
+/vendor/bin/hw/android\.hardware\.contexthub-service\.qmi                             u:object_r:hal_contexthub_default_exec:s0

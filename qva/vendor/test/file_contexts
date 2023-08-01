@@ -33,3 +33,11 @@
 
 #wifimyftm daemon
 /(vendor|system/vendor)/bin/wifimyftm    u:object_r:vendor_wifimyftmsvc_exec:s0
+
+# QESDK ONE
+/dev/socket/qesdk_one(/.*)?                     u:object_r:vendor_qesd_one_socket:s0
+/vendor/bin/qesdk-one                           u:object_r:vendor_hal_qesdonehal_default_exec:s0
+/data/vendor/qesdk_token(/.*)?                  u:object_r:vendor_qesd_one_token_data_file:s0
+
+# QESDK SAMPLE CLIENT
+/vendor/bin/qsap_sampleclient                   u:object_r:vendor_qesdk_sampleclient_exec:s0

@@ -99,25 +99,25 @@
 /(vendor|system/vendor)/bin/InstallKeybox                       u:object_r:vendor_sectest_exec:s0
 /(vendor|system/vendor)/bin/tracing_config\.sh        u:object_r:vendor_smtrace_tracing_exec:s0
 
-# Sprhd
-/vendor/bin/sprhdd                                              u:object_r:vendor_sprhdd_exec:s0
-/vendor/bin/dlsc                                                u:object_r:vendor_dlsc_exec:s0
+# TLPD
 /vendor/bin/ipa_lnx_agent                                       u:object_r:vendor_ipa_lnx_agent_exec:s0
-/dev/ipa_lnx_stats_ioctl                                        u:object_r:vendor_ipa_lnx_agent_file:s0
-/dev/socket/sprhd(/.*)?                                         u:object_r:vendor_sprhdd_socket:s0
-/data/vendor/sprhd(/.*)?                                        u:object_r:vendor_sprhdd_data_file:s0
+/dev/ipa_lnx_stats_ioctl                                        u:object_r:vendor_ipa_lnx_agent_device:s0
 
 #Authentication and FIDO
 /(vendor|system/vendor)/bin/sampleauthdaemon    u:object_r:vendor_fidotest_exec:s0
 /(vendor|system/vendor)/bin/qseeproxysampledaemon u:object_r:vendor_qseeproxysample_exec:s0
 
 #### Context for location test binaries
-/(vendor|system/vendor)/bin/lowi_test                           u:object_r:vendor_location_exec:s0
-/(vendor|system/vendor)/bin/test-version                        u:object_r:vendor_location_exec:s0
-/(vendor|system/vendor)/bin/test-pos-tx                         u:object_r:vendor_location_exec:s0
-/(vendor|system/vendor)/bin/xtwifi-upload-test                  u:object_r:vendor_location_exec:s0
-/(vendor|system/vendor)/bin/test-fake-ap                        u:object_r:vendor_location_exec:s0
-/(vendor|system/vendor)/bin/test-fdal                           u:object_r:vendor_location_exec:s0
+/(vendor|system/vendor)/bin/slim_client                         u:object_r:vendor_location_test_exec:s0
+/(vendor|system/vendor)/bin/lowi_test                           u:object_r:vendor_location_test_exec:s0
+/(vendor|system/vendor)/bin/test-version                        u:object_r:vendor_location_test_exec:s0
+/(vendor|system/vendor)/bin/test-pos-tx                         u:object_r:vendor_location_test_exec:s0
+/(vendor|system/vendor)/bin/xtwifi-upload-test                  u:object_r:vendor_location_test_exec:s0
+/(vendor|system/vendor)/bin/test-fake-ap                        u:object_r:vendor_location_test_exec:s0
+/(vendor|system/vendor)/bin/test-fdal                           u:object_r:vendor_location_test_exec:s0
+/(vendor|system/vendor)/bin/qsh_location_test                   u:object_r:vendor_location_test_exec:s0
+/(vendor|system/vendor)/bin/qsh_geofence_test                   u:object_r:vendor_location_test_exec:s0
+/(vendor|system/vendor)/bin/qsh_slpi_loc_test                   u:object_r:vendor_location_test_exec:s0
 
 #### Context for qguard
 /(vendor|system/vendor)/bin/qguard        u:object_r:vendor_qguard_exec:s0
@@ -153,5 +153,5 @@
 /vendor/lib/rfsa/adsp/libbitml_nsp_v2_skel\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libbitmlengine\.so       u:object_r:same_process_hal_file:s0
 
-# nativehaltestservice
-/vendor/bin/nativehaltestservice          u:object_r:vendor_nativehaltestservice_exec:s0
+#fan_service
+/(vendor|system/vendor)/bin/fan_service u:object_r:vendor_fan_service_exec:s0

@@ -44,4 +44,9 @@ hal_client_domain(mediacodec, vendor_hal_qconfig)
 #Allow mediacodec to access audio HAL
 hal_client_domain(mediacodec, hal_audio)
 
-dontaudit mediacodec vendor_hal_qspmhal_hwservice:hwservice_manager find;
+allow mediacodec vendor_qdsp_device:chr_file {ioctl read};
+dontaudit mediacodec vendor_xdsp_device:chr_file { getattr open read map };
+hal_client_domain(mediacodec, vendor_hal_dspmanager)
+dontaudit mediacodec vendor_qdsp_device:chr_file {open};
+
+allow mediacodec vendor_membuf_dev:chr_file r_file_perms;

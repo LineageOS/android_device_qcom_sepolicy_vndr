@@ -31,3 +31,6 @@ vendor_restricted_prop(vendor_qspm_dbg_prop)
 vendor_restricted_prop(vendor_dbg_brkpoint_prop)
 vendor_restricted_prop(vendor_myapp_prop)
 vendor_restricted_prop(vendor_fda_prop)
+
+# QESDK ONE
+vendor_internal_prop(vendor_qesdk_one_prop);

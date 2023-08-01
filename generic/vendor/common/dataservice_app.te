@@ -24,6 +24,11 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center are provided under the following license:
+#
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 get_prop(vendor_dataservice_app, vendor_cnd_prop)
 
@@ -35,3 +40,6 @@ hal_client_domain(vendor_dataservice_app , vendor_hal_perf)
 
 # dataservice_app is a client of ImsFactory HAL
 hal_client_domain(vendor_dataservice_app, vendor_hal_imsfactory)
+
+# dataservice_app is a client of ImsDataService stable AIDL
+hal_client_domain(vendor_dataservice_app, vendor_hal_dcservice_qti)

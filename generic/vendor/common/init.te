@@ -31,6 +31,7 @@ allow init {
     storage_file
     vendor_vm_system_file
     same_process_hal_file
+    mnt_product_file
 }:dir mounton;
 
 # symlink /sdcard to backing block

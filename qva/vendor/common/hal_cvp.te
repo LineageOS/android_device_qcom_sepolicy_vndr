@@ -44,10 +44,6 @@ r_dir_file(vendor_cvp, adsprpcd_file)
 #  Access for ion memory
 allow vendor_cvp ion_device:chr_file rw_file_perms;
 
-#  Access for DSP/QDSP device
-allow vendor_cvp vendor_qdsp_device:chr_file rw_file_perms;
-allow vendor_cvp vendor_dsp_device:chr_file rw_file_perms;
-
 #  Access for sdcard
 userdebug_or_eng(`
 allow vendor_cvp sdcard_type:dir rw_dir_perms;

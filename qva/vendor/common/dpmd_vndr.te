@@ -79,6 +79,9 @@ allow vendor_dpmd_vndr proc_net:file write;
 
 allow vendor_dpmd_vndr self:netlink_netfilter_socket create_socket_perms_no_ioctl;
 
+add_service(vendor_dpmd_vndr, vendor_nwmgr_service)
+vndbinder_use(vendor_dpmd_vndr)
+
 #diag
 userdebug_or_eng(`
     diag_use(vendor_dpmd_vndr)

@@ -27,4 +27,6 @@
 
 genfscon tracefs /instances/hsuart u:object_r:vendor_debugfs_bt_tracing:s0
 
+genfscon sysfs /module/camera/parameters/cam_error_inject u:object_r:vendor_sysfs_camera:s0
+
 genfscon tracefs /instances/kgsl-fence u:object_r:vendor_debugfs_kgsl_fence_tracing:s0

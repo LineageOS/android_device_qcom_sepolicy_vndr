@@ -43,3 +43,10 @@ set_prop(vendor_atfwd, vendor_radio_prop)
 
 hwbinder_use(vendor_atfwd)
 get_prop(vendor_atfwd, hwservicemanager_prop)
+
+binder_call(vendor_atfwd, radio)
+allow vendor_atfwd radio_service:service_manager find;
+binder_use(vendor_atfwd)
+
+# Fallback for seccomp
+crash_dump_fallback(vendor_atfwd)

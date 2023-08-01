@@ -37,3 +37,6 @@ set_prop(vendor_init-qti-ese-strongbox-sh, vendor_ese_strongbox_prop)
 # Allow init shell file execution on device
 allow vendor_init-qti-ese-strongbox-sh vendor_shell_exec:file rx_file_perms;
 allow vendor_init-qti-ese-strongbox-sh vendor_toolbox_exec:file rx_file_perms;
+
+# Allow nfc device file execution on device
+allow vendor_init-qti-ese-strongbox-sh nfc_device:chr_file { open getattr map };

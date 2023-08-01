@@ -27,6 +27,7 @@
 
 userdebug_or_eng(`
   diag_use(hal_audio)
+  allow hal_audio_default devpts:chr_file rw_file_perms;
 ')
 
 #Split A2dp specific
@@ -40,3 +41,6 @@ hal_client_domain(hal_audio_default, hal_health)
 
 #Allow callbacks into QC2 audio service
 hal_client_domain(hal_audio_default, hal_codec2)
+
+#Allow audio PAL/HAL to talk with SOCPeripherals API's
+unix_socket_connect(hal_audio_default, vendor_ssgtzd, vendor_ssgtzd)

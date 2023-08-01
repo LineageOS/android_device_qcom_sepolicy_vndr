@@ -37,7 +37,8 @@ allow vendor_sysmonapp_app_test app_api_service:service_manager find;
 # For access to camera and media
 allow vendor_sysmonapp_app_test cameraserver_service:service_manager find;
 allow vendor_sysmonapp_app_test mediaserver_service:service_manager find;
-
 # To access FastRPC devices
+userdebug_or_eng(`
 allow vendor_sysmonapp_app_test vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_sysmonapp_app_test vendor_xdsp_device:chr_file r_file_perms;
+')

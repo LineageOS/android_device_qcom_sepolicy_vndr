@@ -54,6 +54,9 @@ allow vendor_psiservice sysfs:dir r_dir_perms;
 allow vendor_psiservice vendor_sysfs_mem_offline:file rw_file_perms;
 allow vendor_psiservice vendor_sysfs_mem_offline:dir r_dir_perms;
 
+# Allow system resource capability
+allow vendor_psiservice self:global_capability_class_set sys_resource;
+
 # For reading "vendor.pasr." properties
 get_prop(vendor_psiservice, vendor_pasr_prop)
 

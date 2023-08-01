@@ -25,6 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
 # vendor_ssgtzd - SSG TZ Daemon
 type vendor_ssgtzd, domain, mlstrustedsubject;
 type vendor_ssgtzd_exec, exec_type, vendor_file_type, file_type;
@@ -33,12 +37,11 @@ init_daemon_domain(vendor_ssgtzd)
 
 #Allow access to smcinvoke device
 allow vendor_ssgtzd tee_device:chr_file rw_file_perms;
+allow vendor_ssgtzd vendor_cs_app:unix_stream_socket connectto;
 
 #Allow access to firmware/image
 allow vendor_ssgtzd vendor_firmware_file:dir r_dir_perms;
 allow vendor_ssgtzd vendor_firmware_file:file r_file_perms;
-#Allow ssgtzd to create sockets for HTTP
-allow vendor_ssgtzd self:udp_socket create_socket_perms;
 
 # Allow ssgtzd to write state information to /data/vendor/qwes/qwesd.conf
 allow vendor_ssgtzd vendor_qwes_data_file:dir { rw_dir_perms setattr };
@@ -48,3 +51,12 @@ allow vendor_ssgtzd vendor_qwes_data_file:file rw_file_perms;
 # Remove this when QMI service moves to pfmd
 allow vendor_ssgtzd self:{ socket qipcrtr_socket } create_socket_perms;
 allowxperm vendor_ssgtzd self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
+
+#Allow access to qseecom DMABUF device
+allow vendor_ssgtzd vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+vndbinder_use(vendor_ssgtzd)
+
+#Allow ssgtzd to access servicemanager
+binder_call(vendor_ssgtzd, servicemanager)
+#Allow ssgtzd to access vndbinder_use
+qtr_sdk_use(vendor_ssgtzd)

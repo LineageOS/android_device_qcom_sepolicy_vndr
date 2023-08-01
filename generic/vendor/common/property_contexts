@@ -25,41 +25,6 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Changes from Qualcomm Innovation Center are provided under the following
-# license:
-#
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted (subject to the limitations in the
-# disclaimer below) provided that the following conditions are met:
-#
-#     * Redistributions of source code must retain the above copyright
-#       notice, this list of conditions and the following disclaimer.
-#
-#     * Redistributions in binary form must reproduce the above
-#       copyright notice, this list of conditions and the following
-#       disclaimer in the documentation and/or other materials provided
-#       with the distribution.
-#
-#     * Neither the name of Qualcomm Innovation Center nor the names of its
-#       contributors may be used to endorse or promote products derived
-#       from this software without specific prior written permission.
-#
-# NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
-# GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
-# HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
-# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
-# ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
-# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
-# IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
-# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
-# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 persist.vendor.service.bdroid.       u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bluetooth.            u:object_r:vendor_bluetooth_prop:s0
 ro.vendor.bluetooth.                 u:object_r:vendor_bluetooth_prop:s0
@@ -71,7 +36,6 @@ ctl.vendor.msm_irqbalance  u:object_r:vendor_msm_irqbalance_prop:s0
 ctl.vendor.netmgrd         u:object_r:vendor_ctl_netmgrd_prop:s0
 ctl.vendor.port-bridge     u:object_r:vendor_ctl_port-bridge_prop:s0
 ctl.vendor.qcrild          u:object_r:vendor_ctl_qcrild_prop:s0
-ctl.vendor.ipa_lnx_agent   u:object_r:vendor_ipa_lnx_agent_prop:s0
 ctl.vendor.ipacm           u:object_r:vendor_ipacm_prop:s0
 ctl.vendor.ipacm-diag      u:object_r:vendor_ipacm-diag_prop:s0
 ctl.vendor.dataqti         u:object_r:vendor_dataqti_prop:s0
@@ -79,6 +43,7 @@ ctl.vendor.sensors         u:object_r:vendor_sensors_prop:s0
 persist.vendor.sensors.    u:object_r:vendor_sensors_prop:s0
 ro.vendor.sensors.         u:object_r:vendor_sensors_prop:s0
 vendor.audio.              u:object_r:vendor_audio_prop:s0
+vendor.audio.ssr.trigger   u:object_r:vendor_audio_ssr_prop:s0
 vendor.voice.              u:object_r:vendor_audio_prop:s0
 persist.vendor.audio.      u:object_r:vendor_audio_prop:s0
 ro.vendor.audio.           u:object_r:vendor_audio_prop:s0
@@ -117,15 +82,6 @@ ro.vendor.build.software.version  u:object_r:vendor_ims_prop:s0
 persist.vendor.ims.        u:object_r:vendor_ims_prop:s0
 persist.vendor.qti.telephony.vt_cam_interface u:object_r:vendor_ims_prop:s0
 ctl.vendor.imsrcsservice   u:object_r:vendor_ctl_vendor_imsrcsservice_prop:s0
-
-#mm-video
-vendor.media.target.version            u:object_r:vendor_video_prop:s0
-vendor.video.disable.ubwc              u:object_r:vendor_video_prop:s0
-vendor.media.target_variant            u:object_r:vendor_video_prop:s0
-vendor.media.target.qssi               u:object_r:vendor_video_prop:s0
-vendor.mm.target.enable.qcom_parser    u:object_r:vendor_video_prop:s0
-vendor.media.system.build_codename     u:object_r:vendor_video_prop:s0
-vendor.netflix.bsp_rev                 u:object_r:vendor_video_prop:s0
 
 # HBTP
 ctl.vendor.hbtp u:object_r:vendor_ctl_vendor_hbtp_prop:s0
@@ -204,3 +160,6 @@ vendor.dcvs.prop                 u:object_r:vendor_dcvs_prop:s0
 
 #pcie property
 persist.vendor.pcie. u:object_r:vendor_pcie_prop:s0
+
+#Dynamic sensor
+vendor.dynamic_sensor. u:object_r:vendor_dynamic_sensor_prop:s0

@@ -32,4 +32,6 @@
 type vendor_qdisplay_service,             vndservice_manager_type;
 type vendor_per_mgr_service,       vndservice_manager_type;
 type vendor_qfeatenab_client_service,     vndservice_manager_type;
+type vendor_xtra_service,                 vndservice_manager_type;
+type vendor_aksgamepad_service,           vndservice_manager_type;
 type vendor_qms_service,                  vndservice_manager_type;

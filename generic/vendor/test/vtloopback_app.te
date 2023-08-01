@@ -31,6 +31,7 @@ app_domain(vtloopback_app)
 net_domain(vtloopback_app)
 diag_use(vtloopback_app)
 binder_call(vtloopback_app, vendor_hal_imsrtp)
+hal_client_domain(vtloopback_app, vendor_hal_diaghal);
 allow vtloopback_app vendor_hal_imsrtp_hwservice:hwservice_manager find;
 allow vtloopback_app cameraserver_service:service_manager find;
 allow vtloopback_app mediaserver_service:service_manager find;
