@@ -97,12 +97,9 @@
 # FBE
 /(vendor|system/vendor)/bin/init.qti.qseecomd.sh		u:object_r:vendor_init-qti-fbe-sh_exec:s0
 
-/vendor/bin/init.qti.chg_policy.sh                  u:object_r:vendor_qti_init_shell_exec:s0
-
 # Same process file
 /vendor/lib(64)?/hw/gralloc\.sdm845\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/vulkan\.sdm845\.so    u:object_r:same_process_hal_file:s0
-/(vendor|system/vendor)/bin/sscrpcd       u:object_r:vendor_sensors_exec:s0
 
 # sysfs read_ahead_kb files
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0
