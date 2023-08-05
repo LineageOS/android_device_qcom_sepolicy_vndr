@@ -33,6 +33,12 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS := \
     $(QSSI_SEPOLICY_PATH)/qva/product/private
 
 ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
+ifneq ($(TARGET_KERNEL_VERSION), 4.19)
+    TARGET_USES_LEGACY_SEPOLICY := true
+endif
+endif
+
+ifneq ($(TARGET_USES_LEGACY_SEPOLICY), true)
     BOARD_VENDOR_SEPOLICY_DIRS := \
        $(BOARD_VENDOR_SEPOLICY_DIRS) \
        $(SEPOLICY_PATH) \
@@ -65,7 +71,7 @@ ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
     endif
 endif
 
-ifneq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
+ifeq ($(TARGET_USES_LEGACY_SEPOLICY), true)
     BOARD_VENDOR_SEPOLICY_DIRS := \
                  $(BOARD_VENDOR_SEPOLICY_DIRS) \
                  $(SEPOLICY_PATH) \
