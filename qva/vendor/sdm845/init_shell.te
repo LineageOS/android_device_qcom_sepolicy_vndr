@@ -25,10 +25,5 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
-# For regionalization
-allow vendor_qti_init_shell regionalization_file:dir r_dir_perms;
-allow vendor_qti_init_shell regionalization_file:file create_file_perms;
-
 r_dir_file(vendor_qti_init_shell, vendor_sysfs_devfreq_l3cdsp)
 allow vendor_qti_init_shell vendor_sysfs_devfreq_l3cdsp:file setattr;
