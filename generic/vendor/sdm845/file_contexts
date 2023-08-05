@@ -111,6 +111,13 @@
 /sys/devices/platform/soc/5c00000.qcom,ssc/subsys[0-9]+/name                                        u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/8300000.qcom,turing/subsys[0-9]+/name                                     u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/4080000.qcom,mss/subsys[0-9]+/name                                        u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/aae0000.qcom,venus/subsys[0-9]+/restart_level                             u:object_r:vendor_sysfs_ssr_toggle:s0
+/sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/restart_level                               u:object_r:vendor_sysfs_ssr_toggle:s0
+/sys/devices/platform/soc/soc:qcom,kgsl-hyp/subsys[0-9]+/restart_level                              u:object_r:vendor_sysfs_ssr_toggle:s0
+/sys/devices/platform/soc/17300000.qcom,lpass/subsys[0-9]+/restart_level                            u:object_r:vendor_sysfs_ssr_toggle:s0
+/sys/devices/platform/soc/5c00000.qcom,ssc/subsys[0-9]+/restart_level                               u:object_r:vendor_sysfs_ssr_toggle:s0
+/sys/devices/platform/soc/8300000.qcom,turing/subsys[0-9]+/restart_level                            u:object_r:vendor_sysfs_ssr_toggle:s0
+/sys/devices/platform/soc/4080000.qcom,mss/subsys[0-9]+/restart_level                               u:object_r:vendor_sysfs_ssr_toggle:s0
 
 # sysfs read_ahead_kb files
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0
