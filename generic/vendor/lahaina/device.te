@@ -32,3 +32,6 @@ type vendor_rawdump_block_device, dev_type;
 
 #define HDMI-IN device
 type vendor_hdmi_bdg_irq_device, dev_type;
+
+#define DP-IN device
+type vendor_dp_bdg_irq_device, dev_type;
