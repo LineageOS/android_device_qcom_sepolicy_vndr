@@ -35,3 +35,7 @@ type vendor_nordic_sysfs_node, sysfs_type, fs_type;
 
 # kineticsxr file
 type vendor_kx_file, file_type, vendor_file_type;
+
+#calib file types
+type vendor_calib_file, file_type, vendor_calib_file_type;
+allow { vendor_calib_file }self:filesystem associate;

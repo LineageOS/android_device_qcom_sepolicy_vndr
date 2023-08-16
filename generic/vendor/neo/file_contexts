@@ -162,3 +162,6 @@
 
 # emmc device rpmb node
 /dev/mmcblk0rpmb                     u:object_r:vendor_rpmb_device:s0
+
+#Graphics dependencies
+/vendor/lib(64)?/libOpenCL_adreno\.so       u:object_r:same_process_hal_file:s0

@@ -36,3 +36,6 @@
 
 # kineticsxr file
 /etc/resources_ctrlr(/.*)?			u:object_r:vendor_kx_file:s0
+
+# calib partition
+/mnt/vendor/calib(/.*)?               u:object_r:vendor_calib_file:s0
