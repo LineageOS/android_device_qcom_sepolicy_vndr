@@ -61,10 +61,11 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type vendor_qms, domain;
+type vendor_qms alias vendor_mutualex, domain;
 type vendor_qms_0, domain;
 type vendor_qms_1, domain;
 type vendor_qms_exec, exec_type, vendor_file_type, file_type;
+type vendor_mutualex_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_qms)
 
 allow vendor_qms self:capability {
