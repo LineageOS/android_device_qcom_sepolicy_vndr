@@ -30,47 +30,45 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# qva/vendor/common/location_slim_daemon.te - sepolicy rules for qti value added location module - slim_daemon
+# qva/vendor/common/location_xtwifi_inetagent.te - sepolicy rules for qti value added location module - xtwifi-inet-agent
 
-type vendor_location_slim_daemon, domain;
-type vendor_location_slim_daemon_exec, exec_type, vendor_file_type, file_type;
+type vendor_location_xtwifi_inetagent, domain;
+type vendor_location_xtwifi_inetagent_exec, exec_type, vendor_file_type, file_type;
 
-# allows loc_launcher to launch slim_daemon
-domain_auto_trans(vendor_location, vendor_location_slim_daemon_exec, vendor_location_slim_daemon)
-allow vendor_location_slim_daemon vendor_location:fd use;
+# allows loc_launcher to launch xtwifi-inet-agent
+domain_auto_trans(vendor_location, vendor_location_xtwifi_inetagent_exec, vendor_location_xtwifi_inetagent)
+allow vendor_location_xtwifi_inetagent vendor_location:fd use;
 
 # allows file access in /data/vendor/location
-allow vendor_location_slim_daemon vendor_location_data_file:dir create_dir_perms;
-allow vendor_location_slim_daemon vendor_location_data_file:file create_file_perms;
+allow vendor_location_xtwifi_inetagent vendor_location_data_file:dir create_dir_perms;
+allow vendor_location_xtwifi_inetagent vendor_location_data_file:file create_file_perms;
 
 # allows socket access in /dev/socket/location
-allow vendor_location_slim_daemon vendor_location_socket:lnk_file { read open getattr };
-allow vendor_location_slim_daemon vendor_location_socket:sock_file create_file_perms;
-allow vendor_location_slim_daemon vendor_location_socket:dir rw_dir_perms;
-allow vendor_location_slim_daemon vendor_location:unix_dgram_socket { read write sendto };
+allow vendor_location_xtwifi_inetagent vendor_location_socket:lnk_file { read open getattr };
+allow vendor_location_xtwifi_inetagent vendor_location_socket:sock_file create_file_perms;
+allow vendor_location_xtwifi_inetagent vendor_location_socket:dir rw_dir_perms;
+allow vendor_location_xtwifi_inetagent vendor_location:unix_dgram_socket { read write sendto };
 
 # allow socket communication with gnss hal
-allow vendor_location_slim_daemon vendor_hal_gnss_qti:unix_dgram_socket sendto;
+allow vendor_location_xtwifi_inetagent vendor_hal_gnss_qti:unix_dgram_socket sendto;
 
-hwbinder_use(vendor_location_slim_daemon)
-get_prop(vendor_location_slim_daemon, hwservicemanager_prop)
-binder_call(vendor_location_slim_daemon, system_server)
+hwbinder_use(vendor_location_xtwifi_inetagent)
+get_prop(vendor_location_xtwifi_inetagent, hwservicemanager_prop)
+binder_call(vendor_location_xtwifi_inetagent, system_server)
 
-# allows shell execute slim_daemon in userdebug mode.
+# allows shell execute xtwifi-inet-agent in userdebug mode.
 userdebug_or_eng(`
-  allow shell vendor_location_slim_daemon_exec:file rx_file_perms;
+  allow shell vendor_location_xtwifi_inetagent_exec:file rx_file_perms;
 ')
 
-# IPC Router
-allow vendor_location_slim_daemon self:qipcrtr_socket create_socket_perms_no_ioctl;
+# Enable standard network access
+net_domain(vendor_location_xtwifi_inetagent)
 
-allow vendor_location_slim_daemon fwk_sensor_hwservice:hwservice_manager find;
+# send to /dev/socket/location/mq/LOWI-SERVER
+allow vendor_location_xtwifi_inetagent vendor_location_lowi_server:unix_dgram_socket sendto;
 
-## send to /dev/socket/location/mq/ - inet-agent-tdp-dl, inet-agent-cs
-allow vendor_location_slim_daemon vendor_location_xtwifi_inetagent:unix_dgram_socket sendto;
+## send to /dev/socket/location/mq/XTWiFi-PE
+allow vendor_location_xtwifi_inetagent vendor_location_xtwifi_client:unix_dgram_socket sendto;
 
-## send to /dev/socket/location/mq/MODEM-CS
-allow vendor_location_slim_daemon vendor_location_xtwifi_client:unix_dgram_socket sendto;
-
-## send to /dev/socket/location/mq/LOWI-SERVER
-allow vendor_location_slim_daemon vendor_location_lowi_server:unix_dgram_socket sendto;
+## send to /dev/socket/location/mq/SLIM
+allow vendor_location_xtwifi_inetagent vendor_location_slim_daemon:unix_dgram_socket sendto;

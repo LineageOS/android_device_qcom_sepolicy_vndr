@@ -91,6 +91,9 @@ allow vendor_location_lowi_server vendor_location_xtwifi_client:unix_dgram_socke
 # /dev/socket/mlid
 allow vendor_location_lowi_server vendor_mlid:unix_dgram_socket sendto;
 
+## send to /dev/socket/location/mq/inet-agent-cs
+allow vendor_location_lowi_server vendor_location_xtwifi_inetagent:unix_dgram_socket sendto;
+
 allow vendor_location_lowi_server self:netlink_route_socket { create bind read };
 
 # Lowi doesnt need to communicate with SLIM. Denial can be ignored.

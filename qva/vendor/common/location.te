@@ -32,5 +32,5 @@
 
 userdebug_or_eng(`
   # stop or kill loc_launcher, it will send signal Sigkill or Sigstop to child processes.
-  allow vendor_location {vendor_location_slim_daemon vendor_location_edgnss_daemon vendor_qsap_location vendor_location_engine_service vendor_location_xtwifi_client}:process { signal sigkill sigstop };
+  allow vendor_location {vendor_location_slim_daemon vendor_location_edgnss_daemon vendor_qsap_location vendor_location_engine_service vendor_location_xtwifi_client vendor_location_xtwifi_inetagent}:process { signal sigkill sigstop };
 ')
