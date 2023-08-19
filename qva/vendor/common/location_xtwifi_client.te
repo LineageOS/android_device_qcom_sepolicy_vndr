@@ -81,6 +81,9 @@ allow vendor_location_xtwifi_client self:qipcrtr_socket create_socket_perms_no_i
 # send to /dev/socket/location/mq/LOWI-SERVER
 allow vendor_location_xtwifi_client vendor_location_lowi_server:unix_dgram_socket sendto;
 
+# send to /dev/socket/location/ - mq/inet-agent-tdp-dl, mq/inet-agent-cs etc
+allow vendor_location_xtwifi_client vendor_location_xtwifi_inetagent:unix_dgram_socket sendto;
+
 # send to /dev/socket/location/mq/72236d44f8-LC
 allow vendor_location_xtwifi_client hal_wifi_default:unix_dgram_socket sendto;
 
