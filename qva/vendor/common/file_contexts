@@ -121,6 +121,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.secure_element@1\.2-service            u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.[0-2]-service        u:object_r:vendor_hal_perf_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf-hal-service             u:object_r:vendor_hal_perf_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.AGMIPC@1\.0-service          u:object_r:vendor_agmservice_qti_exec:s0
 /(vendor|system/vendor)/bin/mm-audio-ftm                                           u:object_r:vendor_audioftm_exec:s0
 /(vendor|system/vendor)/bin/qrtr-ns                                                u:object_r:vendor_qrtr_exec:s0
 /(vendor|system/vendor)/bin/spdaemon                                               u:object_r:vendor_spdaemon_exec:s0
