@@ -246,6 +246,9 @@ type vendor_tui_data_file, file_type, data_file_type;
 # SFS listener data file
 type vendor_data_tzstorage_file, file_type, data_file_type;
 
+#NNHAL files
+type vendor_hal_neuralnetworks_data_file, file_type, data_file_type;
+
 #BT Files
 type vendor_bt_data_file, file_type, data_file_type;
 
