@@ -1,4 +1,4 @@
-# Copyright (c) 2020-2021 The Linux Foundation. All rights reserved.
+# Copyright (c) 2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,11 +25,26 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#Add new domain for eid app
-user=_app seinfo=platform name=.eidservices domain=vendor_eid_app type=app_data_file levelFrom=all
+type vendor_hal_eid_qti, domain;
+hal_server_domain(vendor_hal_eid_qti, vendor_hal_eid)
 
-#Add new domain for powermodule app
-user=_app seinfo=platform name=.powermodule domain=vendor_powermodule_app type=app_data_file levelFrom=all
+type vendor_hal_eid_qti_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(vendor_hal_eid_qti)
 
-#Add new domain for TrustedUIService app
-user=_app seinfo=platform name=com.qualcomm.qti.trustedui domain=vendor_trustedui_app type=app_data_file levelFrom=all
+binder_call(vendor_hal_eid_client, vendor_hal_eid_server)
+binder_call(vendor_hal_eid_server, vendor_hal_eid_client)
+
+hal_attribute_hwservice(vendor_hal_eid, vendor_hal_eid_hwservice)
+
+#Allow access to tee device
+allow vendor_hal_eid_qti tee_device:chr_file rw_file_perms;
+
+#Allow access to load firmware images
+r_dir_file(vendor_hal_eid_qti, firmware_file)
+
+#Allow access to interract with ion_device
+allow vendor_hal_eid_qti ion_device:chr_file r_file_perms;
+
+get_prop(vendor_hal_eid_qti, vendor_tee_listener_prop)
+
+hal_client_domain(vendor_hal_eid_qti, vendor_hal_qteeconnector)
