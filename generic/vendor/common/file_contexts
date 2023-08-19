@@ -307,6 +307,7 @@
 /vendor/bin/hw/hardware\.google\.media\.c2@1\.0-service-software u:object_r:mediacodec_exec:s0
 /vendor/bin/feature_enabler_client          u:object_r:vendor_feature_enabler_client_exec:s0
 /(vendor|system/vendor)/bin/qdcmss              u:object_r:vendor_qdcm-ss_exec:s0
+/vendor/bin/perf_qesdk_client       u:object_r:vendor_perf_qesdk_exec:s0
 /vendor/bin/qsap_qapeservice        u:object_r:vendor_perf_qesdk_exec:s0
 
 ###############################################
