@@ -1,0 +1,2 @@
+typealias vendor_qms alias vendor_mutualex;
+type vendor_mutualex_exec, exec_type, vendor_file_type, file_type;
