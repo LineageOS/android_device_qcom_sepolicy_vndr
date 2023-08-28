@@ -31,6 +31,9 @@
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face@1\.0-service    u:object_r:vendor_biometricsface_exec:s0
 
+#umd_service
+/vendor/bin/hw/vendor\.qti\.hardware\.umd@1\.0-service   u:object_r:vendor_hal_umd_qti_exec:s0
+
 # nordic node file
 /(vendor|system/vendor)/bin/hw/vendor\.shadowcreator\.hardware\.nordic@1\.0-service u:object_r:vendor_hal_nordic_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.kineticsxr\.hardware\.nordic@1\.0-service u:object_r:vendor_hal_nordic_default_exec:s0
