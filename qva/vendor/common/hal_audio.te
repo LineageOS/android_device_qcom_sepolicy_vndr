@@ -27,6 +27,7 @@
 
 userdebug_or_eng(`
   diag_use(hal_audio)
+  allow hal_audio_default devpts:chr_file rw_file_perms;
 ')
 
 #Split A2dp specific

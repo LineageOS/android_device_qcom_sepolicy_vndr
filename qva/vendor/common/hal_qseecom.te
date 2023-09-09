@@ -53,3 +53,4 @@ allow vendor_hal_qseecom_default tee_device:chr_file rw_file_perms;
 
 # Read file perms for vendor_dmabuf_qseecom
 allow vendor_hal_qseecom_default vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow vendor_hal_qseecom_default vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
