@@ -33,9 +33,8 @@ init_daemon_domain(vendor_vppservice)
 
 hal_server_domain(vendor_vppservice, hal_vpp)
 
-add_hwservice(vendor_vppservice, hal_vpp_hwservice)
+hal_attribute_hwservice(hal_vpp, hal_vpp_hwservice)
 
-allow hal_vpp_client hal_vpp_hwservice:hwservice_manager find;
 binder_call(hal_vpp_client, hal_vpp_server)
 binder_call(hal_vpp_server, hal_vpp_client)
 
@@ -57,5 +56,7 @@ allow vendor_vppservice ion_device:chr_file rw_file_perms;
 allow vendor_vppservice video_device:chr_file rw_file_perms;
 allow vendor_vppservice qdsp_device:chr_file r_file_perms;
 allow vendor_vppservice xdsp_device:chr_file r_file_perms;
+allow vendor_vppservice gpu_device:chr_file rw_file_perms;
 
 hal_client_domain(vendor_vppservice, hal_graphics_allocator)
+hal_client_domain(vendor_vppservice, hal_capabilityconfigstore_qti)
