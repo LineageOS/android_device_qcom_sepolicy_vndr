@@ -25,7 +25,7 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
+allow fsck vendor_custom_ab_block_device:blk_file rw_file_perms;
 allow fsck vendor_persist_block_device:blk_file rw_file_perms;
 allow fsck vendor_qmcs_block_device:blk_file rw_file_perms;
 allowxperm fsck vendor_qmcs_block_device:blk_file ioctl { BLKGETSIZE };
