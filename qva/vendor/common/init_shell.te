@@ -45,6 +45,7 @@ allow vendor_qti_init_shell vendor_mpctl_data_file:file { write getattr unlink }
 allow vendor_qti_init_shell vendor_sysfs_vmpressure:file w_file_perms;
 
 allow vendor_qti_init_shell vendor_sysfs_bootguestvm:file w_file_perms;
+allow vendor_qti_init_shell proc_watermark_boost_factor:file { open append write };
 allow vendor_qti_init_shell proc_watermark_scale_factor:file { open append write };
 
 userdebug_or_eng(`
