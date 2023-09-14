@@ -215,3 +215,7 @@ genfscon sysfs /devices/platform/soc/994000.qcom,qup_uart/wakeup u:object_r:sysf
 genfscon sysfs /devices/platform/soc/3000000.remoteproc-adsp/remoteproc/remoteproc1/3000000.remoteproc-adsp:glink-edge/3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/3000000.remoteproc-adsp/remoteproc/remoteproc0/3000000.remoteproc-adsp:glink-edge/3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-0/0-0010/near_res u:object_r:vendor_sysfs_ipd:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-0/0-0010/far_res u:object_r:vendor_sysfs_ipd:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-0/0-0010/near_ipd u:object_r:vendor_sysfs_ipd:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-0/0-0010/far_ipd u:object_r:vendor_sysfs_ipd:s0
