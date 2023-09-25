@@ -30,3 +30,6 @@ get_prop(vold, vendor_tee_listener_prop)
 # be needed
 allow vold mnt_vendor_file:dir { open read ioctl };
 allow vold vendor_sysfs_mmc_host:file w_file_perms;
+userdebug_or_eng(`
+   dontaudit vold vendor_qmcs_file:dir { read };
+')
