@@ -78,6 +78,10 @@ android.hardware.security.keymint.IKeyMintDevice/strongbox                u:obje
 android.hardware.security.sharedsecret.ISharedSecret/strongbox            u:object_r:hal_sharedsecret_service:s0
 android.hardware.security.keymint.IRemotelyProvisionedComponent/strongbox u:object_r:hal_keymint_service:s0
 vendor.qti.gnss.ILocAidlGnss/default                   u:object_r:hal_gnss_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySession/default               u:object_r:hal_wifidisplaysession_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionVideoTrack/default     u:object_r:hal_wifidisplayvideo_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionAudioTrack/default     u:object_r:hal_wifidisplayaudio_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionImageTrack/default     u:object_r:hal_wifidisplayimage_service:s0
 vendor.qti.qhcp.IQHDC/default                          u:object_r:vendor_hal_qms_service:s0
 vendor.qti.hardware.qspa.IQspa/default                u:object_r:vendor_hal_qspa_service:s0
 
