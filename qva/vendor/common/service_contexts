@@ -42,3 +42,7 @@ vendor.nxp.nxpnfc_aidl.INxpNfc/default                 u:object_r:vendor_hal_nxp
 android.hardware.security.keymint.IKeyMintDevice/strongbox                      u:object_r:hal_keymint_service:s0
 android.hardware.security.sharedsecret.ISharedSecret/strongbox                  u:object_r:hal_sharedsecret_service:s0
 android.hardware.security.keymint.IRemotelyProvisionedComponent/strongbox       u:object_r:hal_keymint_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySession/default               u:object_r:hal_wifidisplaysession_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionVideoTrack/default     u:object_r:hal_wifidisplayvideo_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionAudioTrack/default     u:object_r:hal_wifidisplayaudio_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionImageTrack/default     u:object_r:hal_wifidisplayimage_service:s0
