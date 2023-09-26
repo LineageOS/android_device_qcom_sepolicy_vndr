@@ -48,6 +48,12 @@ hal_server_domain_bypass(vendor_wifidisplayhalservice_qti,vendor_wifidisplayhals
 binder_call(vendor_wifidisplayhalservice_client, vendor_wifidisplayhalservice_server)
 binder_call(vendor_wifidisplayhalservice_server, vendor_wifidisplayhalservice_client)
 
+# Add (aidl) service related rules
+hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplaysession_service)
+hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplayvideo_service)
+hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplayaudio_service)
+hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplayimage_service)
+
 # Add hwservice related rules
 hal_attribute_hwservice(vendor_wifidisplayhalservice, vendor_wifidisplayhalservice_hwservice)
 
