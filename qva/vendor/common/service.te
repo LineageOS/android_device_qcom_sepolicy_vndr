@@ -72,3 +72,7 @@ type vendor_hal_qms_service,             hal_service_type, protected_service, se
 type vendor_hal_bttpi_service,           hal_service_type, protected_service, service_manager_type;
 type vendor_hal_qspa_service,            hal_service_type, protected_service, service_manager_type;
 type vendor_hal_nxpnfc_service,          hal_service_type, service_manager_type;
+type hal_wifidisplaysession_service,     hal_service_type, service_manager_type;
+type hal_wifidisplayvideo_service,     hal_service_type, service_manager_type;
+type hal_wifidisplayaudio_service,     hal_service_type, service_manager_type;
+type hal_wifidisplayimage_service,     hal_service_type, service_manager_type;
