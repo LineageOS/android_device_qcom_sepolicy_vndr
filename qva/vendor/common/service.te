@@ -62,3 +62,7 @@ type vendor_aidl_hal_pasrmanager_memory_service,	service_manager_type, hal_servi
 type vendor_hal_authsecret_service,      hal_service_type,protected_service,service_manager_type;
 type vendor_hal_secureprocessor_aidl_service, hal_service_type,  protected_service, service_manager_type;
 type vendor_hal_qfpextendedfingerprint_service, service_manager_type, hal_service_type, protected_service;
+type hal_wifidisplaysession_service,     hal_service_type, service_manager_type;
+type hal_wifidisplayvideo_service,     hal_service_type, service_manager_type;
+type hal_wifidisplayaudio_service,     hal_service_type, service_manager_type;
+type hal_wifidisplayimage_service,     hal_service_type, service_manager_type;

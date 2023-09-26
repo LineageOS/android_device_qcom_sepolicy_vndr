@@ -59,6 +59,10 @@ vendor.qti.hardware.sensorscalibrate.ISensorsCalibrate/default           u:objec
 vendor.qti.qspmhal.IQspmhal/default                           u:object_r:vendor_hal_qspmhal_service:s0
 vendor.qti.hardware.qspa.IQspa/default                 u:object_r:vendor_hal_qspa_service:s0
 android.hardware.drm.IDrmFactory/wfdhdcp               u:object_r:hal_drm_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySession/default               u:object_r:hal_wifidisplaysession_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionVideoTrack/default     u:object_r:hal_wifidisplayvideo_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionAudioTrack/default     u:object_r:hal_wifidisplayaudio_service:s0
+vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionImageTrack/default     u:object_r:hal_wifidisplayimage_service:s0
 vendor.qti.hardware.qconfig.IQConfig/default                          u:object_r:vendor_hal_qconfig_service:s0
 vendor.qti.hardware.perf2.IPerf/default                u:object_r:vendor_hal_perf2_service:s0
 vendor.qti.hardware.vpp.IVppService/default            u:object_r:vendor_hal_vpp_service:s0
