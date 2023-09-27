@@ -26,3 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 binder_call(hal_camera, system_server)
+
+get_prop(hal_camera_default, vendor_video_prop)
+get_prop(hal_camera_default, bootanim_system_prop)
+allow hal_camera_default vendor_membuf_dev:chr_file r_file_perms;

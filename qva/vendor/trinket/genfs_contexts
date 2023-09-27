@@ -84,3 +84,8 @@ genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/
 
 #net sysfs
 genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/net u:object_r:sysfs_net:s0
+
+#camera sysfs
+genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@0/video4linux/video2/name u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@1/video4linux/video3/name u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@2/video4linux/video4/name u:object_r:vendor_sysfs_graphics:s0
