@@ -40,3 +40,6 @@ type vendor_kx_file, file_type, vendor_file_type;
 type vendor_calib_file, file_type, vendor_calib_file_type;
 allow { vendor_calib_file }self:filesystem associate;
 type vendor_sysfs_ipd, sysfs_type, fs_type;
+
+#ipd_distance
+type vendor_sysfs_ipd_distance, sysfs_type, fs_type;
