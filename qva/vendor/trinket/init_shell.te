@@ -3,3 +3,4 @@
 
 #init_shell
 allow vendor_qti_init_shell vendor_sysfs_uevent:file { setattr };
+allow vendor_qti_init_shell vendor_qc_aon_prop:file { open getattr map };
