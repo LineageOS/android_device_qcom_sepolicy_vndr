@@ -276,6 +276,7 @@
 /vendor/bin/init\.qti\.keymaster\.sh                                 u:object_r:vendor_init-qti-keymaster-sh_exec:s0
 /vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service-qti        u:object_r:vendor_hal_gatekeeper_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service-spu-qti    u:object_r:vendor_hal_gatekeeper_spu_qti_exec:s0
+/vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software  u:object_r:hal_gatekeeper_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss.*-service-qti u:object_r:vendor_hal_gnss_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti         u:object_r:hal_bluetooth_default_exec:s0
 /vendor/bin/hw/android\.hardware\.bluetooth@1\.1-service-qti         u:object_r:hal_bluetooth_default_exec:s0
