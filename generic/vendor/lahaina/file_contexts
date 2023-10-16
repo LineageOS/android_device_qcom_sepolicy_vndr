@@ -199,6 +199,12 @@
 /dev/block/platform/soc/4804000.ufshc/by-name/limits                u:object_r:vendor_limits_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/limits-cdsp           u:object_r:vendor_limits_block_device:s0
 
+# hdmi device
+/dev/hdmi_bdg_irq_handler             u:object_r:vendor_hdmi_bdg_irq_device:s0
+
+# dp device
+/dev/dp_bdg_irq_handler             u:object_r:vendor_dp_bdg_irq_device:s0
+
 #subsys nodes
 /sys/devices/platform/soc/soc:qcom,wpss@8a00000/subsys[0-9]+/name      u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/soc:qcom,wpss@8a00000/subsys[0-9]+/restart_level      u:object_r:vendor_sysfs_ssr_toggle:s0
@@ -275,5 +281,3 @@
 
 /vendor/bin/hw/vendor\.qti\.hardware\.display\.demura-service u:object_r:hal_display_demura_default_exec:s0
 
-#brightness node for eDP
-/sys/devices/platform/soc/soc:backlight/backlight/soc:backlight/brightness(/.*)?     u:object_r:vendor_sysfs_graphics:s0
