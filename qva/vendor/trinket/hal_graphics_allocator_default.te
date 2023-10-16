@@ -1,0 +1,6 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+allow hal_graphics_allocator_default vendor_sysfs_kgsl_gpu_model:file r_file_perms;
+allow hal_graphics_allocator_default vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_dmabuf_system_uncached_heap_device:chr_file r_file_perms;
