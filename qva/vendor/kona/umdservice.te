@@ -41,3 +41,6 @@ allow vendor_hal_umd_qti audio_device:dir r_dir_perms;
 #Allow the domain to access the configfs file and dir
 allow vendor_hal_umd_qti configfs:file r_file_perms;
 allow vendor_hal_umd_qti configfs:dir r_dir_perms;
+
+#allow the domain to access dmabuf
+allow vendor_hal_umd_qti dmabuf_system_heap_device:chr_file r_file_perms;
