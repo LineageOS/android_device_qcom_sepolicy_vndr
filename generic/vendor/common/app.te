@@ -35,6 +35,6 @@ get_prop(appdomain, vendor_adsprpc_prop)
 allow appdomain vendor_npu_device:chr_file r_file_perms;
 
 # Allow all apps to access /dev/dma_heap/qcom,system
-allow { appdomain -isolated_app -coredomain } vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow { appdomain -isolated_app_all -coredomain } vendor_dmabuf_system_heap_device:chr_file r_file_perms;
 
 dontaudit appdomain vendor_hal_qspmhal_hwservice:hwservice_manager find;
