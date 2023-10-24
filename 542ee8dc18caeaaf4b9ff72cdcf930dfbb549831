@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be2e077d_a1d7093c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-10-24T19:30:30Z",
+      "side": 1,
+      "message": "Let\u0027s move this to the root SEPolicy.mk.",
+      "revId": "542ee8dc18caeaaf4b9ff72cdcf930dfbb549831",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
