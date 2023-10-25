@@ -26,6 +26,10 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ###################################
 
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
 #pmic sysfs_nodes
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/rtc u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pmi632@2:qcom,qpnp-smb5/power_supply/battery u:object_r:vendor_sysfs_battery_supply:s0
@@ -129,3 +133,7 @@ genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/net u:object_r:sysfs_net
 genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@0/video4linux/video2/name u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@1/video4linux/video3/name u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@2/video4linux/video4/name u:object_r:vendor_sysfs_graphics:s0
+
+#uevent sysfs
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pmi632@2:qcom,qpnp-smb5/power_supply/battery/uevent u:object_r:vendor_sysfs_uevent:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pmi632@2:qpnp,qg/power_supply/bms/uevent u:object_r:vendor_sysfs_uevent:s0
