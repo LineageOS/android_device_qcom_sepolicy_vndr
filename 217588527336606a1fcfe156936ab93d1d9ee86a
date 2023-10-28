@@ -16,6 +16,24 @@
       "message": "Why not go with [this](https://android.googlesource.com/device/google/coral-sepolicy/+/0d0d328ce8cfee6103735467e4cf4aa7ac46d1c5) which seems to have a better commit message?",
       "revId": "217588527336606a1fcfe156936ab93d1d9ee86a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f1516e4_fcd3028e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-10-28T09:22:58Z",
+      "side": 1,
+      "message": "Because no one cared to look for that during the bringup and now this change as been merged in the other sepolicy repos, so we will keep consistency.",
+      "parentUuid": "4529bee3_ea8a9d99",
+      "revId": "217588527336606a1fcfe156936ab93d1d9ee86a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
