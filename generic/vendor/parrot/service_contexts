@@ -1,0 +1,7 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+vendor.qti.data.factoryservice.IFactory/default          u:object_r:vendor_hal_factory_aidlservice:s0
+vendor.qti.hardware.perf2.IPerf/default                u:object_r:vendor_hal_perf2_service:s0
+vendor.qti.hardware.dpmaidlservice.IDpmService/default u:object_r:vendor_hal_dpmaidl_service:s0
+
