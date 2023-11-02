@@ -309,3 +309,5 @@ genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys5/wakeup u
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys4/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys6/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/1103_00.01.00/wakeup u:object_r:sysfs_wakeup:s0
+
+genfscon sysfs /devices/platform/soc/ae94000.qcom,mdss_dsi_ctrl0/uio/uio1/name u:object_r:vendor_sysfs_uio_file:s0
