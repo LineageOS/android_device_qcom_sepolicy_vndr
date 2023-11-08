@@ -192,3 +192,8 @@
 /dev/msm_lsm_cdev     u:object_r:vendor_msm_lsm_cdev_device:s0
 /dev/msm_rtac  u:object_r:vendor_msm_rtac_device:s0
 /dev/msm_aac_in  u:object_r:vendor_media_aac_device:s0
+
+/dev/msm_evrc_in  u:object_r:vendor_media_evrc_device:s0
+/dev/msm_qcelp_in  u:object_r:vendor_media_qcelp_device:s0
+
+/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model               u:object_r:vendor_sysfs_kgsl_gpu_model:s0
