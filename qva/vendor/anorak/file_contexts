@@ -33,9 +33,9 @@
 /(vendor|system/vendor)/bin/hw/vendor\.kineticsxr\.hardware\.nordic@1\.0-service u:object_r:vendor_hal_nordic_default_exec:s0
 /sys/devices/platform/soc/990000\.spi/spi_master/spi0/spi0\.0/jsrequest u:object_r:vendor_nordic_sysfs_node:s0
 /sys/devices/platform/soc/990000\.spi/spi_master/spi0/spi0\.0/jsmem u:object_r:vendor_nordic_sysfs_node:s0
-
+/dev/ttyKXR2                          u:object_r:vendor_ttyKXR2:s0
 # kineticsxr file
-/etc/resources_ctrlr(/.*)?			u:object_r:vendor_kx_file:s0
+/etc/resources_ctrlr(/.*)?            u:object_r:vendor_kx_file:s0
 
 # calib partition
 /mnt/vendor/calib(/.*)?               u:object_r:vendor_calib_file:s0
