@@ -26,3 +26,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 type vendor_membuf_dev, dev_type;
+
+#aidirector audio device
+type vendor_aid_audio_device, dev_type;
