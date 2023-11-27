@@ -464,6 +464,7 @@
 /sys/devices/virtual/switch/hdmi(/.*)?                              u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/[a-z0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)?   u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/caps           u:object_r:sysfs_graphics:s0
+/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/idle_state     u:object_r:sysfs_graphics:s0
 /sys/devices/soc/[a-f0-9]+.qcom,mdss_mdp/bw_mode_bitmap             u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/bw_mode_bitmap             u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_cam/video4linux/video[0-33]/name(/.*)?   u:object_r:sysfs_graphics:s0
