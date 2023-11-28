@@ -118,3 +118,6 @@ vendor_internal_prop(vendor_soc_model_prop);
 vendor_internal_prop(vendor_console_log_level_prop)
 vendor_internal_prop(vendor_dcvs_prop)
 vendor_restricted_prop(vendor_persist_rcs_qti_prop)
+
+#debug.sf
+vendor_restricted_prop(vendor_debug_sf_prop);
