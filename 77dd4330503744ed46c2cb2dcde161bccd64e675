@@ -33,6 +33,23 @@
       "message": "Isn\u0027t this the dead prop?",
       "revId": "77dd4330503744ed46c2cb2dcde161bccd64e675",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72f9710a_6149db9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-12-09T14:22:21Z",
+      "side": 1,
+      "message": "you are right, i even merged a couple removals myself, lol. thanks!",
+      "revId": "77dd4330503744ed46c2cb2dcde161bccd64e675",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
