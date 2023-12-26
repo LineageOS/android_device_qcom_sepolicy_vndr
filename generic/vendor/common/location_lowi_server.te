@@ -99,3 +99,5 @@ dontaudit vendor_location_lowi_server vendor_location_slim_daemon:unix_dgram_soc
 hal_client_domain(vendor_location_lowi_server, vendor_hal_qms_qti);
 
 binder_use(vendor_location_lowi_server);
+
+net_domain(vendor_location_lowi_server);
