@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72110dcf_d48d280f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-01-04T22:25:31Z",
+      "side": 1,
+      "message": "moto sm6225 13 update needs the new rules. Not sure if we can have both coexist without some kind of ifdef",
+      "revId": "e1ee878190dfe347ee65fa4566130ff29689eda5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
