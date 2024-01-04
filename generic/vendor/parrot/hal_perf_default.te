@@ -62,3 +62,7 @@
 allow vendor_hal_perf_default self:capability kill;
 allow vendor_hal_perf_default {appdomain}:process sigkill;
 hal_client_domain(vendor_hal_perf_default, vendor_hal_poweroptservice)
+
+#Allow AIDL base perf-hal communication
+hal_attribute_service(vendor_hal_perf, vendor_hal_perf2_service)
+binder_call(vendor_hal_perf_server, servicemanager)

@@ -24,3 +24,5 @@ neverallow { coredomain -init -ueventd } vendor_calib_file:file *;
 
 get_prop(vendor_qvrd_vndr, vendor_camera_prop)
 dontaudit vendor_qvrd_vndr vendor_hal_camera_postproc_hwservice:hwservice_manager *;
+
+allow vendor_qvrd_vndr vendor_sysfs_ipd_distance:file rw_file_perms;

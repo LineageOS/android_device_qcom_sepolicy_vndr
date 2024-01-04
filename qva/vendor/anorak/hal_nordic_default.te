@@ -32,3 +32,7 @@ allow vendor_hal_nordic_default vendor_sysfs_kgsl:file { open read getattr };
 allow vendor_hal_nordic_default vendor_kx_file:file { open read getattr };
 allow vendor_hal_nordic_default dmabuf_system_heap_device:chr_file { read open ioctl };
 allow vendor_hal_nordic_default dmabuf_system_heap_device:chr_file { read open ioctl };
+allow vendor_hal_nordic_default mnt_vendor_file:dir r_dir_perms;
+allow vendor_hal_nordic_default vendor_calib_file:dir r_dir_perms;
+allow vendor_hal_nordic_default vendor_calib_file:file rw_file_perms;
+allow vendor_hal_nordic_default vendor_ttyKXR2:chr_file rw_file_perms;

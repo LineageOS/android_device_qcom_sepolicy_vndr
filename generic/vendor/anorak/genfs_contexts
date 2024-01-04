@@ -219,3 +219,4 @@ genfscon sysfs /devices/platform/soc/988000.i2c/i2c-0/0-0010/near_res u:object_r
 genfscon sysfs /devices/platform/soc/988000.i2c/i2c-0/0-0010/far_res u:object_r:vendor_sysfs_ipd:s0
 genfscon sysfs /devices/platform/soc/988000.i2c/i2c-0/0-0010/near_ipd u:object_r:vendor_sysfs_ipd:s0
 genfscon sysfs /devices/platform/soc/988000.i2c/i2c-0/0-0010/far_ipd u:object_r:vendor_sysfs_ipd:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-0/0-0010/ipd_distance u:object_r:vendor_sysfs_ipd_distance:s0

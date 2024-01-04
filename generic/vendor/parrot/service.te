@@ -1,0 +1,6 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_hal_factory_aidlservice, vendor_service, protected_service, service_manager_type;
+type vendor_hal_perf2_service,           vendor_service, protected_service, service_manager_type;
+type vendor_hal_dpmaidl_service,         vendor_service, protected_service, service_manager_type;
