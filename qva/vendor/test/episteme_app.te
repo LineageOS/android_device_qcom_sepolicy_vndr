@@ -3,6 +3,7 @@
 
 type vendor_episteme_app, domain;
 app_domain(vendor_episteme_app)
+net_domain(vendor_episteme_app)
 allow vendor_episteme_app app_api_service:service_manager find;
 hal_client_domain(vendor_episteme_app, vendor_hal_qms_qti)
 hal_client_domain(vendor_episteme_app, vendor_hal_qesdhal)

@@ -104,6 +104,10 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-02/c440000.qcom,
 genfscon sysfs /devices/platform/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.2.auto/usb1/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.2.auto/usb2/wakeup u:object_r:sysfs_wakeup:s0
 
+#sysfs_net 
+genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/pci0002:00/0002:00:00.0/0002:01:00.0/net u:object_r:sysfs_net:s0
+
 #vendor_sysfs_graphics nodes
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/blue/brightness  u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/green/brightness  u:object_r:vendor_sysfs_graphics:s0

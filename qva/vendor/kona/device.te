@@ -9,3 +9,6 @@ type vendor_hdmi_bdg_irq_device, dev_type;
 
 #define msm_lsm char device
 type vendor_msm_lsm_cdev_device, dev_type;
+
+#define aidirector audio device
+type vendor_aid_audio_device, dev_type;

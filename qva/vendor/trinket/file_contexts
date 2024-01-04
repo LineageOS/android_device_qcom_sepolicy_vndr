@@ -28,6 +28,8 @@
 # Dev block nodes
 
 #Primary storage device nodes
+/dev/block/mmcblk0boot1                                                         u:object_r:root_block_device:s0
+/dev/block/mmcblk0boot0                                                         u:object_r:root_block_device:s0
 /dev/block/mmcblk0rpmb                                                          u:object_r:vendor_rpmb_device:s0
 /dev/block/mmcblk0                                                              u:object_r:root_block_device:s0
 
@@ -183,3 +185,15 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc u:object_r:vendor_hal_fingerprint_fpc_exec:s0
 
 /sys/devices/platform/soc/1b46018.qfprom/qfprom0/nvmem                  u:object_r:vendor_sysfs_qfprom:s0
+
+# Audio
+/dev/msm_audio_cal  u:object_r:vendor_audio_cal_device:s0
+#msm_lsm cdev
+/dev/msm_lsm_cdev     u:object_r:vendor_msm_lsm_cdev_device:s0
+/dev/msm_rtac  u:object_r:vendor_msm_rtac_device:s0
+/dev/msm_aac_in  u:object_r:vendor_media_aac_device:s0
+
+/dev/msm_evrc_in  u:object_r:vendor_media_evrc_device:s0
+/dev/msm_qcelp_in  u:object_r:vendor_media_qcelp_device:s0
+
+/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model               u:object_r:vendor_sysfs_kgsl_gpu_model:s0

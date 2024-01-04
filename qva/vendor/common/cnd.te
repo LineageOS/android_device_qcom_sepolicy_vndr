@@ -98,6 +98,9 @@ allow vendor_cnd { hal_wifi_hostapd_default }:unix_dgram_socket sendto;
 
 vndbinder_use(vendor_cnd)
 allow vendor_cnd vendor_nwmgr_service:service_manager find;
+
+dontaudit vndservicemanager vendor_cnd:binder call;
+
 ##############################################################
 #for using public interface vendor.qti.data.factory
 #client should add their domain to vendor_cnd.te

@@ -280,3 +280,6 @@
 
 # eSE Strongbox
 /vendor/bin/hw/android\.hardware\.security\.keymint-service\.strongbox-nxp u:object_r:vendor_hal_keymint_strongbox_exec:s0
+
+# eSE Thales Weaver
+/vendor/bin/hw/android\.hardware\.weaver@1\.0-service-thales u:object_r:vendor_hal_weaver_default_exec:s0
