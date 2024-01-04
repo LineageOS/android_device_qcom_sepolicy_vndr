@@ -303,10 +303,13 @@ genfscon sysfs /devices/platform/soc/a300000.qcom,turing/subsys5/wakeup u:object
 genfscon sysfs /devices/platform/soc/8c00000.hsusb/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys6/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys5/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys7/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys5/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys4/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys6/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/1103_00.01.00/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ae94000.qcom,mdss_dsi_ctrl0/uio/uio1/name u:object_r:vendor_sysfs_uio_file:s0
 
 # UFS
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0

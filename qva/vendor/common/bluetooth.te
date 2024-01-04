@@ -39,3 +39,5 @@ hal_client_domain(bluetooth, vendor_hal_qspmhal)
 
 #allow bluetooth to make binder call to gpuservice
 binder_call(bluetooth, gpuservice);
+
+allow bluetooth mediametrics_service:service_manager find;
