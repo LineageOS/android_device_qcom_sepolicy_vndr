@@ -16,6 +16,23 @@
       "message": "commit msg typo - fixed",
       "revId": "6f4cd84d0892b9774bcc10e6c4f111131a3c3821",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdc8a684_e19593a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2024-01-08T19:21:20Z",
+      "side": 1,
+      "message": "Don\u0027t think i can test it - gta4l is samsung tablet without IMS unfortunately.",
+      "revId": "6f4cd84d0892b9774bcc10e6c4f111131a3c3821",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
