@@ -34,6 +34,24 @@
       "parentUuid": "72110dcf_d48d280f",
       "revId": "e1ee878190dfe347ee65fa4566130ff29689eda5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d4ccec7_8b6a0067",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-01-08T09:56:46Z",
+      "side": 1,
+      "message": "pro1x and some samsung tablets iirc?\nAs expected, this hits a neverallow when trying to keep both rules",
+      "parentUuid": "18012e4c_dff6d2a3",
+      "revId": "e1ee878190dfe347ee65fa4566130ff29689eda5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
