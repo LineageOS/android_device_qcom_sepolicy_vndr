@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0975cdf_efd12ae1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-01-08T12:08:37Z",
+      "side": 1,
+      "message": "Doesn\u0027t break moto sm6225",
+      "revId": "f7e0803a67a6b9b71ed5c204e6e0a19db3af9ce0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
