@@ -49,6 +49,14 @@ ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
       BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/qva/vendor/$(TARGET_SEPOLICY_DIR)
     endif
 
+    ifeq ($(TARGET_BOARD_PLATFORM),bengal)
+      ifeq ($(BOARD_USES_LEGACY_IMS_SEPOLICY),true)
+        BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/qva/vendor/bengal/legacy-ims
+      else
+        BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/qva/vendor/bengal/ims
+      endif
+    endif
+
     ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
       BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/generic/vendor/test
       BOARD_VENDOR_SEPOLICY_DIRS += $(SEPOLICY_PATH)/qva/vendor/test
