@@ -30,3 +30,4 @@ hal_client_domain(vendor_qcc_app, vendor_hal_qccvndhal);
 # IPerf
 hal_client_domain(vendor_qcc_app, vendor_hal_perf);
 
+get_prop(vendor_qcc_app, vendor_qcc_prop)
