@@ -54,6 +54,9 @@ allow vendor_hal_gnss_qti vendor_sysfs_mhi:file r_file_perms;
 # Allow Gnss HAL to get updates from health hal
 hal_client_domain(vendor_hal_gnss_qti, hal_health)
 
+# xtra-daemon control
+get_prop(vendor_hal_gnss_qti, xtra_control_prop)
+
 # Most HALs are not allowed to use network sockets. QTI library
 # libqdi is used across multiple processes which are clients of
 # netmgrd including the GNSS HAL. libqdi first attempts to get the network
