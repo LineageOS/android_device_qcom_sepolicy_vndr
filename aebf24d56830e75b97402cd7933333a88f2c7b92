@@ -52,6 +52,24 @@
       "parentUuid": "8c7e9870_5c09e336",
       "revId": "aebf24d56830e75b97402cd7933333a88f2c7b92",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "223c79cf_31f4b2f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-01-18T13:28:02Z",
+      "side": 1,
+      "message": "combining with https://review.lineageos.org/q/Icbda789cd2a9a3391f437af2c07fc5127f2f09ab which returns false by default, xtra-daemon is permanently disabled regardless of the prop.",
+      "parentUuid": "7a577be6_e4b207f5",
+      "revId": "aebf24d56830e75b97402cd7933333a88f2c7b92",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
