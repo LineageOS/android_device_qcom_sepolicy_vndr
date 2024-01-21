@@ -52,6 +52,24 @@
       "parentUuid": "58dee4dd_6a34a2a7",
       "revId": "2955e16464271afa40badddae6da774560699418",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba4c3b0b_94b8753a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-01-21T14:47:37Z",
+      "side": 1,
+      "message": "Yea, you can add it for sdm845 too. It\u0027s u:object_r:block_device:s0 here as well right now.",
+      "parentUuid": "98a7c3b5_56430658",
+      "revId": "2955e16464271afa40badddae6da774560699418",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
