@@ -34,6 +34,24 @@
       "parentUuid": "7469aa71_1f62de05",
       "revId": "2955e16464271afa40badddae6da774560699418",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98a7c3b5_56430658",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-01-21T14:30:55Z",
+      "side": 1,
+      "message": "I don\u0027t think adding it regardless should be a problem, you can wait for Bruno\u0027s opinion as well",
+      "parentUuid": "58dee4dd_6a34a2a7",
+      "revId": "2955e16464271afa40badddae6da774560699418",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
