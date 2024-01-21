@@ -16,6 +16,24 @@
       "message": "Does sdm845 also need it?",
       "revId": "2955e16464271afa40badddae6da774560699418",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58dee4dd_6a34a2a7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30475
+      },
+      "writtenOn": "2024-01-21T12:03:49Z",
+      "side": 1,
+      "message": "Probably yes... Should I cover it as well?",
+      "parentUuid": "7469aa71_1f62de05",
+      "revId": "2955e16464271afa40badddae6da774560699418",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
