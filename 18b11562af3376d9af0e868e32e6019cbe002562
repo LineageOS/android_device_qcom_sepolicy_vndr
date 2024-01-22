@@ -57,6 +57,30 @@
       },
       "revId": "18b11562af3376d9af0e868e32e6019cbe002562",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de4493b1_8e6f9c6b",
+        "filename": "legacy/vendor/sdm845/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-01-22T23:16:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d7ee74ef_8469aa52",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 98
+      },
+      "revId": "18b11562af3376d9af0e868e32e6019cbe002562",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
