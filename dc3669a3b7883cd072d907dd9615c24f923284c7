@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19155264_422c75dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30475
+      },
+      "writtenOn": "2024-01-22T14:35:00Z",
+      "side": 1,
+      "message": "Test result in: https://review.lineageos.org/c/LineageOS/android_device_xiaomi_sdm710-common/+/380692",
+      "revId": "dc3669a3b7883cd072d907dd9615c24f923284c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
