@@ -101,3 +101,6 @@ hal_client_domain(vendor_location_lowi_server, vendor_hal_qms_qti);
 binder_use(vendor_location_lowi_server);
 
 net_domain(vendor_location_lowi_server);
+
+# provide net_admin capability to lowi-server
+allow vendor_location_lowi_server self:capability { net_admin };
