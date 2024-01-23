@@ -109,3 +109,6 @@ hal_client_domain(vendor_location , vendor_hal_cacertservice_qti)
 crash_dump_fallback(vendor_location)
 
 net_domain(vendor_location);
+
+# provide net_admin capability to lowi-server
+allow vendor_location self:capability { net_admin };
