@@ -67,6 +67,7 @@ type vendor_qms_1, domain;
 type vendor_qms_exec, exec_type, vendor_file_type, file_type;
 type vendor_mutualex_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_qms)
+init_daemon_domain(vendor_mutualex)
 
 allow vendor_qms self:capability {
     net_admin
