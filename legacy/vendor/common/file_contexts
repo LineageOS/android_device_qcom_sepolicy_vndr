@@ -748,3 +748,6 @@
 #Thermal HAL
 /vendor/bin/hw/android.hardware.thermal@2.0-service.qti    u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/hw/vendor.qti.hardware.limits@1.0-service      u:object_r:vendor_hal_limits_qti_exec:s0
+
+# MMC
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:sysfs_mmc_host:s0
