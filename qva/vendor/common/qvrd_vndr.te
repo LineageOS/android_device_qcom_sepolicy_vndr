@@ -181,7 +181,7 @@ allow vendor_qvrd_vndr vendor_sysfs_usb_node:dir r_dir_perms;
 allow vendor_qvrd_vndr vendor_sysfs_usb_node:file rw_file_perms;
 
 #allow qvrd_vndr to access /dev/hidraw*
-allow vendor_qvrd_vndr vendor_qvr_hidraw_device:chr_file rw_file_perms;
+allow vendor_qvrd_vndr hidraw_device:chr_file rw_file_perms;
 
 #allow qvrd to access /dev/bus/usb
 allow vendor_qvrd_vndr usb_device:dir r_dir_perms;

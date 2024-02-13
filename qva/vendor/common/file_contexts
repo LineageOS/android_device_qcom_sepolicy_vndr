@@ -54,7 +54,6 @@
 /dev/qg                               u:object_r:vendor_qg_device:s0
 /dev/qg_battery                       u:object_r:vendor_qg_device:s0
 /dev/qvr_external_sensor_ioctl        u:object_r:vendor_qvr_external_sensor_device:s0
-/dev/hidraw[0-5]                      u:object_r:vendor_qvr_hidraw_device:s0
 
 ###################################
 # Dev socket nodes
