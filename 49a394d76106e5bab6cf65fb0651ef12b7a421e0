@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53618fea_618a846b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2024-02-24T00:58:48Z",
+      "side": 1,
+      "message": "the new rules are a duplicate of what\u0027s in generic/vendor/common/hal_health.te already, however this matches sm8550 (which also has the duplicated).",
+      "revId": "49a394d76106e5bab6cf65fb0651ef12b7a421e0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
