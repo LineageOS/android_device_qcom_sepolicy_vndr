@@ -73,3 +73,7 @@ dontaudit vendor_qti_init_shell default_prop:file read;
 # Allow init shell to access NFC device file
 allow vendor_qti_init_shell nfc_device:chr_file { getattr };
 set_prop(vendor_qti_init_shell, vendor_ese_strongbox_prop)
+
+# allow writing Boot completed to kmsg
+allow vendor_qti_init_shell kmsg_device:chr_file write;
+allow vendor_qti_init_shell kmsg_device:chr_file open;
