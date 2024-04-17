@@ -64,6 +64,10 @@ unix_socket_connect(vendor_hal_gnss_qti, vendor_ssgtzd, vendor_ssgtzd)
 allow vendor_hal_gnss_qti vendor_rild_socket:dir search;
 unix_socket_connect(vendor_hal_gnss_qti, vendor_rild, rild)
 
+# allow gnss hal to find framework altitude service
+binder_call(vendor_hal_gnss_qti, servicemanager)
+allow vendor_hal_gnss_qti fwk_altitude_service:service_manager find;
+
 # Most HALs are not allowed to use network sockets. QTI library
 # libqdi is used across multiple processes which are clients of
 # netmgrd including the GNSS HAL. libqdi first attempts to get the network
