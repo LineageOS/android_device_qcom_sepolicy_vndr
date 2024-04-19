@@ -128,6 +128,9 @@ type vendor_sysfs_qvr_external_sensor, sysfs_type, fs_type;
 type vendor_qvrd_vndr_data_file, file_type, data_file_type;
 type vendor_qvrd_vndr_socket, file_type;
 
+#qvrcamservice sysfs files
+type vendor_qvrd_vndr_camera_socket, file_type;
+
 #sxrservice sysfs files
 type vendor_sxrd_vndr_data_file, file_type, data_file_type;
 type vendor_sxrd_vndr_socket, file_type;

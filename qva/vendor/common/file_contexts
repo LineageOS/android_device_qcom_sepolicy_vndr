@@ -73,7 +73,7 @@
 /dev/socket/qcc_trd(/.*)?                       u:object_r:vendor_qcc_trd_socket:s0
 /dev/socket/qesd                                u:object_r:vendor_qesd_socket:s0
 /dev/socket/qvrservice_vndr                     u:object_r:vendor_qvrd_vndr_socket:s0
-/dev/socket/qvrservice_vndr_camera              u:object_r:vendor_qvrd_vndr_socket:s0
+/dev/socket/qvrservice_vndr_camera              u:object_r:vendor_qvrd_vndr_camera_socket:s0
 /dev/socket/sxrservice_vndr                     u:object_r:vendor_sxrd_vndr_socket:s0
 
 /dev/smcinvoke                                  u:object_r:tee_device:s0

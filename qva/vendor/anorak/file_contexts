@@ -39,3 +39,6 @@
 
 # calib partition
 /mnt/vendor/calib(/.*)?               u:object_r:vendor_calib_file:s0
+
+# qvrcamservice
+/(vendor|system/vendor)/bin/hw/qvrcamservice     u:object_r:vendor_qvrd_vndr_cam_exec:s0

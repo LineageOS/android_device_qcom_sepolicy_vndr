@@ -24,12 +24,16 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center, Inc. are provided under the following license:
+# Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
-vendor.qti.hardware.qxr.IQXRCoreService/default        u:object_r:vendor_hal_qvrd_service:s0
-vendor.qti.hardware.qxr.IQXRCamService/default         u:object_r:vendor_hal_qvrd_camservice:s0
-vendor.qti.hardware.qxr.IQXRModService/default         u:object_r:vendor_hal_qvrd_service:s0
-vendor.qti.hardware.qxr.IQXRSplitService/default        u:object_r:vendor_hal_sxrd_service:s0
-vendor.qti.hardware.qxr.IQXRAudioService/default        u:object_r:vendor_hal_sxrd_service:s0
-vendor.qti.gnss.ILocAidlGnss/default                   u:object_r:hal_gnss_service:s0
-vendor.qti.hardware.data.connectionfactory.IFactory/slot0 u:object_r:vendor_hal_dataconnection_service:s0
-vendor.qti.hardware.data.connectionfactory.IFactory/slot1 u:object_r:vendor_hal_dataconnection_service:s0
+#Allow /dev/dma_heap file access
+allow vendor_sxrd_vndr dmabuf_system_heap_device:chr_file { getattr read open ioctl };
+
+#Allow access to video files
+set_prop(vendor_sxrd_vndr, vendor_video_prop)
+
+#Allow access to codec2 config
+get_prop(vendor_sxrd_vndr, codec2_config_prop)
