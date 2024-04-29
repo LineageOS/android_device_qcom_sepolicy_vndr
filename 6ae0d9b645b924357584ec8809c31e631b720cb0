@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f696c766_d74f875a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29080
+      },
+      "writtenOn": "2024-04-29T16:59:10Z",
+      "side": 1,
+      "message": "`genfscon sysfs /devices/platform/soc/1628000.qcom,msm-eud/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/4a84000.qcom,qup_uart/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/5800000.qcom,ipa/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/5ab0000.qcom,venus/subsys5/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/5ab0000.qcom,venus/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/6000000.qcom,mss/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/a400000.qcom,lpass/subsys0/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/a400000.qcom,lpass/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/b000000.qcom,turing/subsys1/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/b000000.qcom,turing/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/c800000.qcom,icnss/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys3/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys4/wakeup u:object_r:sysfs_wakeup:s0`",
+      "revId": "6ae0d9b645b924357584ec8809c31e631b720cb0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
