@@ -34,6 +34,24 @@
       "parentUuid": "f696c766_d74f875a",
       "revId": "6ae0d9b645b924357584ec8809c31e631b720cb0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8b77e32_48b7cbba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29080
+      },
+      "writtenOn": "2024-04-30T11:30:46Z",
+      "side": 1,
+      "message": "they\u0027re not specific to oplus, should go to qcom",
+      "parentUuid": "0908da55_a72c2ca6",
+      "revId": "6ae0d9b645b924357584ec8809c31e631b720cb0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
