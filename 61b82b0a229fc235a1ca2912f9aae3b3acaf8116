@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a5d114a_fcadde96",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-05-18T20:06:03Z",
+      "side": 1,
+      "message": "Maybe stack it on top of https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy_vndr/+/392152 since some nodes have been commonized there",
+      "revId": "61b82b0a229fc235a1ca2912f9aae3b3acaf8116",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
