@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4534e89_0da71e02",
+        "filename": "generic/vendor/holi/genfs_contexts",
+        "patchSetId": 6
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-05-19T10:53:46Z",
+      "side": 1,
+      "message": "Some things have been moved here https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy_vndr/+/392151/2/generic/vendor/common/genfs_contexts\nso you\u0027ll have to remove the duplicates",
+      "revId": "89d13b461357c59c92865b49afa199c0bf9e59d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
