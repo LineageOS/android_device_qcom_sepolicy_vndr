@@ -76,6 +76,7 @@ hal_server_domain_bypass(vendor_cnd, vendor_hal_datafactory_qti)
 binder_call(vendor_hal_datafactory_qti_client, vendor_hal_datafactory_qti_server)
 binder_call(vendor_hal_datafactory_qti_server, vendor_hal_datafactory_qti_client)
 hal_attribute_hwservice(vendor_hal_datafactory_qti, vendor_hal_datafactory_hwservice)
+hal_attribute_service(vendor_hal_datafactory_qti, vendor_hal_factory_aidlservice)
 
 r_dir_file(vendor_cnd, vendor_sysfs_ssr)
 
