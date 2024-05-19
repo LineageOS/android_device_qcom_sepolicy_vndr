@@ -16,6 +16,24 @@
       "message": "Some things have been moved here https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy_vndr/+/392151/2/generic/vendor/common/genfs_contexts\nso you\u0027ll have to remove the duplicates",
       "revId": "89d13b461357c59c92865b49afa199c0bf9e59d3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "138ccaae_9c4baa4f",
+        "filename": "generic/vendor/holi/genfs_contexts",
+        "patchSetId": 6
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 29080
+      },
+      "writtenOn": "2024-05-19T11:23:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e4534e89_0da71e02",
+      "revId": "89d13b461357c59c92865b49afa199c0bf9e59d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
