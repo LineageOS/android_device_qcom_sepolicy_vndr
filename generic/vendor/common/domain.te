@@ -133,6 +133,7 @@ neverallow { domain
 - hal_camera_default
 - apexd
 - vendor_qti_init_shell
+- wpa_supplicant_macsec
 userdebug_or_eng(` -vendor_subsystem_ramdump')
 } { vendor_sys_nonsp_comp vendor_sys_sp_comp }: file *;
 
@@ -158,5 +159,6 @@ neverallow { domain
 - dumpstate
 - system_server
 - vendor_qti_init_shell 
+- wpa_supplicant_macsec
 userdebug_or_eng(` -vendor_subsystem_ramdump')
 } { vendor_sys_nonsp_comp vendor_sys_sp_comp }: dir ~ { search getattr };
