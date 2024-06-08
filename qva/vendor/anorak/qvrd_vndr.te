@@ -37,3 +37,6 @@ allow vendor_qvrd_vndr vendor_qvrd_vndr_cam:fd use;
 
 get_prop(vendor_qvrd_vndr, vendor_camera_prop)
 hal_server_domain_bypass(vendor_qvrd_vndr, vendor_hal_qvrcamservice_qti)
+
+# Allow to access heap
+allow vendor_qvrd_vndr vendor_dmabuf_system_heap_device:chr_file r_file_perms;
