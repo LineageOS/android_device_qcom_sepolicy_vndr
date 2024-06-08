@@ -107,6 +107,9 @@ hal_client_domain(hal_graphics_composer_default, vendor_hal_perf);
 #allow composer to find hal_thermal
 hal_client_domain(hal_graphics_composer_default, hal_thermal);
 
+#allow composer to find hal_qspmhal
+hal_client_domain(hal_graphics_composer_default, vendor_hal_qspmhal);
+
 # Allow access to qipcrtr_socket
 # Remove this when QMI service moves to pfmd
 allow hal_graphics_composer self: qipcrtr_socket create_socket_perms_no_ioctl;

@@ -34,9 +34,6 @@ type vendor_location_engine_service_exec, exec_type, vendor_file_type, file_type
 domain_auto_trans(vendor_location, vendor_location_engine_service_exec, vendor_location_engine_service)
 allow vendor_location_engine_service vendor_location:fd use;
 
-# allows read/write file access in /dev/smcinvoke
-allow vendor_location_engine_service tee_device:chr_file rw_file_perms;
-
 # allows file access in /data/vendor/location
 allow vendor_location_engine_service vendor_location_data_file:dir create_dir_perms;
 allow vendor_location_engine_service vendor_location_data_file:file create_file_perms;

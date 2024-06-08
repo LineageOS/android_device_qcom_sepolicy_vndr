@@ -320,4 +320,3 @@
 
 # Microdump collector parameters
 /sys/module/microdump_collector/parameters/.*  u:object_r:vendor_sysfs_microdump:s0
-/vendor/bin/usbudev     u:object_r:vendor_usbudev_qti_exec:s0
