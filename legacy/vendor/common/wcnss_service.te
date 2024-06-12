@@ -94,3 +94,10 @@ hal_client_domain(wcnss_service, hal_perf)
 
 # allow to read /sys/class/net file
 r_dir_file(wcnss_service, sysfs_net);
+
+allow wcnss_service wifi_vendor_wpa_socket:dir create_dir_perms;
+allow wcnss_service wifi_vendor_wpa_socket:dir r_dir_perms;
+allow wcnss_service wifi_vendor_wpa_socket:sock_file create_file_perms;
+allow wcnss_service wifi_vendor_wpa_socket:sock_file rw_file_perms;
+allow wcnss_service wifi_vendor_wpa_socket:file create_file_perms;
+allow wcnss_service wifi_vendor_wpa_socket:file rw_file_perms;
