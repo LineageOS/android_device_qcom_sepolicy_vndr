@@ -16,6 +16,24 @@
       "message": "This fixes WLAN when using caymanslm blobs.\n\nThe lahaina tags didn\u0027t update legacy policies in forever, and was out of sync with sdm845\u0027s flashy new R/S vendor. The merge didn\u0027t mess with anything in `qva` so I think this is a sane way of integrating them both.\n\nThis is the last release tag I could find for sdm845.",
       "revId": "17f9e28824baa9e4ce9258b1aedadb9fc0d343da",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d71b1d4_dbfc6890",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31496
+      },
+      "writtenOn": "2024-06-13T00:14:49Z",
+      "side": 1,
+      "message": "Full tree found here: https://github.com/lge-sdm845/android_device_qcom_sepolicy_vndr/commits/lineage-21.0-legacy-um/",
+      "parentUuid": "5aa9b3f9_1255c853",
+      "revId": "17f9e28824baa9e4ce9258b1aedadb9fc0d343da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
