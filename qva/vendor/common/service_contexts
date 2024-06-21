@@ -25,9 +25,19 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-vendor.qti.hardware.qxr.IQXRCoreService/default        u:object_r:vendor_hal_qvrd_service:s0
-vendor.qti.hardware.qxr.IQXRCamService/default         u:object_r:vendor_hal_qvrd_service:s0
-vendor.qti.hardware.qxr.IQXRModService/default         u:object_r:vendor_hal_qvrd_service:s0
-vendor.qti.hardware.qxr.IQXRSplitService/default        u:object_r:vendor_hal_sxrd_service:s0
-vendor.qti.hardware.qxr.IQXRAudioService/default        u:object_r:vendor_hal_sxrd_service:s0
-vendor.qti.hardware.alarm.IAlarm/default               u:object_r:vendor_hal_alarm_qti_aidl_service:s0
+vendor.qti.hardware.qxr.IQXRCoreService/default                         u:object_r:vendor_hal_qvrd_service:s0
+vendor.qti.hardware.qxr.IQXRCamService/default                          u:object_r:vendor_hal_qvrd_service:s0
+vendor.qti.hardware.qxr.IQXRModService/default                          u:object_r:vendor_hal_qvrd_service:s0
+vendor.qti.hardware.qxr.IQXRSplitService/default                        u:object_r:vendor_hal_sxrd_service:s0
+vendor.qti.hardware.qxr.IQXRAudioService/default                        u:object_r:vendor_hal_sxrd_service:s0
+vendor.qti.hardware.alarm.IAlarm/default                                u:object_r:vendor_hal_alarm_qti_aidl_service:s0
+vendor.qti.hardware.radio.ims.IImsRadio/imsradio0                       u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.ims.IImsRadio/imsradio1                       u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.qtiradio.IQtiRadioStable/slot1                u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.qtiradio.IQtiRadioStable/slot2                u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.am.IQcRilAudio/slot1                          u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.am.IQcRilAudio/slot2                          u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.qtiradioconfig.IQtiRadioConfig/default        u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.qcrilhook.IQtiOemHook/oemhook0                u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.qcrilhook.IQtiOemHook/oemhook1                u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.internal.deviceinfo.IDeviceInfo/deviceinfo    u:object_r:vendor_hal_telephony_service2:s0
