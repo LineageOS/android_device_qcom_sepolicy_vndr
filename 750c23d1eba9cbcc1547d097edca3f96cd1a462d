@@ -16,6 +16,23 @@
       "message": "Maybe we should wait for a new tag which contain this.",
       "revId": "750c23d1eba9cbcc1547d097edca3f96cd1a462d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "636fc2c5_fa37dddd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-06-21T17:56:38Z",
+      "side": 1,
+      "message": "See https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy_vndr/+/394600/comments/18f3899b_ad6273e1",
+      "revId": "750c23d1eba9cbcc1547d097edca3f96cd1a462d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
