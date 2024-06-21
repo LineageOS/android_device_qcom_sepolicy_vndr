@@ -16,6 +16,24 @@
       "message": "Can we check first if there\u0027s a newer tag containing this commit to merge?",
       "revId": "4e9e1f35bf8ea0c1bac6de2d8bf53a15458ea8b7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff89c434_c4b7d013",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31496
+      },
+      "writtenOn": "2024-06-21T18:47:02Z",
+      "side": 1,
+      "message": "Previously merged tag is LA.UM.9.14.r1-24200-LAHAINA.QSSI13.0\nLast tag I can find on the same CLO release branch is LA.UM.9.14.r1-24700-LAHAINA.QSSI15.0\n\nThere are 0 changes in sepolicy_vndr between the two. Unless you want to switch to a different release (i.e. qcm6490 tags)",
+      "parentUuid": "18f3899b_ad6273e1",
+      "revId": "4e9e1f35bf8ea0c1bac6de2d8bf53a15458ea8b7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
