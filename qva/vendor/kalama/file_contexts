@@ -89,3 +89,9 @@
 
 #memory
 /(vendor|system/vendor)/bin/hw/pasrknob                                            u:object_r:vendor_pasrknob_exec:s0
+
+#proc
+/proc/sys/vm/page-cluster u:object_r:proc_page_cluster:s0
+
+#tee
+/dev/0:0:0:[0-5]  u:object_r:vendor_dev_tee:s0
