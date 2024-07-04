@@ -51,6 +51,14 @@ genfscon sysfs /devices/platform/soc/17300000.qcom,lpass/subsys4/name           
 genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys5/name                                        u:object_r:sysfs_ssr:s0
 genfscon sysfs /devices/platform/soc/8300000.qcom,turing/subsys6/name                                     u:object_r:sysfs_ssr:s0
 genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys7/name                                        u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/platform/soc/188101c.qcom,spss/subsys0                                            u:object_r:sysfs_ssr_toggle:s0
+genfscon sysfs /devices/platform/soc/aae0000.qcom,venus/subsys1                                           u:object_r:sysfs_ssr_toggle:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys2                                             u:object_r:sysfs_ssr_toggle:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys3                                            u:object_r:sysfs_ssr_toggle:s0
+genfscon sysfs /devices/platform/soc/17300000.qcom,lpass/subsys4                                          u:object_r:sysfs_ssr_toggle:s0
+genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys5                                             u:object_r:sysfs_ssr_toggle:s0
+genfscon sysfs /devices/platform/soc/8300000.qcom,turing/subsys6                                          u:object_r:sysfs_ssr_toggle:s0
+genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys7                                             u:object_r:sysfs_ssr_toggle:s0
 
 #net sysfs
 genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/net u:object_r:sysfs_net:s0
