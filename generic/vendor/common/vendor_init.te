@@ -30,6 +30,7 @@ allow vendor_init unlabeled:dir { r_dir_perms setattr relabelfrom };
 allow vendor_init unlabeled:file { r_file_perms setattr relabelfrom };
 allow vendor_init vendor_ipa_dev:chr_file w_file_perms;
 allow vendor_init proc:file write;
+allow vendor_init vendor_proc_firmware_cfg:file w_file_perms;
 
 allow vendor_init self:capability sys_module;
 
