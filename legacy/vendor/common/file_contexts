@@ -751,3 +751,5 @@
 
 # MMC
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:sysfs_mmc_host:s0
+
+/vendor/bin/embmsslServer       u:object_r:vendor_hal_embmssl_qti_exec:s0
