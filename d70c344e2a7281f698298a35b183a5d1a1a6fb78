@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4f65167_296d9ace",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31496
+      },
+      "writtenOn": "2024-07-04T08:14:56Z",
+      "side": 1,
+      "message": "Using different change-id as original was already used for sdm710",
+      "revId": "d70c344e2a7281f698298a35b183a5d1a1a6fb78",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
