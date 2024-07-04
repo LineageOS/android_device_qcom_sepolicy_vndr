@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddc5e907_e3c86e40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31496
+      },
+      "writtenOn": "2024-07-04T17:28:34Z",
+      "side": 1,
+      "message": "We\u0027re missing label for `188101c.qcom,spss` restart_level node.\n\nwil6210 is also not there, but I can\u0027t verify that as it doesn\u0027t exist on my device.",
+      "revId": "d0e6f2e190ebf40bd67658db52078bcef2cc6632",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
