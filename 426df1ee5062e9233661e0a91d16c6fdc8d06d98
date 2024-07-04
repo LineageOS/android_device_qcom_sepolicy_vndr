@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cefe3b51_59e288b3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-07-04T17:42:47Z",
+      "side": 1,
+      "message": "Required by: https://review.lineageos.org/c/LineageOS/android_device_sony_sm8550-common/+/396762",
+      "revId": "426df1ee5062e9233661e0a91d16c6fdc8d06d98",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
