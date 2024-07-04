@@ -117,6 +117,7 @@ type vendor_sysfs_mmc_device_type, fs_type, sysfs_type;
 type vendor_proc_wifi_dbg, fs_type, proc_type;
 type vendor_proc_audiod, fs_type, proc_type;
 type vendor_proc_shs, fs_type, proc_type;
+type vendor_proc_firmware_cfg, fs_type, proc_type;
 
 type vendor_qmuxd_socket, file_type;
 type vendor_rild_socket, file_type;
