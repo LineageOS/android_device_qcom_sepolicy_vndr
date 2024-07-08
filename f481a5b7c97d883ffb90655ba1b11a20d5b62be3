@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc4a0a66_5f9e0d73",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2024-07-08T14:06:24Z",
+      "side": 1,
+      "message": "Solves denial for kiev (lagoon) and Nairo (lito)",
+      "revId": "f481a5b7c97d883ffb90655ba1b11a20d5b62be3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
