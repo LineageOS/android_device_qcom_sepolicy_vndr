@@ -186,6 +186,7 @@
 /sys/devices/platform/soc/4080000.qcom,mss/subsys[0-9]+/name         u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/3000000.qcom,lpass/subsys[0-9]+/name       u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/8300000.qcom,turing/subsys[0-9]+/name      u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/aab0000.qcom,venus/subsys[0-9]+/name       u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/aae0000.qcom,venus/subsys[0-9]+/name       u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/name         u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/9800000.qcom,npu/subsys[0-9]+/name         u:object_r:vendor_sysfs_ssr:s0
@@ -194,6 +195,7 @@
 /sys/devices/platform/soc/4080000.qcom,mss/subsys[0-9]+/restart_level         u:object_r:vendor_sysfs_ssr_toggle:s0
 /sys/devices/platform/soc/3000000.qcom,lpass/subsys[0-9]+/restart_level       u:object_r:vendor_sysfs_ssr_toggle:s0
 /sys/devices/platform/soc/8300000.qcom,turing/subsys[0-9]+/restart_level      u:object_r:vendor_sysfs_ssr_toggle:s0
+/sys/devices/platform/soc/aab0000.qcom,venus/subsys[0-9]+/restart_level       u:object_r:vendor_sysfs_ssr_toggle:s0
 /sys/devices/platform/soc/aae0000.qcom,venus/subsys[0-9]+/restart_level       u:object_r:vendor_sysfs_ssr_toggle:s0
 /sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/restart_level         u:object_r:vendor_sysfs_ssr_toggle:s0
 /sys/devices/platform/soc/9800000.qcom,npu/subsys[0-9]+/restart_level         u:object_r:vendor_sysfs_ssr_toggle:s0
