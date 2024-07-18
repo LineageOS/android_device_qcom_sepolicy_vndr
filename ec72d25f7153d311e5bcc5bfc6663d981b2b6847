@@ -16,6 +16,23 @@
       "message": "Verified the denials resolved on pdx234 (sm8550)",
       "revId": "ec72d25f7153d311e5bcc5bfc6663d981b2b6847",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f0f014b_83c5b193",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33840
+      },
+      "writtenOn": "2024-07-18T09:49:05Z",
+      "side": 1,
+      "message": "Verified the denials resolved on pdx234 (sm8550)",
+      "revId": "ec72d25f7153d311e5bcc5bfc6663d981b2b6847",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
