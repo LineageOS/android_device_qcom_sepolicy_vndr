@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5868fa90_a80ae846",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33840
+      },
+      "writtenOn": "2024-07-25T08:13:42Z",
+      "side": 1,
+      "message": "By adapting commit\nhttps://review.lineageos.org/c/LineageOS/android_device_sony_sm8550-common/+/396761\nhttps://review.lineageos.org/c/LineageOS/android_device_sony_sm8550-common/+/396762\nwith this sepolicy_vndr changes,\nfor e.g.) POCO F5 Pro (mondrian) (sm8450) can also correctly report battery stats on recovery.",
+      "revId": "8f2daa8ba4b3c203733a4043f010b4a8a3171ddd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
