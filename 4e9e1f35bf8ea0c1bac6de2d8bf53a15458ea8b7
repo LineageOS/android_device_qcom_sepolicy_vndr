@@ -34,6 +34,23 @@
       "parentUuid": "18f3899b_ad6273e1",
       "revId": "4e9e1f35bf8ea0c1bac6de2d8bf53a15458ea8b7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32eef6f2_eee83e45",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33118
+      },
+      "writtenOn": "2024-07-27T16:45:07Z",
+      "side": 1,
+      "message": "Can confirm that the following SELinux denial is seen on Poco X5 Pro (redwood) using https://github.com/lineageos/android_device_xiaomi_sm8350-common:\n\n```\n[   33995.998311] SELinux: avc:  denied  { find } for pid\u003d4367 uid\u003d10257 name\u003dvendor.qti.hardware.alarm.IAlarm/default scontext\u003du:r:vendor_poweroffalarm_app:s0:c1,c257,c512,c768 tcontext\u003du:object_r:default_android_service:s0 tclass\u003dservice_manager permissive\u003d0\n```\n\nQcom hasn\u0027t merged any new patch regarding this till this date. If anyone has verified this patch on their device, it should be merged in my opinion.\n\nI\u0027ve yet to verify if this patch fixes the issue on my end (but lacking the machine to compile the rom at the moment unfortunately).",
+      "revId": "4e9e1f35bf8ea0c1bac6de2d8bf53a15458ea8b7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
