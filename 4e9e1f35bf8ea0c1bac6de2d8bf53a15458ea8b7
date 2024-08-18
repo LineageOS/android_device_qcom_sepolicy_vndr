@@ -69,6 +69,24 @@
       "parentUuid": "32eef6f2_eee83e45",
       "revId": "4e9e1f35bf8ea0c1bac6de2d8bf53a15458ea8b7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe72664a_0fa449e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32197
+      },
+      "writtenOn": "2024-08-18T04:20:23Z",
+      "side": 1,
+      "message": "Aren\u0027t sm8350 devices still using HIDL power-off alarm?",
+      "parentUuid": "de7fb05f_79ae5f44",
+      "revId": "4e9e1f35bf8ea0c1bac6de2d8bf53a15458ea8b7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
