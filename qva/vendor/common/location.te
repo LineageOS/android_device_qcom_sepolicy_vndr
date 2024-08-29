@@ -41,3 +41,5 @@ set_prop(vendor_location, vendor_location_prop);
 ## xtra-daemon
 ##############
 hal_client_domain(vendor_location, vendor_qccsyshal);
+
+r_dir_file(vendor_location, vendor_sysfs_soc_sensitive);
