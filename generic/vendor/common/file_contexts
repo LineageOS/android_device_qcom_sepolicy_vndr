@@ -207,7 +207,7 @@
 /vendor/bin/ATFWD-daemon        u:object_r:vendor_atfwd_exec:s0
 /vendor/bin/hw/android\.hardware\.vr@1\.0-service.crosshatch      u:object_r:hal_vr_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fpc u:object_r:hal_fingerprint_default_exec:s0
-/vendor/bin/hw/android.hardware.thermal@2.0-service.qti      u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/hw/android\.hardware\.thermal-service\.qti     u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/thermal-engine      u:object_r:vendor_thermal-engine_exec:s0
 /vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2      u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/thermal-engine-v2      u:object_r:vendor_thermal-engine_exec:s0
