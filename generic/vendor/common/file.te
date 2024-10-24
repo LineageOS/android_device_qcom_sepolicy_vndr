@@ -101,6 +101,7 @@ type vendor_sysfs_touch, sysfs_type, fs_type;
 type vendor_sysfs_uio_file, sysfs_type, fs_type;
 type vendor_sysfs_wdog_device, sysfs_type, fs_type;
 type vendor_sysfs_usb_c, sysfs_type, fs_type;
+type vendor_sysfs_usb_data_enabled, sysfs_type, fs_type;
 type vendor_sysfs_usb_device, sysfs_type, fs_type;
 type vendor_sysfs_usb_supply, sysfs_type, fs_type;
 type vendor_sysfs_usbpd_device, sysfs_type, fs_type;
