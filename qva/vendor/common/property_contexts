@@ -68,6 +68,7 @@ vendor.perf.gestureflingboost.enable   u:object_r:vendor_scroll_prop:s0
 
 # NFC
 vendor.qti.nfc.                              u:object_r:vendor_nfc_nq_prop:s0
+vendor.nfc.min_firmware                      u:object_r:vendor_nfc_prop:s0
 
 # eSE-StrongBox
 ctl.start$vendor.ese-strongbox_4_1           u:object_r:vendor_ese_strongbox_prop:s0

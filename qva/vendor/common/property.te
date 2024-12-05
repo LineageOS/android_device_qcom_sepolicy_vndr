@@ -58,6 +58,7 @@ vendor_restricted_prop(vendor_iop_prop);
 
 #properties for nfc
 vendor_restricted_prop(vendor_nfc_nq_prop);
+vendor_internal_prop(vendor_nfc_prop);
 
 # properties for eSE-StrongBox
 vendor_internal_prop(vendor_ese_strongbox_prop);
