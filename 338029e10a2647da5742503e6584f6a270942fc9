@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d62053b_a401635d",
+        "filename": "generic/vendor/lito/genfs_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-12-08T00:41:41Z",
+      "side": 0,
+      "message": "exists on op7, would need to get added to generic/msmnile",
+      "revId": "338029e10a2647da5742503e6584f6a270942fc9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8efefee9_ae9f3c77",
+        "filename": "generic/vendor/lito/genfs_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-12-08T00:41:41Z",
+      "side": 0,
+      "message": "exists on op8, would need to get added to generic/kona",
+      "revId": "338029e10a2647da5742503e6584f6a270942fc9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c2269b5_76de665e",
+        "filename": "generic/vendor/lito/genfs_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-12-08T00:41:41Z",
+      "side": 0,
+      "message": "exists on op8, would need to get added to generic/kona",
+      "revId": "338029e10a2647da5742503e6584f6a270942fc9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
