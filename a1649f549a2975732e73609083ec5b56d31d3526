@@ -16,6 +16,24 @@
       "message": "Remove from oplus then.",
       "revId": "a1649f549a2975732e73609083ec5b56d31d3526",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c71ac03_639976d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34398
+      },
+      "writtenOn": "2024-12-09T20:51:31Z",
+      "side": 1,
+      "message": "created new PR https://review.lineageos.org/c/LineageOS/android_hardware_oplus/+/411079",
+      "parentUuid": "8f5dc349_a5fafdf1",
+      "revId": "a1649f549a2975732e73609083ec5b56d31d3526",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
