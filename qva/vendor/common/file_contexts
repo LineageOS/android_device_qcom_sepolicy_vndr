@@ -124,7 +124,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.memory\.pasrmanager-service      	   u:object_r:vendor_pasrmanager_memory_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.secure_element@1\.0-service            u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.secure_element@1\.2-service            u:object_r:hal_secure_element_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element-service\.qti      u:object_r:hal_secure_element_default_exec:s0
+/(vendor|odm|vendor/odm|system/vendor)/bin/hw/android\.hardware\.secure_element-service\.qti      u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.[0-2]-service        u:object_r:vendor_hal_perf_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf-hal-service             u:object_r:vendor_hal_perf_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf2-hal-service            u:object_r:vendor_hal_perf_default_exec:s0
