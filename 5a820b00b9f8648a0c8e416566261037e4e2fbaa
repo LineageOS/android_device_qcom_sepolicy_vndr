@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6582c5a_5ccfde4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30475
+      },
+      "writtenOn": "2025-01-02T14:35:33Z",
+      "side": 1,
+      "message": "Verified on Pyxis.\n\nFixes:\n01-02 13:26:14.908  1446  1446 I auditd  : type\u003d1400 audit(0.0:56): avc:  denied  { write } for  comm\u003d\"cnss-daemon\" name\u003d\"rps_cpus\" dev\u003d\"sysfs\" ino\u003d80299 scontext\u003du:r:wcnss_service:s0 tcontext\u003du:object_r:sysfs_net:s0 tclass\u003dfile permissive\u003d0\n01-02 13:26:14.908  1446  1446 W cnss-daemon: type\u003d1400 audit(0.0:56): avc:  denied  { write } for  name\u003d\"rps_cpus\" dev\u003d\"sysfs\" ino\u003d80299 scontext\u003du:r:wcnss_service:s0 tcontext\u003du:object_r:sysfs_net:s0 tclass\u003dfile permissive\u003d0\n01-02 13:26:14.908  1446  1446 I auditd  : type\u003d1400 audit(0.0:57): avc:  denied  { write } for  comm\u003d\"cnss-daemon\" name\u003d\"rps_cpus\" dev\u003d\"sysfs\" ino\u003d80302 scontext\u003du:r:wcnss_service:s0 tcontext\u003du:object_r:sysfs_net:s0 tclass\u003dfile permissive\u003d0\n01-02 13:26:14.908  1446  1446 W cnss-daemon: type\u003d1400 audit(0.0:57): avc:  denied  { write } for  name\u003d\"rps_cpus\" dev\u003d\"sysfs\" ino\u003d80302 scontext\u003du:r:wcnss_service:s0 tcontext\u003du:object_r:sysfs_net:s0 tclass\u003dfile permissive\u003d0\n01-02 13:26:14.924  1446  1446 E cnss-daemon: wlan_service_rps_enable: unable to open /sys/class/net/wlan1/queues/rx-0/rps_cpus\n01-02 13:26:14.925  1446  1446 E cnss-daemon: wlan_service_rps_enable: unable to open /sys/class/net/wlan1/queues/rx-1/rps_cpus\n01-02 13:26:14.925  1446  1446 E cnss-daemon: wlan_service_rps_enable: unable to open /sys/class/net/wlan1/queues/rx-2/rps_cpus\n01-02 13:26:14.925  1446  1446 E cnss-daemon: wlan_service_rps_enable: unable to open /sys/class/net/wlan1/queues/rx-3/rps_cpus\n01-02 13:26:14.925  1446  1446 E cnss-daemon: wlan_service_rps_enable: unable to open /sys/class/net/wlan1/queues/rx-4/rps_cpus\n\nThe change also fixes the problem with HotSpot that is disabled once cnss-daemon tries to write rps_cpus sysfs knobs.",
+      "revId": "5a820b00b9f8648a0c8e416566261037e4e2fbaa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
