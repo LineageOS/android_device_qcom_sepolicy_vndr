@@ -141,6 +141,8 @@ genfscon sysfs /power/mem_sleep u:object_r:vendor_sysfs_suspend:s0
 genfscon sysfs /kernel/boot_adsp/ssr                                   u:object_r:vendor_sysfs_adsp_ssr:s0
 genfscon sysfs /firmware/devicetree/base/soc  u:object_r:vendor_sysfs_devicetree_soc:s0
 
+genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_battery_supply:s0
+
 # Wakeup sysfs nodes
 genfscon sysfs /devices/platform/dummy_hcd.0/usb1/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:gpio_keys/wakeup u:object_r:sysfs_wakeup:s0
