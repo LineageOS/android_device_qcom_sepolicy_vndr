@@ -30,6 +30,8 @@
 # Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
+vendor.qti.data.factoryservice.IFactory/default                       u:object_r:vendor_hal_factory_aidlservice:s0
+vendor.qti.ims.factoryaidlservice.IImsFactory/default                 u:object_r:vendor_hal_factory_aidlservice:s0
 vendor.qti.hardware.radio.ims.IImsRadio/imsradio0                     u:object_r:vendor_hal_telephony_service2:s0
 vendor.qti.hardware.radio.ims.IImsRadio/imsradio1                     u:object_r:vendor_hal_telephony_service2:s0
 vendor.qti.hardware.radio.qtiradio.IQtiRadioStable/slot1              u:object_r:vendor_hal_telephony_service2:s0
