@@ -125,3 +125,5 @@ genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.2.auto/
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/qcom/boost_monitor_timer_ms u:object_r:vendor_sysfs_ufs:s0
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/qcom/boost_min_threshold u:object_r:vendor_sysfs_ufs:s0
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/qcom/boost_max_threshold u:object_r:vendor_sysfs_ufs:s0
+
+genfscon sysfs /class/udc u:object_r:sysfs_udc:s0
