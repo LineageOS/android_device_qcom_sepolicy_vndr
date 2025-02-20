@@ -97,6 +97,7 @@
 /vendor/bin/hw/android\.hardware\.drm@[0-9]+\.[0-9]+-service\.clearkey             u:object_r:vendor_hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.nxp                 u:object_r:hal_nfc_default_exec:s0
 
+/vendor/bin/hw/vendor\.nxp\.hardware\.nfc@2\.0-service                             u:object_r:hal_nfc_default_exec:s0
 /vendor/bin/hw/android\.hardware\.nfc@1\.2-service-st                              u:object_r:hal_nfc_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.alarm@1\.0-service                           u:object_r:vendor_hal_alarm_qti_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.iop@2\.0-service                             u:object_r:vendor_hal_iop_default_exec:s0
