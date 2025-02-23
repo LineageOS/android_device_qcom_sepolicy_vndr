@@ -45,3 +45,4 @@ com.qualcomm.qti.uceservice                    u:object_r:imsrcs_service:s0
 
 # AIDL
 android.hardware.drm.IDrmFactory/widevine      u:object_r:hal_drm_service:s0
+vendor.nxp.nxpnfc_aidl.INxpNfc/default         u:object_r:hal_nxpnfc_service:s0
