@@ -84,6 +84,7 @@
 /dev/block/platform/soc/4804000.ufshc/by-name/tz_[ab]           u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/vbmeta_[ab]       u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/vendor_[ab]       u:object_r:system_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/oem_[ab]          u:object_r:system_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/xbl_[ab]          u:object_r:vendor_xbl_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/xbl_config_[ab]   u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/imagefv_[ab]      u:object_r:vendor_custom_ab_block_device:s0
@@ -116,6 +117,7 @@
 /dev/block/platform/soc/4744000.sdhci/by-name/system_[ab]       u:object_r:system_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/tz_[ab]           u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/vendor_[ab]       u:object_r:system_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/oem_[ab]          u:object_r:system_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/xbl_[ab]          u:object_r:vendor_xbl_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/aop_[ab]          u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/vbmeta_[ab]       u:object_r:vendor_custom_ab_block_device:s0
