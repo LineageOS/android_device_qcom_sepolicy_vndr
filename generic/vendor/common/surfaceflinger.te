@@ -39,4 +39,5 @@ hal_client_domain(surfaceflinger, vendor_hal_perf)
 
 r_dir_file(surfaceflinger, vendor_sysfs_kgsl)
 
+dontaudit surfaceflinger vendor_hal_qspmhal_default:binder call;
 dontaudit surfaceflinger vendor_hal_qspmhal_hwservice:hwservice_manager find;
