@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0fe638c_48f87ee5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 28223
+      },
+      "writtenOn": "2025-03-16T03:24:57Z",
+      "side": 1,
+      "message": "Nothing else shows up after running wakeup_sepolicy_v2.sh",
+      "revId": "c30720d909a1799d6b52739bff38d6b54ca70356",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
