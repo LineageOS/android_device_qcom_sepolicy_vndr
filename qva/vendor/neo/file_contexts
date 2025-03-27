@@ -15,3 +15,4 @@
 #
 /vendor/bin/hw/vendor\.qti\.hardware\.power\.powerstateservice@1\.0-service			   u:object_r:vendor_hal_powerstateservice_qti_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.power\.powerstateutility@1\.0-service			   u:object_r:vendor_hal_powerstateutility_qti_exec:s0
+/(vendor|system/vendor)/bin/init\.qti\.early_init\.sh                                  u:object_r:vendor_qti_init_shell_exec:s0
