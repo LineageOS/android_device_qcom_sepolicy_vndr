@@ -28,4 +28,10 @@ binder_call(vendor_sec_provisioningmanager, vendor_sec_featuremanager);
 allow vendor_sec_provisioningmanager vendor_sec_vndr_data_file:dir { rw_dir_perms };
 allow vendor_sec_provisioningmanager vendor_sec_vndr_data_file:file create_file_perms;
 
+allow vendor_sec_provisioningmanager vendor_persist_sec_file:dir create_dir_perms;
+allow vendor_sec_provisioningmanager vendor_persist_sec_file:file create_file_perms;
+
 net_domain(vendor_sec_provisioningmanager);
+allow vendor_sec_provisioningmanager mnt_vendor_file:dir search;
+neverallow { domain -init -vendor_init -vendor_sec_provisioningmanager -vendor_sec_datamanager } vendor_persist_sec_file:{ dir file } *;
+neverallow { domain -init -vendor_init -vendor_sec_provisioningmanager -vendor_sec_datamanager -vendor_sec_cloudagent -vendor_sec_featuremanager } vendor_sec_vndr_data_file:{ dir file } *;

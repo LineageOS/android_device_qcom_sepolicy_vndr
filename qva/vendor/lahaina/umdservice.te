@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #Define domain
@@ -41,3 +41,6 @@ allow vendor_hal_umd_qti configfs:file r_file_perms;
 allow vendor_hal_umd_qti configfs:dir r_dir_perms;
 
 allow vendor_hal_umd_qti ion_device:chr_file r_file_perms;
+
+#Allow the domain to watch the dev directory for creation of video nodes
+allow vendor_hal_umd_qti device:dir {read watch};

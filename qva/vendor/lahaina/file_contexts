@@ -66,4 +66,8 @@
 /vendor/bin/datamanager       u:object_r:vendor_sec_datamanager_exec:s0
 /vendor/bin/oras              u:object_r:vendor_sec_oras_exec:s0
 
+# data files
 /data/vendor/secure-edge-control(/.*)?                              u:object_r:vendor_sec_vndr_data_file:s0
+
+# persist files
+/mnt/vendor/persist/sec(/.*)?      u:object_r:vendor_persist_sec_file:s0

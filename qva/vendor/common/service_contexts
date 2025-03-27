@@ -32,3 +32,5 @@ vendor.qti.hardware.qxr.IQXRSplitService/default        u:object_r:vendor_hal_sx
 vendor.qti.hardware.qxr.IQXRAudioService/default        u:object_r:vendor_hal_sxrd_service:s0
 vendor.qti.hardware.alarm.IAlarm/default               u:object_r:vendor_hal_alarm_qti_aidl_service:s0
 vendor.nxp.nxpnfc_aidl.INxpNfc/default                 u:object_r:vendor_hal_nxpnfc_service:s0
+
+vendor.qti.gnss.ILocAidlGnss/default                   u:object_r:hal_gnss_service:s0
