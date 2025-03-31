@@ -367,6 +367,8 @@
 /vendor/lib(64)?/libdrmutils\.so           u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libdrm\.so                u:object_r:same_process_hal_file:s0
 
+/vendor/lib(64)?/libubwcp\.so              u:object_r:same_process_hal_file:s0
+
 # /vendor/app/TimeService/TimeService.apk
 /vendor/lib(64)?/libTimeService\.so        u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libtime_genoff\.so        u:object_r:same_process_hal_file:s0
