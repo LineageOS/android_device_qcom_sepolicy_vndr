@@ -16,6 +16,24 @@
       "message": "How about adding support for odm partition together?",
       "revId": "d5b13f9a62948c7e3dc8d7b8ea65e1b7d86d7349",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2878f558_c6273595",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30975
+      },
+      "writtenOn": "2025-04-02T03:18:05Z",
+      "side": 1,
+      "message": "ODM is device-specific; hence, it is better to label it in the device-specific SELinux policy.",
+      "parentUuid": "ffc8eea8_dc15e614",
+      "revId": "d5b13f9a62948c7e3dc8d7b8ea65e1b7d86d7349",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
