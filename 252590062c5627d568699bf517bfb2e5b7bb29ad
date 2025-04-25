@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6583b0df_a55f9fbb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-04-25T06:33:01Z",
+      "side": 1,
+      "message": "looks like this is only necessary if you went out of your way to relabel this path? by default it\u0027s not labeled and somehow just works.\n\n```\npdx225 / # strace -e openat -fp `pidof android.hardware.usb.gadget-service.qti`\nstrace: Process 2310 attached with 2 threads\n[pid  2310] openat(AT_FDCWD, \"/sys/class/udc/4e00000.dwc3/current_speed\", O_RDONLY|O_NOFOLLOW|O_CLOEXEC) \u003d 10\n```",
+      "revId": "252590062c5627d568699bf517bfb2e5b7bb29ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
