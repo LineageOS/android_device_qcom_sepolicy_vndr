@@ -34,6 +34,24 @@
       "parentUuid": "6583b0df_a55f9fbb",
       "revId": "252590062c5627d568699bf517bfb2e5b7bb29ad",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c80998b3_c4790a77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-04-25T13:23:13Z",
+      "side": 1,
+      "message": "```\nlegacy-um/generic/vendor/kona/genfs_contexts:genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0\nlegacy-um/generic/vendor/msmsteppe/genfs_contexts:genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0\nsm8450/generic/vendor/msmsteppe/genfs_contexts:genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0\nlegacy-um/qva/vendor/atoll/genfs_contexts:genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0\nlegacy-um/generic/vendor/msmnile/genfs_contexts:genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0\nlegacy-um/generic/vendor/lahaina/genfs_contexts:genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0\nlegacy-um/generic/vendor/lahaina/genfs_contexts:genfscon sysfs /devices/platform/soc/a800000.ssusb/a800000.dwc3/udc/a800000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0\n```",
+      "parentUuid": "bac84138_7f36c00b",
+      "revId": "252590062c5627d568699bf517bfb2e5b7bb29ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
