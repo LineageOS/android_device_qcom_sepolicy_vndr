@@ -52,6 +52,24 @@
       "parentUuid": "bac84138_7f36c00b",
       "revId": "252590062c5627d568699bf517bfb2e5b7bb29ad",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "32ac0ad5_6e2f7bce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-04-25T13:25:07Z",
+      "side": 1,
+      "message": "eh, maybe it\u0027s ok then I just checked wrong platform.",
+      "parentUuid": "c80998b3_c4790a77",
+      "revId": "252590062c5627d568699bf517bfb2e5b7bb29ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
