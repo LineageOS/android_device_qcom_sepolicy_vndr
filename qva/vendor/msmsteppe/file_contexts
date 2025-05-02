@@ -60,10 +60,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ###################################
-
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc u:object_r:vendor_hal_fingerprint_fpc_exec:s0
-
-###################################
 #Dev nodes
 #
 /dev/power_state                      u:object_r:vendor_power_state_device:s0
