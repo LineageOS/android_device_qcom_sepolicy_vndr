@@ -27,4 +27,4 @@
 
 com.qualcomm.qti.auth.securesampleauthdaemon   u:object_r:vendor_fidotest_service:s0
 com.qualcomm.qti.qseeproxysample               u:object_r:vendor_qseeproxysample_service:s0
-
+vendor.qti.diaghal                             u:object_r:vendor_hal_diaghal_service:s0
