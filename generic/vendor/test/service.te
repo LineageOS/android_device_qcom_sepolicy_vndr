@@ -27,3 +27,4 @@
 
 type vendor_fidotest_service,        service_manager_type;
 type vendor_qseeproxysample_service, service_manager_type;
+type vendor_hal_diaghal_service,     service_manager_type;
