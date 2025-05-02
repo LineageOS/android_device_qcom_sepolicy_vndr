@@ -65,6 +65,7 @@
 /dev/block/platform/soc/4804000.ufshc/by-name/apdp_[ab]         u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/bluetooth_[ab]    u:object_r:vendor_modem_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/boot_[ab]         u:object_r:boot_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/vendor_boot_[ab]  u:object_r:boot_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/cmnlib_[ab]       u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/cmnlib64_[ab]     u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/devcfg_[ab]       u:object_r:vendor_custom_ab_block_device:s0
@@ -103,6 +104,7 @@
 /dev/block/platform/soc/4744000.sdhci/by-name/abl_[ab]          u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/apdp_[ab]         u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/boot_[ab]         u:object_r:boot_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/vendor_boot_[ab]  u:object_r:boot_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/cmnlib_[ab]       u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/cmnlib64_[ab]     u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/devcfg_[ab]       u:object_r:vendor_custom_ab_block_device:s0
