@@ -74,3 +74,8 @@ allow vendor_qvrd_vndr_cam proc_uptime:file r_file_perms;
 crash_dump_fallback(vendor_qvrd_vndr_cam);
 
 allow vendor_qvrd_vndr_cam appdomain:process setsched;
+
+# Allow qvrd_vndr_cam to call qvrd_vndr
+vndbinder_use(vendor_qvrd_vndr_cam);
+binder_call(vendor_qvrd_vndr_cam, vendor_qvrd_vndr)
+allow vendor_qvrd_vndr_cam vendor_hal_qvrd_ipcservice:service_manager { add find };

@@ -39,3 +39,8 @@ hal_server_domain_bypass(vendor_qvrd_vndr, vendor_hal_qvrcamservice_qti)
 
 # Allow to access heap
 allow vendor_qvrd_vndr vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+
+# Allow qvrd_vndr to call qvrd_vndr_cam
+vndbinder_use(vendor_qvrd_vndr);
+binder_call(vendor_qvrd_vndr, vendor_qvrd_vndr_cam)
+allow vendor_qvrd_vndr vendor_hal_qvrd_ipcservice:service_manager { add find };
