@@ -1,4 +1,4 @@
-# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023,2025 Qualcomm Innovation Center, Inc. All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -38,6 +38,10 @@ neverallow {
   -vendor_wigignpt
   -vendor_cnd
   -vendor_qms
+  -vendor_hal_cloudagent_qti
+  -vendor_hal_datamanager_qti
+  -vendor_hal_provisioningmanager_qti
+  -vendor_hal_featuremanager_qti
   userdebug_or_eng(` -vendor_hal_diaghal')
   userdebug_or_eng(` -vendor_wifimyftmsvc')
 } self:global_capability_class_set { net_admin net_raw };
@@ -58,6 +62,10 @@ neverallow {
   -vendor_qms
   -vendor_hal_imsrtp
   -vendor_cacertservice_app
+  -vendor_hal_cloudagent_qti
+  -vendor_hal_datamanager_qti
+  -vendor_hal_provisioningmanager_qti
+  -vendor_hal_featuremanager_qti
   userdebug_or_eng(` -vendor_hal_diaghal')
   userdebug_or_eng(` -vendor_qtiloopback_native')
   userdebug_or_eng(` -vendor_wifimyftmsvc')
@@ -67,6 +75,7 @@ neverallow {
   vendor_halserverdomain
   - vendor_qtidataservices_app
   - vendor_cacertservice_app
+  - vendor_hal_featuremanager_qti
   userdebug_or_eng(` -vendor_wifimyftmsvc')
 } { file_type fs_type }:file execute_no_trans;
 neverallow { domain -init } vendor_halserverdomain:process transition;

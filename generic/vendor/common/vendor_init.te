@@ -122,3 +122,6 @@ get_prop(vendor_init, vendor_pcie_prop);
 
 #Access rcs service
 set_prop(vendor_init, vendor_persist_rcs_prop)
+
+# Allow access to camera properties
+set_prop(vendor_init, vendor_camera_prop)

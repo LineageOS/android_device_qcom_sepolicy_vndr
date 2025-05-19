@@ -1,0 +1,37 @@
+# Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_hal_featuremanager_qti_exec, exec_type, vendor_file_type, file_type;
+type vendor_sec_oras_exec, exec_type, vendor_file_type, file_type;
+
+# Allow for transition from init domain to vendor_hal_featuremanager_qti
+init_daemon_domain(vendor_hal_featuremanager_qti)
+
+#use bypass to allow netadmin, socket, etc permissions
+hal_server_domain_bypass(vendor_hal_featuremanager_qti, vendor_hal_featuremanager)
+
+# Allow vendor_hal_featuremanager_qti to use Binder IPC
+binder_use(vendor_hal_featuremanager_qti)
+hal_attribute_service(vendor_hal_featuremanager, vendor_hal_featuremanager_aidl_service)
+
+binder_call(vendor_hal_featuremanager_client, vendor_hal_featuremanager_server)
+binder_call(vendor_hal_featuremanager_server, vendor_hal_featuremanager_client)
+
+unix_socket_connect(vendor_hal_featuremanager_qti, vendor_ssgtzd, vendor_ssgtzd)
+
+allow vendor_hal_featuremanager_qti vendor_shell_exec:file execute_no_trans;
+allow vendor_hal_featuremanager_qti vendor_sec_oras_exec:file execute_no_trans;
+
+set_prop(vendor_hal_featuremanager_qti, vendor_secfm_prop);
+# Allow access to find other services
+
+allow vendor_hal_featuremanager_qti dnsproxyd_socket:sock_file write;
+allow vendor_hal_featuremanager_qti self:udp_socket create;
+
+allow vendor_hal_featuremanager_qti netd:unix_stream_socket connectto;
+allow vendor_hal_featuremanager_qti self:udp_socket {create bind setattr setopt getopt connect };
+allow vendor_hal_featuremanager_qti self:tcp_socket {create_stream_socket_perms };
+allow vendor_hal_featuremanager_qti fwmarkd_socket:sock_file write;
+allow vendor_hal_featuremanager_qti port:tcp_socket name_connect;
+allow netd vendor_hal_featuremanager_qti:fd use;
+allow netd vendor_hal_featuremanager_qti:tcp_socket { read write getopt setopt bind create setattr };

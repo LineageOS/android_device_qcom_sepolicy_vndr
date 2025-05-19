@@ -27,7 +27,7 @@
 
 # Changes from Qualcomm Innovation Center are provided under the following license:
 #
-# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023,2025 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -153,6 +153,10 @@ neverallow {
   - vendor_qms
   - vendor_ims_dcservice
   - vendor_cacertservice_app
+  - vendor_hal_cloudagent_qti
+  - vendor_hal_datamanager_qti
+  - vendor_hal_provisioningmanager_qti
+  - vendor_hal_featuremanager_qti
   userdebug_or_eng(` -vendor_wifimyftmsvc')
 } hwservicemanager:binder { call transfer };
 ')

@@ -26,7 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 # Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023, 2025 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 ###################################
@@ -55,6 +55,7 @@
 /dev/qvr_external_sensor_ioctl        u:object_r:vendor_qvr_external_sensor_device:s0
 /dev/hidraw[0-5]                      u:object_r:vendor_qvr_hidraw_device:s0
 /dev/st54spi_gpio                     u:object_r:vendor_ese_gpio_device:s0
+/dev/stsafe320_gpio                   u:object_r:vendor_ese_gpio_device:s0
 /dev/qmc_dma                          u:object_r:vendor_qmc_dma_device:s0
 /dev/qmc_cma                          u:object_r:vendor_qmc_cma_device:s0
 /dev/q2spiuwb                         u:object_r:vendor_q2spiuwb_device:s0

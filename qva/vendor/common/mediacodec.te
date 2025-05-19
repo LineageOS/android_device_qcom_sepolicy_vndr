@@ -35,6 +35,7 @@ allow mediacodec vendor_wfdnativemm_service:service_manager find;
 allow mediacodec audio_device:chr_file rw_file_perms;
 allow mediacodec vendor_membuf_dev:chr_file r_file_perms;
 allow mediacodec vendor_vm_cp_bitstream_device:chr_file r_file_perms;
+allow mediacodec self:capability sys_nice;
 binder_call(mediacodec, vendor_wifidisplayhalservice_qti);
 
 get_prop(mediacodec, vendor_video_prop)

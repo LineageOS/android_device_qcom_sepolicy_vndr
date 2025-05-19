@@ -57,3 +57,10 @@ allow hal_display_demura_default mnt_vendor_file:dir search;
 # Allow reading/writing to '/mnt/vendor/persist/display/*'
 allow hal_display_demura_default vendor_persist_display_file:dir rw_dir_perms;
 allow hal_display_demura_default vendor_persist_display_file:file create_file_perms;
+
+# Allow binder call from display_demura to sevicemanager
+binder_call(hal_display_demura_default, servicemanager)
+allow servicemanager hal_display_demura_default:binder call;
+
+# Allow aidl service related rules
+allow hal_display_demura_default vendor_hal_display_demura_aidl_service:service_manager add;

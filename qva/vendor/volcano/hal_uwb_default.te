@@ -1,0 +1,10 @@
+#
+# Copyright (c) 2023, 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+#
+allow hal_uwb vendor_spiuwb_device:chr_file rw_file_perms;
+
+allow hal_uwb_default vendor_firmware_file:dir r_dir_perms;
+allow hal_uwb_default vfat:dir { open read search };
+
+get_prop(hal_uwb, vendor_bluetooth_prop)
