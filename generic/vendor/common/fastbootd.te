@@ -28,6 +28,11 @@
 #Allow fastbootd
 recovery_only(`
 allow fastbootd {
+	boot_block_device
+	dtbo_block_device
+	misc_block_device
+	system_block_device
+	vendor_custom_block_device
 	vendor_custom_ab_block_device
 	recovery_block_device
 	vendor_xbl_block_device
@@ -35,8 +40,16 @@ allow fastbootd {
 	vendor_ssd_block_device
 	vendor_modem_block_device
 	vendor_mdtp_device
+	vendor_rpmb_device
 }:blk_file { rw_file_perms };
 
+allowxperm fastbootd {
+	boot_block_device
+	misc_block_device
+	system_block_device
+	vendor_custom_block_device
+	vendor_mdtp_device
+}:blk_file ioctl { BLKDISCARD BLKSECDISCARD };
 
 # Allow fastbootd to read /sys/class/power_supply directory
 # and access to power supply, usb nodes.

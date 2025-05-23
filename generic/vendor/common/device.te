@@ -30,6 +30,7 @@ type vendor_avtimer_device, dev_type;
 type vendor_bt_device, dev_type;
 type vendor_bu21150_device, dev_type;
 type vendor_citadel_device, dev_type;
+type vendor_custom_block_device, dev_type;
 type vendor_custom_ab_block_device, dev_type;
 type vendor_diag_device, dev_type, mlstrustedobject;
 type vendor_dsp_device, dev_type;
