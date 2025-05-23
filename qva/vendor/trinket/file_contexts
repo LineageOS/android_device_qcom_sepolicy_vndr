@@ -33,9 +33,12 @@
 
 # UFS Devices
 /dev/block/platform/soc/4804000.ufshc/by-name/system                            u:object_r:system_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/vendor                            u:object_r:system_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/metadata                          u:object_r:metadata_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/userdata                          u:object_r:userdata_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/boot                              u:object_r:boot_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/dtbo                              u:object_r:dtbo_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/vbmeta                            u:object_r:boot_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/logdump                           u:object_r:vendor_logdump_partition:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/fsc                                u:object_r:vendor_modem_efs_partition_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/fsg                                u:object_r:vendor_modem_efs_partition_device:s0
@@ -136,9 +139,12 @@
 
 #non A/B
 /dev/block/platform/soc/4744000.sdhci/by-name/system                            u:object_r:system_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/vendor                            u:object_r:system_block_device:s0
 /dev/block/platform/soc/4744000.ufshc/by-name/metadata                          u:object_r:metadata_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/userdata                          u:object_r:userdata_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/boot                              u:object_r:boot_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/dtbo                              u:object_r:dtbo_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/vbmeta                            u:object_r:boot_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/logdump                           u:object_r:vendor_logdump_partition:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/fsc                                u:object_r:vendor_modem_efs_partition_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/fsg                                u:object_r:vendor_modem_efs_partition_device:s0
