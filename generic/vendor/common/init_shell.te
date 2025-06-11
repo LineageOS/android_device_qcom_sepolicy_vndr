@@ -179,7 +179,7 @@ set_prop(vendor_qti_init_shell, vendor_wifi_prop)
 # To read /proc/meminfo
 allow vendor_qti_init_shell proc_meminfo:file r_file_perms;
 
-allow vendor_qti_init_shell vendor_sysfs_suspend:file w_file_perms;
+allow vendor_qti_init_shell sysfs_mem_sleep:file w_file_perms;
 wakelock_use(vendor_qti_init_shell);
 
 # Set ro.vendor.qti.soc_id to soc_id in QCV init script
