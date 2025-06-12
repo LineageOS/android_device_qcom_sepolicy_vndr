@@ -28,3 +28,4 @@
 allow hal_power_default vendor_hbtp_kernel_sysfs:file rw_file_perms;
 
 hal_client_domain(hal_power_default, vendor_hal_perf)
+hal_client_domain(hal_power_default, hal_graphics_composer)
