@@ -1,8 +1,8 @@
 # Board specific SELinux policy variable definitions
 SEPOLICY_PATH:= device/qcom/sepolicy_vndr/sm8550
 QSSI_SEPOLICY_PATH:= device/qcom/sepolicy
-BOARD_SYSTEM_EXT_PREBUILT_DIR := device/qcom/sepolicy/generic
-BOARD_PRODUCT_PREBUILT_DIR := device/qcom/sepolicy/generic/product
+BOARD_SYSTEM_EXT_SEPOLICY_PREBUILT_DIRS := device/qcom/sepolicy/generic
+BOARD_PRODUCT_SEPOLICY_PREBUILT_DIRS := device/qcom/sepolicy/generic/product
 SYS_ATTR_PROJECT_PATH := $(TOP)/device/qcom/sepolicy/generic/public/attribute
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS:= \
     $(SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS) \
