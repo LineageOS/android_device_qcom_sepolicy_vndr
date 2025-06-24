@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a20cafc3_e4c7205e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2025-06-24T03:01:13Z",
+      "side": 1,
+      "message": "Fixes issue where [sku]_v0 is used instead of v1 because sku_version was labeled too late.",
+      "revId": "ab4276bb91aaa0177d78adbe283253bd04153667",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
