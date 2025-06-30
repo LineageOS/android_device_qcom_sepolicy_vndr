@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55410f89_dc09d037",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32253
+      },
+      "writtenOn": "2025-06-30T06:09:46Z",
+      "side": 1,
+      "message": "`m selinux_policy` passes on nairo",
+      "revId": "bf9bfcf702872ceec82c5c03fd79041b0d4a9990",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
