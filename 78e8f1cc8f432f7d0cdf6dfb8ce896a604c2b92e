@@ -16,6 +16,23 @@
       "message": "Hold for now",
       "revId": "78e8f1cc8f432f7d0cdf6dfb8ce896a604c2b92e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5630ddd3_ab3b4a47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-07-01T22:56:24Z",
+      "side": 1,
+      "message": "yup, decoupled it from the hw/moto change so take your time",
+      "revId": "78e8f1cc8f432f7d0cdf6dfb8ce896a604c2b92e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
