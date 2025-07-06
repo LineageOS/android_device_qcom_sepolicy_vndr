@@ -25,13 +25,12 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #face3d
 vendor_internal_prop(vendor_face3d_producer_prop);
-
 #sec property
 vendor_internal_prop(vendor_secfm_prop);
 neverallow {domain -init -vendor_init -vendor_hal_provisioningmanager_qti -vendor_hal_featuremanager_qti} {vendor_secfm_prop}:property_service set;
@@ -39,8 +38,8 @@ vendor_internal_prop(vendor_secdm_prop);
 neverallow {domain -init -vendor_init  -vendor_hal_featuremanager_qti -vendor_hal_datamanager_qti } {vendor_secdm_prop}:property_service set;
 vendor_internal_prop(vendor_secca_prop);
 neverallow {domain -init -vendor_init -vendor_hal_cloudagent_qti -vendor_hal_datamanager_qti } {vendor_secca_prop}:property_service set;
-
 #awareagent property
 vendor_internal_prop(vendor_awareagent_prop);
 neverallow {domain -init -vendor_init -vendor_hal_cloudagent_qti -vendor_awareagent} {vendor_awareagent_prop}:property_service set;
+vendor_internal_prop(vendor_qrs_service_prop);
 

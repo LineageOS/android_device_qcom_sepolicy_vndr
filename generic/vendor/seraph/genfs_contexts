@@ -133,7 +133,7 @@ genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-2/
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/fps_periodicity_ms   u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/fps_periodicity_ms   u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-2/fps_periodicity_ms   u:object_r:vendor_sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/power/control                             u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/9800000.qcom,mdss_mdp/power/control                             u:object_r:vendor_sysfs_graphics:s0
 
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:1/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0

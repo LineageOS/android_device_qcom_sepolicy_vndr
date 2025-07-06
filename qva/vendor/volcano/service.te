@@ -1,5 +1,8 @@
-# Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 type vendor_hal_featuremanager_aidl_service,hal_service_type,protected_service, service_manager_type;
 type vendor_hal_datamanager_aidl_service,hal_service_type,protected_service, service_manager_type;
+type vendor_hal_cloudagent_aidl_service,hal_service_type,protected_service, service_manager_type;
+type vendor_aidl_qrs_service,hal_service_type, protected_service, service_manager_type;

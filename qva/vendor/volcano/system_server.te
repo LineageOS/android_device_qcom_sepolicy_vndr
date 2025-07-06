@@ -6,3 +6,6 @@ ifelse(target_requires_insecure_execmem_for_swiftshader, `true',
    `allow system_server self:process execmem;',
    `neverallow system_server self:process execmem;')
 
+allow system_server vendor_aidl_qrs_service:service_manager find;
+
+hal_client_domain(system_server,vendor_hal_qrsloader);

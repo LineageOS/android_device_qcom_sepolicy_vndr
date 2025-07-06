@@ -1,5 +1,7 @@
-# Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 vendor.qti.sec.featuremanager.IFeatureManager/default   u:object_r:vendor_hal_featuremanager_aidl_service:s0
 vendor.qti.sec.datamanager.IDataManager/default         u:object_r:vendor_hal_datamanager_aidl_service:s0
+vendor.qti.hardware.qrs.qrsprovider.IQrsProvider/default         u:object_r:vendor_aidl_qrs_service:s0

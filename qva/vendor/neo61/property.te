@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2018-2019, 2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -26,16 +26,11 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 # Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
-# nordic node file
-/(vendor|system/vendor)/bin/hw/vendor\.kineticsxr\.hardware\.nordic@1\.0-service u:object_r:vendor_hal_nordic_default_exec:s0
-/sys/devices/platform/soc/990000\.spi/spi_master/spi0/spi0\.0/jsrequest u:object_r:vendor_nordic_sysfs_node:s0
-/sys/devices/platform/soc/990000\.spi/spi_master/spi0/spi0\.0/jsmem u:object_r:vendor_nordic_sysfs_node:s0
+#keymint quickboot prop
+vendor_restricted_prop(vendor_tee_keymint_quickboot);
 
-# kineticsxr file
-/etc/resources_ctrlr(/.*)?			u:object_r:vendor_kx_file:s0
-
-# calib partition
-/mnt/vendor/calib(/.*)?               u:object_r:vendor_calib_file:s0
+#Gatekeper quickboot prop
+vendor_restricted_prop(vendor_tee_gk_quickboot);

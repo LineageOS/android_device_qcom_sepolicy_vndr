@@ -89,6 +89,7 @@ neverallow { domain
 - hal_sensors_default
 - hal_camera_default
 - hal_audio_default
+- vendor_qvrd_vndr_cam
 userdebug_or_eng(` -vendor_usta_app')
 userdebug_or_eng(` -vendor_ustaservice_app')
 userdebug_or_eng(` -vendor_sysmonapp_app_test')
@@ -110,6 +111,8 @@ neverallow { domain
 - vendor_qvrd_vndr
 - vendor_thermal-engine
 - vendor_dspservice
+- vendor_qvrd_vndr_cam
+userdebug_or_eng(` -vendor_nativehaltestservice')
 userdebug_or_eng(` -vendor_sysmonapp_app_test')
 } vendor_qdsp_device:chr_file *;
 neverallow { domain -init -vendor_init - ueventd } vendor_qdsp_device:chr_file ~{r_file_perms};
@@ -133,6 +136,7 @@ neverallow { domain
 - hal_camera_default
 - apexd
 - vendor_qti_init_shell
+- vendor_qvrd_vndr_cam
 - wpa_supplicant_macsec
 userdebug_or_eng(` -vendor_subsystem_ramdump')
 } { vendor_sys_nonsp_comp vendor_sys_sp_comp }: file *;

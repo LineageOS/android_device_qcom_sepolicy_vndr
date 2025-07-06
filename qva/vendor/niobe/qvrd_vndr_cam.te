@@ -1,10 +1,5 @@
-#Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
-#SPDX-License-Identifier: BSD-3-Clause
-
-type vendor_qvrd_vndr_cam, domain, mlstrustedsubject;
-type vendor_qvrd_vndr_cam_exec, vendor_file_type, exec_type, file_type;
-
-init_daemon_domain(vendor_qvrd_vndr_cam)
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+#SPDX-License-Identifier: BSD-3-Clause-Clear
 
 binder_service(vendor_qvrd_vndr_cam)
 
@@ -73,3 +68,15 @@ allow vendor_qvrd_vndr_cam proc_uptime:file r_file_perms;
 crash_dump_fallback(vendor_qvrd_vndr_cam);
 
 allow vendor_qvrd_vndr_cam appdomain:process setsched;
+
+# Access dsp
+allow vendor_qvrd_vndr_cam vendor_xdsp_device:chr_file r_file_perms;
+allow vendor_qvrd_vndr_cam vendor_qdsp_device:chr_file r_file_perms;
+get_prop(vendor_qvrd_vndr_cam, vendor_adsprpc_prop)
+
+# Access /sys/devices/soc0/subset_parts
+allow vendor_qvrd_vndr_cam vendor_sys_nonsp_comp:file r_file_perms;
+unix_socket_connect(vendor_qvrd_vndr_cam, logdr, logd)
+
+#Access vendor_hal_camera_postproc_hwservice
+typeattribute vendor_qvrd_vndr_cam hal_camera_client;

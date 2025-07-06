@@ -1,0 +1,33 @@
+# Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# # SPDX-License-Identifier: BSD-3-Clause-Clear
+#
+type vendor_aware_platform_service_exec, exec_type, vendor_file_type, file_type;
+
+# Allow for transition from init domain to vendor_hal_awareagent_qti
+init_daemon_domain(vendor_aware_platform_service)
+
+allow vendor_aware_platform_service vendor_aware_vndr_data_file:dir { rw_dir_perms };
+allow vendor_aware_platform_service vendor_aware_vndr_data_file:file { create_file_perms };
+
+# Accessing RIL/wpa_supplicant
+allow vendor_aware_platform_service rild:unix_stream_socket connectto;
+allow vendor_aware_platform_service vendor_rild_socket:dir search;
+allow vendor_aware_platform_service vendor_rild_socket:sock_file write;
+ 
+allow vendor_aware_platform_service hal_wifi_supplicant_default:unix_dgram_socket sendto;
+allow vendor_aware_platform_service vendor_wifi_vendor_data_file:dir search;
+allow vendor_aware_platform_service wpa_data_file:dir { w_dir_perms };
+allow vendor_aware_platform_service wpa_data_file:sock_file { create_file_perms };
+
+get_prop(vendor_aware_platform_service, boot_status_prop)
+
+# for socket access
+allow vendor_aware_platform_service vendor_aware_socket:dir rw_dir_perms;
+allow vendor_aware_platform_service vendor_aware_socket:dir create_dir_perms;
+allow vendor_aware_platform_service vendor_aware_socket:sock_file create_file_perms;
+allow vendor_aware_platform_service vendor_aware_socket:sock_file rw_file_perms;
+allow vendor_aware_platform_service vendor_aware_socket:unix_dgram_socket { read write sendto };
+
+get_prop(vendor_aware_platform_service, wifi_hal_prop);
+allow vendor_aware_platform_service vendor_awareagent:unix_dgram_socket sendto;
+

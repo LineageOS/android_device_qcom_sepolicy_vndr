@@ -159,3 +159,6 @@
 
 #fan_service
 /(vendor|system/vendor)/bin/fan_service u:object_r:vendor_fan_service_exec:s0
+
+# nativehaltestservice
+/vendor/bin/nativehaltestservice          u:object_r:vendor_nativehaltestservice_exec:s0

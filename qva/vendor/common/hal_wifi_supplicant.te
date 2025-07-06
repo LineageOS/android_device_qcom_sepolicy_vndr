@@ -26,6 +26,10 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
 # Allow access to create socket and ioctl.
 
 allow hal_wifi_supplicant_default self:qipcrtr_socket create_socket_perms_no_ioctl;
@@ -53,3 +57,4 @@ allow hal_wifi_supplicant vendor_fstman:unix_dgram_socket sendto;
 allow hal_wifi_supplicant vendor_wigighalsvc:unix_dgram_socket sendto;
 
 type_transition hal_wifi_supplicant vendor_wifi_vendor_data_file:dir vendor_wifi_vendor_wpa_socket "wigig_sockets";
+allow hal_wifi_supplicant_default vendor_aware_platform_service:unix_dgram_socket sendto;

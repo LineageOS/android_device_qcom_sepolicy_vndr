@@ -18,16 +18,15 @@ get_prop(vendor_awareagent, wifi_hal_prop);
 allow vendor_awareagent vendor_sysfs_battery_supply:dir search;
 allow vendor_awareagent vendor_sysfs_battery_supply:file { read open };
 
-allow vendor_awareagent vendor_aware_vndr_data_file:dir { rw_dir_perms };
+allow vendor_awareagent vendor_aware_vndr_data_file:dir { create_dir_perms };
 allow vendor_awareagent vendor_aware_vndr_data_file:file { create_file_perms };
-neverallow {domain -init -vendor_init -vendor_awareagent} vendor_aware_vndr_data_file:{dir file} *;
+neverallow {domain -init -vendor_init -vendor_awareagent -vendor_aware_platform_service } vendor_aware_vndr_data_file:{dir file} *;
 
 allow vendor_awareagent vendor_persist_aware_file:dir create_dir_perms;
 allow vendor_awareagent vendor_persist_aware_file:file create_file_perms;
 allow vendor_awareagent mnt_vendor_file:dir { getattr search };
-neverallow {domain -init -vendor_init -vendor_awareagent} vendor_persist_aware_file:{dir file} *;
+neverallow {domain -init -vendor_init -vendor_awareagent -vendor_aware_platform_service } vendor_persist_aware_file:{dir file} *;
 
-set_prop(vendor_awareagent, vendor_awareagent_prop);
 get_prop(vendor_awareagent, boot_status_prop)
 
 binder_call(vendor_awareagent, servicemanager)
@@ -58,3 +57,10 @@ unix_socket_connect(vendor_awareagent, vendor_ssgtzd, vendor_ssgtzd)
 userdebug_or_eng(`
 get_prop(vendor_awareagent, vendor_mink_trace_prop)
 ')
+
+allow vendor_awareagent vendor_aware_platform_service:unix_dgram_socket sendto;
+
+allow vendor_awareagent vendor_wifi_vendor_data_file:dir search;
+allow vendor_awareagent wpa_data_file:dir { add_name remove_name search write };
+allow vendor_awareagent wpa_data_file:sock_file { create setattr write };
+

@@ -178,6 +178,7 @@
 /vendor/bin/qesdk-secmanager                                                       u:object_r:vendor_qesdsect_exec:s0
 /(vendor|system/vendor)/bin/qms                                                    u:object_r:vendor_qms_exec:s0
 /(vendor|system/vendor)/bin/hw/qvrservice                                          u:object_r:vendor_qvrd_vndr_exec:s0
+/(vendor|system/vendor)/bin/hw/qvrcamservice                                       u:object_r:vendor_qvrd_vndr_cam_exec:s0
 /(vendor|system/vendor)/bin/hw/sxrservice                                          u:object_r:vendor_sxrd_vndr_exec:s0
 /(vendor|system/vendor)/bin/init\.qvrd\.usb_mtu_set\.sh                            u:object_r:vendor_init_qvrd_shell_exec:s0
 /vendor/bin/trusteduilistener                                                      u:object_r:vendor_trusteduilistener_exec:s0

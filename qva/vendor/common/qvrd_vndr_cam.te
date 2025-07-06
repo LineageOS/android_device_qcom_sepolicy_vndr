@@ -1,0 +1,7 @@
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_qvrd_vndr_cam, domain, mlstrustedsubject;
+type vendor_qvrd_vndr_cam_exec, vendor_file_type, exec_type, file_type;
+
+init_daemon_domain(vendor_qvrd_vndr_cam)

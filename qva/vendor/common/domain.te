@@ -26,6 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 dontaudit domain vendor_persist_dpm_prop:file r_file_perms;
+dontaudit domain vendor_hal_perf2_service:service_manager find;
 neverallow {
    coredomain
    -init

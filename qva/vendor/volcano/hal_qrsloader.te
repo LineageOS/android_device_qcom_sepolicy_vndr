@@ -1,0 +1,7 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+binder_call(vendor_hal_qrsloader_client, vendor_hal_qrsloader_server)
+binder_call(vendor_hal_qrsloader_server, vendor_hal_qrsloader_client)
+add_hwservice(vendor_hal_qrsloader_server, hal_qrsloader_hwservice)
+hal_attribute_service(vendor_hal_qrsloader,vendor_aidl_qrs_service)

@@ -1,0 +1,15 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Define domain
+type vendor_qrsloader, domain;
+type vendor_qrsloader_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_qrsloader);
+
+vndbinder_use(vendor_qrsloader);
+binder_use(vendor_qrsloader);
+binder_call(vendor_qrsloader, hwservicemanager)
+hal_server_domain(vendor_qrsloader, vendor_hal_qrsloader)
+allow vendor_qrsloader vendor_qms_service:service_manager find;
+get_prop(vendor_qrsloader, vendor_qrs_service_prop)
