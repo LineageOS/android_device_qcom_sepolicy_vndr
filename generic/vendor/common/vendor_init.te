@@ -105,6 +105,9 @@ userdebug_or_eng(`
 
 set_prop(vendor_init,vendor_dcvs_prop)
 
+# Allow access to camera properties
+set_prop(vendor_init, vendor_camera_prop)
+
 # Allow vendor_init to read vendor_soc_name_prop
 get_prop(vendor_init, vendor_soc_name_prop);
 # Allow vendor_init to read vendor_soc_model_prop
