@@ -38,3 +38,5 @@
 /sys/firmware/devicetree/base/memory/ddr_device_type                               u:object_r:vendor_sysfs_ddr:s0
 
 /sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/spm_lvl                u:object_r:vendor_sysfs_scsi_host:s0
+
+/sys/devices/platform/soc/8804000.sdhci/mmc_host/mmc1/mmc1:59b4/block/mmcblk1/queue/read_ahead_kb    u:object_r:vendor_sysfs_mmc_host:s0
