@@ -16,6 +16,24 @@
       "message": "Wouldn\u0027t this be simpler? https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy_vndr/+/437689",
       "revId": "6fb293e52113033b255f41067594cb5f7fdfaea8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8a87600_53a68179",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-07-19T12:08:40Z",
+      "side": 1,
+      "message": "Yes, I will do that here too.",
+      "parentUuid": "992aa025_fa9ad0a6",
+      "revId": "6fb293e52113033b255f41067594cb5f7fdfaea8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
