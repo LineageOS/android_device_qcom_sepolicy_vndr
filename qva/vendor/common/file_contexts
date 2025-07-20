@@ -146,7 +146,7 @@
 /(vendor|system/vendor)/bin/wfdhdcphalservice                                      u:object_r:vendor_wfdhdcphalservice_qti_exec:s0
 /(vendor|system/vendor)/bin/wfdvndservice                                          u:object_r:vendor_wfdvndservice_exec:s0
 /(vendor|system/vendor)/bin/nqnfcinfo                                              u:object_r:vendor_nqnfcinfo_exec:s0
-/(vendor|system/vendor)/bin/ssgqmigd                                               u:object_r:vendor_ssgqmigd_exec:s0
+/(vendor|system/vendor)/bin/ssgqmigd(64)?                                          u:object_r:vendor_ssgqmigd_exec:s0
 /(vendor|system/vendor)/bin/ssgtzd                                                 u:object_r:vendor_ssgtzd_exec:s0
 /(vendor|system/vendor)/bin/hlosminkdaemon                                         u:object_r:vendor_hlosminkdaemon_exec:s0
 /(vendor|system/vendor)/bin/qwesd                                                  u:object_r:vendor_qwesd_exec:s0
