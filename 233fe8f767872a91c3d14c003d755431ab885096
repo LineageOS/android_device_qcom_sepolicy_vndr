@@ -16,6 +16,24 @@
       "message": "Maybe  pick https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy_vndr/+/437919 instead?",
       "revId": "233fe8f767872a91c3d14c003d755431ab885096",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21f42b6f_12a64140",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-07-24T11:44:16Z",
+      "side": 1,
+      "message": "That covers everything in this commit, so yes: https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy_vndr/+/439264",
+      "parentUuid": "23cedcee_0898fe38",
+      "revId": "233fe8f767872a91c3d14c003d755431ab885096",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
