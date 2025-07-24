@@ -92,4 +92,5 @@ recovery_only(`
 allow init vendor_sysfs_graphics:file w_file_perms;
 allow init vendor_sysfs_graphics:dir search;
 allow init vendor_sysfs_usb_device:file w_file_perms;
+allow init proc:file write;
 ')
