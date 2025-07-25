@@ -16,6 +16,24 @@
       "message": "Is this the same in pineapple \u0026 volcano?",
       "revId": "a11bf61b948023aca5d5cdefa41366e689b20eb2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c087f8a8_497aa6f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2025-07-25T11:33:44Z",
+      "side": 1,
+      "message": "Don\u0027t have a pineapple device to check, but I\u0027m assuming so since it\u0027s the same on sun as well.",
+      "parentUuid": "5612ce6e_5418457e",
+      "revId": "a11bf61b948023aca5d5cdefa41366e689b20eb2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
