@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef30fa21_5ea14690",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2025-07-26T11:07:39Z",
+      "side": 1,
+      "message": "other SoC\u0027s such as exynos need this as well so might it be better to move to lineage sepolicy?",
+      "revId": "791bef20554ff96b5fedb94e31635b8191da0748",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
