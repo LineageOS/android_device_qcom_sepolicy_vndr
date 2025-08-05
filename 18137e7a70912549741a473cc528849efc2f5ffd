@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3125a70_1f1f76c8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-08-05T18:00:52Z",
+      "side": 1,
+      "message": "Is this needed, tho? I mean, we\u0027re not using these services and eventually this will be labeled in a future tag.",
+      "revId": "18137e7a70912549741a473cc528849efc2f5ffd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8ab4bfc_e125822f",
+        "filename": "qva/vendor/common/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-08-05T18:00:52Z",
+      "side": 1,
+      "message": "```suggestion\n/vendor/bin/hw/android\\.hardware\\.security\\.keymint(3)?-service\\.strongbox-nxp         u:object_r:vendor_hal_keymint_strongbox_exec:s0\n```",
+      "range": {
+        "startLine": 98,
+        "startChar": 44,
+        "endLine": 98,
+        "endChar": 51
+      },
+      "revId": "18137e7a70912549741a473cc528849efc2f5ffd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7198067_a8580059",
+        "filename": "qva/vendor/common/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-08-05T18:00:52Z",
+      "side": 1,
+      "message": "```suggestion\n/(vendor|system/vendor)/bin/hw/android\\.hardware\\.weaver-service\\.nxp(-qti)?          u:object_r:vendor_hal_weaver_default_exec:s0\n```",
+      "range": {
+        "startLine": 102,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 127
+      },
+      "revId": "18137e7a70912549741a473cc528849efc2f5ffd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
