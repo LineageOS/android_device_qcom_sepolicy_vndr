@@ -95,9 +95,9 @@
 /vendor/bin/init\.qti\.ese\.strongbox\.sh                                          u:object_r:vendor_init-qti-ese-strongbox-sh_exec:s0
 /vendor/bin/hw/android\.hardware\.security\.keymint-service-spu-qti                u:object_r:vendor_hal_keymint_spu_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.weaver-service-spu-qti                           u:object_r:vendor_hal_weaver_spu_qti_exec:s0
-/vendor/bin/hw/android\.hardware\.security\.keymint-service\.strongbox-nxp         u:object_r:vendor_hal_keymint_strongbox_exec:s0
+/vendor/bin/hw/android\.hardware\.security\.keymint3?-service\.strongbox[-\.]nxp   u:object_r:vendor_hal_keymint_strongbox_exec:s0
 /vendor/bin/hw/android\.hardware\.security\.keymint-service\.strongbox-thales      u:object_r:vendor_hal_keymint_strongbox_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.weaver-service\.nxp-qti          u:object_r:vendor_hal_weaver_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.weaver-service\.nxp(-qti)?       u:object_r:vendor_hal_weaver_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.weaver-service\.thales           u:object_r:vendor_hal_weaver_default_exec:s0
 /vendor/bin/hw/android\.hardware\.authsecret-service\.nxp-qti                      u:object_r:hal_authsecret_default_exec:s0
 /vendor/bin/hw/android\.hardware\.authsecret-service\.thales-qti                   u:object_r:hal_authsecret_default_exec:s0
