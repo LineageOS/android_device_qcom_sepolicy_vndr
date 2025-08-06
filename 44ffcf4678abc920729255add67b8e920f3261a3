@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de554414_987160b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-08-06T20:02:52Z",
+      "side": 1,
+      "message": "Makes me wonder why aren\u0027t these labeled in AOSP sepolicy.",
+      "revId": "44ffcf4678abc920729255add67b8e920f3261a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
