@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f221af1e_d0515636",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2025-08-06T13:48:30Z",
+      "side": 1,
+      "message": "I\u0027m adding them",
+      "parentUuid": "a3125a70_1f1f76c8",
+      "revId": "18137e7a70912549741a473cc528849efc2f5ffd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d8ab4bfc_e125822f",
@@ -41,6 +59,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "06e077d7_6208cde7",
+        "filename": "qva/vendor/common/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2025-08-06T13:48:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d8ab4bfc_e125822f",
+      "range": {
+        "startLine": 98,
+        "startChar": 44,
+        "endLine": 98,
+        "endChar": 51
+      },
+      "revId": "18137e7a70912549741a473cc528849efc2f5ffd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e7198067_a8580059",
@@ -54,6 +96,30 @@
       "writtenOn": "2025-08-05T18:00:52Z",
       "side": 1,
       "message": "```suggestion\n/(vendor|system/vendor)/bin/hw/android\\.hardware\\.weaver-service\\.nxp(-qti)?          u:object_r:vendor_hal_weaver_default_exec:s0\n```",
+      "range": {
+        "startLine": 102,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 127
+      },
+      "revId": "18137e7a70912549741a473cc528849efc2f5ffd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3fb77d7e_1974aaba",
+        "filename": "qva/vendor/common/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2025-08-06T13:48:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7198067_a8580059",
       "range": {
         "startLine": 102,
         "startChar": 0,
