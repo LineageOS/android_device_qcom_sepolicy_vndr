@@ -16,6 +16,24 @@
       "message": "Makes me wonder why aren\u0027t these labeled in AOSP sepolicy.",
       "revId": "44ffcf4678abc920729255add67b8e920f3261a3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d312509_3b2843f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2025-08-07T03:33:03Z",
+      "side": 1,
+      "message": "just like they don\u0027t label the nxp nfc hal Ia11c39cd64b03de4b189edc5aa7e5be638af1494",
+      "parentUuid": "de554414_987160b1",
+      "revId": "44ffcf4678abc920729255add67b8e920f3261a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
