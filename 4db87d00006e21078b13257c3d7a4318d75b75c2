@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0810000c_23b76634",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21290
+      },
+      "writtenOn": "2025-08-15T15:01:21Z",
+      "side": 1,
+      "message": "fixes a denial during connection, but probably noone in legacy-um will ever have the vendor aidl service, so it falls back to hidl anyway",
+      "revId": "4db87d00006e21078b13257c3d7a4318d75b75c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
