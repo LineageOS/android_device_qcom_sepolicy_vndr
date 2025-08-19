@@ -128,3 +128,6 @@ dontaudit vendor_init block_device:lnk_file setattr;
 
 #googleclientidbase properties
 dontaudit vendor_init default_prop:property_service set;
+
+# Allow vendor_init to read vendor_thermal_engine_prop
+set_prop(vendor_init, vendor_thermal_engine_prop)
