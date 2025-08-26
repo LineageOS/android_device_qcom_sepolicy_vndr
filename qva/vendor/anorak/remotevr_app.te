@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +13,7 @@
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
-# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -24,21 +24,25 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
+
 # Changes from Qualcomm Technologies, Inc. are provided under the following license:
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
-# nordic node file
-/(vendor|system/vendor)/bin/hw/vendor\.kineticsxr\.hardware\.nordic@1\.0-service u:object_r:vendor_hal_nordic_default_exec:s0
-/sys/devices/platform/soc/990000\.spi/spi_master/spi0/spi0\.0/jsrequest u:object_r:vendor_nordic_sysfs_node:s0
-/sys/devices/platform/soc/990000\.spi/spi_master/spi0/spi0\.0/jsmem u:object_r:vendor_nordic_sysfs_node:s0
-/dev/ttyKXR2                          u:object_r:vendor_ttyKXR2:s0
-# kineticsxr file
-/etc/resources_ctrlr(/.*)?            u:object_r:vendor_kx_file:s0
+type vendor_remotevr_app,domain;
+typeattribute vendor_remotevr_app vendor_hal_sxrservice_qti_socket_client;
 
-# calib partition
-/mnt/vendor/calib(/.*)?               u:object_r:vendor_calib_file:s0
+app_domain(vendor_remotevr_app);
 
-# qvrcamservice
-/(vendor|system/vendor)/bin/hw/qvrcamservice     u:object_r:vendor_qvrd_vndr_cam_exec:s0
+hal_client_domain(vendor_remotevr_app, vendor_hal_sxrservice_qti);
+hal_client_domain(vendor_remotevr_app, vendor_hal_perf);
+
+net_domain(vendor_remotevr_app)
+
+allow vendor_remotevr_app app_api_service:service_manager find;
+
+get_prop(vendor_remotevr_app , vendor_display_prop)
+
+allow vendor_remotevr_app audioserver_service:service_manager find;
+
+allow vendor_remotevr_app mediametrics_service:service_manager find;
