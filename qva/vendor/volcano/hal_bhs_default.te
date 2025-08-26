@@ -1,0 +1,18 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Define domain
+type vendor_hal_bhs_default, domain;
+hal_server_domain(vendor_hal_bhs_default, vendor_hal_bhs)
+type vendor_hal_bhs_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_bhs_default);
+
+#rule added for uevent sockt open/read and listen
+allow vendor_hal_bhs_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+#rules added for property
+set_prop(vendor_hal_bhs_default, vendor_bhs_remoteproc_prop);
+set_prop(vendor_hal_bhs_default, vendor_bhs_cpu_prop);
+
+#wakelock policy
+wakelock_use(vendor_hal_bhs_default);

@@ -1,0 +1,8 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# HwBinder IPC from clients into server, and callbacks
+binder_call(vendor_hal_bhs_client, vendor_hal_bhs_server)
+binder_call(vendor_hal_bhs_server, vendor_hal_bhs_client)
+
+hal_attribute_service(vendor_hal_bhs,vendor_hal_bhs_service)

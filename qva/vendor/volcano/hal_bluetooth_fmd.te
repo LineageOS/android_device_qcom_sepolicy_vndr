@@ -1,11 +1,9 @@
 # Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
-userdebug_or_eng(`
 # for BTFMD Service
 hal_server_domain(hal_bluetooth_default, vendor_hal_bluetooth_fmd)
 
 binder_call(vendor_hal_bluetooth_fmd_client, vendor_hal_bluetooth_fmd_server)
 binder_call(vendor_hal_bluetooth_fmd_server, vendor_hal_bluetooth_fmd_client)
 hal_attribute_service(vendor_hal_bluetooth_fmd, vendor_hal_bluetooth_fmd_service)
-')

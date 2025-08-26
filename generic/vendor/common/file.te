@@ -193,6 +193,10 @@ type vendor_mbn_data_file, file_type, data_file_type;
 type vendor_firmware_data_file, file_type, data_file_type;
 type vendor_qmcs_file, file_type, vendor_qmcs_file_type;
 allow { vendor_qmcs_file }self:filesystem associate;
+type vendor_soccp_file, file_type, contextmount_type, vendor_file_type;
+allow { vendor_soccp_file }self:filesystem associate;
+type vendor_dcp_file, file_type, contextmount_type, vendor_file_type;
+allow { vendor_dcp_file }self:filesystem associate;
 
 #vendor capability configstore hal
 type vendor_capabilityconfigstore_data_file, file_type, data_file_type;

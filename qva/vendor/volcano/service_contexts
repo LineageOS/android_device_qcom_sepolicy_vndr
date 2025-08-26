@@ -1,7 +1,8 @@
-# Changes from Qualcomm Technologies, Inc. are provided under the following license:
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 vendor.qti.sec.featuremanager.IFeatureManager/default   u:object_r:vendor_hal_featuremanager_aidl_service:s0
 vendor.qti.sec.datamanager.IDataManager/default         u:object_r:vendor_hal_datamanager_aidl_service:s0
 vendor.qti.hardware.qrs.qrsprovider.IQrsProvider/default         u:object_r:vendor_aidl_qrs_service:s0
+vendor.qti.hardware.bhs.Ibhs/default                          u:object_r:vendor_hal_bhs_service:s0
+vendor.qti.hardware.bluetooth_fmd.IBtFmd/default                u:object_r:vendor_hal_bluetooth_fmd_service:s0

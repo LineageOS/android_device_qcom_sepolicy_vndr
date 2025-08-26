@@ -29,6 +29,10 @@
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
+#BHS
+vendor_internal_prop(vendor_bhs_remoteproc_prop);
+vendor_internal_prop(vendor_bhs_cpu_prop);
+
 #face3d
 vendor_internal_prop(vendor_face3d_producer_prop);
 #sec property

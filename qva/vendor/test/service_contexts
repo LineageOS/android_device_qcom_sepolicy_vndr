@@ -5,5 +5,4 @@ vendor.qti.hardware.debugutils.IDebugUtils/default              u:object_r:hal_d
 vendor.qti.hardware.wifi.wifimyftm.IWifiMyFtm/default           u:object_r:vendor_hal_wifimyftm_service:s0
 
 vendor.qti.qepi.IQEPI/qepi                             u:object_r:vendor_hal_qms_service:s0
-vendor.qti.hardware.bluetooth_fmd.IBtFmd/default                u:object_r:vendor_hal_bluetooth_fmd_service:s0
 

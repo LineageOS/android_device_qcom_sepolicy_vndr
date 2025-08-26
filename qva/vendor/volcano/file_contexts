@@ -29,6 +29,8 @@
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
+#BHS
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.bhs\.service           u:object_r:vendor_hal_bhs_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face@1\.0-service    u:object_r:vendor_biometricsface_exec:s0
 
 /data/vendor/face3d_dir(/.*)?                                                      u:object_r:vendor_biometricsface_data_file:s0

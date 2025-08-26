@@ -1,0 +1,30 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+#
+
+type vendor_hal_drm_playready_aidl_qti, domain;
+type vendor_hal_drm_playready_aidl_qti_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_hal_drm_playready_aidl_qti)
+
+hal_server_domain(vendor_hal_drm_playready_aidl_qti, hal_drm)
+
+vndbinder_use(vendor_hal_drm_playready_aidl_qti);
+binder_call(vendor_hal_drm_playready_aidl_qti, servicemanager);
+
+allow vendor_hal_drm_playready_aidl_qti mediacodec:fd use;
+allow vendor_hal_drm_playready_aidl_qti { appdomain -isolated_app }:fd use;
+allow vendor_hal_drm_playready_aidl_qti vendor_qce_device:chr_file rw_file_perms;
+
+allow vendor_hal_drm_playready_aidl_qti vendor_qdisplay_service:service_manager { find };
+
+
+allow vendor_hal_drm_playready_aidl_qti vendor_mediadrm_vendor_data_file:dir create_dir_perms;
+allow vendor_hal_drm_playready_aidl_qti vendor_mediadrm_vendor_data_file:file create_file_perms;
+allow vendor_hal_drm_playready_aidl_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow vendor_hal_drm_playready_aidl_qti vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+allow vendor_hal_drm_playready_aidl_qti vendor_vm_cp_bitstream_device:chr_file r_file_perms;
+allow vendor_hal_drm_playready_aidl_qti vendor_membuf_dev:chr_file r_file_perms;
+
+# Required to read drm smmu property
+#get_prop(vendor_hal_drm_playready_aidl_qti, vendor_drm_smmu_prop);

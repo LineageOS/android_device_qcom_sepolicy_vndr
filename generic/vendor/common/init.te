@@ -55,6 +55,12 @@ allow init vendor_qmcs_file:filesystem { relabelfrom mount unmount relabelto };
 allow init vendor_spunvm_file:dir { mounton };
 allow init vendor_spunvm_file:filesystem { relabelfrom mount unmount relabelto };
 
+allow init vendor_soccp_file:dir { mounton };
+allow init vendor_soccp_file:filesystem { relabelfrom mount unmount relabelto };
+
+allow init vendor_dcp_file:dir { mounton };
+allow init vendor_dcp_file:filesystem { relabelfrom mount unmount relabelto };
+
 dontaudit init kernel:system module_request;
 
 allow init sysfs_leds:lnk_file r_file_perms;

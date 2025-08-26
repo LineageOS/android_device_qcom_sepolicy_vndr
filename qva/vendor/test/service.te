@@ -3,5 +3,4 @@
 
 type hal_debugutils_aidlservice, hal_service_type, service_manager_type;
 type vendor_hal_wifimyftm_service, hal_service_type, protected_service, service_manager_type;
-type vendor_hal_bluetooth_fmd_service,   hal_service_type, protected_service, service_manager_type;
 
