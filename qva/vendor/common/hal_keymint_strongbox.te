@@ -40,6 +40,12 @@ binder_call(vendor_hal_keymint_strongbox, secure_element);
 
 get_prop(vendor_hal_keymint_strongbox, vendor_security_patch_level_prop);
 
+# selinux rules for direct communication with ese hal
+hal_client_domain(vendor_hal_keymint_strongbox, hal_secure_element)
+
 allow vendor_hal_keymint_strongbox secure_element_service:service_manager find;
 
 allow vendor_hal_keymint_strongbox self:capability2 wake_alarm;
+
+# Rules to access wakelock
+wakelock_use(vendor_hal_keymint_strongbox)

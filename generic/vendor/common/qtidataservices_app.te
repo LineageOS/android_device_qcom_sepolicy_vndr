@@ -89,3 +89,4 @@ binder_use(vendor_qtidataservices_app)
 
 allow vendor_qtidataservices_app vendor_nicmd:fd use;
 allow vendor_qtidataservices_app vendor_nicmd:udp_socket { getattr getopt read write };
+allow vendor_qtidataservices_app vendor_cnd:udp_socket { read write };
