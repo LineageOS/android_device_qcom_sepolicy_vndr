@@ -43,3 +43,5 @@ get_prop(vendor_hal_keymint_strongbox, vendor_security_patch_level_prop);
 allow vendor_hal_keymint_strongbox secure_element_service:service_manager find;
 
 allow vendor_hal_keymint_strongbox self:capability2 wake_alarm;
+
+wakelock_use(vendor_hal_keymint_strongbox)
