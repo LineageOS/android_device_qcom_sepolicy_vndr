@@ -41,3 +41,5 @@ allow vendor_hal_weaver_default secure_element_service:service_manager find;
 allow vendor_hal_weaver_default self:capability2 wake_alarm;
 
 get_prop(vendor_hal_weaver_default, boot_status_prop)
+
+wakelock_use(vendor_hal_weaver_default)
