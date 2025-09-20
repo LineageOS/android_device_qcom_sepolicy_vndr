@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cfe1acc_c0cb9774",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-09-20T13:56:25Z",
+      "side": 1,
+      "message": "This commit exists in lineage-23.0-caf-sm8750 branch, spotted while picking your changes.",
+      "revId": "359a22e6e1568d2874a85dacf4e1db14f519c69d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
