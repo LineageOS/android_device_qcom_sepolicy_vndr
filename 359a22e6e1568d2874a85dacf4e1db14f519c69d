@@ -69,6 +69,24 @@
       "message": "The commit is part of LA.VENDOR.15.4.0.r1-18400-pakala.QSSI16.0 (https://git.codelinaro.org/clo/la/device/qcom/sepolicy_vndr/-/tags?sort\u003dupdated_desc\u0026search\u003dLA.VENDOR.15.4.0.r1) and this branch is still based on LA.VENDOR.15.4.0.r1-18000-pakala.QSSI16.0.",
       "revId": "359a22e6e1568d2874a85dacf4e1db14f519c69d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b8ea245_dc6be697",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2025-09-20T14:22:18Z",
+      "side": 1,
+      "message": "pull the new tag instead?",
+      "parentUuid": "54c0f2ed_c8f176e4",
+      "revId": "359a22e6e1568d2874a85dacf4e1db14f519c69d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
