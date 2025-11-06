@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06bff082_97c2b42d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2025-11-06T22:24:17Z",
+      "side": 1,
+      "message": "I still need to check and see what other repos will need updating prior to merge. I know oplus will need a CR to remove the defines. Dre is the only device coming to mind that uses ST nfc from oplus, and iirc some moto devices will need patching as well.",
+      "revId": "6f1d03dd10c264cd38104c98671c7178ce467a86",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
