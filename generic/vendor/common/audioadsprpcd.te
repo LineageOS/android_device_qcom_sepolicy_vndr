@@ -51,3 +51,6 @@ allow vendor_audioadsprpcd vendor_dmabuf_adsp_heap_device:chr_file r_file_perms;
 # Allow access to dynamically updated dsp libs
 allow vendor_audioadsprpcd vendor_audio_dsp_data_file:dir r_dir_perms;
 allow vendor_audioadsprpcd vendor_audio_dsp_data_file:file r_file_perms;
+
+# Allow access to device directories
+allow vendor_audioadsprpcd device:dir r_dir_perms;

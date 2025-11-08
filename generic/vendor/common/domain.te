@@ -137,6 +137,7 @@ neverallow { domain
 - apexd
 - vendor_qti_init_shell
 - vendor_qvrd_vndr_cam
+- vendor_qti_graphics_boot
 - wpa_supplicant_macsec
 userdebug_or_eng(` -vendor_subsystem_ramdump')
 } { vendor_sys_nonsp_comp vendor_sys_sp_comp }: file *;

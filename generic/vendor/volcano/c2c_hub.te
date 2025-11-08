@@ -1,0 +1,20 @@
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. 
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_c2c_hub, domain;
+type vendor_c2c_hub_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_c2c_hub)
+
+# Sepolicy rules for c2c_hub service
+allow vendor_c2c_hub mnt_vendor_file:dir r_dir_perms;
+allow vendor_c2c_hub vendor_persist_data_file:dir r_dir_perms;
+allow vendor_c2c_hub vendor_fas_persist_data_file:file create_file_perms;
+allow vendor_c2c_hub vendor_fas_persist_data_file:dir rw_dir_perms;
+
+unix_socket_connect(vendor_c2c_hub, vendor_ssgtzd, vendor_ssgtzd)
+allow vendor_c2c_hub proc_version:file r_file_perms;
+net_domain(vendor_c2c_hub);
+
+userdebug_or_eng(`
+    get_prop(vendor_c2c_hub,vendor_mink_trace_prop)
+')

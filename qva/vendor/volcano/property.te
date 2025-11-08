@@ -46,4 +46,4 @@ neverallow {domain -init -vendor_init -vendor_hal_cloudagent_qti -vendor_hal_dat
 vendor_internal_prop(vendor_awareagent_prop);
 neverallow {domain -init -vendor_init -vendor_hal_cloudagent_qti -vendor_awareagent} {vendor_awareagent_prop}:property_service set;
 vendor_internal_prop(vendor_qrs_service_prop);
-
+vendor_internal_prop(vendor_qrs_enable_tag_resolver_prop);

@@ -125,6 +125,9 @@ persist.vendor.vin.                          u:object_r:vendor_hvdcp_opti_prop:s
 persist.vendor.qg.                           u:object_r:vendor_hvdcp_opti_prop:s0
 persist.vendor.soh.                          u:object_r:vendor_hvdcp_opti_prop:s0
 
+#healthd properties
+persist.vendor.hal_health.                   u:object_r:vendor_hal_health_prop:s0
+
 # XLAT property
 persist.vendor.net.doxlat                    u:object_r:vendor_xlat_prop:s0
 

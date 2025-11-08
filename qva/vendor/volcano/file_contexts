@@ -31,6 +31,12 @@
 
 #BHS
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.bhs\.service           u:object_r:vendor_hal_bhs_default_exec:s0
+/(vendor|system/vendor)/bin/vendor_bhs_mproc\.sh                             u:object_r:vendor_bhs_mproc_exec:s0
+/sys/devices/platform/soc/3000000.remoteproc-adsp/remoteproc/remoteproc[0-9]+/state   u:object_r:vendor_sysfs_ssr_state:s0
+/sys/devices/platform/soc/32300000.remoteproc-cdsp/remoteproc/remoteproc[0-9]+/state  u:object_r:vendor_sysfs_ssr_state:s0
+/sys/devices/platform/soc/4080000.remoteproc-mss/remoteproc/remoteproc[0-9]+/state    u:object_r:vendor_sysfs_ssr_state:s0
+/sys/devices/platform/soc/9bb00000.remoteproc-wpss/remoteproc/remoteproc[0-9]+/state  u:object_r:vendor_sysfs_ssr_state:s0
+
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face@1\.0-service    u:object_r:vendor_biometricsface_exec:s0
 
 /data/vendor/face3d_dir(/.*)?                                                      u:object_r:vendor_biometricsface_data_file:s0

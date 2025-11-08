@@ -69,6 +69,7 @@ type vendor_dmabuf_demura_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_ubwcp_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_system_movable_heap_device, dmabuf_heap_device_type, dev_type;
 type vendor_dmabuf_ubwcp_movable_heap_device, dmabuf_heap_device_type, dev_type;
+type vendor_dmabuf_sc_tcm_heap_device, dmabuf_heap_device_type, dev_type;
 
 type vendor_membuf_dev, dev_type;
 

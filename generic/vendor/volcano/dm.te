@@ -1,0 +1,19 @@
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. 
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_dm, domain;
+type vendor_dm_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_dm)
+
+# Sepolicy rules for dm service
+allow vendor_dm mnt_vendor_file:dir r_dir_perms;
+unix_socket_connect(vendor_dm, vendor_ssgtzd, vendor_ssgtzd)
+net_domain(vendor_dm);
+allow vendor_dm vendor_persist_data_file:dir r_dir_perms;
+allow vendor_dm vendor_fas_persist_data_file:file create_file_perms;
+allow vendor_dm vendor_fas_persist_data_file:dir rw_dir_perms;
+allow vendor_dm proc_version:file r_file_perms;
+
+userdebug_or_eng(`
+    get_prop(vendor_dm,vendor_mink_trace_prop)
+')

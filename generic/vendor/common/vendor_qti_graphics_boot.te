@@ -9,4 +9,5 @@ init_daemon_domain(vendor_qti_graphics_boot)
 #============= qti_graphics_boot ==============
 set_prop(vendor_qti_graphics_boot, vendor_display_prop)
 allow vendor_qti_graphics_boot vendor_toolbox_exec:file rx_file_perms;
+allow vendor_qti_graphics_boot vendor_sys_nonsp_comp:file r_file_perms;
 

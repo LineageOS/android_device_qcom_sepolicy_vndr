@@ -6,3 +6,15 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm-service\.playready-qti       u:object_r:vendor_hal_drm_playready_aidl_qti_exec:s0
 
 
+###################################
+#Dev nodes
+#
+/dev/power_state                      u:object_r:vendor_power_state_device:s0
+#swap partition node
+/dev/block/by-name/swap				  u:object_r:vendor_hibernate_swap:s0
+
+###################################
+# System files
+#
+/vendor/bin/hw/vendor\.qti\.hardware\.power\.powerstateservice@1\.0-service			   u:object_r:vendor_hal_powerstateservice_qti_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.power\.powerstateutility@1\.0-service			   u:object_r:vendor_hal_powerstateutility_qti_exec:s0

@@ -284,3 +284,13 @@
 
 # Dev node for rpmb
 /dev/mmcblk0rpmb                u:object_r:vendor_rpmb_device:s0
+
+/(vendor|system/vendor)/bin/FAS        u:object_r:vendor_fas_exec:s0
+/(vendor|system/vendor)/bin/c2c_hub        u:object_r:vendor_c2c_hub_exec:s0
+/(vendor|system/vendor)/bin/dm        u:object_r:vendor_dm_exec:s0
+/(vendor|system/vendor)/bin/mosquitto        u:object_r:vendor_mosquitto_exec:s0
+
+/mnt/vendor/persist/data/c2c(/.*)?    u:object_r:vendor_fas_persist_data_file:s0
+
+#fas sockets
+/dev/socket/fas(/.*)?       u:object_r:vendor_fas_socket:s0

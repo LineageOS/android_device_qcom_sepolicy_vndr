@@ -2,3 +2,4 @@
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 allow vendor_init system_file:file { getattr read };
+allow vendor_qti_init_shell vendor_sysfs_gunyah_panic:file w_file_perms;

@@ -25,8 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# ​​​​​Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 # nordic node file
@@ -39,3 +39,11 @@ type vendor_kx_file, file_type, vendor_file_type;
 #calib file types
 type vendor_calib_file, file_type, vendor_calib_file_type;
 allow { vendor_calib_file }self:filesystem associate;
+
+#hlos mink daemon socket
+type vendor_hlos_minkd_opener_socket, file_type, mlstrustedobject;
+
+#suspend/hibernate files
+type vendor_sysfs_mem_sleep, fs_type, sysfs_type;
+type vendor_sysfs_power_disk, sysfs_type, fs_type;
+type vendor_sysfs_cpu_sleep_disabled, sysfs_type, fs_type;

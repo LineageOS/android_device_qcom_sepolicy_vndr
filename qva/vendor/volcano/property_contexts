@@ -42,3 +42,4 @@ vendor.secca.service                         u:object_r:vendor_secca_prop:s0
 #aware-agent
 vendor.awareagent.service                    u:object_r:vendor_awareagent_prop:s0
 persist.vendor.qrs.service                   u:object_r:vendor_qrs_service_prop:s0
+persist.vendor.qrs.enable.tag.resolver       u:object_r:vendor_qrs_enable_tag_resolver_prop:s0

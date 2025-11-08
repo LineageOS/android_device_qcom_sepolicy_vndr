@@ -1,0 +1,8 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# define power_state device
+type vendor_power_state_device, dev_type;
+
+# block device for swap
+type vendor_hibernate_swap, dev_type;

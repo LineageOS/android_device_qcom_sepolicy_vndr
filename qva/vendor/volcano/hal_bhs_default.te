@@ -16,3 +16,11 @@ set_prop(vendor_hal_bhs_default, vendor_bhs_cpu_prop);
 
 #wakelock policy
 wakelock_use(vendor_hal_bhs_default);
+
+#rules added for BHS mproc load/unload and module load/unload
+type vendor_bhs_mproc_exec, exec_type, vendor_file_type, file_type;
+type vendor_bhs_mproc, domain;
+init_daemon_domain(vendor_bhs_mproc);
+allow vendor_bhs_mproc vendor_sysfs_ssr:file r_file_perms;
+allow vendor_bhs_mproc vendor_sysfs_ssr_state:file rw_file_perms;
+allow vendor_bhs_mproc vendor_sysfs_bhs_irq:file rw_file_perms;

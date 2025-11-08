@@ -13,3 +13,40 @@ binder_call(vendor_qrsloader, hwservicemanager)
 hal_server_domain(vendor_qrsloader, vendor_hal_qrsloader)
 allow vendor_qrsloader vendor_qms_service:service_manager find;
 get_prop(vendor_qrsloader, vendor_qrs_service_prop)
+
+# Allow creating, writing, and unlinking  socket file
+allow vendor_qrsloader vendor_fas_socket:sock_file create_file_perms;
+
+# Allow removing a name from the directory
+allow vendor_qrsloader vendor_fas_socket:dir remove_name;
+
+allow vendor_qrsloader vendor_fas:unix_dgram_socket sendto;
+
+# Allow traversal of /mnt/vendor directory
+allow vendor_qrsloader mnt_vendor_file:dir search;
+
+# Allow traversal of /mnt/vendor/persist/data directory
+allow vendor_qrsloader vendor_persist_data_file:dir search;
+
+# Allow read/search access to /mnt/vendor/persist/data/c2c directory
+allow vendor_qrsloader vendor_fas_persist_data_file:dir r_dir_perms;
+
+# Allow read/open/getattr access to FAS.json file under /mnt/vendor/persist/data/c2c
+allow vendor_qrsloader vendor_fas_persist_data_file:file r_file_perms;
+
+# Allow search, write, and add_name in /dev/socket/fas directory (needed for socket creation)
+allow vendor_qrsloader vendor_fas_socket:dir { search write add_name };
+
+# Access to /dev/socket/aware directory
+allow vendor_qrsloader vendor_aware_socket:dir { search write add_name remove_name };
+
+# Create and manage socket files in that directory
+allow vendor_qrsloader vendor_aware_socket:sock_file { create write unlink };
+
+# Allow vendor_qrsloader to send data to vendor_awareagent over Unix datagram socket
+allow vendor_qrsloader vendor_awareagent:unix_dgram_socket sendto;
+
+# Allow vendor_awareagent to send data to vendor_qrsloader over Unix datagram socket
+allow vendor_awareagent vendor_qrsloader:unix_dgram_socket sendto;
+
+get_prop(vendor_qrsloader, vendor_qrs_enable_tag_resolver_prop)

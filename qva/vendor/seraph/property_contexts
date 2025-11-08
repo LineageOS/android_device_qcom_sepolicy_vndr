@@ -31,3 +31,6 @@
 
 #WFD
 vendor.qti.wfd.                              u:object_r:vendor_wfd_prop:s0
+
+#VM Shutdown feature enable flag
+ro.vendor.vm.ssr.enable                      u:object_r:vendor_vm_ssrenable_prop:s0

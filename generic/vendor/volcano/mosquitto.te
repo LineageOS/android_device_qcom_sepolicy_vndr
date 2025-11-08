@@ -1,0 +1,9 @@
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. 
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_mosquitto, domain;
+type vendor_mosquitto_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_mosquitto)
+
+# Sepolicy rules for mosquitto
+net_domain(vendor_mosquitto);

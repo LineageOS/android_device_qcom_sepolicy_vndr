@@ -1,9 +1,10 @@
-# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
-
 
 # Allow init shell to acces configfs
 allow vendor_qti_init_shell configfs:dir rw_dir_perms;
 allow vendor_qti_init_shell configfs:dir create_dir_perms;
 allow vendor_qti_init_shell configfs:file rw_file_perms;
 allow vendor_qti_init_shell configfs:file create_file_perms;
+
+allow vendor_qti_init_shell vendor_sysfs_cpu_sleep_disabled:file w_file_perms;

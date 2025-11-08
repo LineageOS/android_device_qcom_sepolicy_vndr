@@ -169,6 +169,8 @@
 /dev/gunyah                                                          u:object_r:vendor_gunyah_dev:s0
 /dev/qgunyah                                                         u:object_r:vendor_gunyah_chr_device:s0
 
+# Gunyah panic notifier sysfs
+/sys/devices/platform/soc/soc:qcom,gunyah-panic-notifier/trustedvm_recovery u:object_r:vendor_sysfs_gunyah_panic:s0
 
 #subsys nodes
 /sys/devices/platform/soc/4080000.remoteproc-mss/remoteproc/remoteproc[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
