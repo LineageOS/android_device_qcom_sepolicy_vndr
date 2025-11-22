@@ -16,6 +16,24 @@
       "message": "Can we remove these from BP3A topic? repopicking the whole topic does not work anymore for syncs without this repo.",
       "revId": "f321a04280cb16a6ac7cad12c9947025ffd50dfb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "211206f1_c50eadac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-11-22T16:35:06Z",
+      "side": 1,
+      "message": "Why are you not syncing these repos if these are part of lineage snippets?",
+      "parentUuid": "cfe28ee7_df17f1a2",
+      "revId": "f321a04280cb16a6ac7cad12c9947025ffd50dfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
