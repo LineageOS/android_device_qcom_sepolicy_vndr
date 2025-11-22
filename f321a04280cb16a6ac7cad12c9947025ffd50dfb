@@ -51,6 +51,23 @@
       "message": "Unsure, but it\u0027s missing from my sync.",
       "revId": "f321a04280cb16a6ac7cad12c9947025ffd50dfb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "803dd93a_11914d0a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-11-22T17:01:59Z",
+      "side": 1,
+      "message": "repopick has an ignore option for missing repos. You should definitely have this repository synced and if not, you either explicitly removed it or something is wrong in your tree",
+      "revId": "f321a04280cb16a6ac7cad12c9947025ffd50dfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
