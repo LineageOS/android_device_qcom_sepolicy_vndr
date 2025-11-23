@@ -87,7 +87,6 @@ binder_call(vendor_hal_qms_qti_server, servicemanager)
 binder_call(vendor_hal_qms_qti_client, vendor_hal_qms_qti_server)
 binder_call(vendor_hal_qms_qti_server, vendor_hal_qms_qti_client)
 allow vendor_qms connectivity_native_service:service_manager find;
-binder_call(vendor_qms, connectivity_native_service)
 binder_call(vendor_qms, system_server)
 allow vendor_qms self:netlink_route_socket nlmsg_readpriv;
 allow vendor_qms  proc_net:file rw_file_perms;
