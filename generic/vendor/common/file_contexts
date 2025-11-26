@@ -117,6 +117,7 @@
 /dev/socket/notify-topology                     u:object_r:vendor_notify-topology_socket:s0
 /dev/socket/vuidmgr                             u:object_r:vendor_vuidmgr_socket:s0
 /dev/nq-nci                                     u:object_r:nfc_device:s0
+/dev/sec-nfc                                    u:object_r:nfc_device:s0
 /dev/st21nfc                                     u:object_r:nfc_device:s0
 /dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
 /dev/bt_cp_ctrl                                 u:object_r:hci_attach_dev:s0
