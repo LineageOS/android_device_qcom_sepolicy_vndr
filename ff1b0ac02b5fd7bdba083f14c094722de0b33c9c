@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9b18917_37332354",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36121
+      },
+      "writtenOn": "2026-01-24T16:10:35Z",
+      "side": 1,
+      "message": "Samsung galaxi j5 2016",
+      "revId": "ff1b0ac02b5fd7bdba083f14c094722de0b33c9c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
