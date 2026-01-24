@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3376232c_5a331a0b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36121
+      },
+      "writtenOn": "2026-01-24T16:11:32Z",
+      "side": 1,
+      "message": "Recovery samsung",
+      "revId": "54ca7bac1ab34a599ee91fa26102a31d5ea2be15",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
