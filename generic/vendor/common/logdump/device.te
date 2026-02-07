@@ -1,0 +1,2 @@
+#logdump partition
+type vendor_logdump_partition, dev_type;
