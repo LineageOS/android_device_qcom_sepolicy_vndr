@@ -115,7 +115,7 @@ userdebug_or_eng(`
 ')
 
 # Allow access to read the VM SSR flag
-allow hal_camera_default vendor_vm_ssrenable_prop:file read;
+get_prop(hal_camera_default, vendor_vm_ssrenable_prop);
 
 # Allow access to AVF qVirt manager interface
 hal_client_domain(hal_camera_default, vendor_hal_avf_qcvm_qti)
