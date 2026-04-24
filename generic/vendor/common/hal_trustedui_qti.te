@@ -74,3 +74,9 @@ hal_attribute_service(vendor_hal_trustedui, vendor_hal_trustedui_aidl_service)
 userdebug_or_eng(`
   get_prop(vendor_hal_trustedui_qti, vendor_mink_trace_prop)
 ')
+
+# Properties for configuring process startup
+set_prop(vendor_hal_trustedui_qti, vendor_trustedui_listener_enabled_prop)
+get_prop(vendor_hal_trustedui_qti, vendor_trustedui_listener_start_prop)
+get_prop(vendor_hal_trustedui_qti, vendor_trustedui_start_prop)
+

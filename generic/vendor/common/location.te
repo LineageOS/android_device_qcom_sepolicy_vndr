@@ -25,6 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
 # generic/vendor/common/location.te - sepolicy rules for generic location module - loc_launcher
 
 # loc_launcher service
@@ -56,11 +60,6 @@ allow vendor_location vendor_location_lowi_server:unix_dgram_socket sendto;
 # permission for read execute vendor_location daemons in userdebug mode.
 userdebug_or_eng(`
   allow shell vendor_location_exec:file rx_file_perms;
-')
-
-# stop or kill loc_launcher, it will send signal Sigkill or Sigstop to child processes.
-userdebug_or_eng(`
-  allow vendor_location {vendor_location_xtra_daemon vendor_location_lowi_server}:process { signal sigkill sigstop };
 ')
 
 dontaudit vendor_location kernel:system module_request;

@@ -25,9 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
+
 # generic/vendor/common/hal_gnss_qti.te - generic sepolicy rules for vendor_location hidl
 
 type vendor_hal_gnss_qti, domain;
@@ -35,6 +36,8 @@ hal_server_domain(vendor_hal_gnss_qti, hal_gnss)
 
 type vendor_hal_gnss_qti_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_hal_gnss_qti)
+
+set_prop(vendor_hal_gnss_qti, vendor_location_prop)
 
 # vendor binder
 use_vendor_per_mgr(vendor_hal_gnss_qti)
