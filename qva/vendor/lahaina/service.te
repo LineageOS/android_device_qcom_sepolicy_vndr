@@ -1,12 +1,12 @@
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # # SPDX-License-Identifier: BSD-3-Clause-Clear
 
-type vendor_sec_featuremanager_service,  vendor_service,service_manager_type;
-type vendor_sec_datamanager_service,     vendor_service,service_manager_type;
-type vendor_awareagent_service, vendor_service,service_manager_type;
-type vendor_aware_platform_service_service, vendor_service,service_manager_type;
-type vendor_hal_perf2_service, vendor_service,service_manager_type;
-type vendor_aidl_rcsservice, vendor_service,service_manager_type;
-type vendor_hal_factory_aidlservice, vendor_service,service_manager_type;
-type vendor_hal_vnddisplayconfig_service, vendor_service,service_manager_type;
+type vendor_sec_featuremanager_service,  hal_service_type,service_manager_type;
+type vendor_sec_datamanager_service,     hal_service_type,service_manager_type;
+type vendor_awareagent_service, hal_service_type,service_manager_type;
+type vendor_aware_platform_service_service, hal_service_type,service_manager_type;
+type vendor_hal_perf2_service, hal_service_type,service_manager_type;
+type vendor_aidl_rcsservice, hal_service_type,service_manager_type;
+type vendor_hal_factory_aidlservice, hal_service_type,service_manager_type;
+type vendor_hal_vnddisplayconfig_service, hal_service_type,service_manager_type;
 
