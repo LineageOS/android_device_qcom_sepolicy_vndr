@@ -20,15 +20,7 @@ unix_socket_connect(vendor_sec_featuremanager, vendor_ssgtzd, vendor_ssgtzd)
 allow vendor_sec_featuremanager vendor_shell_exec:file execute_no_trans;
 allow vendor_sec_featuremanager vendor_sec_oras_exec:file execute_no_trans;
 
-allow vendor_sec_featuremanager vendor_sec_vndr_data_file:dir create_dir_perms;
-allow vendor_sec_featuremanager vendor_sec_vndr_data_file:file create_file_perms;
-
 # Allow access to find other services
-allow vendor_sec_featuremanager vendor_sec_cloudagent_service:service_manager find;
-binder_call(vendor_sec_featuremanager, vendor_sec_cloudagent);
-
-allow vendor_sec_featuremanager vendor_sec_datamanager_service:service_manager find;
-binder_call(vendor_sec_featuremanager, vendor_sec_datamanager);
 
 set_prop(vendor_sec_featuremanager, vendor_secfm_prop);
 

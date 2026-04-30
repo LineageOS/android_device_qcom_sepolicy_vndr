@@ -26,7 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2023,2024 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2023,2024,2025 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #face3d
@@ -43,4 +43,7 @@ persist.vendor.umd.                          u:object_r:vendor_umd_prop:s0
 #sec properties
 vendor.secfm.service                         u:object_r:vendor_secfm_prop:s0
 vendor.secdm.service                         u:object_r:vendor_secdm_prop:s0
-vendor.secca.service                         u:object_r:vendor_secca_prop:s0
+
+#aware-agent
+vendor.awareagent.service                    u:object_r:vendor_awareagent_prop:s0
+

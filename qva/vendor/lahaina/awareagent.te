@@ -1,0 +1,54 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. 
+# # SPDX-License-Identifier: BSD-3-Clause-Clear
+#
+type vendor_awareagent, domain;
+type vendor_awareagent_exec, exec_type, vendor_file_type, file_type;
+
+# # Allow for transition from init domain to vendor_hal_awareagent_qti
+init_daemon_domain(vendor_awareagent)
+
+vndbinder_use(vendor_awareagent)
+
+# Allow vendor_awareagent to be registered with service manager
+add_service(vendor_awareagent, vendor_awareagent_service)
+binder_call(vendor_awareagent, servicemanager);
+
+#============= vendor_awareagent ==============
+allow vendor_awareagent proc_meminfo:file { r_file_perms };
+allow vendor_awareagent proc_stat:file { r_file_perms };
+allow vendor_awareagent sysfs_net:dir { r_dir_perms };
+allow vendor_awareagent sysfs_net:file { r_file_perms };
+
+allow vendor_awareagent vendor_sysfs_battery_supply:dir search;
+allow vendor_awareagent vendor_sysfs_battery_supply:file { read open };
+
+allow vendor_awareagent vendor_aware_vndr_data_file:dir { create_dir_perms };
+allow vendor_awareagent vendor_aware_vndr_data_file:file { create_file_perms };
+neverallow {domain -init -vendor_init -vendor_awareagent -vendor_aware_platform_service } vendor_aware_vndr_data_file:{dir file} *;
+
+allow vendor_awareagent vendor_persist_aware_file:dir create_dir_perms;
+allow vendor_awareagent vendor_persist_aware_file:file create_file_perms;
+allow vendor_awareagent mnt_vendor_file:dir search;
+neverallow {domain -init -vendor_init -vendor_awareagent -vendor_aware_platform_service } vendor_persist_aware_file:{dir file} *;
+
+allow vendor_awareagent sysfs:file { open read };
+allow vendor_awareagent proc_uptime:file { open read };
+
+# Network access
+net_domain(vendor_awareagent);
+
+# QWES
+unix_socket_connect(vendor_awareagent, vendor_ssgtzd, vendor_ssgtzd)
+
+# Socket access
+allow vendor_awareagent vendor_aware_socket:dir rw_dir_perms;
+allow vendor_awareagent vendor_aware_socket:dir create_dir_perms;
+allow vendor_awareagent vendor_aware_socket:sock_file create_file_perms;
+allow vendor_awareagent vendor_aware_socket:sock_file rw_file_perms;
+allow vendor_awareagent vendor_aware_socket:unix_dgram_socket { read write sendto };
+
+allow vendor_awareagent vendor_aware_platform_service:unix_dgram_socket sendto;
+
+allow vendor_awareagent vendor_wifi_vendor_data_file:dir search;
+allow vendor_awareagent wpa_data_file:dir { add_name remove_name search write };
+allow vendor_awareagent wpa_data_file:sock_file { create setattr write };

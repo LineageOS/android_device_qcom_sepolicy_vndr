@@ -1,0 +1,4 @@
+# # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# # SPDX-License-Identifier: BSD-3-Clause-Clear
+
+allow hal_wifi_supplicant_default vendor_aware_platform_service:unix_dgram_socket sendto;
