@@ -43,3 +43,11 @@ binder_call(hal_bluetooth, servicemanager)
 
 # for Xpan Provider Service
 hal_attribute_service(hal_bluetooth, vendor_hal_xpanprovider_service)
+
+# Proximity/BCS Soft SKU license
+set_prop(hal_bluetooth, vendor_proximity_prop)
+
+# Allow BT HAL to read access to vendor_mink_trace_prop
+userdebug_or_eng(`
+get_prop(hal_bluetooth_default, vendor_mink_trace_prop)
+')

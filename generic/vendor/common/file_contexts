@@ -642,3 +642,6 @@
 
 # CHRE
 /vendor/bin/hw/android\.hardware\.contexthub-service\.qmi                             u:object_r:hal_contexthub_default_exec:s0
+
+# Powerstats hal
+/vendor/bin/hw/android\.hardware\.powerstats-service.qti                   u:object_r:hal_power_stats_default_exec:s0

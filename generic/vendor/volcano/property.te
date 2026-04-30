@@ -1,0 +1,6 @@
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. 
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+vendor_restricted_prop(vendor_fas_signal_prop);
+vendor_restricted_prop(vendor_qlas_migrated_prop);
+vendor_restricted_prop(vendor_qlas_migrated_files_prop);

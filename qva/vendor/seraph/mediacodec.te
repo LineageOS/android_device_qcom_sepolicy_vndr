@@ -29,6 +29,9 @@
 # Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
+# Allow mediacodec to access vendor_dmabuf_sc_tcm_heap_device
+allow mediacodec vendor_dmabuf_sc_tcm_heap_device:chr_file r_file_perms;
+
 # Allow mediacodec to create DisplayConfig client interface
 hal_client_domain(mediacodec, hal_graphics_composer)
 hal_client_domain(mediacodec, vendor_hal_perf)

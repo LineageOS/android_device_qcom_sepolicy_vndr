@@ -1,0 +1,9 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Allow access to device directories
+allow vendor_audioadsprpcd device:dir { read watch };
+
+r_dir_file(vendor_audioadsprpcd, vendor_sysfs_public);
+allow vendor_audioadsprpcd sysfs:dir r_dir_perms;
+

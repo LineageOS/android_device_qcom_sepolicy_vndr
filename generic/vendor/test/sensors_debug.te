@@ -24,28 +24,40 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-type vendor_subsystem_ramdump_exec, exec_type, vendor_file_type, file_type;
 
+# Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Policy for sensor debug daemon
+
+type vendor_sensors_debug, domain;
+type vendor_sensors_debug_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_sensors_debug)
+get_prop(vendor_sensors_debug, vendor_sensors_prop)
+
+
+# Access to tests from userdebug/eng builds
 userdebug_or_eng(`
-  type vendor_subsystem_ramdump, domain;
+  diag_use(vendor_sensors_debug)
+  get_prop(vendor_sensors_debug, vendor_sensors_dbg_prop)
 
-  init_daemon_domain(vendor_subsystem_ramdump);
+  #allow starting of diag_mdlog
+  allow vendor_sensors_debug vendor_qlogd_exec:file rx_file_perms;
+  allow vendor_sensors_debug vendor_shell_exec:file rx_file_perms;
 
-  allow vendor_subsystem_ramdump device:dir r_dir_perms;
-  allow vendor_subsystem_ramdump vendor_ramdump_device:chr_file r_file_perms;
-  allow vendor_subsystem_ramdump vendor_ramdump_microdump_modem_device:chr_file r_file_perms;
+  allow vendor_sensors_debug vendor_sensors_vendor_data_file:dir create_dir_perms;
+  allow vendor_sensors_debug vendor_sensors_vendor_data_file:file create_file_perms;
+  allow vendor_sensors_debug vendor_sensors_vendor_data_file:fifo_file create_file_perms;
 
-  allow vendor_subsystem_ramdump vendor_sysfs_devcd:file rw_file_perms;
-  allow vendor_subsystem_ramdump vendor_sysfs_qcom_ramdump:file rw_file_perms;
-  allow vendor_subsystem_ramdump self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+  allow vendor_sensors_debug self:{ socket qipcrtr_socket } create_socket_perms;
+  # ioctlcmd=c304
+  allowxperm vendor_sensors_debug self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
 
-  r_dir_file(vendor_subsystem_ramdump, sysfs_type);
+  allow vendor_sensors_debug mnt_vendor_file:dir r_dir_perms;
 
-  allow vendor_subsystem_ramdump vendor_ramdump_vendor_data_file:dir rw_dir_perms;
-  allow vendor_subsystem_ramdump vendor_ramdump_vendor_data_file:file create_file_perms;
-
-  set_prop(vendor_subsystem_ramdump, vendor_ssr_prop);
-
-  allow vendor_subsystem_ramdump vendor_mdmhelperdata_data_file:dir r_dir_perms;
-  allow vendor_subsystem_ramdump vendor_mdmhelperdata_data_file:file r_file_perms;
+  #Allow to search SSR node directory
+  allow vendor_sensors_debug vendor_sysfs_slpi:dir search;
+  allow vendor_sensors_debug vendor_sysfs_slpi:file getattr;
 ')

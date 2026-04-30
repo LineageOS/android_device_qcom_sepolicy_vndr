@@ -1,0 +1,2 @@
+# Allow sensors HAL to stat the SC TCM dma_heap device
+allow hal_sensors_default vendor_dmabuf_sc_tcm_heap_device:chr_file getattr;

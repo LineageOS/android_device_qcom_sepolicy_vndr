@@ -31,3 +31,6 @@ wfd.native.mm.service                          u:object_r:vendor_wfdnativemm_ser
 wfdhdcpvndservice                              u:object_r:vendor_wfdhdcpvndservice_service:s0
 #QTR SDK
 vendor_qtrsdkservice                           u:object_r:vendor_qtrsdkservice_service:s0
+#QVR IPC
+QVRIPCService                                  u:object_r:vendor_hal_qvripc_service:s0
+QVRCamIPCService                               u:object_r:vendor_hal_qvrcamipc_service:s0

@@ -69,6 +69,12 @@ crash_dump_fallback(vendor_qvrd_vndr_cam);
 
 allow vendor_qvrd_vndr_cam appdomain:process setsched;
 
+# Allow qvrd_vndr_cam to call qvrd_vndr
+vndbinder_use(vendor_qvrd_vndr_cam);
+binder_call(vendor_qvrd_vndr_cam, vendor_qvrd_vndr)
+allow vendor_qvrd_vndr_cam vendor_hal_qvrcamipc_service:service_manager { add };
+allow vendor_qvrd_vndr_cam vendor_hal_qvripc_service:service_manager { find };
+
 # Access dsp
 allow vendor_qvrd_vndr_cam vendor_xdsp_device:chr_file r_file_perms;
 allow vendor_qvrd_vndr_cam vendor_qdsp_device:chr_file r_file_perms;

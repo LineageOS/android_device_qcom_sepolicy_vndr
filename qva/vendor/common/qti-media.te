@@ -34,3 +34,4 @@ allow vendor_qti_media vendor_qti_media_exec:file rx_file_perms;
 allow vendor_qti_media vendor_toolbox_exec:file rx_file_perms;
 set_prop(vendor_qti_media, vendor_video_prop)
 allow vendor_qti_media vendor_sysfs_sku:file { open read };
+allow vendor_qti_media vendor_sys_nonsp_comp:file r_file_perms;

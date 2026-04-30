@@ -88,6 +88,7 @@ neverallow { domain
 - hal_contexthub_default
 - hal_sensors_default
 - hal_camera_default
+is_flag_enabled(TARGET_DEFINES_AXR_CONFIGURATION, -hal_perception_server)
 - hal_audio_default
 - vendor_qvrd_vndr_cam
 userdebug_or_eng(` -vendor_usta_app')
@@ -138,6 +139,8 @@ neverallow { domain
 - vendor_qti_init_shell
 - vendor_qvrd_vndr_cam
 - vendor_qti_graphics_boot
+- vendor_qti_media
+- vendor_hal_perf_default
 - wpa_supplicant_macsec
 userdebug_or_eng(` -vendor_subsystem_ramdump')
 } { vendor_sys_nonsp_comp vendor_sys_sp_comp }: file *;
