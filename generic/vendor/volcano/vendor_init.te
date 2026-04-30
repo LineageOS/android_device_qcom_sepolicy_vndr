@@ -1,0 +1,11 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Volcano-specific vendor_init rules for QLAS file migration
+
+# Allow vendor_init to set permissions on qlas persist files
+# This is needed for chown/chmod operations in qlas_service.rc
+# Note: We only set permissions on migrated files in persist partition
+# Files in /vendor are read-only and have correct permissions from build
+allow vendor_init vendor_qlas_persist_data_file:dir { write setattr };
+allow vendor_init vendor_qlas_persist_data_file:file { setattr write };

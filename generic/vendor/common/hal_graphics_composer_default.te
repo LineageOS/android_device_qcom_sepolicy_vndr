@@ -123,3 +123,9 @@ allow hal_graphics_composer_default vendor_sysfs_disp_boot_param:file r_file_per
 allow hal_graphics_composer_default vendor_persist_feature_enabler_file:dir search;
 allow hal_graphics_composer_default vendor_persist_feature_enabler_file:file r_file_perms;
 unix_socket_connect(hal_graphics_composer_default, vendor_ssgtzd, vendor_ssgtzd);
+
+# Allow composer to read perf hal properties specifically vendor.post_boot.parsed and
+# vendor.mpctl.init.complete
+get_prop(hal_graphics_composer_default, vendor_mpctl_prop)
+get_prop(hal_graphics_composer_default, vendor_wlc_public_prop)
+

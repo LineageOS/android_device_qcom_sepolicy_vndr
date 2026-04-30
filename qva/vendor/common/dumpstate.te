@@ -50,3 +50,6 @@ binder_call(dumpstate, hal_dumpstate_default)
 binder_call(dumpstate, vendor_qms)
 binder_call(dumpstate, hal_bluetooth_default)
 binder_call(dumpstate, hal_uwb)
+
+allow dumpstate vendor_soccp_file:{ dir filesystem } getattr;
+allow dumpstate vendor_dcp_file:{ dir filesystem } getattr;

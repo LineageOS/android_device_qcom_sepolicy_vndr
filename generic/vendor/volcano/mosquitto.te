@@ -7,3 +7,5 @@ init_daemon_domain(vendor_mosquitto)
 
 # Sepolicy rules for mosquitto
 net_domain(vendor_mosquitto);
+allow vendor_mosquitto vendor_mosquitto_socket:dir w_dir_perms;
+allow vendor_mosquitto vendor_mosquitto_socket:sock_file { unlink create};

@@ -1,6 +1,9 @@
-# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.  
-# SPDX-License-Identifier: BSD-3-Clause-Clear 
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 # vendor_cdsprpcd daemon
 
 allow vendor_cdsprpcd device:dir { read watch };
+
+r_dir_file(vendor_cdsprpcd, vendor_sysfs_public);
+allow vendor_cdsprpcd sysfs:dir r_dir_perms;

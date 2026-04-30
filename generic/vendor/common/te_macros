@@ -255,3 +255,11 @@ unix_socket_connect($1, vendor_nicmd, vendor_nicmd)
 allow $1 vendor_nicmd_socket:sock_file { read getattr write };
 allow $1 vendor_nicmd_socket:tipc_socket { create_socket_perms_no_ioctl };
 ')
+
+####################################
+# Workaround: Conditional Policy Macros for Matrix
+# Ideally this code should go in flagging_macros but not available for android 14
+# Hence adding in te_macros
+# is_flag_enabled(flag, rules)
+# SELinux rules which apply only if given feature is turned on
+define(`is_flag_enabled', `ifelse(target_flag_$1, `true', `$2')')

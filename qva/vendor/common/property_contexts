@@ -170,3 +170,6 @@ ro.vendor.qc_aon_presence                    u:object_r:vendor_qc_aon_prop:s0
 
 #UWB
 persist.vendor.qti.uwb.                      u:object_r:vendor_uwb_prop:s0
+
+# Proximity/BCS Soft SKU license
+persist.vendor.qti.proximity.                u:object_r:vendor_proximity_prop:s0

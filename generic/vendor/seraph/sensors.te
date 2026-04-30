@@ -6,3 +6,6 @@ allow vendor_sensors vendor_calib_file:dir r_dir_perms;
 allow vendor_sensors vendor_calib_file:file rw_file_perms;
 allow vendor_sensors device:dir read;
 allow vendor_sensors device:dir watch;
+
+r_dir_file(vendor_sensors, vendor_sysfs_public);
+allow vendor_sensors sysfs:dir r_dir_perms;

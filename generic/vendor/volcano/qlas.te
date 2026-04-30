@@ -1,0 +1,39 @@
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. 
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_qlas, domain;
+type vendor_qlas_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_qlas)
+
+allow vendor_qlas vendor_qlas_socket:dir w_dir_perms;
+allow vendor_qlas vendor_qlas_socket:sock_file { create unlink write };
+
+unix_socket_connect(vendor_qlas, vendor_ssgtzd, vendor_ssgtzd)
+allow vendor_qlas mnt_vendor_file:dir { search };
+
+allow vendor_qlas vendor_qlas_persist_data_file:file rw_file_perms;
+allow vendor_qlas vendor_qlas_persist_data_file:dir rw_dir_perms;
+allow vendor_qlas proc_version:file r_file_perms;
+net_domain(vendor_qlas);
+
+userdebug_or_eng(`
+    get_prop(vendor_qlas, vendor_mink_trace_prop)
+')
+
+allow vendor_qlas vendor_mosquitto_socket:dir {search};
+allow vendor_qlas vendor_persist_data_file:dir {search};
+
+unix_socket_connect(vendor_qlas, vendor_mosquitto, vendor_mosquitto)
+
+
+set_prop(vendor_qlas, vendor_fas_signal_prop)
+
+allow vendor_qlas vendor_qlas_conf_file:dir { r_dir_perms };
+allow vendor_qlas vendor_qlas_conf_file:file { r_file_perms };
+allow vendor_qlas vendor_qlas_persist_data_file:file { create_file_perms };
+allow vendor_qlas vendor_qlas_persist_data_file:lnk_file create;
+
+allow vendor_qlas vendor_qlas_persist_data_file:dir relabelto;
+allow vendor_qlas vendor_qlas_persist_data_file:file relabelto;
+
+set_prop(vendor_qlas, vendor_qlas_migrated_prop)

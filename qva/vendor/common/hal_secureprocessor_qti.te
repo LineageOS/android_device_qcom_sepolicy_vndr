@@ -56,3 +56,7 @@ hal_client_domain(vendor_hal_secureprocessor_qti, hal_graphics_allocator);
 
 # For AIDL Service
 hal_attribute_service(vendor_hal_secureprocessor, vendor_hal_secureprocessor_aidl_service)
+
+# Allow following permission to access qvirt manager service
+hal_client_domain(vendor_hal_secureprocessor_qti, vendor_hal_qvirtservice)
+

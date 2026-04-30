@@ -66,4 +66,5 @@ hal_server_domain_bypass(vendor_hal_imsrtp, vendor_hal_imsrtphal)
 binder_use(vendor_hal_imsrtphal)
 # allow binder connection from client to server
 binder_call(vendor_hal_imsrtphal_client, vendor_hal_imsrtphal_server)
+binder_call(vendor_hal_imsrtphal_server, vendor_hal_imsrtphal_client)
 hal_attribute_service(vendor_hal_imsrtphal, vendor_hal_imsrtp_service)

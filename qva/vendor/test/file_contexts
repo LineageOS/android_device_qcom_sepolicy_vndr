@@ -55,7 +55,7 @@
 
 #QVIRTSERVICE SAMPLE CLIENT
 /vendor/bin/qvirt-testclient                    u:object_r:vendor_qvirt_testclient_exec:s0
-
+/vendor/bin/qvirt-ext-testclient                u:object_r:vendor_qvirt_testclient_exec:s0
 # ppat_stats files
 /vendor/bin/ppat_stats           u:object_r:vendor_ppat_stats_exec:s0
 /data/vendor/ppat_stats(/.*)?    u:object_r:vendor_ppat_stats_data_file:s0

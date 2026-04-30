@@ -299,6 +299,7 @@ genfscon sysfs /devices/platform/soc/soc:qcom,spcom/wakeup u:object_r:sysfs_wake
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-kiwi/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/9bb00000.remoteproc-wpss/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/17110040.qcom,wcn6750/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/17110040.qcom,wcn6450/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd-secure/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:gpio_key/wakeup u:object_r:sysfs_wakeup:s0
@@ -314,3 +315,4 @@ genfscon sysfs /devices/platform/soc/1c08000.qcom,pcie/pci0001:00/0001:00:00.0/0
 
 # sys net
 genfscon sysfs /devices/platform/soc/17110040.qcom,wcn6750/net/ u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/soc/17110040.qcom,wcn6450/net/ u:object_r:sysfs_net:s0

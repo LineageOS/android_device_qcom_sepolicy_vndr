@@ -30,3 +30,5 @@ type vendor_esepmdaemon_service, vndservice_manager_type;
 type vendor_wfdnativemm_service, vndservice_manager_type;
 type vendor_wfdhdcpvndservice_service, vndservice_manager_type;
 type vendor_qtrsdkservice_service, vndservice_manager_type;
+type vendor_hal_qvripc_service, vndservice_manager_type;
+type vendor_hal_qvrcamipc_service, vndservice_manager_type;
