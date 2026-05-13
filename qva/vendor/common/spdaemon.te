@@ -32,6 +32,7 @@ type vendor_spdaemon_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vendor_spdaemon)
 binder_call(vendor_spdaemon, servicemanager)
+hal_client_domain(vendor_spdaemon, hal_system_suspend)
 hal_client_domain(vendor_spdaemon, vendor_hal_qms_qti)
 
 # Allow access to spss_utils device
