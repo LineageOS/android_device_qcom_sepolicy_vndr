@@ -279,3 +279,5 @@ until_board_api(202604, `
 ')
 
 genfscon sysfs /devices/platform/soc/soc:qti,smmu-proxy/wakeup u:object_r:sysfs_wakeup:s0
+
+genfscon sysfs /kernel/fastrpc      u:object_r:vendor_sysfs_public:s0
