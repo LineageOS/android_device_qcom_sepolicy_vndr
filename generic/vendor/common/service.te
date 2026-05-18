@@ -57,6 +57,6 @@ type vendor_hal_trustedui_aidl_service, hal_service_type, protected_service, ser
 type vendor_qms_service, service_manager_type;
 type vendor_hal_capabilityconfigstore_service, hal_service_type, protected_service, service_manager_type;
 type vendor_aidl_rcsservice, hal_service_type, protected_service, service_manager_type;
-type vendor_hal_dspmanager_aidlservice, hal_service_type, service_manager_type, isolated_compute_allowed_service;
+type vendor_hal_dspmanager_aidlservice, hal_service_type, service_manager_type;
 type vendor_hal_c2pa_aidl_service, service_manager_type, protected_service, hal_service_type;
 type vendor_hal_avf_qcvm_service, hal_service_type, protected_service, service_manager_type;
