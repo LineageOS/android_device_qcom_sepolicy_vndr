@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e01cb68_63ffb673",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-06-09T19:13:41Z",
+      "side": 1,
+      "message": "sorry, UI bit me, I didn\u0027t publish the edit restoring the file",
+      "revId": "6eef2ec3cb0fcbe258ecd645b61e3ad551e8bf6e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
