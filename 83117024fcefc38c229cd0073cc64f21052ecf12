@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f91f9a9_ca52e728",
+        "filename": "generic/vendor/common/tee.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-06-09T18:52:43Z",
+      "side": 1,
+      "message": "useless",
+      "revId": "83117024fcefc38c229cd0073cc64f21052ecf12",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62c0ae3d_486f0600",
+        "filename": "generic/vendor/common/tee.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-06-09T18:52:43Z",
+      "side": 1,
+      "message": "useless",
+      "revId": "83117024fcefc38c229cd0073cc64f21052ecf12",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
