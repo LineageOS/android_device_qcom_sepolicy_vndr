@@ -109,6 +109,7 @@
 /dev/hbtp_vm                                    u:object_r:vendor_hbtp_device:s0
 /dev/sg[0-9]+                                   u:object_r:vendor_sg_device:s0
 /dev/ufs-bsg.*                                   u:object_r:vendor_bsg_device:s0
+/dev/0:0:0:[0-9]                                u:object_r:vendor_dev_tee:s0
 /dev/0:0:0:49476                                u:object_r:vendor_bsg_device:s0
 /dev/0:0:0:4                                    u:object_r:vendor_ufs_lun4_bsg_device:s0
 /dev/sensors                                    u:object_r:sensors_device:s0
