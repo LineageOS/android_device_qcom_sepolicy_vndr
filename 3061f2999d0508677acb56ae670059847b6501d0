@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6d89854_d2fb4c94",
+        "filename": "generic/vendor/common/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-06-09T08:51:29Z",
+      "side": 1,
+      "message": "just change 4 to [0-9]",
+      "revId": "3061f2999d0508677acb56ae670059847b6501d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
