@@ -296,6 +296,7 @@
 
 # ufs device type(read_ahead_kb)
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:\d+/block/sd[a-z]/queue/read_ahead_kb  u:object_r:vendor_sysfs_sd:s0
+/sys/devices/platform/soc/8804000.sdhci/mmc_host/mmc[0-1]/mmc[0-1:[a-f0-9]+/block/mmcblk[0-1]/queue/read_ahead_kb u:object_r:vendor_sysfs_sd:s0
 
 # VM Specific
 /vendor/vm-system(/.*)?              u:object_r:same_process_hal_file:s0
