@@ -24,6 +24,8 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+type vendor_dev_tee, dev_type;
+
 allow tee self:capability { chown setgid setuid sys_admin sys_rawio };
 
 allow tee device:dir r_dir_perms;
@@ -38,6 +40,7 @@ allowxperm tee vendor_rpmb_device:chr_file ioctl { MMC_IOC_MULTI_CMD };
 allow tee vendor_ssd_block_device:blk_file rw_file_perms;
 allow tee vendor_sg_device:chr_file { rw_file_perms setattr };
 allow tee vendor_bsg_device:chr_file rw_file_perms;
+allow tee vendor_dev_tee:chr_file rw_file_perms;
 allow tee vendor_ufs_lun4_bsg_device:chr_file rw_file_perms;
 
 allow tee mnt_vendor_file:dir r_dir_perms;
