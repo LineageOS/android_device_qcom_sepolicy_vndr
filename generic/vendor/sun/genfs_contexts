@@ -237,6 +237,7 @@ genfscon sysfs /kernel/load_guestvm_trustedvm/boot_guestvm u:object_r:vendor_sys
 genfscon sysfs /kernel/load_guestvm_oemvm/boot_guestvm u:object_r:vendor_sysfs_guestvm:s0
 
 #wakeup sysfs nodes listed by SuspendSepolicyTests.sh
+genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/89c000.qcom,qup_uart/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/880000.i3c-master/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a80000.i2c/i2c-0/0-0028/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a8c000.i2c/i2c-1/1-000e/wakeup u:object_r:sysfs_wakeup:s0
