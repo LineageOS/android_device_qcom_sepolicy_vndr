@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dcfb5ff4_2fbd99cf",
+        "filename": "generic/vendor/common/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-06-10T06:12:20Z",
+      "side": 1,
+      "message": "Did you notice that the label refers to LUN4 specifically?",
+      "revId": "f86e763a99dcc6c5977d9c416e3776056a510054",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
