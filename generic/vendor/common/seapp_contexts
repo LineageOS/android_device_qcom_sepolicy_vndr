@@ -42,9 +42,6 @@ user=oem_2918 seinfo=platform name=.cacertservice domain=vendor_cacertservice_ap
 #Add new domain for imshelper service
 user=radio seinfo=platform name=.imshelperservice domain=vendor_imshelper_app type=radio_data_file
 
-#Add new domain for power off alarm app
-user=_app seinfo=platform name=com.qualcomm.qti.poweroffalarm domain=vendor_poweroffalarm_app type=app_data_file levelFrom=all
-
 #Add new domain for trustzone access app
 user=_app seinfo=platform name=com.qualcomm.qti.qms.service.trustzoneaccess domain=vendor_tzas_app type=app_data_file levelfrom=all
 
