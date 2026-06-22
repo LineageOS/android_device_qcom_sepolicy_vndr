@@ -60,7 +60,11 @@ type vendor_sysfs_ssr, sysfs_type, fs_type;
 type vendor_sysfs_ssr_toggle, sysfs_type, fs_type;
 type vendor_sysfs_touch, sysfs_type, fs_type;
 type vendor_sysfs_uio_file, sysfs_type, fs_type;
+<<<<<<< HEAD   (a6a763ac81e6b144dd88f5f381bb25fad81ae2e6 sepolicy_vndr: Fix sepolicy denials for write to proc/sys/ke)
 type vendor_sysfs_usb_c, sysfs_type, fs_type;
+=======
+type vendor_sysfs_wdog_device, sysfs_type, fs_type;
+>>>>>>> CHANGE (98243b3f86251994e41ffde79ec38334cd2829d6 sepolicy: Replace vendor_sysfs_usb_c with sysfs_typec)
 type vendor_sysfs_usb_data_enabled, sysfs_type, fs_type;
 type vendor_sysfs_usb_device, sysfs_type, fs_type;
 type vendor_sysfs_usb_supply, sysfs_type, fs_type;
