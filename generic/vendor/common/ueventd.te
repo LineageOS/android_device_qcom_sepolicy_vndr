@@ -27,7 +27,7 @@
 # For setting up various WIGIG files
 allow ueventd vendor_sysfs_bond0:file rw_file_perms;
 
-allow ueventd vendor_sysfs_usb_c:file w_file_perms;
+allow ueventd sysfs_typec:file w_file_perms;
 
 allow ueventd {
     { sysfs_type - usermodehelper }
