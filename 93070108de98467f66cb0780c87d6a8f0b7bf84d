@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "359085df_1058921c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34519
+      },
+      "writtenOn": "2026-06-24T05:11:35Z",
+      "side": 1,
+      "message": "Fixes build for Spacewar on lineage-24.0",
+      "revId": "93070108de98467f66cb0780c87d6a8f0b7bf84d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
