@@ -28,7 +28,6 @@
 type mst_test_app, domain;
 
 userdebug_or_eng(`
-  typeattribute mst_test_app coredomain;
   permissive mst_test_app;
   app_domain(mst_test_app);
 
