@@ -26,34 +26,20 @@ get_prop(vendor_avf_qcvm_manager, vendor_vm_ssrenable_prop)
 
 #
 # Transition to virtualizationmanager when the client executes it.
-domain_auto_trans(vendor_avf_qcvm_manager, virtualizationmanager_exec, virtualizationmanager)
-
-# Allow virtualizationmanager to communicate over UDS with the client.
-allow { virtualizationmanager crosvm } vendor_avf_qcvm_manager:unix_stream_socket { ioctl getattr read write };
-
-# Let the client pass file descriptors to virtualizationmanager and on to crosvm.
-allow { virtualizationmanager crosvm } vendor_avf_qcvm_manager:fd use;
-
-# Let the client use file descriptors created by virtualizationmanager.
-allow vendor_avf_qcvm_manager virtualizationmanager:fd use;
+virtualizationservice_vendor_use(vendor_avf_qcvm_manager)
 
 # Allow piping console log to the client
-allow { virtualizationmanager crosvm } vendor_avf_qcvm_manager:fifo_file { ioctl getattr read write };
+allow { virtualizationmanager_vendor crosvm_domain } vendor_avf_qcvm_manager:fifo_file { ioctl getattr read write };
 
 # Allow client to read/write vsock created by virtualizationmanager to communicate with the VM
 # that it created. Notice that we do not grant permission to create a vsock;
 # the client can only connect to VMs that it owns.
-allow vendor_avf_qcvm_manager virtualizationmanager:vsock_socket { getattr getopt read write };
+allow vendor_avf_qcvm_manager virtualizationmanager_vendor:vsock_socket { getattr getopt read write };
 
 # Allow client to inspect hypervisor capabilities
 get_prop(vendor_avf_qcvm_manager, hypervisor_prop)
 
-# Allow virtualizationmanager to read the path of the client using /proc/{PID}/exe
-allow virtualizationmanager vendor_avf_qcvm_manager:dir search;
-allow virtualizationmanager vendor_avf_qcvm_manager:file read;
-allow virtualizationmanager vendor_avf_qcvm_manager:lnk_file read;
-
-#Provide access to the anon node
+# Provide access to the anon node
 gunyah_cma_use(vendor_avf_qcvm_manager)
 
 #Provide read access to the CMA FD nodes
@@ -73,9 +59,9 @@ allow vendor_avf_qcvm_manager vendor_custom_ab_block_device:blk_file r_file_perm
 
 # Allow vendor_avf_qcvm_manager to inspect all hypervisor capabilities
 # and enable as an early virtmgr
-early_virtmgr_use(vendor_avf_qcvm_manager)
+early_virtmgr_vendor_use(vendor_avf_qcvm_manager)
 
-allow { vendor_avf_qcvm_manager crosvm virtualizationmanager early_virtmgr } mnt_vendor_vm_file:file rw_file_perms;
+allow { vendor_avf_qcvm_manager crosvm_domain virtualizationmanager_domain early_virtmgr_domain } mnt_vendor_vm_file:file rw_file_perms;
 allow { vendor_avf_qcvm_manager } mnt_vendor_vm_file:dir search;
 allow { vendor_avf_qcvm_manager } mnt_vendor_file:dir search;
 

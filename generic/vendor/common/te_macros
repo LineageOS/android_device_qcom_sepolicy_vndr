@@ -282,10 +282,10 @@ type $1_gunyah_cmafd;
 type_transition $1 $1:anon_inode $1_gunyah_cmafd "[gunyah-cma]";
 # Allow domain to create/use gunyah-cmafd anon_inode.
 allow $1 $1_gunyah_cmafd:anon_inode { create read getattr };
-# Allow virtualizationmaanger and crosvm access to the gunyah-cma node
-allow virtualizationmanager $1_gunyah_cmafd:anon_inode { getattr read write };
-allow early_virtmgr $1_gunyah_cmafd:anon_inode { getattr read write };
-allow crosvm $1_gunyah_cmafd:anon_inode { read write map };
+# Allow virtualizationmanager_domain and crosvm_domain access to the gunyah-cma node
+allow virtualizationmanager_domain $1_gunyah_cmafd:anon_inode { getattr read write };
+allow early_virtmgr_domain $1_gunyah_cmafd:anon_inode { getattr read write };
+allow crosvm_domain $1_gunyah_cmafd:anon_inode { read write map };
 # This domain may not use gunyah-cmafd anon_inodes created by other domains.
 neverallow $1 ~$1_gunyah_cmafd:anon_inode *;
 ')
