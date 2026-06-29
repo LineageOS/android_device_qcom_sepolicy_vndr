@@ -16,6 +16,24 @@
       "message": "this fix coredomain needed for Poweroffalarm right",
       "revId": "f9924cb3363904571db1ef744464ce853f34efc7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec7eeeaf_81d18b04",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34519
+      },
+      "writtenOn": "2026-06-29T06:36:34Z",
+      "side": 1,
+      "message": "Nope thats a different one, not this. This is for the QCOM MST neverallows",
+      "parentUuid": "631e3b80_b9899624",
+      "revId": "f9924cb3363904571db1ef744464ce853f34efc7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
