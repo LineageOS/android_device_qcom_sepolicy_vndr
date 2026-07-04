@@ -34,3 +34,5 @@ allow hal_health {
     vendor_sysfs_battery_supply
     vendor_sysfs_usb_supply
 }:file rw_file_perms;
+
+get_prop(hal_health_default, vendor_soc_id_prop)
