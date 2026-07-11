@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9e6223e_39dddb92",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32197
+      },
+      "writtenOn": "2026-07-11T08:21:48Z",
+      "side": 1,
+      "message": "I don\u0027t mean to intrude but there\u0027s a duplicate of type vendor_hal_factory_aidlservice\n(from I3d7191f6db392acd26ec938e18764ba4ca8a3c32)",
+      "revId": "0dea6f220f82d37bcfe9fc49b39c5b511c12708c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
