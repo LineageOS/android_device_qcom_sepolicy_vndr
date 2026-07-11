@@ -128,3 +128,10 @@ dontaudit vendor_init block_device:lnk_file setattr;
 
 #googleclientidbase properties
 dontaudit vendor_init default_prop:property_service set;
+
+# Properties for configuring process startup
+set_prop(vendor_init, vendor_secureprocessor_start_prop)
+set_prop(vendor_init, vendor_trustedui_listener_enabled_prop)
+set_prop(vendor_init, vendor_trustedui_listener_start_prop)
+set_prop(vendor_init, vendor_trustedui_start_prop)
+

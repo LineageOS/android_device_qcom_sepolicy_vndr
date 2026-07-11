@@ -56,3 +56,6 @@ hal_client_domain(vendor_hal_secureprocessor_qti, hal_graphics_allocator);
 
 # For AIDL Service
 hal_attribute_service(vendor_hal_secureprocessor, vendor_hal_secureprocessor_aidl_service)
+
+# Properties for configuring process startup
+get_prop(vendor_hal_secureprocessor_qti, vendor_secureprocessor_start_prop)

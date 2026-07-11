@@ -33,3 +33,4 @@
 # qva/vendor/common/location_xtra_daemon.te - sepolicy rules in qva for location module - xtra-daemon
 
 get_prop(vendor_location_xtra_daemon, vendor_qms_prop)
+set_prop(vendor_location_xtra_daemon, vendor_location_prop);

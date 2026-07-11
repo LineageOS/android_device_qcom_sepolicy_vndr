@@ -48,3 +48,7 @@ allow vendor_wcnss_service vendor_wifihal_socket:dir { write remove_name search 
 allow vendor_wcnss_service vendor_wifihal_socket:sock_file { setattr unlink create };
 allow vendor_wcnss_service wpa_data_file:sock_file write;
 allow vendor_wcnss_service hal_wifi_supplicant_default:unix_dgram_socket sendto;
+
+binder_call(vendor_wcnss_service,servicemanager)
+# allow vendor_wcnss_service vendor_hal_perf_hwservice:hwservice_manager find
+hal_client_domain(vendor_wcnss_service, vendor_hal_perf)

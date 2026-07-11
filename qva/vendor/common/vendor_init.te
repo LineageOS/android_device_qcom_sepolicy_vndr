@@ -81,3 +81,5 @@ set_prop(vendor_init, vendor_dcf_prop)
 
 #VM shutdown feature
 set_prop(vendor_init,vendor_vm_ssrenable_prop)
+
+set_prop(vendor_init, vendor_location_prop)

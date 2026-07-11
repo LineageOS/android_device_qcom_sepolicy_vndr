@@ -55,4 +55,7 @@ allow vendor_hal_soter_qti vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_
 allow vendor_hal_soter_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
 
 hal_attribute_service(vendor_hal_soter, vendor_hal_soteraidl_service)
-binder_call(vendor_hal_soter_qti, servicemanager);
+binder_call(vendor_hal_soter_qti, servicemanager)
+
+#Allow servicemanager to call vendor_hal_soter for lazy hal lifecycle management
+binder_call(servicemanager, vendor_hal_soter_qti)

@@ -40,3 +40,9 @@ allow vendor_hal_identity_qti ion_device:chr_file r_file_perms;
 # As each dma buf is seperate device, need to allow access to those devices
 allow vendor_hal_identity_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
 allow vendor_hal_identity_qti vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+
+#Allow AIDL based identity_hal communication with servicemanager
+binder_call(vendor_hal_identity_qti, servicemanager)
+
+#Allow servicemanager to call vendor_hal_identity for lazy hal lifecycle management
+binder_call(servicemanager, vendor_hal_identity_qti)

@@ -167,3 +167,11 @@ persist.vendor.pcie. u:object_r:vendor_pcie_prop:s0
 
 #Dynamic sensor
 vendor.dynamic_sensor. u:object_r:vendor_dynamic_sensor_prop:s0
+
+# Trusted UI properties for configuring process startup
+vendor.trustedui_listener.service_start   u:object_r:vendor_trustedui_listener_start_prop:s0
+vendor.trustedui_listener.service.enabled u:object_r:vendor_trustedui_listener_enabled_prop:s0
+vendor.trustedui.service_start            u:object_r:vendor_trustedui_start_prop:s0
+
+# Secure camera properties for configuring process startup
+vendor.secureprocessor.service_start u:object_r:vendor_secureprocessor_start_prop:s0

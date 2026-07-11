@@ -491,6 +491,7 @@
 /mnt/vendor/persist/time(/.*)?       u:object_r:vendor_persist_time_file:s0
 /mnt/vendor/persist/audio(/.*)?      u:object_r:vendor_persist_audio_file:s0
 /mnt/vendor/persist/feature_enabler_client(/.*)? u:object_r:vendor_persist_feature_enabler_file:s0
+/mnt/vendor/persist/xtra(/.*)?       u:object_r:vendor_persist_xtra_file:s0
 
 # /qmcs
 /mnt/vendor/qmcs(/.*)?         u:object_r:vendor_qmcs_file:s0

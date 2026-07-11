@@ -142,6 +142,8 @@ type vendor_location_socket, file_type;
 type vendor_qsap_location_socket, file_type;
 type vendor_wifihal_socket, file_type;
 type vendor_pps_socket, file_type;
+#xtra-daemon files
+type vendor_persist_xtra_file, file_type, vendor_persist_type;
 
 # imshelper_app file types
 #type vendor_imshelper_app_data_file, file_type, data_file_type;
