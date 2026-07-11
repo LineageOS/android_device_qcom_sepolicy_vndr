@@ -1,8 +1,0 @@
-# Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
-# SPDX-License-Identifier: BSD-3-Clause-Clear
-
-# TODO(b/65201432): Swiftshader needs to create executable memory.
-ifelse(target_requires_insecure_execmem_for_swiftshader, `true',
-   `allow surfaceflinger self:process execmem;',
-   `neverallow surfaceflinger self:process execmem;')
-
