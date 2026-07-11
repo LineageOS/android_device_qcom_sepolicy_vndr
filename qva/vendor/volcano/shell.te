@@ -1,0 +1,9 @@
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# gpustats
+# /sys/class/kgsl/kgsl-3d0/gpu_available_frequencies
+# /sys/class/kgsl/kgsl-3d0/gpuclk
+
+allow shell vendor_sysfs_kgsl:file r_file_perms;
+allow shell vendor_sysfs_kgsl_gpuclk:file r_file_perms;

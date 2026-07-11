@@ -32,6 +32,7 @@ allow init {
     vendor_vm_system_file
     same_process_hal_file
     mnt_product_file
+    mnt_vendor_vm_file
 }:dir mounton;
 
 dontaudit init debugfs_tracing_debug:dir mounton;

@@ -645,3 +645,5 @@
 
 # Powerstats hal
 /vendor/bin/hw/android\.hardware\.powerstats-service.qti                   u:object_r:hal_power_stats_default_exec:s0
+
+/mnt/product/vm-persist(/.*)?                                              u:object_r:mnt_vendor_vm_file:s0

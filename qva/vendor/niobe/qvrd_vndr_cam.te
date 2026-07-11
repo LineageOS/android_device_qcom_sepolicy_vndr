@@ -61,7 +61,7 @@ hal_client_domain(vendor_qvrd_vndr_cam, hal_graphics_allocator);
 get_prop(vendor_qvrd_vndr_cam, aac_drc_prop)
 get_prop(vendor_qvrd_vndr_cam, ab_update_gki_prop)
 
-allow vendor_qvrd_vndr_cam { gpu_device sensors_device }:chr_file r_file_perms;
+allow vendor_qvrd_vndr_cam { gpu_device sensors_device }:chr_file rw_file_perms;
 allow vendor_qvrd_vndr_cam video_device:chr_file rw_file_perms;
 
 allow vendor_qvrd_vndr_cam proc_uptime:file r_file_perms;
@@ -70,7 +70,6 @@ crash_dump_fallback(vendor_qvrd_vndr_cam);
 allow vendor_qvrd_vndr_cam appdomain:process setsched;
 
 # Allow qvrd_vndr_cam to call qvrd_vndr
-vndbinder_use(vendor_qvrd_vndr_cam);
 binder_call(vendor_qvrd_vndr_cam, vendor_qvrd_vndr)
 allow vendor_qvrd_vndr_cam vendor_hal_qvrcamipc_service:service_manager { add };
 allow vendor_qvrd_vndr_cam vendor_hal_qvripc_service:service_manager { find };

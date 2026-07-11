@@ -1,0 +1,12 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_init_check_virtsupport_sh, domain;
+type vendor_init_check_virtsupport_sh_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_init_check_virtsupport_sh)
+
+allow vendor_init_check_virtsupport_sh vendor_shell_exec:file rx_file_perms;
+allow vendor_init_check_virtsupport_sh vendor_toolbox_exec:file rx_file_perms;
+
+set_prop(vendor_init_check_virtsupport_sh,vendor_virt_service_enabled_prop)

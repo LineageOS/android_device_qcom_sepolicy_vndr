@@ -37,3 +37,9 @@ vendor.gatekeeper.quickboot  u:object_r:vendor_tee_gk_quickboot:s0
 
 # Qseecomd hibernate prop
 vendor.qseecomd.hibernate    u:object_r:vendor_tee_keymint_quickboot:s0
+
+# Enable Virtualization service property
+vendor.virt.service.enabled   u:object_r:vendor_virt_service_enabled_prop:s0
+
+#VM Shutdown Feature Enable flag
+ro.vendor.vm.ssr.enable       u:object_r:vendor_vm_ssrenable_prop:s0

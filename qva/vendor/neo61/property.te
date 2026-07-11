@@ -34,3 +34,9 @@ vendor_restricted_prop(vendor_tee_keymint_quickboot);
 
 #Gatekeper quickboot prop
 vendor_restricted_prop(vendor_tee_gk_quickboot);
+
+#Virt service enable property
+vendor_internal_prop(vendor_virt_service_enabled_prop);
+
+#VM shutdown toggle
+vendor_restricted_prop(vendor_vm_ssrenable_prop);

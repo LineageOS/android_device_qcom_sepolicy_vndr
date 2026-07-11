@@ -265,3 +265,5 @@ type vendor_sysfs_cpsk_power, sysfs_type, fs_type;
 type vendor_sysfs_sd, fs_type, sysfs_type;
 
 type vendor_sysfs_powercap, fs_type, sysfs_type;
+
+type mnt_vendor_vm_file, file_type;

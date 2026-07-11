@@ -1,4 +1,4 @@
-# Copyright (c) 2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2017-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -26,9 +26,22 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 # Changes from Qualcomm Technologies, Inc. are provided under the following license:
-# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. 
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
-android.hardware.drm.IDrmFactory/playready             u:object_r:hal_drm_service:s0
+# vendor_hlosminkdaemon - HLOS Mink Daemon
+type vendor_hlosminkdaemon, domain, mlstrustedsubject;
+type vendor_hlosminkdaemon_exec, exec_type, vendor_file_type, file_type;
+type vendor_hlos_minkd_opener_socket, file_type, mlstrustedobject;
 
-vendor.qti.qvirtvendor.IVendorVM/default               u:object_r:vendor_hal_qvirtvendor_service:s0
+init_daemon_domain(vendor_hlosminkdaemon)
+
+# Allow access to qipcrtr_socket
+# Remove this when QMI service moves to pfmd
+allow vendor_hlosminkdaemon self:{ socket qipcrtr_socket } create_socket_perms;
+allowxperm vendor_hlosminkdaemon self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
+
+# Allow hlosminkdaemon access to vendor_mink_trace_prop
+userdebug_or_eng(`
+  get_prop(vendor_hlosminkdaemon, vendor_mink_trace_prop)
+')
