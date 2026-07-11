@@ -16,6 +16,24 @@
       "message": "I don\u0027t mean to intrude but there\u0027s a duplicate of type vendor_hal_factory_aidlservice\n(from I3d7191f6db392acd26ec938e18764ba4ca8a3c32)",
       "revId": "0dea6f220f82d37bcfe9fc49b39c5b511c12708c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0579c888_e0d217e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32197
+      },
+      "writtenOn": "2026-07-11T10:42:33Z",
+      "side": 1,
+      "message": "Also need to replace I22c6634034976f9c610a7e74080eef99df7719ab with the sm8650 version of it (I65cee1f54b2a8f610c92b04aab8de2c667412a1f), or change `exported_wifi_prop` to `wifi_hal_prop`. And thanks for the other fix!",
+      "parentUuid": "d9e6223e_39dddb92",
+      "revId": "0dea6f220f82d37bcfe9fc49b39c5b511c12708c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
