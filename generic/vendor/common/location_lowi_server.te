@@ -6,7 +6,10 @@
 type vendor_location_lowi_server, domain;
 type vendor_location_lowi_server_exec, exec_type, vendor_file_type, file_type;
 
+# allows loc_launcher to launch lowi-server 
+domain_auto_trans(vendor_location, vendor_location_lowi_server_exec, vendor_location_lowi_server)
 init_daemon_domain(vendor_location_lowi_server)
+allow vendor_location_lowi_server vendor_location:fd use;
 
 # allows file access in /data/vendor/location
 allow vendor_location_lowi_server vendor_location_data_file:dir create_dir_perms;
