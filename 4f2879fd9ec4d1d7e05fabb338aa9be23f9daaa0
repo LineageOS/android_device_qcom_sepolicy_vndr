@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e892bd8b_ca7dc737",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-08-21T01:11:27Z",
+      "side": 1,
+      "message": "I\u0027m also seeing this denial on rtwo and this with the commit before it fixes it",
+      "revId": "4f2879fd9ec4d1d7e05fabb338aa9be23f9daaa0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
