@@ -1,0 +1,5 @@
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.eid@1\.0-service  u:object_r:vendor_hal_eid_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.soter@1\.0-service  u:object_r:vendor_hal_soter_qti_exec:s0
+/(vendor|system/vendor)/bin/dpmQmiMgr  u:object_r:vendor_hal_dpmQmiMgr_exec:s0
+/(vendor|system/vendor)/bin/ssgqmigd(64)?  u:object_r:vendor_ssgqmigd_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.sensorscalibrate@1\.0-service  u:object_r:vendor_hal_sensorscalibrate_qti_default_exec:s0
