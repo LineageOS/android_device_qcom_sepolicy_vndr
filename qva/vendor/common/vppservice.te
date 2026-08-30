@@ -33,6 +33,7 @@ init_daemon_domain(vendor_vppservice)
 
 hal_server_domain(vendor_vppservice, vendor_hal_vpp)
 
+hal_attribute_hwservice(vendor_hal_vpp, vendor_hal_vpp_hwservice)
 hal_attribute_service(vendor_hal_vpp, vendor_hal_vpp_service)
 
 binder_call(vendor_hal_vpp_client, vendor_hal_vpp_server)

@@ -41,3 +41,6 @@ allow vendor_hal_keymint_qti tee_device:chr_file rw_file_perms;
 
 # As each dma buf is seperate device, need to allow access to those devices
 allow vendor_hal_keymint_qti vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+
+# Allow read SOC name
+get_prop(vendor_hal_keymint_qti, vendor_soc_name_prop)

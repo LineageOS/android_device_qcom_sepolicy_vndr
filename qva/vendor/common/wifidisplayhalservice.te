@@ -54,6 +54,9 @@ hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplayvideo_service
 hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplayaudio_service)
 hal_attribute_service(vendor_wifidisplayhalservice, hal_wifidisplayimage_service)
 
+# Add hwservice related rules
+hal_attribute_hwservice(vendor_wifidisplayhalservice, vendor_wifidisplayhalservice_hwservice)
+
 #Direct streaming native service
 add_service(vendor_wifidisplayhalservice_qti, vendor_wfdnativemm_service)
 

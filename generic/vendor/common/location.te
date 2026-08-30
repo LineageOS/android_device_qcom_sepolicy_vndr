@@ -40,6 +40,16 @@ init_daemon_domain(vendor_location)
 
 allow vendor_location self:capability { setgid setuid };
 
+hwbinder_use(vendor_location)
+
+get_prop(vendor_location, hwservicemanager_prop)
+
+# Enable standard network access (for XTRA download)
+net_domain(vendor_location)
+
+# required for xtra-daemon, slim-daemon.
+allow vendor_location self:qipcrtr_socket create_socket_perms_no_ioctl;
+
 # execute permission for vendor_location daemons in /vendor/bin/
 allow vendor_location vendor_location_exec:file rx_file_perms;
 

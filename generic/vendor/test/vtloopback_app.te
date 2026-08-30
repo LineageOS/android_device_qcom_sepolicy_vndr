@@ -31,6 +31,7 @@ app_domain(vtloopback_app)
 net_domain(vtloopback_app)
 diag_use(vtloopback_app)
 binder_call(vtloopback_app, vendor_hal_imsrtp)
+allow vtloopback_app vendor_hal_imsrtp_hwservice:hwservice_manager find;
 allow vtloopback_app cameraserver_service:service_manager find;
 allow vtloopback_app mediaserver_service:service_manager find;
 get_prop(vtloopback_app, vendor_ims_prop)
