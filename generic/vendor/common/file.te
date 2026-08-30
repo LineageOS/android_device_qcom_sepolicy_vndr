@@ -123,6 +123,7 @@ type vendor_proc_shs, fs_type, proc_type;
 
 type vendor_qmuxd_socket, file_type;
 type vendor_rild_socket, file_type;
+type vendor_netmgrd_socket, file_type;
 type vendor_shsusrd_socket, file_type;
 type vendor_port-bridge_socket, file_type;
 type vendor_thermal_socket, file_type;
@@ -176,6 +177,8 @@ type vendor_persist_bluetooth_file, file_type, vendor_persist_type;
 type vendor_persist_alarm_file, file_type, vendor_persist_type;
 type vendor_persist_feature_enabler_file, file_type, vendor_persist_type;
 
+type vendor_netmgr_data_file, file_type, data_file_type;
+type vendor_netmgr_recovery_data_file, file_type, data_file_type;
 type vendor_qmipriod_data_file, file_type, data_file_type;
 type vendor_ipa_vendor_data_file, file_type, data_file_type;
 type vendor_shsusr_data_file, file_type, data_file_type;

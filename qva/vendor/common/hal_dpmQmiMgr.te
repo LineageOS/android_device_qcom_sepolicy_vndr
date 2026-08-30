@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,30 +24,38 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-type vendor_port-bridge, domain;
-type vendor_port-bridge_exec, exec_type, vendor_file_type, file_type;
 
-init_daemon_domain(vendor_port-bridge)
+#dpmQmiMgr as domain
+type vendor_hal_dpmQmiMgr, domain;
+type vendor_hal_dpmQmiMgr_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_hal_dpmQmiMgr)
+
+net_domain(vendor_hal_dpmQmiMgr)
+
+hal_server_domain_bypass(vendor_hal_dpmQmiMgr, vendor_hal_dpmqmiservice_qti)
+binder_call(vendor_hal_dpmqmiservice_qti_client, vendor_hal_dpmqmiservice_qti_server)
+binder_call(vendor_hal_dpmqmiservice_qti_server, vendor_hal_dpmqmiservice_qti_client)
+hal_attribute_hwservice(vendor_hal_dpmqmiservice_qti,vendor_hal_dpmqmi_hwservice)
+
+#Allow to get hwservice_prop
+get_prop(vendor_hal_dpmQmiMgr, vendor_persist_dpm_prop)
+
+#sysfs_data file permissions
+allow vendor_hal_dpmQmiMgr vendor_sysfs_data:file r_file_perms;
+
+#Allow reading proc/net entries
+r_dir_file(vendor_hal_dpmQmiMgr,proc_net)
+r_dir_file(vendor_hal_dpmQmiMgr,proc_net_tcp_udp)
+
+#Allow creating socket and IOCTLs
+allow vendor_hal_dpmQmiMgr self:{ socket qipcrtr_socket udp_socket } create_socket_perms_no_ioctl;
+
+#Rules below are needed to communicate with IPC_ROUTER for QMI
+allowxperm vendor_hal_dpmQmiMgr self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
+allow vendor_hal_dpmQmiMgr self:capability net_bind_service;
+allowxperm vendor_hal_dpmQmiMgr self:udp_socket ioctl priv_sock_ioctls;
 
 userdebug_or_eng(`
-  domain_auto_trans(shell, vendor_port-bridge_exec, vendor_netmgrd)
-  diag_use(vendor_port-bridge)
+    diag_use(vendor_hal_dpmQmiMgr)
 ')
-
-# Allow operations on different types of sockets
-allow vendor_port-bridge vendor_port-bridge:netlink_kobject_uevent_socket { create bind read };
-
-allow vendor_port-bridge {
-    # Allow operations on mhi transport
-    vendor_mhi_device
-    # Allow operations on ATCoP g-link transport
-    vendor_at_device
-}:chr_file rw_file_perms;
-
-#access ipa sysfs node
-allow vendor_port-bridge vendor_sysfs_data:file r_file_perms;
-
-allow vendor_port-bridge vendor_port_bridge_data_file:file create_file_perms;
-allow vendor_port-bridge vendor_port_bridge_data_file:dir w_dir_perms;
-allow vendor_port-bridge vendor_port-bridge_socket:dir w_dir_perms;
-allow vendor_port-bridge vendor_port-bridge_socket:sock_file create_file_perms;

@@ -31,6 +31,7 @@ type vendor_qconfigservice_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_qconfigservice)
 hal_server_domain(vendor_qconfigservice, vendor_hal_qconfig)
 
+hal_attribute_hwservice(vendor_hal_qconfig, vendor_hal_qconfig_hwservice)
 hal_attribute_service(vendor_hal_qconfig, vendor_hal_qconfig_service)
 
 binder_call(vendor_hal_qconfig_client, vendor_hal_qconfig_server)

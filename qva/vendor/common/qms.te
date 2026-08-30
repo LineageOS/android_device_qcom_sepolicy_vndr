@@ -221,6 +221,7 @@ allow vendor_qms hostapd_data_file:sock_file create_file_perms;
 allow vendor_qms { hal_wifi_hostapd_default }:unix_dgram_socket sendto;
 
 allow vendor_qms vendor_qms_service:service_manager { add find };
+allow vendor_qms vendor_qms_vndservice:service_manager { add find };
 
 allow vendor_qms vendor_qms_vndr_data_file:dir create_dir_perms;
 allow vendor_qms vendor_qms_vndr_data_file:file create_file_perms;

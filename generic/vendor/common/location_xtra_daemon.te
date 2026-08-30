@@ -6,6 +6,7 @@
 type vendor_location_xtra_daemon, domain;
 type vendor_location_xtra_daemon_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_location_xtra_daemon)
+domain_auto_trans(vendor_location, vendor_location_xtra_daemon_exec, vendor_location_xtra_daemon)
 add_service(vendor_location_xtra_daemon, vendor_xtra_service)
 vndbinder_use(vendor_location_xtra_daemon)
 

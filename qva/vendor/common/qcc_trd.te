@@ -64,8 +64,13 @@ type vendor_qcc_trd_2_exec, file_type, vendor_file_type, exec_type;
 
 init_daemon_domain(vendor_qcc_trd_2)
 
+vndbinder_use(vendor_qcc_trd_2)
+
 allow vendor_qcc_trd_2 vendor_qcc_trd_data_file:file create_file_perms;
 allow vendor_qcc_trd_2 vendor_qcc_trd_data_file:dir create_dir_perms;
+
+allow vendor_qcc_trd_2 vendor_qccvendor_data_file:file create_file_perms;
+allow vendor_qcc_trd_2 vendor_qccvendor_data_file:dir create_dir_perms;
 
 # access to /dev/ramdump_microdump_modem - deprecated
 # allow vendor_qcc_trd vendor_ramdump_microdump_modem_device:chr_file r_file_perms;
@@ -129,6 +134,9 @@ allow vendor_qcc_trd_2 vendor_persist_rfs_shared_hlos_file:file create_file_perm
 # for logcat
 unix_socket_connect(vendor_qcc_trd_2, logdr, logd);
 
+# allow qcc_prop
+set_prop(vendor_qcc_trd_2, vendor_qcc_prop);
+
 # qmi
 qmux_socket(vendor_qcc_trd_2);
 allow vendor_qcc_trd_2 self:{ qipcrtr_socket } create_socket_perms_no_ioctl;
@@ -145,6 +153,14 @@ allow vendor_qcc_trd_2 fuse:file create_file_perms;
 allow vendor_qcc_trd_2 mnt_user_file:dir search;
 allow vendor_qcc_trd_2 mnt_user_file:lnk_file read;
 ')
+
+# allow qcc-trd to add qccvndhal service to hwservicemanager
+hal_server_domain(vendor_qcc_trd_2, vendor_hal_qccvndhal)
+hal_attribute_hwservice(vendor_hal_qccvndhal, vendor_hal_qccvndhal_hwservice)
+
+#Allow hwbinder call from hal client to server
+binder_call(vendor_hal_qccvndhal_client, vendor_hal_qccvndhal_server)
+binder_call(vendor_hal_qccvndhal_server, vendor_hal_qccvndhal_client)
 
 # use QTR SDK
 qtr_sdk_use(vendor_qcc_trd_2)
