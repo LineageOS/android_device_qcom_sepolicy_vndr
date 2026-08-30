@@ -58,6 +58,7 @@ hal_client_domain(vendor_mmi, hal_graphics_allocator);
 
 #mmi test case
 unix_socket_connect(vendor_mmi, vendor_cnd, vendor_cnd);
+unix_socket_connect(vendor_mmi, vendor_netmgrd, vendor_netmgrd);
 net_domain(vendor_mmi);
 allow vendor_mmi vendor_mmi_exec:file rx_file_perms;
 allow vendor_mmi proc:file r_file_perms;

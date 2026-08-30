@@ -88,6 +88,7 @@
 # System files
 #
 
+/(vendor|system/vendor)/bin/dpmQmiMgr                                              u:object_r:vendor_hal_dpmQmiMgr_exec:s0
 /vendor/bin/vendor.dpmd                                                            u:object_r:vendor_dpmd_vndr_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.0-strongbox-service-qti             u:object_r:vendor_hal_keymaster_qti_exec:s0
 /vendor/bin/hw/android\.hardware\.keymaster@4\.1-strongbox-service-qti             u:object_r:vendor_hal_keymaster_qti_exec:s0
@@ -118,7 +119,9 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.spu@2\.0-service                       u:object_r:vendor_hal_spu_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.spu-service                  u:object_r:vendor_hal_spu_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.scve\.panorama@1\.0-service  u:object_r:vendor_scve_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.sensorscalibrate@1\.0-service                u:object_r:vendor_hal_sensorscalibrate_qti_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.sensorscalibrate-service                     u:object_r:vendor_hal_sensorscalibrate_qti_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.soter@1\.0-service           u:object_r:vendor_hal_soter_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.soter-service                u:object_r:vendor_hal_soter_qti_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator@1\.[0-3]-service                    u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service                            u:object_r:hal_vibrator_default_exec:s0
@@ -147,7 +150,7 @@
 /(vendor|system/vendor)/bin/wfdhdcphalservice                                      u:object_r:vendor_wfdhdcphalservice_qti_exec:s0
 /(vendor|system/vendor)/bin/wfdvndservice                                          u:object_r:vendor_wfdvndservice_exec:s0
 /(vendor|system/vendor)/bin/nqnfcinfo                                              u:object_r:vendor_nqnfcinfo_exec:s0
-/(vendor|system/vendor)/bin/ssgqmigd                                               u:object_r:vendor_ssgqmigd_exec:s0
+/(vendor|system/vendor)/bin/ssgqmigd(64)?                                          u:object_r:vendor_ssgqmigd_exec:s0
 /(vendor|system/vendor)/bin/ssgtzd                                                 u:object_r:vendor_ssgtzd_exec:s0
 /(vendor|system/vendor)/bin/hlosminkdaemon                                         u:object_r:vendor_hlosminkdaemon_exec:s0
 /(vendor|system/vendor)/bin/qwesd                                                  u:object_r:vendor_qwesd_exec:s0

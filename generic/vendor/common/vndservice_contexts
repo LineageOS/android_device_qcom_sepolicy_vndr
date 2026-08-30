@@ -27,4 +27,5 @@
 display.qservice                        u:object_r:vendor_qdisplay_service:s0
 featenab_client.service                 u:object_r:vendor_qfeatenab_client_service:s0
 vendor.qcom.PeripheralManager           u:object_r:vendor_per_mgr_service:s0
+vendor.qti.data.qmsservice.IQmsService  u:object_r:vendor_qms_vndservice:s0
 vendor.qti.gnss.xtra.ILocAidlXtraService  u:object_r:vendor_xtra_service:s0

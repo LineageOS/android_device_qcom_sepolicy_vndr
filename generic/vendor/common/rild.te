@@ -28,6 +28,9 @@ binder_call(rild, vendor_per_mgr)
 
 vndbinder_use(rild)
 
+allow rild vendor_netmgrd_socket:dir search;
+unix_socket_connect(rild, vendor_netmgrd, vendor_netmgrd)
+
 allow rild vendor_file:file { execute_no_trans lock ioctl };
 allow rild self:tipc_socket { create_socket_perms_no_ioctl };
 allow rild vendor_per_mgr_service:service_manager find;
@@ -50,6 +53,7 @@ hal_server_domain(rild, hal_secure_element)
 hal_server_domain(rild, vendor_hal_iwlanservice_qti)
 binder_call(vendor_hal_iwlanservice_qti_client, vendor_hal_iwlanservice_qti_server)
 binder_call(vendor_hal_iwlanservice_qti_server, vendor_hal_iwlanservice_qti_client)
+hal_attribute_hwservice(vendor_hal_iwlanservice_qti, vendor_hal_iwlan_hwservice)
 hal_attribute_service(vendor_hal_iwlanservice_qti, vendor_hal_iwlan_service)
 
 hal_server_domain(rild, vendor_hal_dataconnection_qti)

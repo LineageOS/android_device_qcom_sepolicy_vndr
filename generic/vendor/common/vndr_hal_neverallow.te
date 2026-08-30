@@ -46,6 +46,7 @@ neverallow {
   vendor_halserverdomain
   -vendor_cnd
   -vendor_hal_datafactory_qti
+  -vendor_hal_dpmqmiservice_qti
   -vendor_hal_sxrservice_qti
   -vendor_hal_qvrservice_qti
   -vendor_hal_fstman

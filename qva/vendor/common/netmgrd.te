@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -24,8 +24,10 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Changes from Qualcomm Innovation Center are provided under the following license:
 #
-# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -57,28 +59,31 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type vendor_qmipriod, domain;
-type vendor_qmipriod_exec, exec_type, vendor_file_type, file_type;
-
-#set domains
-init_daemon_domain(vendor_qmipriod)
-net_domain(vendor_qmipriod)
-
-#allow use of the QRTR socket for the QMI communication
-allow vendor_qmipriod self:qipcrtr_socket create_socket_perms_no_ioctl;
-
-#allow use of netmgrd unix sockets
-netmgr_socket(vendor_qmipriod);
-allow vendor_qmipriod vendor_netmgrd_socket:dir w_dir_perms;
-allow vendor_qmipriod vendor_netmgrd_socket:sock_file create;
-
-#allow use of NICM unix sockets
-nicm_socket(vendor_qmipriod);
-allow vendor_qmipriod vendor_nicmd_socket:dir w_dir_perms;
-allow vendor_qmipriod vendor_nicmd_socket:sock_file create;
-
-#allow logging to file for engineering builds
 userdebug_or_eng(`
-  allow vendor_qmipriod vendor_qmipriod_data_file:dir rw_dir_perms;
-  allow vendor_qmipriod vendor_qmipriod_data_file:file create_file_perms;
+  domain_auto_trans(shell, vendor_netmgrd_exec, vendor_netmgrd)
+  diag_use(vendor_netmgrd)
+  diag_use(netutils_wrapper)
 ')
+
+#Allow vendor_netmgrd operations
+allow vendor_netmgrd vendor_netmgrd:capability {
+    fsetid
+};
+
+#Allow logging
+allow vendor_netmgrd vendor_smem_log_device:chr_file rw_file_perms;
+
+allow vendor_netmgrd netutils_wrapper:process sigkill;
+
+#Allow operations on different types of sockets
+allow vendor_netmgrd vendor_netmgrd:rawip_socket { create getopt setopt write };
+
+unix_socket_connect(vendor_netmgrd, vendor_cnd, vendor_cnd);
+
+allow vendor_netmgrd { vendor_wcnss_service_exec vendor_shell_exec }:file rx_file_perms;
+
+allowxperm vendor_netmgrd self:udp_socket ioctl rmnet_sock_ioctls;
+
+# Allow vendor_netmgrd to set vendor properties
+set_prop(vendor_netmgrd, vendor_data_ko_prop)
+allow vendor_netmgrd self:qipcrtr_socket create_socket_perms_no_ioctl;

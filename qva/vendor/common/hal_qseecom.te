@@ -39,6 +39,9 @@ init_daemon_domain(vendor_hal_qseecom_default)
 binder_call(vendor_hal_qseecom_client, vendor_hal_qseecom_server)
 binder_call(vendor_hal_qseecom_server, vendor_hal_qseecom_client)
 
+#allow the service to be added to hwservice list
+hal_attribute_hwservice(vendor_hal_qseecom, vendor_hal_qseecom_hwservice)
+
 #Allow aidl based qseecom_hal communication
 hal_attribute_service(vendor_hal_qseecom, vendor_hal_qseecom_service)
 binder_call(vendor_hal_qseecom_server, servicemanager)

@@ -7,6 +7,7 @@ type vendor_location_lowi_server, domain;
 type vendor_location_lowi_server_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vendor_location_lowi_server)
+domain_auto_trans(vendor_location, vendor_location_lowi_server_exec, vendor_location_lowi_server)
 
 # allows file access in /data/vendor/location
 allow vendor_location_lowi_server vendor_location_data_file:dir create_dir_perms;
@@ -61,6 +62,8 @@ allow vendor_location_lowi_server vendor_location_xtwifi_client:unix_dgram_socke
 allow vendor_location_lowi_server vendor_mlid:unix_dgram_socket sendto;
 
 allow vendor_location_lowi_server self:netlink_route_socket { create bind read };
+
+allow vendor_location_lowi_server vendor_location:fd use;
 
 # Lowi doesnt need to communicate with SLIM. Denial can be ignored.
 dontaudit vendor_location_lowi_server vendor_location_slim_daemon:unix_dgram_socket sendto;

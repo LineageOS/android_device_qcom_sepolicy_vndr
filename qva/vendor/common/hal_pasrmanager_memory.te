@@ -40,6 +40,7 @@ init_daemon_domain(vendor_pasrmanager_memory_qti)
 binder_call(vendor_hal_mem_pasrmanager_client, vendor_hal_mem_pasrmanager_server)
 
 # Add pasrmanager to hwservice_manager and allow it to be discovered
+hal_attribute_hwservice(vendor_hal_mem_pasrmanager, vendor_hal_pasrmanager_memory_hwservice)
 hal_attribute_service(vendor_hal_mem_pasrmanager, vendor_aidl_hal_pasrmanager_memory_service)
 binder_call(vendor_hal_mem_pasrmanager_server, servicemanager)
 
