@@ -1,0 +1,2 @@
+# Add hwservice related rules
+hal_attribute_hwservice(vendor_wifidisplayhalservice, vendor_wifidisplayhalservice_hwservice)
