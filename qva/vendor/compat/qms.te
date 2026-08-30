@@ -1,0 +1,1 @@
+allow vendor_qms vendor_qms_vndservice:service_manager { add find };
