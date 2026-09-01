@@ -24,6 +24,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5534e5b3_fb74b574",
+        "filename": "generic/vendor/compat/hal_embmssl.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2026-09-01T23:59:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "96a5ce24_536dac0a",
+      "range": {
+        "startLine": 1,
+        "startChar": 6,
+        "endLine": 1,
+        "endChar": 28
+      },
+      "revId": "0acbfce6046c37a9c14a52c84d3a3897a71f10c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3abbd993_878c0a88",
@@ -47,6 +71,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2d60352_82e9aa36",
+        "filename": "qva/vendor/compat/hwservice.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2026-09-01T23:59:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3abbd993_878c0a88",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 82
+      },
+      "revId": "0acbfce6046c37a9c14a52c84d3a3897a71f10c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "54271620_30d63a64",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-09-01T23:43:40Z",
       "side": 1,
       "message": "These should be moved below copyright",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 106
+      },
+      "revId": "0acbfce6046c37a9c14a52c84d3a3897a71f10c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7dd2620f_25396dac",
+        "filename": "qva/vendor/compat/hwservice_contexts",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2026-09-01T23:59:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54271620_30d63a64",
       "range": {
         "startLine": 1,
         "startChar": 0,
