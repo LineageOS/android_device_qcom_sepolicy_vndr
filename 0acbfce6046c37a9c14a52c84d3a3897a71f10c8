@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96a5ce24_536dac0a",
+        "filename": "generic/vendor/compat/hal_embmssl.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-09-01T23:43:40Z",
+      "side": 1,
+      "message": "This HAL/service should be killed device side",
+      "range": {
+        "startLine": 1,
+        "startChar": 6,
+        "endLine": 1,
+        "endChar": 28
+      },
+      "revId": "0acbfce6046c37a9c14a52c84d3a3897a71f10c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3abbd993_878c0a88",
+        "filename": "qva/vendor/compat/hwservice.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-09-01T23:43:40Z",
+      "side": 1,
+      "message": "These should be moved below copyright and you might as well fix comma spacing",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 82
+      },
+      "revId": "0acbfce6046c37a9c14a52c84d3a3897a71f10c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54271620_30d63a64",
+        "filename": "qva/vendor/compat/hwservice_contexts",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-09-01T23:43:40Z",
+      "side": 1,
+      "message": "These should be moved below copyright",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 106
+      },
+      "revId": "0acbfce6046c37a9c14a52c84d3a3897a71f10c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
