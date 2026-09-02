@@ -16,6 +16,24 @@
       "message": "Do we need to keep system/vendor here? There should be no shipping taro that doesn\u0027t have vendor partition",
       "revId": "018ed48b9a3cda43a1aa68e911b7ada3be7682dd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d5c573a_5557b8ff",
+        "filename": "qva/vendor/compat/file_contexts",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2026-09-02T23:22:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "db114e85_cdd58d06",
+      "revId": "018ed48b9a3cda43a1aa68e911b7ada3be7682dd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
