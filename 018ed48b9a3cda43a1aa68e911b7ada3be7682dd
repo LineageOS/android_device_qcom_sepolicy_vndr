@@ -52,6 +52,24 @@
       "parentUuid": "7d5c573a_5557b8ff",
       "revId": "018ed48b9a3cda43a1aa68e911b7ada3be7682dd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92d4e476_9afb99cd",
+        "filename": "qva/vendor/compat/file_contexts",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2026-09-03T01:57:46Z",
+      "side": 1,
+      "message": "They did in ps6, the diff this comment is alongside shows ps5",
+      "parentUuid": "9b7fd9f0_67654e3c",
+      "revId": "018ed48b9a3cda43a1aa68e911b7ada3be7682dd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
