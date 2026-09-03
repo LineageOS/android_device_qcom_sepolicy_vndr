@@ -34,6 +34,24 @@
       "parentUuid": "db114e85_cdd58d06",
       "revId": "018ed48b9a3cda43a1aa68e911b7ada3be7682dd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b7fd9f0_67654e3c",
+        "filename": "qva/vendor/compat/file_contexts",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-09-03T01:25:30Z",
+      "side": 1,
+      "message": "Shouldn\u0027t the others get system/vendor dropped as well?",
+      "parentUuid": "7d5c573a_5557b8ff",
+      "revId": "018ed48b9a3cda43a1aa68e911b7ada3be7682dd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
