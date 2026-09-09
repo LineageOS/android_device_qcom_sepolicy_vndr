@@ -113,7 +113,7 @@ allow vendor_thermal-engine block_device:dir r_dir_perms;
 allow vendor_thermal-engine vendor_limits_block_device:blk_file rw_file_perms;
 
 # This is required for power telemetry sysfs access
-until_board_api(202604, `
+until_board_api(209904, `
 	allow vendor_thermal-engine vendor_sysfs_powercap:dir r_dir_perms;
 	allow vendor_thermal-engine vendor_sysfs_powercap:file rw_file_perms;
 ')
