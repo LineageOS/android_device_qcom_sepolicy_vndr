@@ -17,7 +17,7 @@ r_dir_file(vendor_qlm_service, sysfs_thermal)
 allow vendor_qlm_service sysfs_thermal:lnk_file r_file_perms;
 
 # This is required for power telemetry sysfs access
-until_board_api(202604, `
+until_board_api(209904, `
 	allow vendor_qlm_service vendor_sysfs_powercap:dir r_dir_perms;
 	allow vendor_qlm_service vendor_sysfs_powercap:file r_file_perms;
 ')
