@@ -309,7 +309,7 @@ type vendor_sysfs_cpsk_power, sysfs_type, fs_type;
 type vendor_mpam_data_file, file_type, data_file_type;
 type vendor_sysfs_mpam, fs_type, sysfs_type;
 
-until_board_api(202604, `
+until_board_api(209904, `
     type vendor_sysfs_powercap, fs_type, sysfs_type;
 ')
 
