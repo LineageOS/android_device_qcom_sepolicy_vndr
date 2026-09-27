@@ -175,6 +175,7 @@ genfscon sysfs /devices/platform/soc/1c08000.qcom,pcie/pci0001:00/0001:00:00.0/0
 genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net u:object_r:sysfs_net:s0
 genfscon sysfs /devices/platform/soc/17210040.qcom,wcn7750/net/ u:object_r:sysfs_net:s0
 genfscon sysfs /devices/platform/soc/17210040.qcom,wcn6450/net/ u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/soc/22800000.qcom,icnss/net/ u:object_r:sysfs_net:s0
 
 #wakeup sysfs nodes listed by SuspendSepolicyTests.sh
 genfscon sysfs /devices/platform/soc/988000.qcom,qup_uart/wakeup u:object_r:sysfs_wakeup:s0
@@ -212,6 +213,7 @@ genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-wpss/wakeup u:object_r:sysfs
 genfscon sysfs /devices/platform/soc/a84000.i2c/i2c-2/2-0028/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ac0000.geniqup/a84000.i2c/i2c-1/1-0028/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/99c000.qcom,qup_uart/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a8c000.i2c/i2c-5/5-0028/wakeup u:object_r:sysfs_wakeup:s0
 
 genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a80000.i2c/i2c-1/1-0028/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/fastrpc-adsp-secure/wakeup u:object_r:sysfs_wakeup:s0

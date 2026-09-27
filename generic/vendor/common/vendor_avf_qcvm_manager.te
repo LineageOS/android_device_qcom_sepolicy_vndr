@@ -83,3 +83,10 @@ userdebug_or_eng(`
 userdebug_or_eng(`
   allow vendor_avf_qcvm_manager kmsg_debug_device:chr_file { ioctl w_file_perms };
  ')
+
+# Suppress harmless AVF-related denials that do not affect functionality.
+# early_virtmgr searches vendor partition mount points during VM boot;
+# these dir search denials are benign and do not affect VM operation.
+# Bug: CR 4491805
+dontaudit early_virtmgr vendor_vm_file:dir search;
+dontaudit early_virtmgr mnt_vendor_file:dir search;

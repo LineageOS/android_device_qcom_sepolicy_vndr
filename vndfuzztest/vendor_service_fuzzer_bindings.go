@@ -47,6 +47,7 @@ var (
     "vendor.qti.hardware.data.iwlandata.IIWlan/slot1":                                   EXCEPTION_NO_FUZZER,
     "vendor.qti.hardware.data.iwlandata.IIWlan/slot2":                                   EXCEPTION_NO_FUZZER,
     "vendor.qti.hardware.agm.IAGM/default":                                              EXCEPTION_NO_FUZZER,
+    "vendor.qti.hardware.agm.ICodecIpc/default":                                         []string{"agm_codec_ipc.aidl_fuzzer"},
     "vendor.nxp.nxpnfc_aidl.INxpNfc/default":                                            EXCEPTION_NO_FUZZER,
     "vendor.qti.MemHal.IMemHal/default":                                                 EXCEPTION_NO_FUZZER,
     "vendor.qti.data.ntn.IQmsSatelliteService/default":                                  EXCEPTION_NO_FUZZER,

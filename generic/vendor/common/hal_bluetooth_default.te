@@ -24,6 +24,10 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# ​​​​​Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 allow hal_bluetooth_default vendor_bt_device:chr_file rw_file_perms;
 
 # talk to system_server to set priority
@@ -69,3 +73,8 @@ r_dir_file(hal_bluetooth_default, mnt_vendor_file)
 
 # Access lbsoc_helper to bluetooth
 use_libsoc_helper(hal_bluetooth_default)
+
+# UART power control sysfs for runtime PM (write needed for power/control)
+allow hal_bluetooth_default vendor_sysfs_uart_power:file rw_file_perms;
+# UART power runtime status sysfs (read-only kernel attribute)
+allow hal_bluetooth_default vendor_sysfs_uart_power_status:file r_file_perms;
