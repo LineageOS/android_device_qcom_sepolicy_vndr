@@ -220,6 +220,7 @@ neverallow {
 } vendor_qms_config_data_file:{file }  { create write } ;
 
 #Allow QMS to use ipa_events
+get_prop(vendor_qms, vendor_ssr_prop)
 allow vendor_qms vendor_ipaevents_device:chr_file r_file_perms;
 
 #Allow QMS to read restart level property
