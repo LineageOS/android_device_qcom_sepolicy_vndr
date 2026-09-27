@@ -93,6 +93,8 @@
 
 # Context for sensors.debug, Sensors deamon for debug features
 /vendor/bin/sensors.debug                                       u:object_r:vendor_sensors_debug_exec:s0
+# Context for modem crash signature daemon
+/vendor/bin/modem_crash_capture           u:object_r:vendor_modem_crash_capture_exec:s0
 
 #### Context for qguard
 /(vendor|system/vendor)/bin/qguard        u:object_r:vendor_qguard_exec:s0

@@ -122,7 +122,7 @@ vendor.debug.egl.changepixelformat  u:object_r:vendor_public_vendor_default_prop
 vendor.debug.prerotation.disable  u:object_r:vendor_public_vendor_default_prop:s0
 vendor.debug.egl.swapinterval  u:object_r:vendor_public_vendor_default_prop:s0
 vendor.debug.egl.profiler  u:object_r:vendor_public_vendor_default_prop:s0
-
+vendor.gfx.perf_hint u:object_r:vendor_gpu_prop:s0
 # shsusrd loading
 persist.vendor.data.shsusr_load u:object_r:vendor_data_shsusr_prop:s0
 persist.vendor.data.qmipriod_load u:object_r:vendor_data_qmipriod_prop:s0

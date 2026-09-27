@@ -206,3 +206,6 @@ get_prop(vendor_hal_perf_default, vendor_soc_name_prop);
 
 #allow perfhal to read boot complete prop
 get_prop(vendor_hal_perf_default, boot_status_prop);
+
+#allow perfhal to write THP sysnode
+allow vendor_hal_perf_default sysfs_transparent_hugepage:file w_file_perms;

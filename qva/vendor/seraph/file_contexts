@@ -58,3 +58,4 @@
 
 #sensors glink dev node
 /dev/glinkpkt_lmcu_qsh_1_[0-9]+      u:object_r:vendor_glink_lmcu_qsh_device:s0
+/dev/glinkpkt_lmcu_qsh_drc_1_[0-6]+  u:object_r:vendor_glink_lmcu_qsh_device:s0
