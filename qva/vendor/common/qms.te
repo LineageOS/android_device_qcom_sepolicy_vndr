@@ -170,6 +170,9 @@ allow vendor_qms firmware_file:file r_file_perms;
 # Allow vendor_qms to read vendor_soc_model_prop
 get_prop(vendor_qms, vendor_soc_model_prop);
 
+# Allow vendor_qms to read vendor_ssr_prop
+get_prop(vendor_qms, vendor_ssr_prop)
+
 #communicating with hostapd for sending commands/listening to events
 allow vendor_qms hostapd_data_file:dir rw_dir_perms;
 allow vendor_qms hostapd_data_file:sock_file create_file_perms;
