@@ -37,3 +37,4 @@ allow vendor_qlas vendor_qlas_persist_data_file:dir relabelto;
 allow vendor_qlas vendor_qlas_persist_data_file:file relabelto;
 
 set_prop(vendor_qlas, vendor_qlas_migrated_prop)
+get_prop(vendor_qlas, vendor_fas_onboarded_prop)

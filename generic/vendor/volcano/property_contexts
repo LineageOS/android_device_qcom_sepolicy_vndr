@@ -5,5 +5,7 @@
 persist.vendor.fas.signal  u:object_r:vendor_fas_signal_prop:s0
 
 # qlas File Migration Properties
-persist.vendor.qlas.migrated_files    u:object_r:vendor_qlas_migrated_files_prop:s0
-vendor.qlas.migrated    u:object_r:vendor_qlas_migrated_prop:s0
+persist.vendor.qlas.migrated    u:object_r:vendor_qlas_migrated_prop:s0
+persist.vendor.fas.hub_ready u:object_r:vendor_hub_ready_prop:s0
+persist.vendor.fas.onboarded u:object_r:vendor_fas_onboarded_prop:s0
+vendor.dm.restart    u:object_r:vendor_dm_restart_prop:s0

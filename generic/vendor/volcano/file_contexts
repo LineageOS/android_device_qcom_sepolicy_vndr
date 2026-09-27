@@ -293,7 +293,7 @@
 /mnt/vendor/persist/data/c2c(/.*)?    u:object_r:vendor_qlas_persist_data_file:s0
 
 /vendor/etc/qlas(/.*)?    u:object_r:vendor_qlas_conf_file:s0
-/vendor/etc/qlas_migration\.conf    u:object_r:vendor_qlas_migration_config:s0
+/vendor/etc/qlas_files_to_migrate\.conf    u:object_r:vendor_qlas_migration_config:s0
 
 
 # qlas sockets

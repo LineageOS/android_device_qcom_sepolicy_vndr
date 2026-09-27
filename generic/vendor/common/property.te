@@ -134,3 +134,6 @@ vendor_internal_prop(vendor_pcie_prop)
 
 #Dynamic sensor
 vendor_internal_prop(vendor_dynamic_sensor_prop)
+
+# Qseecomd hibernate properties
+vendor_internal_prop(vendor_qseecomd_hibernate_prop)

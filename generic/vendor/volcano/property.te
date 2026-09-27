@@ -3,4 +3,6 @@
 
 vendor_restricted_prop(vendor_fas_signal_prop);
 vendor_restricted_prop(vendor_qlas_migrated_prop);
-vendor_restricted_prop(vendor_qlas_migrated_files_prop);
+vendor_restricted_prop(vendor_hub_ready_prop);
+vendor_restricted_prop(vendor_fas_onboarded_prop);
+vendor_restricted_prop(vendor_dm_restart_prop);

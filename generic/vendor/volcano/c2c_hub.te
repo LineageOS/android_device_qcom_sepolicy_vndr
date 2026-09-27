@@ -24,5 +24,10 @@ allow vendor_c2c_hub vendor_mosquitto:unix_stream_socket {connectto};
 
 allow vendor_c2c_hub init:unix_stream_socket {connectto};
 allow vendor_c2c_hub property_socket:sock_file {write};
-set_prop(vendor_c2c_hub, vendor_fas_signal_prop)
 
+# Hub reads persist.vendor.fas.signal from qlas
+get_prop(vendor_c2c_hub, vendor_fas_signal_prop)
+
+# Hub writes persist.vendor.fas.hub_ready to signal dm
+set_prop(vendor_c2c_hub, vendor_hub_ready_prop)
+set_prop(vendor_c2c_hub, vendor_fas_onboarded_prop)

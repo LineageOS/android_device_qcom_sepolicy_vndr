@@ -1,0 +1,4 @@
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+com.qualcomm.qti.qvr.camera.IQVRCameraServiceBroker/default    u:object_r:vendor_hal_qvrcambroker_service:s0

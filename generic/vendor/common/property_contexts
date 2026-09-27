@@ -163,3 +163,7 @@ persist.vendor.pcie. u:object_r:vendor_pcie_prop:s0
 
 #Dynamic sensor
 vendor.dynamic_sensor. u:object_r:vendor_dynamic_sensor_prop:s0
+
+# Qseecomd hibernate properties
+vendor.qseecomd.hibernate       u:object_r:vendor_qseecomd_hibernate_prop:s0
+vendor.qseecomd.hibernate_entry u:object_r:vendor_qseecomd_hibernate_prop:s0

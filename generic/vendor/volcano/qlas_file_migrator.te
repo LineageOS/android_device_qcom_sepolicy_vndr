@@ -21,7 +21,6 @@ unix_socket_connect(vendor_qlas_file_migrator, vendor_ssgtzd, vendor_ssgtzd)
 allow vendor_qlas_file_migrator vendor_persist_data_file:dir {search};
 
 set_prop(vendor_qlas_file_migrator, vendor_qlas_migrated_prop)
-set_prop(vendor_qlas_file_migrator, vendor_qlas_migrated_files_prop)
 
 userdebug_or_eng(`
     get_prop(vendor_qlas_file_migrator, vendor_mink_trace_prop)

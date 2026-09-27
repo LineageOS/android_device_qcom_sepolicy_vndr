@@ -72,6 +72,7 @@ allow vendor_qvrd_vndr_cam appdomain:process setsched;
 # Allow qvrd_vndr_cam to call qvrd_vndr
 binder_call(vendor_qvrd_vndr_cam, vendor_qvrd_vndr)
 allow vendor_qvrd_vndr_cam vendor_hal_qvrcamipc_service:service_manager { add };
+allow vendor_qvrd_vndr_cam vendor_hal_qvrcambroker_service:service_manager { add };
 allow vendor_qvrd_vndr_cam vendor_hal_qvripc_service:service_manager { find };
 
 # Access dsp

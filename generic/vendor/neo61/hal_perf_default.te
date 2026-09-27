@@ -33,3 +33,4 @@
 allow vendor_hal_perf_default self:capability kill;
 allow vendor_hal_perf_default {appdomain}:process sigkill;
 hal_client_domain(vendor_hal_perf_default, vendor_hal_poweroptservice)
+wakelock_use(vendor_hal_perf_default)

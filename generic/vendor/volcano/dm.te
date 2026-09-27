@@ -21,3 +21,9 @@ userdebug_or_eng(`
 allow vendor_dm vendor_mosquitto_socket:dir {search};
 allow vendor_dm vendor_mosquitto_socket:sock_file { write };
 allow vendor_dm vendor_mosquitto:unix_stream_socket {connectto};
+
+# Allow DM to read hub_ready property
+get_prop(vendor_dm, vendor_hub_ready_prop)
+
+# Allow DM to set restart property (signals init to restart the service on failure)
+set_prop(vendor_dm, vendor_dm_restart_prop)

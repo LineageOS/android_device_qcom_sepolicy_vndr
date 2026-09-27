@@ -43,6 +43,9 @@ binder_call(vendor_hal_qseecom_server, vendor_hal_qseecom_client)
 hal_attribute_service(vendor_hal_qseecom, vendor_hal_qseecom_service)
 binder_call(vendor_hal_qseecom_server, servicemanager)
 
+#Allow servicemanager to call vendor_hal_qseecom for lazy hal lifecycle management
+binder_call(servicemanager, vendor_hal_qseecom_server)
+
 #allow access to hal_allocator
 hal_client_domain(vendor_hal_qseecom_default, hal_allocator)
 
