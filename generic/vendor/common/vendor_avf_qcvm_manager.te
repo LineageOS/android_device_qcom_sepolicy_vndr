@@ -88,5 +88,5 @@ userdebug_or_eng(`
 # early_virtmgr searches vendor partition mount points during VM boot;
 # these dir search denials are benign and do not affect VM operation.
 # Bug: CR 4491805
-dontaudit early_virtmgr vendor_vm_file:dir search;
-dontaudit early_virtmgr mnt_vendor_file:dir search;
+dontaudit early_virtmgr_domain vendor_vm_file:dir search;
+dontaudit early_virtmgr_domain mnt_vendor_file:dir search;
