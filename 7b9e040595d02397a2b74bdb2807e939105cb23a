@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eafdd6ae_96122336",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 27025
+      },
+      "writtenOn": "2026-09-30T10:19:03Z",
+      "side": 1,
+      "message": "qcom is really flipflopping on this https://git.codelinaro.org/clo/la/device/qcom/sepolicy_vndr/-/commit/7c678178218983e3132b7e14c7c90eecf0a321fe, given the double reverts maybe we can pick loc launcher optimisation on sun?",
+      "revId": "7b9e040595d02397a2b74bdb2807e939105cb23a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
