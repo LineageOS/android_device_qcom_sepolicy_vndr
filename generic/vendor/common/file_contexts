@@ -363,6 +363,7 @@
 /vendor/lib(64)?/vendor\.qti\.hardware\.display\.snapalloc-impl\.so         u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/mapper\.qti\.so        u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmapperutils\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libsdmextension\.so      u:object_r:same_process_hal_file:s0
 
 /vendor/lib(64)?/hw/vulkan\.adreno\.so         u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libEGL_adreno\.so             u:object_r:same_process_hal_file:s0
