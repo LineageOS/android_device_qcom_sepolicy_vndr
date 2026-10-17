@@ -152,3 +152,6 @@ persist.vendor.qteeconnector.           u:object_r:vendor_qteeconnector_opti_pro
 vendor.dcvs.prop                 u:object_r:vendor_dcvs_prop:s0
 
 persist.vendor.rcs.singlereg.                        u:object_r:vendor_persist_rcs_qti_prop:s0
+
+# CNSS
+vendor.vold.serialno    u:object_r:vendor_cnss_daemon_prop:s0 exact string

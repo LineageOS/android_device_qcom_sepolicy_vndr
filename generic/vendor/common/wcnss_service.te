@@ -82,3 +82,4 @@ r_dir_file(vendor_wcnss_service, storage_file)
 r_dir_file(vendor_wcnss_service, mnt_user_file)
 ')
 
+set_prop(vendor_wcnss_service, vendor_cnss_daemon_prop)
