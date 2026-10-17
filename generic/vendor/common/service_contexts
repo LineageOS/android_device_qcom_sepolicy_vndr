@@ -42,3 +42,5 @@ vendor.qti.hardware.radio.qcrilhook.IQtiOemHook/oemhook0              u:object_r
 vendor.qti.hardware.radio.qcrilhook.IQtiOemHook/oemhook1              u:object_r:vendor_hal_telephony_service2:s0
 vendor.qti.hardware.radio.internal.deviceinfo.IDeviceInfo/deviceinfo  u:object_r:vendor_hal_telephony_service2:s0
 vendor.qti.hardware.radio.qtiradioconfig.IQtiRadioConfig/default      u:object_r:vendor_hal_telephony_service2:s0
+
+android.hardware.drm.IDrmFactory/widevine                    u:object_r:hal_drm_service:s0
