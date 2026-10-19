@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f469bae2_981936fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-10-19T23:17:25Z",
+      "side": 1,
+      "message": "Pick this instead https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy_vndr/+/437681",
+      "revId": "07af01e33f24c9ba0c9c520fa7532cc25aacff9a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
