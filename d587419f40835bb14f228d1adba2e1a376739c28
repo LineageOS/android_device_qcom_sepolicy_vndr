@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0a5ecb0_f1d44045",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-10-19T23:15:16Z",
+      "side": 1,
+      "message": "This seems to be an oneplus specific thing, I don\u0027t see it in other devices\u0027 blobs",
+      "revId": "d587419f40835bb14f228d1adba2e1a376739c28",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
