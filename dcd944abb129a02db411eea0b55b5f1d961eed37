@@ -16,6 +16,24 @@
       "message": "Needed on Xiaomi SM8150, thanks",
       "revId": "dcd944abb129a02db411eea0b55b5f1d961eed37",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd36b7f5_9e34132f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2026-10-25T23:22:02Z",
+      "side": 1,
+      "message": "Note: \u003e\u003dsm8250 (so qva/) wasn\u0027t needed, but I guess it wouldn\u0027t hurt",
+      "parentUuid": "0b72b554_731438f8",
+      "revId": "dcd944abb129a02db411eea0b55b5f1d961eed37",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
