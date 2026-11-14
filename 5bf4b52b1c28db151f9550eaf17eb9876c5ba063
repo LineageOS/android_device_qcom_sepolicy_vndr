@@ -16,6 +16,23 @@
       "message": "Since it\u0027s upstream, I prefer not to touch commit message with our own stuff.",
       "revId": "5bf4b52b1c28db151f9550eaf17eb9876c5ba063",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58f69ac5_27bbcfc1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-14T17:31:03Z",
+      "side": 1,
+      "message": "Just remember to close it manually once this is merged: https://github.com/LineageOS/issues/issues/1102",
+      "revId": "5bf4b52b1c28db151f9550eaf17eb9876c5ba063",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
