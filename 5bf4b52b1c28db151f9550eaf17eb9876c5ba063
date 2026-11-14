@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "304f2466_042cad07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-14T16:46:41Z",
+      "side": 1,
+      "message": "Since it\u0027s upstream, I prefer not to touch commit message with our own stuff.",
+      "revId": "5bf4b52b1c28db151f9550eaf17eb9876c5ba063",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
